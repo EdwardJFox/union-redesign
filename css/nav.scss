@@ -1,1 +1,124 @@
 /* The Navigation SCSS */
+nav {
+  background-color: $union_green;
+  width: 25%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+
+  &.closed {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+
+  &.open {
+
+  }
+
+  .header {
+    text-align: center;
+    img {
+      width: 90%;
+    }
+  }
+
+  section {
+    padding-bottom: 1em;
+
+    .title {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      i {
+        color: #fff;
+        font-size: 3.2em;
+        padding: 0 0.2em;
+      }
+      h2 {
+        color: #fff;
+        font-size: 2em;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .subtitle {
+      padding: 0.2em 1.2em;
+      h3 {
+        color: #fff;
+        font-size: 1.5em;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .links {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.6em;
+      a {
+        color: #fff;
+        font-size: 1.1em;
+        font-weight: 300;
+        text-decoration: none;
+        padding: 0.2em 1em;
+        display: block;
+        font-weight: 300;
+        font-family: 'Roboto', sans-serif;
+        &:hover {
+          background-color: $white_hover;
+        }
+      }
+    }
+  }
+}
+
+.quickbar {
+  width: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .openMenu {
+    cursor: pointer;
+    height: 40px;
+    color: #fff;
+    i {
+      font-size: 2.5em;
+    }
+  }
+
+  a {
+    height: 44px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+    color: $union_green;
+    text-align: center;
+
+    i {
+      font-size: 2.3em;
+    }
+
+    .title {
+      position: absolute;
+      left: 40px;
+      top: 0px;
+      width: 172px;
+      font-size: 1.2em;
+      color: #fff;
+      background-color: #50b848;
+      display: none;
+    }
+    &:hover .title {
+    }
+  }
+}

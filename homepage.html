@@ -26,14 +26,15 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-
     <header>
       <div class="logo">
         <img src="https://staffsunion.s3.amazonaws.com/images/union_logo_white_small.png" alt="Union Logo">
       </div>
       <div class="search">
         <div class="icon"><i class="material-icons">search</i></div>
-        <input type="search" placeholder="Search">
+        <div class="searchInput">
+          <input type="search" placeholder="Search">
+        </div>
       </div>
       <div class="user">
         <div class="avatar"><i class="material-icons">person</i></div>
@@ -46,7 +47,8 @@
       </div>
     </header>
 
-    <nav>
+    <nav class="closed">
+      <div class="closeButton"><i class="material-icons">menu</i></div>
       <div class="header">
         <a href="/"><img src="https://staffsunion.s3.amazonaws.com/images/union_logo_white_full.png" alt="Union Logo"></a>
       </div>
@@ -174,6 +176,36 @@
         </ul>
       </section>
     </nav>
+
+    <div class="quickbar">
+      <div class="openMenu">
+        <i class="material-icons">menu</i>
+      </div>
+      <a href="/" class="link">
+        <i class="material-icons">people</i>
+        <div class="title">
+          What we do
+        </div>
+      </a>
+      <a href="/" class="link">
+        <i class="material-icons">event_note</i>
+        <div class="title">
+          What to do
+        </div>
+      </a>
+      <a href="/" class="link">
+        <i class="material-icons">info_outline</i>
+        <div class="title">
+          Advice
+        </div>
+      </a>
+      <a href="/" class="link">
+        <i class="material-icons">movie</i>
+        <div class="title">
+          Student Media
+        </div>
+      </a>
+    </div>
 
     <main>
 
