@@ -1,4 +1,26 @@
 /* Buttons styling */
 .button, .btn, .blockLink {
   padding: 0.4em 0.8em;
+  font-weight: 300;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+
+    &.greenBg:hover {
+      background-color: darken($union_green, 5%);
+    }
+    &.pinkBg:hover {
+      background-color: darken($pink, 5%);
+    }
+    &.redBg:hover {
+      background-color: darken($blue, 5%);
+    }
+    &.cyanBg:hover {
+      background-color: darken($cyan, 5%);
+    }
+    &.darkCyanBg:hover {
+      background-color: darken($darkCyan, 5%);
+    }
+  }
 }

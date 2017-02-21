@@ -1,24 +1,177 @@
 @import "colours";
+@import "mixins";
 
 /* Homepage specific styling */
 .splash {
   padding: 1em 0;
-  // Leadership Race
+  /* Leadership Race*/
   &.leadership {
     background-color: $leadership_race_bg;
 
     .logo {
-      width: 60%;
+      width: 70%;
     }
+    .content {
+      text-align: center;
+      padding: 0.2em 0.8em;
+      p {
+        color: #fff;
+      }
+      video {
+        display: none;
+      }
+    }
+  }
+}
+
+.row {
+  &.events {
+    background: #333;
+    .title {
+      width: 100%;
+      padding: 0.2em 0.8em;
+      background-color: $pink;
+      h2 {
+        color: #fff;
+        margin: 0;
+        padding: 0.2em 0;
+      }
+    }
+    .eventList {
+      padding: 0 0.8em;
+      .msl_eventlist > div {
+        padding: 0.8em 0;
+        .event_item {
+          width: 100%;
+          margin-bottom: 0.5em;
+          border-left: 6px solid $pink;
+          background-color: #fff;
+          .event_image {
+            display: none;
+          }
+          dl {
+            margin: 0;
+          }
+          .event_info {
+            dt {
+              background-color: $pink;
+              padding: 0.4em 0.8em;
+              @include displayFlex;
+              @include flexAlign(center);
+              @include flexJustify(center);
+              a {
+                color: #fff;
+                font-size: 1.3em;
+                text-decoration: none;
+                text-align: center;
+              }
+            }
+            dd {
+              margin: 0;
+              padding: 0.4em;
+              @include displayFlex;
+              @include flexAlign(center);
+              font-size: 1.1em;
+              line-height: 160%;
+            }
+            .msl_event_time::before, .msl_event_location::before {
+              @include googleFont;
+              font-size: 1.5em;
+            }
+            .msl_event_time::before {
+              content: 'date_range';
+            }
+            .msl_event_location::before {
+              content: 'location_on';
+            }
+            .msl_event_time, .msl_event_location {
+
+            }
+            .msl_event_description {
+              padding: 0.2em 0.8em;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.news {
+
   }
 }
 
 
 /* Tablets*/
 @media (min-width: 48em){
+  .splash {
+    &.leadership {
+      .content {
+        padding: 0;
+        text-align: left;
+        video {
+          display: block;
+        }
+      }
+    }
+  }
+  .row {
+    &.events {
+      min-height: 300px;
+      .title {
+        -ms-flex: 0 0 82px;
+            -webkit-box-flex: 0;
+                flex: 0 0 82px;
+        width: 82px;
+        overflow: hidden;
+        position: relative;
+        h2 {
+          -webkit-transform: rotate(-90deg);
+                  transform: rotate(-90deg);
+          padding: 0;
+          position: absolute;
+          bottom: 64px;
+          left: -37px;
+        }
+      }
+      .eventList {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        /* Small fix for the height of events*/
+        #whatson, .msl_eventlist, .msl_eventlist > div {
+          height: 100%;
+        }
 
+        .msl_eventlist > div {
+          padding: 0.8em 0;
+          @include displayFlex();
+          @include flexJustify(space-around);
+          @include flexAlign(stretch);
+          .event_item {
+            @include flexFixed(22%);
+            border-left: 6px solid $pink;
+            background-color: #fff;
+            .event_image {
+              display: none;
+            }
+            dl {
+              margin: 0;
+            }
+            .event_info {
+              dt {
+                height: 78px;
+                padding: 0 0.6em;
+              }
+              dd {
+                font-size: 1em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 /* Desktop*/
 @media (min-width: 80em){
-
 }

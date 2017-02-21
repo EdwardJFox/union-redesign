@@ -1,0 +1,51 @@
+/* Useful Mixins, do not declare classes in this file */
+
+/* For when you want to use a google material icon in a ::before or ::after*/
+@mixin googleFont {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1.6em;
+          flex: 0 0 1.6em;
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+
+/* Just so there is a default way of creating a flexbox*/
+@mixin displayFlex(){
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+@mixin flexFixed($width) {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 $width;
+  -webkit-flex: 0 0 $width;
+          flex: 0 0 $width;
+}
+
+@mixin flexAlign($align) {
+  -webkit-box-align: $align;
+      -ms-flex-align: $align;
+  -webkit-align-items: $align;
+          align-items: $align;
+}
+
+@mixin flexJustify($justify) {
+  -webkit-box-pack: $justify;
+      -ms-flex-pack: $justify;
+  -webkit-justify-content: $justify;
+          justify-content: $justify;
+}

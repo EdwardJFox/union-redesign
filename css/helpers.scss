@@ -1,13 +1,24 @@
 /* CSS classes to use around the site to make some things easier */
-// Content aligning
+/* Content aligning*/
 .content-center {
   text-align: center;
 }
 .is-center {
   margin: 0 auto;
 }
+.flex-middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 
-// Helper colour classes
+/* Helper colour classes*/
 .green {
     color: $union_green !important;
 }

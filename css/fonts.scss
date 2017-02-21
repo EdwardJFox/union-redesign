@@ -1,6 +1,6 @@
 /* Fonts and Typography */
 
-/* Headers */
+// Headers
 h1, h2, h3, h4 {
   font-family: 'Raleway', sans-serif;
 }
@@ -19,4 +19,35 @@ h3 {
 
 h4 {
   font-size: 2em;
+}
+
+// Body Text
+p, a, dd, dt, dl {
+  font-family: 'Roboto', sans-serif;
+}
+p {
+  font-size: 1.1em;
+  line-height: 150%;
+  font-weight: 300;
+  color: #000;
+  margin: 0;
+  padding: 0.2em 0 0.4em;
+
+  // Used for the leaders into a section, just a default styling
+  &.leader {
+    font-size: 1.3em;
+    font-weight: 400;
+  }
+}
+
+a {
+  font-size: 1.1em;
+  color: $union_green
+}
+a:hover {
+  color: $union_green_hover;
+}
+
+b {
+  font-weight: 600;
 }
