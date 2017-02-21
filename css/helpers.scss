@@ -1,0 +1,76 @@
+/* CSS classes to use around the site to make some things easier */
+// Content aligning
+.content-center {
+  text-align: center;
+}
+.is-center {
+  margin: 0 auto;
+}
+
+// Helper colour classes
+.green {
+    color: $union_green !important;
+}
+.greenBg {
+    background-color: $union_green;
+}
+.darkGreen {
+    color: $union_green_dark !important;
+}
+.darkGreenBg {
+    background-color: $union_green_dark;
+}
+.pink {
+    color: $pink !important;
+}
+.pinkBg {
+    background-color: $pink;
+}
+.red {
+    color: $red !important;
+}
+.redBg {
+    background-color: $red;
+}
+.blue {
+    color: $blue !important;
+}
+.blueBg {
+    background-color: $blue;
+}
+.cyan {
+    color: $cyan !important;
+}
+.cyanBg {
+    background-color: $cyan;
+}
+.darkCyan {
+    color: $darkCyan !important;
+}
+.darkCyanBg {
+    background-color: $darkCyan;
+}
+.white {
+    color: $white !important;
+}
+.whiteBg {
+    background-color: $white;
+}
+.grey {
+    color: $grey !important;
+}
+.greyBg {
+    background-color: $grey;
+}
+.darkGrey {
+    color: $darkGrey !important;
+}
+.darkGreyBg {
+    background-color: $darkGrey;
+}
+.black {
+    color: $black !important;
+}
+.blackBg {
+    background-color: $black;
+}

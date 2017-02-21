@@ -1,4 +1,4 @@
-/* Colours file */
+/* Colour variables file, do not create css classes in this file */
 
 $union_green: #50b848;
 $union_green_dark: #388332;
@@ -8,3 +8,18 @@ $union_green_hover_clear: rgba(80, 184, 72, 0.2);
 
 $white: #fff;
 $white_hover: rgba(255, 255, 255, 0.2);
+
+// Colours imported from the Union's current design
+$pink: #ec1e79;
+$red: #E31836;
+$blue: #0096db;
+$cyan: #54827c;
+$darkCyan: #426661;
+$white: #fff;
+$grey: #eee;
+$darkGrey: #454545;
+$black: #000;
+
+/* CAMPAIGN SPECIFIC COLOURS */
+// Leadership Race
+$leadership_race_bg: #1c1c1a;

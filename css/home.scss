@@ -1,0 +1,24 @@
+@import "colours";
+
+/* Homepage specific styling */
+.splash {
+  padding: 1em 0;
+  // Leadership Race
+  &.leadership {
+    background-color: $leadership_race_bg;
+
+    .logo {
+      width: 60%;
+    }
+  }
+}
+
+
+/* Tablets*/
+@media (min-width: 48em){
+
+}
+/* Desktop*/
+@media (min-width: 80em){
+
+}

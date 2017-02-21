@@ -7,14 +7,31 @@ nav {
   top: 0;
   left: 0;
   overflow-y: scroll;
+  z-index: 200;
 
-  &.closed {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
+  &.close {
+    animation-name: slideOutSidebar;
+    animation-fill-mode: forwards;
+    animation-duration: 0.8s;
+    animation-delay: 0s;
   }
 
   &.open {
+    animation-duration: 0.8s;
+    animation-delay: 0s;
+    animation-name: slideInSidebar;
+    animation-fill-mode: forwards;
+  }
 
+  .closeButton {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 4px;
+    i {
+      font-size: 2.5em;
+      color: #fff;
+    }
   }
 
   .header {
@@ -157,5 +174,31 @@ nav {
         display: block;
       }
     }
+  }
+}
+
+@keyframes slideOutSidebar {
+  from {
+    -webkit-transform: translatex(0%);
+    -ms-transform: translatex(0%);
+    transform: translateX(0%);
+  }
+  to {
+    -webkit-transform: translateX(-105%);
+    -ms-transform: translateX(-105%);
+    transform: translateX(-105%);
+  }
+}
+
+@keyframes slideInSidebar {
+  from {
+    -webkit-transform: translatex(-105%);
+    -ms-transform: translatex(-105%);
+    transform: translateX(-105%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
   }
 }
