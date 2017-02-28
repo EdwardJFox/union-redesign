@@ -1,0 +1,17 @@
+footer {
+  position: relative;
+  background-color: $cyan;
+  min-height: 200px;
+  margin-top: 65px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -65px;
+    left: 0;
+  	width: 0;
+  	height: 0;
+  	border-bottom: 65px solid $cyan;
+  	border-right: 100vw solid transparent;
+  }
+}
