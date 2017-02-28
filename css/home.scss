@@ -27,6 +27,9 @@
 .row {
   &.events {
     background: #333;
+    background-image: url('../assets/event_row_bg.png');
+    background-size: 33% auto;
+
     .title {
       width: 100%;
       padding: 0.2em 0.8em;
@@ -120,6 +123,7 @@
   .row {
     &.events {
       height: 320px;
+      background-size: auto 33%;
       .title {
         -ms-flex: 0 0 82px;
             -webkit-box-flex: 0;
