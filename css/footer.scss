@@ -2,16 +2,41 @@ footer {
   position: relative;
   background-color: $cyan;
   min-height: 200px;
-  margin-top: 65px;
+  margin-top: 200px;
 
   &:before {
     content: '';
     position: absolute;
-    top: -65px;
+    top: -199px;
     left: 0;
   	width: 0;
   	height: 0;
-  	border-bottom: 65px solid $cyan;
-  	border-right: 100vw solid transparent;
+  	border-bottom: 200px solid $cyan;
+  	border-right: 99vw solid transparent;
+  }
+  #footerLinks {
+    padding-bottom: 2em;
+    h2, a, p {
+      color: #fff;
+    }
+    h2 {
+      margin: 0.1em 0;
+    }
+    p {
+      padding: 0;
+    }
+    a > img {
+      width: 42px;
+      margin-right: 0.4em;
+    }
+    #unionLinks a, #universityLinks a {
+      display: block;
+      text-decoration: none;
+      font-weight: 300;
+      padding: 0.1em 0;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   }
 }

@@ -25,6 +25,54 @@
 }
 
 .row {
+  &.news {
+    overflow: hidden;
+    background: #e7e7e7;
+    .title {
+      width: 100%;
+      display: block;
+      h2 {
+        margin: 0;
+        padding: 0.1em 1em;
+      }
+    }
+    .newsWidget {
+      .newsItems {
+        .newsItem {
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .newsInfo {
+        .newsDescription {
+          padding: 0.6em;
+        }
+      }
+      .newsList {
+        background-color: #dfdfdf;
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0.6em 0.4em;
+          li {
+            display: block;
+            cursor: pointer;
+            margin: 0 0 0.5em 0;
+            border-left: 4px solid $union_green_not_active;
+            transition: background-color 200ms;
+            &.active {
+              background-color: rgba(80, 184, 72, 0.13);
+              border-color: #50b848;
+            }
+            &:hover {
+              background-color: rgba(80, 184, 72, 0.18);
+            }
+          }
+        }
+      }
+    }
+  }
   &.events {
     background: #333;
     .title {
@@ -101,6 +149,63 @@
   &.news {
 
   }
+
+  .studentVoice {
+    .logo {
+      text-align: center;
+      img {
+        width: 50%;
+      }
+    }
+    .intro {
+
+    }
+    .content {
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+          a {
+            text-decoration: none;
+            padding: 0.8em 1.4em 0.8em 0.4em;
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: right;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+          &:nth-child(1){
+
+          }
+          &:nth-child(2){
+            background: #daffd7;
+          }
+          &:nth-child(3){
+            background: #9bf193;
+            a { color: $union_green_dark; }
+          }
+          &:nth-child(4){
+            background: #78db6f;
+            a { color: #fff; }
+          }
+          &:nth-child(5){
+            background: #62cd59;
+            a { color: #fff; }
+          }
+        }
+      }
+    }
+  }
+
+  .advert {
+    img {
+      padding: 1em;
+      width: 100%;
+    }
+  }
 }
 
 
@@ -118,6 +223,59 @@
     }
   }
   .row {
+    &.news {
+      height: 300px;
+      .title {
+        display: none;
+      }
+      .newsWidget {
+        @include displayFlex;
+        .newsItems {
+          flex: 0 0 505px;
+          .newsItem {
+            display: block;
+            padding: 1em;
+          }
+        }
+
+        .newsInfo {
+          flex: 1;
+          .newsDescription {
+            height: 100%;
+            padding: 0.4em 0.8em;
+            @include displayFlex;
+            justify-content: center;
+            flex-direction: column;
+            span {
+              padding: 0.4em;
+            }
+          }
+        }
+
+        .newsList {
+          flex: 0 0 320px;
+          @include displayFlex;
+          flex-direction: column;
+          ul {
+            flex: 1;
+            padding: 0;
+
+            li {
+              &.active {
+
+              }
+              p {
+                display: block;
+                padding: 0.6em 0.4em;
+              }
+            }
+          }
+          .content-center {
+            flex: 0 0 40px;
+          }
+        }
+      }
+    }
     &.events {
       height: 320px;
       .title {
@@ -229,10 +387,47 @@
 /* Desktop*/
 @media (min-width: 80em){
   .row {
+    &.news {
+      .newsWidget {
+        width: 1200px;
+        margin: 0 auto;
+      }
+    }
     &.events {
       #whatson {
         width: 1200px;
         margin: 0 auto;
+      }
+    }
+    .studentVoice {
+      padding: 1em 0 0;
+      position: relative;
+      .logo {
+        position: absolute;
+        width: 200px;
+        top: 0;
+        left: 0;
+        img {
+          width: 80%;
+        }
+      }
+      .intro {
+        padding-left: 200px;
+      }
+      .content {
+        flex: 1;
+        ul {
+          @include displayFlex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: center;
+          li {
+            flex: 1;
+            @include displayFlex;
+            @include flexAlign(center);
+            @include flexJustify(flex-end);
+          }
+        }
       }
     }
   }
