@@ -6,7 +6,6 @@
   padding: 1em 0;
   /* Leadership Race*/
   &.leadership {
-    background-color: $leadership_race_bg;
 
     .logo {
       width: 70%;
@@ -14,9 +13,6 @@
     .content {
       text-align: center;
       padding: 0.2em 0.8em;
-      p {
-        color: #fff;
-      }
       video {
         display: none;
       }
