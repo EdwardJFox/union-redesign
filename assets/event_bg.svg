@@ -3,15 +3,15 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 296 60" style="enable-background:new 0 0 296 60;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#C41267;}
+	.st0{fill:#388332;}
 </style>
-<rect x="-13.5" y="13.5" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 46.5 13.5)" class="st0" width="60" height="33"/>
-<rect x="18.5" y="24.5" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 78.5 -18.5)" class="st0" width="60" height="11"/>
-<rect x="39.5" y="24.5" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 99.5 -39.5)" class="st0" width="60" height="11"/>
-<rect x="73" y="18" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 133 -73)" class="st0" width="60" height="24"/>
-<rect x="114.5" y="11.5" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 174.5 -114.5)" class="st0" width="60" height="37"/>
-<rect x="149" y="25" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 209 -149)" class="st0" width="60" height="10"/>
-<rect x="190.5" y="19.5" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 250.5 -190.5)" class="st0" width="60" height="21"/>
-<rect x="216" y="25" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 276 -216)" class="st0" width="60" height="10"/>
-<rect x="245.5" y="19.5" transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 305.5 -245.5)" class="st0" width="60" height="21"/>
+<rect class="st0" width="33" height="60"/>
+<rect x="43" class="st0" width="11" height="60"/>
+<rect x="64" class="st0" width="11" height="60"/>
+<rect x="91" class="st0" width="24" height="60"/>
+<rect x="126" class="st0" width="37" height="60"/>
+<rect x="174" class="st0" width="10" height="60"/>
+<rect x="210" class="st0" width="21" height="60"/>
+<rect x="241" class="st0" width="10" height="60"/>
+<rect x="265" class="st0" width="21" height="60"/>
 </svg>

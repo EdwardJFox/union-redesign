@@ -81,7 +81,7 @@
     .title {
       width: 100%;
       padding: 0.2em 0.8em;
-      background-color: $pink;
+      background-color: $union_green;
       background-image: url('../assets/event_bg.svg');
       background-size: auto 100%;
 
@@ -98,7 +98,7 @@
         .event_item {
           width: 100%;
           margin-bottom: 0.5em;
-          border-left: 6px solid $pink;
+          border-left: 6px solid $union_green;
           background-color: #fff;
           .event_image {
             display: none;
@@ -108,7 +108,7 @@
           }
           .event_info {
             dt {
-              background-color: $pink;
+              background-color: $union_green;
               padding: 0.4em 0.8em;
               @include displayFlex;
               @include flexAlign(center);
@@ -319,7 +319,6 @@
 
           .event_item {
             @include flexFixed(22%);
-            border-left: 6px solid $pink;
             background-color: #fff;
             position: relative;
             overflow: hidden;
