@@ -29,6 +29,12 @@
   display: -webkit-flex;
   display: flex;
 }
+@mixin flex($grow){
+  -webkit-box-flex: $grow;
+    -ms-flex: $grow;
+  -webkit-flex: $grow;
+          flex: $grow;
+}
 @mixin flexFixed($width) {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 $width;
