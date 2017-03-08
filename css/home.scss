@@ -208,23 +208,41 @@
 
   &.socialMedia {
     background-color: rgba(29, 161, 244, 0.2);
+    padding: 1em 0;
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      li {
-        @include displayFlex;
-        .icon {
-          @include flexFixed(120px);
+    .icons {
+      width: 100%;
+      ul {
+        @include displayFlex();
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+          flex: 1;
+          text-align: center;
           img {
-            width: 100%;
+            width: 90%;
+          }
+          .name {
+            display: none;
           }
         }
-        .name {
-          @include flex(1);
-        }
-
+      }
+    }
+    .timeline {
+      text-align: center;
+      iframe {
+        margin: 1em auto !important;
+        width: 95% !important;
+      }
+    }
+    .youtube {
+      text-align: center;
+      iframe {
+        margin: 1em auto;
+        border: none;
+        width: 95%;
+        height: 260px;
       }
     }
   }
@@ -405,6 +423,93 @@
         }
       }
     }
+    &.socialMedia .span3 {
+      @include displayFlex;
+      .icons {
+        width: auto;
+        @include flexFixed(80px);
+        ul {
+          @include displayFlex;
+          @include flexDirection(column);
+          li {
+            .platform {
+              position: relative;
+              display: block;
+              font-size: 1em;
+              &:hover .name {
+                width: 240px;
+              }
+              &.facebook .name {
+                background: $facebook_hover;
+              }
+              &.twitter .name {
+                background: $twitter_hover;
+              }
+              &.snapchat .name {
+                background: $snapchat_hover;
+              }
+              &.youtube .name {
+                background: $youtube_hover;
+              }
+              &.instagram .name {
+                background: $instagram_hover;
+              }
+            }
+            .icon {
+              width: 80px;
+              height: 80px;
+              img {
+                z-index: 80;
+                position: absolute;
+                left: 0;
+                top: 0;
+              }
+            }
+            .name {
+              z-index: 40;
+              overflow: hidden;
+              display: block;
+              width: 0;
+              height: 42px;
+              position: absolute;
+              left: 50%;
+              top: 15px;
+              transition: width 0.4s;
+              p {
+                color: #fff;
+                padding: 0.6em 0.8em 0.6em 0;
+                font-size: 0.9em;
+                text-align: right;
+              }
+              &:hover {
+              }
+            }
+          }
+        }
+      }
+      .timeline {
+        @include flex(3);
+        @include displayFlex;
+        @include flexAlign(center);
+        @include flexJustify(flex-end);
+        iframe {
+          max-width: 400px !important;
+          margin: 0;
+        }
+      }
+      .youtube {
+        @include flex(5);
+        @include displayFlex;
+        @include flexAlign(center);
+        @include flexJustify(flex-end);
+        iframe {
+          margin: 0;
+          border: none;
+          width: 96%;
+          height: 380px;
+        }
+      }
+    }
   }
 }
 /* Desktop*/
@@ -423,7 +528,7 @@
       }
     }
     .studentVoice {
-      padding: 1em 0 0;
+      padding: 1em 0;
       position: relative;
       .logo {
         position: absolute;

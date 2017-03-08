@@ -42,6 +42,13 @@
           flex: 0 0 $width;
 }
 
+@mixin flexWrap($wrap){
+  -webkit-box-wrap: $wrap;
+      -ms-flex-wrap: $wrap;
+  -webkit-flex-wrap: $wrap;
+          flex-wrap: $wrap;
+}
+
 @mixin flexAlign($align) {
   -webkit-box-align: $align;
       -ms-flex-align: $align;
@@ -54,4 +61,10 @@
       -ms-flex-pack: $justify;
   -webkit-justify-content: $justify;
           justify-content: $justify;
+}
+
+@mixin flexDirection($direction){
+      -ms-flex-direction: $direction;
+  -webkit-flex-direction: $direction;
+          flex-direction: $direction;
 }
