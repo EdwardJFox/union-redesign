@@ -1,6 +1,11 @@
 @import "colours";
 @import "mixins";
 
+/* Sort out the backgrounds on the homepage, to ensure they all have a default white */
+main section:not(:first-child) {
+  background: #fff;
+}
+
 /* Homepage specific styling */
 .splash {
   padding: 1em 0;
@@ -27,10 +32,44 @@
       padding: 0.2em 0.8em;
     }
   }
+  &.video {
+    .videoWrap {
+      background: #000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      overflow: hidden;
+      video {
+        z-index: -1;
+        width: 200%;
+        margin-left: -50%;
+      }
+    }
+  }
+  &.basshunter {
+    padding: 3em 0;
+    .logo {
+      width: 70%;
+    }
+    overflow: hidden;
+    min-height: 40vh;
+    background: rgba(0, 0, 0, 0.6);
+    .content {
+      height: 100%;
+      @include displayFlex;
+      @include flexAlign(center);
+      h3 {
+        font-size: 1.6em;
+      }
+    }
+  }
 }
 
 .row {
+  z-index: 100;
   &.news {
+    padding: 0.4em 0.6em 1.2em;
     overflow: hidden;
     background: #e7e7e7;
     .title {
@@ -38,7 +77,7 @@
       display: block;
       h2 {
         margin: 0;
-        padding: 0.1em 1em;
+        padding: 0.1em 0.2em;
       }
     }
     .newsWidget {
@@ -72,6 +111,9 @@
             }
             &:hover {
               background-color: rgba(80, 184, 72, 0.18);
+            }
+            p {
+              padding: 0.4em 0.4em;
             }
           }
         }
@@ -166,7 +208,7 @@
       }
     }
     .intro {
-
+      padding: 0 0.8em;
     }
     .content {
       ul {
@@ -257,7 +299,6 @@
   }
 }
 
-
 /* Tablets*/
 @media (min-width: 48em){
   .splash {
@@ -277,13 +318,45 @@
         text-align: left;
       }
     }
+    &.video {
+      .videoWrap {
+        width: 100%;
+        video {
+          z-index: -1;
+          min-height: 100vh;
+          width: 100% !important;
+          margin: 0 auto;
+        }
+      }
+    }
+    &.basshunter {
+      min-height: 60vh;
+      padding: 0;
+    }
   }
   .row {
     &.news {
       height: 332px;
       padding: 1em 0;
+      position: relative;
+      background-image: url('../assets/news_bg.svg');
+      background-position: right center;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
       .title {
-        display: none;
+        width: auto;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        h2 {
+          color: #878787;
+          position: absolute;
+          transform: rotate(270deg);
+          bottom: 128px;
+          left: -24px;
+          font-size: 4em;
+        }
       }
       .newsWidget {
         @include displayFlex;

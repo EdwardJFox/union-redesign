@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, height=device-height">
   <title>Staffordshire Students' Union</title>
   <!-- Pure CSS Grids -->
 
@@ -63,6 +63,13 @@
     <div class="closeButton"><i class="material-icons">menu</i></div>
     <div class="header">
       <a href="/"><img src="https://staffsunion.s3.amazonaws.com/images/union_logo_white_full.png" alt="Union Logo"></a>
+    </div>
+
+    <div class="search">
+      <div class="icon"><i class="material-icons">search</i></div>
+      <div class="searchInput">
+        <input type="search" placeholder="Search">
+      </div>
     </div>
 
     <section>
@@ -226,22 +233,15 @@
   </div>
   <main id="fullWidth">
     <section class="row">
-      <div class="span3 splash leadership">
-        <div class="pure-g">
-          <div class="pure-u-1-1 pure-u-lg-1-12"></div>
-          <div class="pure-u-1-1 pure-u-lg-1-3 flex-middle">
-            <img src="assets/leaderhip_logo_dark_text.png" class="logo">
+      <div class="span3 splash video basshunter">
+        <div class="videoWrap"><video src="https://staffsunion.s3.amazonaws.com/images/events/basshunter/video.mp4" autoplay loop></video></div>
+          <div class="content">
+            <div class="content-center">
+              <img src="assets/basshunter_logo.png" class="logo">
+              <h3 class="white">LRV, 9pm - 3am, tonight</h3>
+              <p><a href="/" class="blockLink whiteBg black">Buy Tickets</a></p>
+            </div>
           </div>
-          <div class="pure-u-1-1 pure-u-lg-1-12"></div>
-          <div class="pure-u-1-1 pure-u-lg-5-12 content">
-            <video src="assets/noms_video.mp4" autoplay muted loop poster="assets/leadership_noms_poster.png" style="width: 60%;">
-
-            </video>
-            <p class="leader">The Leadership Race Nominations are now open!</p>
-            <p>You have until Wednesday the 1st of March to nominate yourself as the next potential leader of the Students' Union</p>
-            <p><a href="/" class="blockLink greenBg white">Read more, and nominate yourself here</a></p>
-          </div>
-          <div class="pure-u-1-1 pure-u-lg-1-12"></div>
         </div>
       </div>
     </section>

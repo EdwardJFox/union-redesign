@@ -1,4 +1,9 @@
 /* For all the default html styling, not to be used classes */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 video {
   width: 100%;
 }
