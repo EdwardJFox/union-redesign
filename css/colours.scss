@@ -37,7 +37,20 @@ $twitter_hover: #4a9bd9;
 $youtube: #E52D27;
 $youtube_hover: #cd241f;
 
-/* Advice */
+/* Events */
+// $event_highlight: $pink;
+$event_highlight: $union_green;
+
+/* Advice Purple */
+/*
 $advice_main: #7063d7;
 $advice_main_hover: #6155c7;
 $advice_main_dark: #2e266b;
+*/
+$advice_main: $union_green;
+$advice_main_hover: $union_green_hover;
+$advice_main_dark: $union_green_hover;
+
+/* Social Media */
+// $social_media_bg: rgba(29, 161, 244, 0.2);
+$social_media_bg: rgba(80, 184, 72, 0.2);

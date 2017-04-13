@@ -14,6 +14,18 @@ footer {
   	border-bottom: 200px solid $cyan;
   	border-right: 99vw solid transparent;
   }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: -179px;
+    right: 0;
+  	width: 0;
+  	height: 0;
+  	border-bottom: 180px solid $darkCyan;
+  	border-left: 70vw solid transparent;
+    z-index: -100;
+  }
   #footerLinks {
     padding-bottom: 2em;
     h2, a, p {
@@ -37,6 +49,15 @@ footer {
     }
     a:hover {
       text-decoration: underline;
+    }
+  }
+  #footerBottom {
+    text-align: center;
+    color: #fff;
+    background-color: $darkCyan;
+    padding: 0.8em 0;
+    a {
+      text-decoration: none;
     }
   }
 }

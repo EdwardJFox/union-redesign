@@ -140,6 +140,7 @@ main section:not(:first-child) {
     }
     .eventList {
       padding: 0 0.8em;
+      position: relative;
       .msl_eventlist > div {
         padding: 0.8em 0;
         .event_item {
@@ -193,6 +194,9 @@ main section:not(:first-child) {
             }
           }
         }
+      }
+      .eventsArrow {
+        display: none;
       }
     }
   }
@@ -287,7 +291,7 @@ main section:not(:first-child) {
   }
 
   &.socialMedia {
-    background-color: rgba(29, 161, 244, 0.2);
+    background-color: $social_media_bg;
     padding: 1em 0;
 
     .icons {
@@ -721,6 +725,44 @@ main section:not(:first-child) {
       #whatson {
         width: 1200px;
         margin: 0 auto;
+      }
+      .eventsArrow {
+        @include displayFlex(!important);
+        @include flexJustify(center);
+        @include flexAlign(center);
+        background-color: $event_highlight;
+        padding: 0.4em;
+        position: absolute;
+        right: 2em;
+        top: calc(50% - 2em);
+        height: 4em;
+        width: 4em;
+        border-radius: 2em;
+        cursor: pointer;
+        color: #fff;
+
+        .message {
+          opacity: 0;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+          display: block;
+          color: #fff;
+          position: absolute;
+          width: 6em;
+          bottom: -1.3em;
+          right: -1.3em;
+        }
+
+        &:hover {
+          .message {
+            opacity: 1;
+          }
+        }
+
+        i {
+          color: #fff;
+          font-size: 3em;
+        }
       }
     }
 

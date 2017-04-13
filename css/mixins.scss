@@ -23,11 +23,11 @@
 }
 
 /* Just so there is a default way of creating a flexbox*/
-@mixin displayFlex(){
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+@mixin displayFlex($important:""){
+  display: -webkit-box #{$important};
+  display: -ms-flexbox #{$important};
+  display: -webkit-flex #{$important};
+  display: flex #{$important};
 }
 @mixin flex($grow){
   -webkit-box-flex: $grow;
