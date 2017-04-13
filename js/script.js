@@ -6,4 +6,20 @@ $(document).ready(function(){
     }
   });
 
+  homepage();
+
 });
+
+function homepage(){
+  $('.success .stories').unslider({
+  	infinite: true,
+  	arrows: {
+  		//  Unslider default behaviour
+  		prev: '',
+  		next: '',
+  	},
+  	autoplay: true,
+  	speed: 1200,
+    delay: 5000
+  });
+}

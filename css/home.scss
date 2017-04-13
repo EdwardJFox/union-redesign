@@ -250,6 +250,35 @@ main section:not(:first-child) {
     }
   }
 
+  .success {
+    position: relative;
+    padding: 0 0.8em;
+
+    @include displayFlex;
+    @include flexDirection(column);
+    @include flexAlign(center);
+    @include flexJustify(center);
+
+    li p {
+      text-align: center;
+    }
+
+    .blockLink {
+      margin: 0.4em 0;
+    }
+
+    .unslider-nav {
+      margin: 0 auto;
+      li {
+        height: 10px;
+        width: 10px;
+      }
+    }
+    .quote_icon {
+      display: none;
+    }
+  }
+
   .advert {
     img {
       padding: 1em;
@@ -294,6 +323,32 @@ main section:not(:first-child) {
         border: none;
         width: 95%;
         height: 260px;
+      }
+    }
+  }
+
+  &.advice {
+    .title {
+      background: $advice_main;
+      h2 {
+        color: #fff;
+        margin: 0;
+        padding: 0.4em 0.8em;
+      }
+    }
+    .content {
+      .areas {
+        .area {
+          margin: 0.4em;
+          padding: 0.6em 0.8em;
+          color: #fff;
+          text-decoration: none;
+          background: $advice_main;
+          display: block;
+          &:hover {
+            background: $advice_main_hover;
+          }
+        }
       }
     }
   }
@@ -512,6 +567,8 @@ main section:not(:first-child) {
         }
       }
     }
+
+
     &.socialMedia .span3 {
       @include displayFlex;
       .icons {
@@ -599,6 +656,56 @@ main section:not(:first-child) {
         }
       }
     }
+
+    &.advice {
+      overflow: hidden;
+      height: 280px;
+      .title {
+        position: relative;
+        width: 82px;
+
+        h2 {
+          transform: rotate(270deg);
+          position: absolute;
+          left: -80px;
+          top: 86px;
+          margin: 0.6em 0 !important;
+        }
+        &::after {
+          position: absolute;
+          right: -20px;
+          top: 0px;
+          content: '';
+        	width: 0;
+        	height: 0;
+        	border-top: 280px solid $advice_main;
+        	border-right: 20px solid transparent;
+        }
+      }
+      .content {
+         @include displayFlex;
+         .areas {
+           @include displayFlex;
+           @include flexJustify(space-around);
+           @include flexWrap(wrap);
+           .area {
+             margin: 0.4em 0;
+             @include flexFixed(32%);
+           }
+         }
+       }
+    }
+
+    .success {
+      .quote_icon {
+        display: block;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        color: #d7d7d7;
+        font-size: 8em;
+      }
+    }
   }
 }
 /* Desktop*/
@@ -616,6 +723,24 @@ main section:not(:first-child) {
         margin: 0 auto;
       }
     }
+
+    &.studentVoiceRow {
+      background-image: url('../assets/student_voice_logo_grey.svg');
+      background-position: left 1% top 50%;
+      background-size: auto 55%;
+      background-repeat: no-repeat;
+    }
+
+    &.advice {
+      .content {
+        width: 1200px;
+        margin: 0 auto;
+        .areas {
+          @include flexFixed(800px);
+        }
+      }
+    }
+
     .studentVoice {
       padding: 1em 0;
       position: relative;

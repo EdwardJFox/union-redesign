@@ -22,5 +22,8 @@
     &.darkCyanBg:hover {
       background-color: darken($darkCyan, 5%);
     }
+    &.adviceBg:hover {
+      background-color: darken($advice_main, 5%);
+    }
   }
 }

@@ -18,6 +18,9 @@
   <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-min.css">
   <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
 
+  <link rel="stylesheet" href="css/unslider.css">
+  <link rel="stylesheet" href="css/unslider-dots.css">
+
   <!--<![endif]-->
 
   <!-- Google's Material Icons Font -->
@@ -32,6 +35,7 @@
 
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/unslider-min.js"></script>
 </head>
 
 <body>
@@ -59,7 +63,7 @@
     </div>
 
   </header>
-  <nav>
+  <nav id="sidebar">
     <div class="closeButton"><i class="material-icons">menu</i></div>
     <div class="header">
       <a href="/"><img src="https://staffsunion.s3.amazonaws.com/images/union_logo_white_full.png" alt="Union Logo"></a>
@@ -372,7 +376,7 @@
       </div>
     </section>
 
-    <section class="row">
+    <section class="row studentVoiceRow">
       <div class="rowInner">
         <div class="span2 studentVoice">
           <div class="logo">
@@ -391,25 +395,20 @@
             </ul>
           </div>
         </div>
-        <div class="span1 advert">
-          <img src="assets/advert.png">
+        <div class="span1 success">
+          <h4>Union Success Stories</h4>
+          <div class="stories">
+            <ul>
+              <li><p>“The people you work with during shifts are friendly, and the Union’s work hours have been incredibly flexible for my studies”</p></li>
+              <li><p>“The biggest change has been in my confidence”</p></li>
+            </ul>
+          </div>
+          <a href="#" class="blockLink greenBg white">Read more success stories</a>
+          <i class="material-icons quote_icon">format_quote</i>
         </div>
       </div>
     </section>
 
-    <section class="row">
-      <div class="rowInner">
-        <div class="span1">
-
-        </div>
-        <div class="span1">
-
-        </div>
-        <div class="span1">
-
-        </div>
-      </div>
-    </section>
     <section class="row socialMedia">
       <div class="rowInner">
         <div class="span3">
@@ -473,6 +472,56 @@
           <div class="youtube">
             <iframe src="http://www.youtube.com/embed/?listType=user_uploads&list=Staffssu" ></iframe>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row advice">
+      <div class="title"><h2>Advice</h2></div>
+      <div class="content">
+        <div class="intro">
+          <h2>Here to help</h2>
+          <p>Being a student can be difficult at times. So, we've compiled as much information as possible to help you along the way.</p>
+          <div class="content-center" style="padding: 0.4em 0;">
+            <a href="#" class="blockLink adviceBg white">Read more</a>
+          </div>
+        </div>
+        <div class="areas">
+          <a href="#" class="area">
+            Academic Procedures
+          </a>
+          <a href="#" class="area">
+            Bullying & Harassment
+          </a>
+          <a href="#" class="area">
+            Crime
+          </a>
+          <a href="#" class="area">
+            Housing
+          </a>
+          <a href="#" class="area">
+            International
+          </a>
+          <a href="#" class="area">
+            Pre-Registration Health and Social Work Students
+          </a>
+          <a href="#" class="area">
+            Students with Disabilities
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="row adverts">
+      <div class="rowInner">
+        <div class="span1 advert">
+          <img src="assets/advert.png">
+        </div>
+        <div class="span1 advert">
+          <img src="assets/advert_mukky.png">
+        </div>
+        <div class="span1 advert">
+          <img src="assets/advert_academic_popup.png">
         </div>
       </div>
     </section>
