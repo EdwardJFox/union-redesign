@@ -4,7 +4,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#50B848">
   <title>Staffordshire Students' Union</title>
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/site_resources/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/assets/site_resources/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/site_resources/favicon-16x16.png" sizes="16x16">
+  <link rel="mask-icon" href="/assets/site_resources/safari-pinned-tab.svg" color="#50B848">
+
+  <!-- Styling -->
   <!-- Pure CSS Grids -->
 
   <!--[if lte IE 8]>
@@ -32,6 +41,22 @@
   <!-- Site Style sheets -->
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="css/home.min.css">
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-2790440-1', 'auto');
+    ga('require', 'ec');
+    ga('send', 'pageview');
+  </script>
+
+  <script async src="//staffsunion.s3.amazonaws.com/js/styleswitch.js"></script>
+
+  {head_content}
 
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

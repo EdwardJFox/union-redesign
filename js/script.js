@@ -7,9 +7,10 @@ $(document).ready(function(){
   });
 
   homepage();
-
 });
 
+
+// Homepage specific stuff, trying to keep the JavaScript input in MSL clean
 function homepage(){
   $('.success .stories').unslider({
   	infinite: true,
