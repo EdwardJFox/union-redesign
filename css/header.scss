@@ -88,10 +88,10 @@ header {
       &:hover {
         color: rgba(255, 255, 255, 0.9);
       }
+    }
 
-      &.hide {
-        display: none;
-      }
+    &.hide {
+      display: none;
     }
   }
 
@@ -116,18 +116,65 @@ header {
       font-size: 1.1em;
       font-weight: 300;
       font-family: 'Roboto', sans-serif;
+      overflow: hidden;
     }
     .chevron {
+      cursor: pointer;
       i {
         color: #fff;
         font-size: 1.8em;
         margin-top: 4px;
       }
+      &.active {
+        i {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 40px;
+      right: 0px;
+      width: 100%;
+      height: auto;
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+      z-index: 200;
+      background-color: #f2f2f3;
+      display: none;
+
+      p {
+        padding: 0.4em 0.6em;
+        color: #333;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        a {
+          display: block;
+          text-decoration: none;
+          padding: 0.4em 0.8em;
+          -webkit-transition: background 0.1s;
+                  transition: background 0.1s;
+          font-weight: 300;
+
+          &:hover {
+            background: $union_green_hover_clear;
+          }
+        }
+      }
+
+      &.open {
+        display: block;
+      }
     }
 
     &.active {
       @include displayFlex;
-      @include flexFixed(160px);
+      @include flexFixed(180px);
       @include flexAlign(center);
       @include flexJustify(center);
       padding: 0 0.4em;
@@ -177,6 +224,12 @@ header {
   header {
     .search {
       @include displayFlex;
+    }
+    .user {
+      .dropdown {
+        width: 240px;
+        max-height: calc(60vh - 40px);
+      }
     }
   }
 }

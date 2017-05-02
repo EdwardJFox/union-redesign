@@ -2,9 +2,6 @@
 
 /* For when you want to use a google material icon in a ::before or ::after*/
 @mixin googleFont {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 1.6em;
-          flex: 0 0 1.6em;
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
@@ -28,6 +25,12 @@
   display: -ms-flexbox #{$important};
   display: -webkit-flex #{$important};
   display: flex #{$important};
+}
+@mixin displayInlineFlex($important:""){
+  display: -webkit-box #{$important};
+  display: -ms-inline-flexbox #{$important};
+  display: -webkit-inline-flex #{$important};
+  display: inline-flex #{$important};
 }
 @mixin flex($grow){
   -webkit-box-flex: $grow;

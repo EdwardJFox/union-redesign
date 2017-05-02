@@ -1,0 +1,54 @@
+/* Admin Tool bar */
+.tools {
+  ul {
+    @include displayFlex(!important);
+    @include flexAlign(center);
+
+    li {
+      padding: 0 !important;
+      margin-right: 0.4em !important;
+      input {
+        margin-right: 0.2em !important;
+      }
+    }
+  }
+}
+
+#msl_toolbar {
+  overflow: auto !important;
+  margin: 0 !important;
+  ul {
+    li {
+      a {
+        padding: 0.4em 0.8em !important;;
+        border-left: none;
+        &:hover {
+          background: $union_green_hover_clear;
+        }
+        &.msl_toolbarbutton_selected {
+          color: $union_green_dark;
+          font-size: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+/* Old import specific fixes */
+input#ctl00_ctl00_Main_AdminPageContent_cbIsEnabled_chkItem {
+  display: block !important;
+}
+input[class^='ctl00_Main_EventTypeName_CheckboxList_checkList'], input[class^='ctl00_Main_AndEventTypeName_CheckboxList_checkList'], .msl_admin_page input[type="checkbox"] {
+  display: inline-block !important;
+}
+
+input#ctl00_Main_btnRecipients {
+  color: #fff !important;
+  padding: 0.4em 0.8em !important;
+  background-color: #50B848 !important;
+  text-decoration: none !important;
+}
+
+#ctl00_ctl00_Main_AdminPageContent_pnlReport {
+  overflow: visible !important;
+}

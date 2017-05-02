@@ -27,3 +27,23 @@
     }
   }
 }
+
+/* Add Button */
+.add, .msl_add {
+  background: none;
+  text-decoration: none;
+  @include displayInlineFlex;
+  @include flexAlign(center);
+  padding: 0.4em 0.8em;
+
+  &:hover {
+    background: $union_green_hover_clear;
+  }
+
+  &:before {
+    @include googleFont;
+    @include flexFixed(1em);
+    content: 'add';
+    padding-right: 0.2em;
+  }
+}
