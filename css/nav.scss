@@ -229,7 +229,7 @@ nav#sidebar {
 /* Tablets*/
 @media (min-width: 48em){
   nav {
-    width: 40%;
+    width: 40% !important;
     .search {
       display: none;
     }
@@ -239,7 +239,7 @@ nav#sidebar {
 /* Desktop */
 @media (min-width: 80em){
   nav {
-    width: 25%;
+    width: 25% !important;
   }
 }
 

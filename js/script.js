@@ -24,3 +24,8 @@ function homepage(){
     delay: 5000
   });
 }
+
+// Setup the header with the admin login stuff
+function setupHeader(){
+
+}

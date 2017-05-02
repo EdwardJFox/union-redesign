@@ -27,6 +27,10 @@ header {
   }
 
   .search {
+    /* MSL Default changes */
+    padding: 0;
+    background: none;
+
     display: none;
 
     -webkit-box-flex: 0;
@@ -71,20 +75,28 @@ header {
     }
   }
 
+  .login {
+    @include displayFlex;
+    @include flexFixed(120px);
+    @include flexAlign(center);
+    @include flexJustify(center);
+
+    .link {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 300;
+      &:hover {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      &.hide {
+        display: none;
+      }
+    }
+  }
+
   .user {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 160px;
-            flex: 0 0 160px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    display: flex;
-    padding: 0 0.4em;
+    display: none;
 
     .avatar {
       color: $union_green_dark;
@@ -112,13 +124,24 @@ header {
         margin-top: 4px;
       }
     }
+
+    &.active {
+      @include displayFlex;
+      @include flexFixed(160px);
+      @include flexAlign(center);
+      @include flexJustify(center);
+      padding: 0 0.4em;
+    }
   }
 
   .basket {
+    padding: 0;
+    background: none;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 60px;
             flex: 0 0 60px;
     position: relative;
+    display: none;
 
     i {
       font-size: 2em;
@@ -137,6 +160,15 @@ header {
       border-radius: 2em;
       font-family: 'Roboto', sans-serif;
       font-size: 0.8em;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    &.active {
+      display: block;
     }
   }
 }
