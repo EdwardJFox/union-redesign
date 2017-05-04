@@ -1,0 +1,29 @@
+/* Accordion Widget */
+
+.accordion {
+  display: inline-block;
+  width: 100%;
+  margin: 0.3em 0;
+
+  > .accordionTitle {
+    padding: 0.5em 3em 0.5em 0.6em;
+    font-size: 1.1em;
+    font-weight: 300;
+    cursor: pointer;
+    background-image: url(//staffsunion.s3.amazonaws.com/images/icons/icon_arrow_white.svg);
+    background-repeat: no-repeat;
+    background-position: top 12px right 12px;
+    background-size: auto 18px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    margin: 0.5em 0;
+    &.dropped {
+        background-image: url(//staffsunion.s3.amazonaws.com/images/icons/icon_arrow_white_up.svg);
+    }
+  }
+
+  .accordionContent {
+    padding: 0.7em 0.7em 0.4em;
+  }
+}

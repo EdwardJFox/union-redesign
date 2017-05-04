@@ -1,4 +1,4 @@
-$(document).ready(function(){  setupHeader();
+/*Config Variables*/var navSlideSpeed = 300,    dropdownOptions = {        duration : 300,        complete: function(){}    },    accordionOptions = {        duration : 300,        complete: function(){}    };$(document).ready(function(){  setupHeader();
 
   $('.openMenu').on('click', function(){    $('nav').removeClass('close').addClass('open opening');    setTimeout(function(){      $('nav').removeClass('opening');    }, 800)  });  $('.closeButton').on('click', function(){    $('nav').removeClass('open').addClass('close');  });
   $(document).on('click', function closeMenu (e){
@@ -8,6 +8,7 @@ $(document).ready(function(){  setupHeader();
   });
 
   homepage();
+  setupAccordion();
 });
 
 
@@ -104,4 +105,40 @@ function userDropdownClick(){
     $dropdown.addClass('open');
     $chevron.addClass('active');
   }
+}
+
+function setupAccordion(){
+  $('.accordion').each(function(){
+    try {
+      var content = $(this).find('> .accordionContent');
+      var headers = $(this).find('> .accordionTitle');
+      if($(content).length != $(headers).length){
+        throw "Number of contents does not much the number of headers";
+      }
+      else {
+        //Hide all the content
+        $(content).hide();
+        //For each header
+        $(headers).each(function(){
+          var currentContent = $(this).next();
+          $(this).click(function(){
+            //If the current content is already visible, hide it
+            if($(currentContent).is(":visible")){
+              $(currentContent).slideUp(accordionOptions);
+              $(this).removeClass('dropped');
+            }
+            //Otherwise, slide it down
+            else{
+              $(currentContent).slideDown(accordionOptions);
+              $(this).addClass('dropped');
+            }
+            ga('send', 'event', 'Components', 'Accordion', $(this).text());
+          });
+        })
+      }
+    }
+    catch(err){
+        console.error("Accordion Error: " + err);
+    }
+  });
 }

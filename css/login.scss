@@ -1,0 +1,83 @@
+/* Login Page Styling */
+.rowInner {
+  > a {
+    text-decoration: none;
+  }
+  .span1 {
+    margin: 0.4em;
+    padding: 0 0.4em;
+    h1 {
+      margin: 0.3em 0.4em 0.1em;
+    }
+    h2 {
+      margin: 0.8em 0.2em 0.6em;
+    }
+  }
+
+  .login#ctl00_logincontrol_pnlStandardLogin {
+    @include displayFlex;
+    @include flexWrap(wrap);
+    @include flexAlign(center);
+
+    label {
+      @include flexFixed(90px);
+    }
+    input.textbox {
+      @include flex(1);
+      min-width: 75%;
+      background: #fff;
+
+      &:hover {
+        background: #fff;
+      }
+
+      &:focus {
+        background: #fff;
+      }
+    }
+    .msl-rememberme {
+      @include flex(1);
+      label {
+        padding-left: 0.2em;
+      }
+    }
+  }
+
+  .login {
+    padding: 0.8em 0;
+    #ctl00_logincontrol_lnkRegister, #ctl00_logincontrol_lnkForgottenPassword {
+      padding: 0.4em 0.6em;
+      text-decoration: none;
+      font-size: 1em;
+
+      &:hover {
+        text-decoration: none;
+        background: $union_green_hover_clear;
+      }
+    }
+  }
+}
+
+.hubWarning {
+  background-color: #f1580d;
+  color: #fff;
+  padding: 0.4em;
+  display: -js-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  margin-bottom: 0.8em;
+}
+.hubWarning i {
+  font-size: 2.4em;
+  -webkit-flex: 0 0 1.4em;
+  flex: 0 0 1.4em;
+}
+.hubWarning p {
+  -webkit-flex: 1;
+  flex: 1;
+}
+.hubWarning i, .hubWarning p {
+  color: #fff !important;
+}

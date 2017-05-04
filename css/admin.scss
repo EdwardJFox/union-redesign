@@ -1,3 +1,14 @@
+/* Admin Context Control */
+.msl-grouping-context-control {
+  padding: 0.4em 0;
+  a {
+    padding: 0.2em 0.4em;
+    &:hover {
+      background: $union_green_hover_clear;
+    }
+  }
+}
+
 /* Admin Tool bar */
 .tools {
   ul {
@@ -17,11 +28,18 @@
 #msl_toolbar {
   overflow: auto !important;
   margin: 0 !important;
+  padding: 0.8em 0 0.4em;
   ul {
+    float: none !important;
     li {
+      float: none !important;
+      display: inline-block !important;
       a {
+        float: none !important;
         padding: 0.4em 0.8em !important;;
         border-left: none;
+        height: auto !important;
+        line-height: normal !important;
         &:hover {
           background: $union_green_hover_clear;
         }
@@ -29,6 +47,18 @@
           color: $union_green_dark;
           font-size: 100% !important;
         }
+      }
+    }
+  }
+}
+
+/* Link Grid */
+.msl_linkgrid {
+  li {
+    a {
+      padding-bottom: 0.4em;
+      &:hover {
+        background-color: $union_green_hover_clear !important;
       }
     }
   }
