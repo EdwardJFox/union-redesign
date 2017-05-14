@@ -1,4 +1,5 @@
-/* Form Styling */
+/* Form Styling, lots of MSL overrides here */
+// Lots of !important in here due to overriding all the defaults
 
 // Text input box
 input.textbox {
@@ -17,6 +18,10 @@ input.textbox {
   &:focus {
     background-color: #f1f1f1 !important;
     border-bottom: 4px solid $union_green !important;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(80,184,72,1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(80,184,72,1);
+    box-shadow: 0px 0px 5px 0px rgba(80,184,72,1);
+    outline: $union_green;
   }
 }
 
@@ -32,5 +37,77 @@ input.button {
 
 /* Form pairs */
 .vpFormPair {
-  
+
+}
+
+/* Textarea */
+.vp_content {
+  > textarea {
+    background: #f1f1f1;
+    padding: 0.4em 0.6em !important;
+    border: none;
+    border-bottom: 4px solid #e7e7e7;
+    font-size: 1.1em;
+    margin-bottom: 0.4em;
+
+    &:hover {
+      background-color: #f1f1f1 !important;
+      border-bottom: 4px solid #c7ebca !important;
+    }
+
+    &:focus {
+      background-color: #f1f1f1 !important;
+      border-bottom: 4px solid $union_green !important;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(80,184,72,1);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(80,184,72,1);
+      box-shadow: 0px 0px 5px 0px rgba(80,184,72,1);
+      outline: $union_green;
+    }
+  }
+}
+
+/* Highlighting */
+.vp_highlight {
+  background-color: $union_green_hover_clear !important;
+}
+
+// Date picker
+.vp_range {
+  .date_date {
+    width: 6.5em !important;
+  }
+}
+
+/* Checkbox Grid */
+.vp_content.checkbox {
+  tr {
+    td {
+      padding: 0.2em 0.4em;
+      input[type="checkbox"] {
+        margin-right: 0.2em;
+      }
+    }
+  }
+}
+
+/* Submit Button */
+.pFormSubmit, .vpFormSubmit, .emailform {
+  input[type="submit"] {
+    padding: 0.4em 0.8em !important;
+    background-color: $union_green !important;
+    text-decoration: none !important;
+    &:hover {
+      background-color: $union_green_hover !important;
+    }
+  }
+}
+
+/* Button control row */
+.buttons {
+  input[type="submit"] {
+    padding: 0.4em 0.8em !important;
+    font-size: 1em !important;
+    margin-right: 0.4em !important;
+    margin-bottom: 0.2em !important;
+  }
 }

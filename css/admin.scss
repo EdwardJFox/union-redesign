@@ -9,6 +9,31 @@
   }
 }
 
+/* Admin Button Gird */
+#ulAdmin, #ulOrgs {
+  li {
+    a {
+      border: none !important;
+      height: 6em !important;
+      &:hover {
+        border: !important;
+        background-color: $union_green_hover_clear !important;
+      }
+    }
+  }
+}
+
+
+// Header link fix
+.mslwidget {
+  h2 {
+    a {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+    }
+  }
+}
+
 /* Admin Tool bar */
 .tools {
   ul {
@@ -37,7 +62,7 @@
       a {
         float: none !important;
         padding: 0.4em 0.8em !important;;
-        border-left: none;
+        border-left: none !important;
         height: auto !important;
         line-height: normal !important;
         &:hover {

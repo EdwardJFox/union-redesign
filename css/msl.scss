@@ -1,0 +1,53 @@
+/* Notifications */
+.msl_info {
+  padding: 0.4em 0.6em;
+  background: none !important;
+  @include displayFlex;
+  @include flexAlign(center);
+
+  &::before {
+    @include googleFont;
+    content: 'info';
+    padding: 0 0.2em 0 0;
+  }
+
+  a {
+     color: #fff;
+     padding: 0 0.2em;
+  }
+}
+
+// Notifications
+.msl_notification {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: none !important;
+  span {
+    padding: 0.4em 0.8em;
+    border: none !important;
+    background-image: none !important;
+    @include displayFlex;
+    @include flexAlign(center);
+    font-weight: 400;
+
+    &::before {
+      @include googleFont;
+      padding: 0 0.2em 0 0;
+    }
+
+    // Warning Notification
+    &.msl_warning {
+      color: #fff !important;
+      background: $notification_warning;
+      &::before {
+        content: 'warning';
+      }
+    }
+
+    // Generic Message
+    &.msl_info {
+      color: #fff !important;
+      background: $notification_generic;
+    }
+  }
+}

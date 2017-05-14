@@ -4,8 +4,12 @@
   font-weight: 300;
   text-decoration: none;
 
+  // A default colour of the Union's green
+  background-color: $union_green;
+
   &:hover {
     text-decoration: none;
+    background-color: $union_green_hover;
 
     &.greenBg:hover {
       background-color: darken($union_green, 5%);

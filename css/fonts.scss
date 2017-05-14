@@ -48,6 +48,11 @@ a:hover {
   color: $union_green_hover;
 }
 
+/* Specifically for an anchor in another dic=v, to stop its size compounding up and looking weird */
+p > a, span > a {
+  font-size: 1em;
+}
+
 b {
   font-weight: 600;
 }
