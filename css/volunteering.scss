@@ -1,0 +1,251 @@
+/* For the /volunteering/ section */
+
+.activity-detail dt, .opportunity-list dt {
+	font-size: 1.2em;
+	font-weight: 600;
+}
+.activity-detail dd, .opportunity-list dd {
+	margin: 0.6em 0;
+	font-size: 1.2em;
+	font-weight: 300;
+}
+.vol-skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.vol-skills-list li {
+  position: relative;
+  flex: 0 0 48%;
+  height: 180px;
+  display: inline-block;
+  margin-bottom: 0.8em;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.vol-skills-list li.workingwithothers {
+  background-image: url('https://staffsunion.s3.amazonaws.com/images/volunteering/icons/Working%20with%20Others-01.png');
+}
+.vol-skills-list li.organisationalskills {
+  background-image: url('https://staffsunion.s3.amazonaws.com/images/volunteering/icons/Organisational%20Skills-01.png');
+}
+.vol-skills-list li.leadershipskills {
+  background-image: url('https://staffsunion.s3.amazonaws.com/images/volunteering/icons/Leadershop%20Skills-01.png');
+}
+.vol-skills-list li.presentingyourself {
+  background-image: url('https://staffsunion.s3.amazonaws.com/images/volunteering/icons/Presenting%20Yourself-01.png');
+}
+.vol-skills-list li.communicationandinterpersonalskills {
+  background-image: url('https://staffsunion.s3.amazonaws.com/images/volunteering/icons/Communication%20and%20Interpersonal%20Skills-01.png');
+}
+.vol-skills-list li.valuingdiversityanddifference {
+  background-image: url('https://staffsunion.s3.amazonaws.com/images/volunteering/icons/Valuing%20diversity%20and%20difference-01.png');
+}
+.vol-skills-list li.selfmotivationandinitiative {
+  background-image: url('https://staffsunion.s3.amazonaws.com/images/volunteering/icons/Self-Motivation%20and%20Initiative-01.png');
+}
+.vol-skills-list li.problemsolving {
+  background-image: url('https://staffsunion.s3.amazonaws.com/images/volunteering/icons/Problem%20Solving-01.png');
+}
+.vol-skills-list li.negotiationskills {
+  background-image: url('https://staffsunion.s3.amazonaws.com/images/volunteering/icons/Negotiation%20Skills-01.png');
+}
+.vol-skills-list li.applyingtechnology {
+  background-image: url('https://staffsunion.s3.amazonaws.com/images/volunteering/icons/Applying%20Technology-01.png');
+}
+.vol-skills-list li.numeracyskills {
+  background-image: url('https://staffsunion.s3.amazonaws.com/images/volunteering/icons/Numeracy%20Skills-01.png');
+}
+.vol-skills-list li .skill-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.4em;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.vol-skills-list li .skill-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.4em;
+  font-size: 0.9em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.msl-vol-opportunity-apply a, .opportunity-list dd a {
+  background-color: #50B848;
+  color: #fff;
+  padding: 0.3em 0.6em;
+}
+#provider-details h1 a, .opportunity-list h3 a {
+  font-family: 'league_gothicregular', sans-serif;
+}
+.msl-vol-opportunity-types {
+  background-color: #eee;
+  padding: 0.8em 1em;
+}
+
+.opportunity-list > ul {
+  list-style: none;
+}
+
+.opportunity-list > ul > li {
+  margin-bottom: 0.6em;
+  padding-left: 0.8em;
+  border-left: 4px solid #50B848;
+}
+
+/* Profile */
+.vol-profile .vol-skills-list li {
+  margin-bottom: 2.8em;
+}
+.vol-profile .vol-skills-list li span:first-of-type {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 0.9em;
+  color: #fff;
+  padding: 0.4em;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.vol-profile .skill-count {
+  background: #777 url('http://www.staffsunion.com/pagestylesheet/activities/volunteering/profile/pending.png') !important;
+  top: auto !important;
+  bottom: -1.85em;
+  height: 36px;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+}
+.vol-profile .skill-count:before {
+  content: '';
+  background: #50B848 url('http://www.staffsunion.com/pagestylesheet/activities/volunteering/profile/pending.png') !important;
+  width: 0px;
+  height: 36px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+}
+
+.vol-profile .skill-count.percent10:before { width: 10%; }
+.vol-profile .skill-count.percent20:before { width: 20%; }
+.vol-profile .skill-count.percent30:before { width: 30%; }
+.vol-profile .skill-count.percent40:before { width: 40%; }
+.vol-profile .skill-count.percent50:before { width: 50%; }
+.vol-profile .skill-count.percent60:before { width: 60%; }
+.vol-profile .skill-count.percent70:before { width: 70%; }
+.vol-profile .skill-count.percent80:before { width: 80%; }
+.vol-profile .skill-count.percent90:before { width: 90%; }
+.vol-profile .skill-count.percent100:before { width: 100%; }
+
+.msl-role {
+  width: 100%;
+  display: block;
+  padding: 0.3em 0.6em;
+}
+.msl-role input[type=checkbox], .msl_row input[type=checkbox] {
+  display: inline-block !important;
+}
+
+/* Browse page */
+#browse-opps {
+  .filters {
+    .toggle-all, .toggle-none {
+      padding: 0.4em 0.6em;
+
+      &:hover {
+        background: $union_green_hover_clear;
+      }
+    }
+    > div {
+      padding-top: 0.6em;
+    }
+    > h3 {
+      font-size: 1.4em;
+      padding-bottom: 0.2em;
+    }
+
+    > input[type="submit"] {
+      display: block;
+      margin: 0.4em 0;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 0.4em;
+    }
+  }
+  .allopps {
+    padding: 0 0.7em;
+    .search-panel {
+      text-align: right;
+      padding: 0.4em 0;
+    }
+
+    .opportunity-list {
+      .btn {
+        padding: 0.6em 0.8em;
+        margin-bottom: 0.6em;
+
+        a {
+          float: right;
+          text-decoration: none;
+        }
+      }
+    }
+    #ctl00_Main_ActivityListPaged1_dp2 {
+      @include displayFlex;
+      span {
+        @include flex(1);
+        text-align: center;
+      }
+      span, a {
+        padding: 0.4em 0.8em;
+      }
+      a {
+
+        &:hover {
+          background: $union_green_hover_clear;
+        }
+      }
+    }
+  }
+  table {
+    td {
+      display: block;
+      padding: 0.2em;
+    }
+  }
+}
+
+/*Tablet*/
+@media (min-width: 48em){
+  .vol-skills-list {
+    justify-content: flex-start;;
+  }
+  .vol-skills-list li {
+    flex: 0 0 24%;
+    margin-right: 1%;
+  }
+
+  /* Browse page */
+  #browse-opps {
+    @include displayFlex;
+    @include flexWrap(wrap);
+
+    .filters {
+      @include flexFixed(200px)
+    }
+    .allopps {
+      @include flex(1);
+    }
+  }
+}

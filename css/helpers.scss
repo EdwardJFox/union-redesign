@@ -97,3 +97,15 @@
 .adviceBg {
   background-color: $advice_main;
 }
+
+
+/* Images */
+img.imgResponsive {
+  max-width: 100%;
+  height: auto !important;
+  width: auto !important;
+}
+
+img.imgStretch {
+  width: 100%;
+}

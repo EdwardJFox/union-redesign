@@ -32,6 +32,11 @@
   }
 }
 
+.blockLink {
+  display: -webkit-inline-block;
+  display: inline-block;
+}
+
 /* Add Button */
 .add, .msl_add {
   background: none;

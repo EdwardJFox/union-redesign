@@ -21,15 +21,30 @@ main {
     section {
       &.row {
         @include displayFlex
+        @include flexWrap(wrap);
+        .rowHeader {
+          flex: 0 0 100%;
+          width: 100%;
+          display: block;
+
+          span {
+            width: 1200px;
+            margin: 0 auto;
+            display: block;
+          }
+        }
         .rowInner {
           width: 1200px;
           margin: 0 auto;
           @include displayFlex;
+          .span1, .span2, .span3 {
+            position: relative;
+          }
           .span1 {
             -webkit-box-flex: 0;
-            -webkit-flex: 0 0 calc(100% / 3);
-                -ms-flex: 0 0 calc(100% / 3);
-                    flex: 0 0 calc(100% / 3);
+            -webkit-flex: 0 0 calc((100% / 3);
+                -ms-flex: 0 0 calc((100% / 3);
+                    flex: 0 0 calc((100% / 3);
           }
           .span2 {
             -webkit-box-flex: 0;
@@ -43,6 +58,10 @@ main {
                 -ms-flex: 0 0 100%;
                     flex: 0 0 100%;
           }
+        }
+
+        &.header {
+          min-height: 176px;
         }
       }
     }

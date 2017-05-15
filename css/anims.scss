@@ -1,0 +1,29 @@
+/* Used for pulse on hover */
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0px 0px 0px 0px #50B848;
+    -moz-box-shadow: 0px 0px 0px 0px #50B848;
+    box-shadow: 0px 0px 0px 0px #50B848;
+  }
+
+  100% {
+    -webkit-box-shadow: 0px 0px 0px 12px transparent;
+    -moz-box-shadow: 0px 0px 0px 12px transparent;
+    box-shadow: 0px 0px 0px 12px transparent;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0px 0px 0px 0px #50B848;
+    -moz-box-shadow: 0px 0px 0px 0px #50B848;
+    box-shadow: 0px 0px 0px 0px #50B848;
+  }
+
+  100% {
+    -webkit-box-shadow: 0px 0px 0px 12px transparent;
+    -moz-box-shadow: 0px 0px 0px 12px transparent;
+    box-shadow: 0px 0px 0px 12px transparent;
+  }
+}

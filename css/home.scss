@@ -122,14 +122,14 @@ main section:not(:first-child) {
   }
   &.events {
     background: #333;
-    background-image: url('../assets/event_row_bg.png');
+    background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_row_bg.png');
     background-size: 33% auto;
 
     .title {
       width: 100%;
       padding: 0.2em 0.8em;
       background-color: $union_green;
-      background-image: url('../assets/event_bg.svg');
+      background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_bg.svg');
       background-size: auto 100%;
 
       h2 {
@@ -398,7 +398,7 @@ main section:not(:first-child) {
       height: 332px;
       padding: 1em 0;
       position: relative;
-      background-image: url('../assets/news_bg.svg');
+      background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/news_bg.svg');
       background-position: right center;
       background-size: auto 100%;
       background-repeat: no-repeat;
@@ -408,12 +408,13 @@ main section:not(:first-child) {
         position: absolute;
         left: 0px;
         top: 0px;
+        @include flexFixed(82px);
         h2 {
           color: #878787;
           position: absolute;
           transform: rotate(270deg);
           bottom: 128px;
-          left: -24px;
+          left: -58px;
           font-size: 4em;
         }
       }
@@ -475,7 +476,7 @@ main section:not(:first-child) {
         width: 82px;
         overflow: hidden;
         position: relative;
-        background-image: url('../assets/event_bg_vert.svg');
+        background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_bg_vert.svg');
         background-size: 100% auto;
 
         h2 {
@@ -509,19 +510,19 @@ main section:not(:first-child) {
             overflow: hidden;
 
             &:nth-child(1):after {
-              background-image: url('../assets/event_barcode_1.svg');
+              background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_1.svg');
             }
 
             &:nth-child(2):after {
-              background-image: url('../assets/event_barcode_2.svg');
+              background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_2.svg');
             }
 
             &:nth-child(3):after {
-              background-image: url('../assets/event_barcode_3.svg');
+              background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_3.svg');
             }
 
             &:nth-child(4):after {
-              background-image: url('../assets/event_barcode_4.svg');
+              background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_4.svg');
             }
 
             &:after {
@@ -575,6 +576,24 @@ main section:not(:first-child) {
 
     &.socialMedia .span3 {
       @include displayFlex;
+
+      .title {
+        width: auto;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        @include flexFixed(82px);
+        h2 {
+          color: #878787;
+          position: absolute;
+          transform: rotate(270deg);
+          bottom: 128px;
+          left: -58px;
+          font-size: 4em;
+        }
+      }
+
       .icons {
         width: auto;
         @include flexFixed(80px);
@@ -751,6 +770,8 @@ main section:not(:first-child) {
           width: 6em;
           bottom: -1.3em;
           right: -1.3em;
+          padding: 0 !important;
+          background: none !important;
         }
 
         &:hover {
@@ -767,7 +788,7 @@ main section:not(:first-child) {
     }
 
     &.studentVoiceRow {
-      background-image: url('../assets/student_voice_logo_grey.svg');
+      background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/logos/student_voice_logo_grey.svg');
       background-position: left 1% top 50%;
       background-size: auto 55%;
       background-repeat: no-repeat;
