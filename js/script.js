@@ -25,6 +25,41 @@ function homepage(){
   	speed: 1200,
     delay: 5000
   });
+
+
+  // Setup the news widget
+  $newsItems = $('#homepagebanner .news_item');
+  $newsWrap = $('.newsItems');
+  $newsList = $('.newsList ul');
+
+  for(var i = 0; i < $newsItems.length; i++){
+    var href = $newsItems.eq(i).find('a').attr('href');
+    var src = $newsItems.eq(i).find('img').attr('src');
+    var toAppend = '<div class="newsItem ' + (i + 1) + '">';
+    var title = $newsItems.eq(i).find('a').text();
+    toAppend += '<a href="' + href + '" class="image">';
+    toAppend += '<img src="' + src + '" /></a><div class="newsDescription">';
+    toAppend += '<p>' + title + '</p><span>';
+    toAppend += '<a href="' + href + '" class="blockLink greenBg white">Read more</a></span></div></div>';
+
+    $newsWrap.append(toAppend);
+
+    var listToAppend = '<li id="' + (i + 1) + '"><p>' + title + '</p></li>';
+    $newsList.append(listToAppend);
+  }
+
+  newsItemClick(1);
+
+  $newsList.find('li').on('click', function(){
+    newsItemClick($(this).attr('id'));
+  });
+}
+
+function newsItemClick(index){
+  $('.newsItem').hide();
+  $('.newsItem.' + index).show();
+  $('.newsList li').removeClass('active');
+  $('#' + index).addClass('active');
 }
 
 // Setup the header with the admin login stuff

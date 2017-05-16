@@ -9,9 +9,14 @@ main section:not(:first-child) {
 /* Homepage specific styling */
 .splash {
   padding: 1em 0;
+
+  // Union branded
+  &.union {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
   /* Leadership Race*/
   &.leadership {
-
     .logo {
       width: 70%;
     }
@@ -82,9 +87,13 @@ main section:not(:first-child) {
     }
     .newsWidget {
       .newsItems {
+        overflow: hidden;
         .newsItem {
-          img {
-            width: 100%;
+          .image {
+            text-align: center;
+            img {
+              max-height: 270px;
+            }
           }
         }
       }
@@ -395,7 +404,6 @@ main section:not(:first-child) {
   }
   .row {
     &.news {
-      height: 332px;
       padding: 1em 0;
       position: relative;
       background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/news_bg.svg');
@@ -403,41 +411,33 @@ main section:not(:first-child) {
       background-size: auto 100%;
       background-repeat: no-repeat;
       .title {
-        width: auto;
-        height: 100%;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        @include flexFixed(82px);
-        h2 {
-          color: #878787;
-          position: absolute;
-          transform: rotate(270deg);
-          bottom: 128px;
-          left: -58px;
-          font-size: 4em;
-        }
+        padding: 0 0.4em;
       }
+
       .newsWidget {
         @include displayFlex;
+        padding: 0 1em;
         .newsItems {
-          flex: 0 0 505px;
+          flex: 1 0;
           .newsItem {
-            display: block;
-            padding: 1em;
-          }
-        }
-
-        .newsInfo {
-          flex: 1;
-          .newsDescription {
-            height: 100%;
-            padding: 0.4em 0.8em;
             @include displayFlex;
-            justify-content: center;
-            flex-direction: column;
-            span {
-              padding: 0.4em;
+            padding: 1em;
+
+            .image {
+              @include flexFixed(55%);
+            }
+
+            .newsDescription {
+              @include displayFlex;
+              @include flex(1);
+              text-align: center;
+              @include flexJustify(center);
+              @include flexDirection(column);
+              height: 270px;
+              padding: 0.4em 0.8em;
+              span {
+                padding: 0.4em;
+              }
             }
           }
         }
@@ -467,27 +467,7 @@ main section:not(:first-child) {
       }
     }
     &.events {
-      height: 320px;
       background-size: auto 33%;
-      .title {
-        -ms-flex: 0 0 82px;
-            -webkit-box-flex: 0;
-                flex: 0 0 82px;
-        width: 82px;
-        overflow: hidden;
-        position: relative;
-        background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_bg_vert.svg');
-        background-size: 100% auto;
-
-        h2 {
-          -webkit-transform: rotate(-90deg);
-                  transform: rotate(-90deg);
-          padding: 0;
-          position: absolute;
-          bottom: 64px;
-          left: -37px;
-        }
-      }
       .eventList {
         -webkit-box-flex: 1;
             -ms-flex: 1;
@@ -682,29 +662,6 @@ main section:not(:first-child) {
 
     &.advice {
       overflow: hidden;
-      height: 280px;
-      .title {
-        position: relative;
-        width: 82px;
-
-        h2 {
-          transform: rotate(270deg);
-          position: absolute;
-          left: -80px;
-          top: 86px;
-          margin: 0.6em 0 !important;
-        }
-        &::after {
-          position: absolute;
-          right: -20px;
-          top: 0px;
-          content: '';
-        	width: 0;
-        	height: 0;
-        	border-top: 280px solid $advice_main;
-        	border-right: 20px solid transparent;
-        }
-      }
       .content {
          @include displayFlex;
          .areas {
@@ -735,12 +692,50 @@ main section:not(:first-child) {
 @media (min-width: 80em){
   .row {
     &.news {
+      height: 332px;
       .newsWidget {
         width: 1200px;
         margin: 0 auto;
+        padding: 0;
+      }
+      .title {
+        width: auto;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        @include flexFixed(82px);
+        h2 {
+          color: #878787;
+          position: absolute;
+          transform: rotate(270deg);
+          bottom: 128px;
+          left: -58px;
+          font-size: 4em;
+        }
       }
     }
     &.events {
+      height: 320px;
+      .title {
+        -ms-flex: 0 0 82px;
+            -webkit-box-flex: 0;
+                flex: 0 0 82px;
+        width: 82px;
+        overflow: hidden;
+        position: relative;
+        background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_bg_vert.svg');
+        background-size: 100% auto;
+
+        h2 {
+          -webkit-transform: rotate(-90deg);
+                  transform: rotate(-90deg);
+          padding: 0;
+          position: absolute;
+          bottom: 64px;
+          left: -37px;
+        }
+      }
       #whatson {
         width: 1200px;
         margin: 0 auto;
@@ -795,11 +790,34 @@ main section:not(:first-child) {
     }
 
     &.advice {
+      height: 280px;
       .content {
         width: 1200px;
         margin: 0 auto;
         .areas {
           @include flexFixed(800px);
+        }
+      }
+      .title {
+        position: relative;
+        width: 82px;
+
+        h2 {
+          transform: rotate(270deg);
+          position: absolute;
+          left: -80px;
+          top: 86px;
+          margin: 0.6em 0 !important;
+        }
+        &::after {
+          position: absolute;
+          right: -20px;
+          top: 0px;
+          content: '';
+        	width: 0;
+        	height: 0;
+        	border-top: 280px solid $advice_main;
+        	border-right: 20px solid transparent;
         }
       }
     }
