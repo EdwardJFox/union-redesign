@@ -13,6 +13,7 @@ main section:not(:first-child) {
   // Union branded
   &.union {
     background: rgba(0, 0, 0, 0.4);
+    display: none;
   }
 
   /* Leadership Race*/
@@ -82,12 +83,13 @@ main section:not(:first-child) {
       display: block;
       h2 {
         margin: 0;
-        padding: 0.1em 0.2em;
+        padding: 0.1em 0.2em 0.1em 0.9em;
       }
     }
     .newsWidget {
       .newsItems {
         overflow: hidden;
+        text-align: center;
         .newsItem {
           .image {
             text-align: center;
@@ -148,7 +150,7 @@ main section:not(:first-child) {
       }
     }
     .eventList {
-      padding: 0 0.8em;
+      padding: 0 0.8em 0.8em;
       position: relative;
       .msl_eventlist > div {
         padding: 0.8em 0;
@@ -188,6 +190,7 @@ main section:not(:first-child) {
             .msl_event_time::before, .msl_event_location::before {
               @include googleFont;
               font-size: 1.5em;
+              padding: 0 0.3em;
             }
             .msl_event_time::before {
               content: 'date_range';
@@ -205,7 +208,17 @@ main section:not(:first-child) {
         }
       }
       .eventsArrow {
-        display: none;
+        display: block;
+        background: #50b848;
+        color: #fff;
+        padding: 0.4em;
+        .message {
+          background: none !important;
+          padding: 0 !important;
+        }
+        i {
+          float: right;
+        }
       }
     }
   }
@@ -301,7 +314,20 @@ main section:not(:first-child) {
 
   &.socialMedia {
     background-color: $social_media_bg;
-    padding: 1em 0;
+    .rowInner {
+      padding: 1em 0;
+    }
+    .title {
+      width: 100%;
+      display: block;
+      background-color: $twitter;
+      color: #fff;
+
+      h2 {
+        margin: 0;
+        padding: 0.1em 0.2em;
+      }
+    }
 
     .icons {
       width: 100%;
@@ -365,6 +391,27 @@ main section:not(:first-child) {
       }
     }
   }
+
+  &.officers {
+    padding: 1em 0.7em;
+    background: #f2f2f2;
+    .title {
+      h2 {
+        color: $union_green;
+      }
+    }
+    .image {
+        text-align: center;
+        img {
+          width: 70%;
+        }
+    }
+    .content {
+      .flex-middle {
+        @include flexDirection(column);
+      }
+    }
+  }
 }
 
 /* Tablets*/
@@ -378,6 +425,9 @@ main section:not(:first-child) {
           display: block;
         }
       }
+    }
+    &.union {
+      display: block;
     }
     &.ptbs {
       padding: 2em 0;
@@ -412,6 +462,9 @@ main section:not(:first-child) {
       background-repeat: no-repeat;
       .title {
         padding: 0 0.4em;
+        h2 {
+          padding: 0.1em 0.2em;
+        }
       }
 
       .newsWidget {
@@ -469,6 +522,7 @@ main section:not(:first-child) {
     &.events {
       background-size: auto 33%;
       .eventList {
+        padding: 0 !important;
         -webkit-box-flex: 1;
             -ms-flex: 1;
                 flex: 1;
@@ -676,6 +730,42 @@ main section:not(:first-child) {
        }
     }
 
+    &.officers {
+      height: 280px;
+      padding: 1em 0;
+      position: relative;
+
+      .title {
+        width: auto;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        @include flexFixed(82px);
+        h2 {
+          color: $union_green;
+          position: absolute;
+          transform: rotate(270deg);
+          bottom: 86px;
+          left: -64px;
+          font-size: 4em;
+        }
+      }
+
+      .image {
+        height: 248px;
+        img {
+          width: auto !important;
+          height: 100%;
+        }
+      }
+      .content {
+        .flex-middle {
+          height: 248px;
+        }
+      }
+    }
+
     .success {
       .quote_icon {
         display: block;
@@ -745,7 +835,6 @@ main section:not(:first-child) {
         @include flexJustify(center);
         @include flexAlign(center);
         background-color: $event_highlight;
-        padding: 0.4em;
         position: absolute;
         right: 2em;
         top: calc(50% - 2em);
@@ -754,6 +843,7 @@ main section:not(:first-child) {
         border-radius: 2em;
         cursor: pointer;
         color: #fff;
+        text-decoration: none;
 
         .message {
           opacity: 0;
@@ -765,8 +855,6 @@ main section:not(:first-child) {
           width: 6em;
           bottom: -1.3em;
           right: -1.3em;
-          padding: 0 !important;
-          background: none !important;
         }
 
         &:hover {
@@ -778,6 +866,7 @@ main section:not(:first-child) {
         i {
           color: #fff;
           font-size: 3em;
+          float: none;
         }
       }
     }
@@ -787,6 +876,32 @@ main section:not(:first-child) {
       background-position: left 1% top 50%;
       background-size: auto 55%;
       background-repeat: no-repeat;
+    }
+
+    &.socialMedia {
+      height: 440px;
+      .title {
+        position: relative;
+        width: 82px;
+
+        h2 {
+          transform: rotate(270deg);
+          position: absolute;
+          left: -44px;
+          top: 148px;
+          margin: 0.6em 0 !important;
+        }
+        &::after {
+          position: absolute;
+          right: -20px;
+          top: 0px;
+          content: '';
+        	width: 0;
+        	height: 0;
+        	border-bottom: 440px solid $twitter;
+        	border-right: 20px solid transparent;
+        }
+      }
     }
 
     &.advice {
@@ -805,8 +920,8 @@ main section:not(:first-child) {
         h2 {
           transform: rotate(270deg);
           position: absolute;
-          left: -80px;
-          top: 86px;
+          left: -82px;
+          top: 82px;
           margin: 0.6em 0 !important;
         }
         &::after {

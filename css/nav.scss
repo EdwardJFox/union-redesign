@@ -104,12 +104,12 @@ nav#sidebar {
 
       i {
         color: #50b848;
-        font-size: 3.2em;
+        font-size: 2.6em;
         padding: 0 0.2em;
       }
       h2 {
         color: #50b848;
-        font-size: 2em;
+        font-size: 1.6em;
         margin: 0;
         padding: 0;
       }
@@ -118,7 +118,7 @@ nav#sidebar {
       padding: 0.2em 1.2em;
       h3 {
         color: #fff;
-        font-size: 1.5em;
+        font-size: 1.4em;
         margin: 0;
         padding: 0;
       }
@@ -260,6 +260,27 @@ nav#sidebar {
     width: 40% !important;
     .search {
       display: none;
+    }
+
+    section {
+      .title {
+        i {
+          font-size: 3.2em;
+        }
+        h2 {
+          font-size: 2em;
+        }
+      }
+      .subtitle {
+        h3 {
+          font-size: 1.5em;
+        }
+      }
+      .links {
+        a {
+          font-size: 1.2em !important;
+        }
+      }
     }
   }
 }

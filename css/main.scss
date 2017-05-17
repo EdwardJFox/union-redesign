@@ -10,11 +10,11 @@ main {
 
       video.background {
         position: absolute;
-        top: 50%;
+        top: 21%;
         left: 50%;
         min-width: 100%;
         min-height: 100%;
-        width: auto;
+        width: 100%;
         height: auto;
         z-index: -100;
         transform: translateX(-50%) translateY(-50%);
@@ -79,6 +79,12 @@ main {
           min-height: 176px;
         }
       }
+    }
+
+    video.background {
+      position: absolute;
+      top: 50%;
+      width: auto;
     }
   }
 }

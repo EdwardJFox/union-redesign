@@ -1,0 +1,96 @@
+/* Clubs and Soc browse page */
+.page_clubsandsocs {
+  #clubs, #socs {
+    .itemList {
+      .item {
+        padding: 0.6em 1em;
+        margin-bottom: 1.2em;
+        background-color: #f2f2f2;
+
+        .image {
+          float: left;
+          padding: 0.4em;
+
+          img {
+            width: 92px;
+          }
+        }
+
+        .viewButton {
+          text-align: center;
+          cursor: pointer;
+        }
+
+        .clubs {
+          display: none;
+        }
+
+        .msl_organisation_list {
+          margin: 0.4em 0 !important;
+          list-style: none;
+          background: #fff;
+
+          li {
+            padding: 0;
+            margin: 0;
+            a {
+              padding: 0.6em 0.8em;
+              display: block;
+              text-decoration: none;
+              &:hover {
+                background-color: $union_green_hover_clear;
+              }
+            }
+          }
+        }
+
+        &:hover {
+        background-color: #efefef;
+        }
+
+        &.akuma {
+          img, .image {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Tablets*/
+@media (min-width: 48em){
+  .page_clubsandsocs {
+    #clubs, #socs {
+      .itemList {
+        @include displayFlex;
+        @include flexJustify(space-around);
+        @include flexWrap(wrap);
+
+        .item {
+          @include flexFixed(48%);
+
+          &:hover {
+
+          }
+        }
+      }
+    }
+  }
+}
+/* Desktop*/
+@media (min-width: 80em){
+  .page_clubsandsocs {
+    #clubs, #socs {
+      .itemList {
+        .item {
+          @include flexFixed(31.5%);
+
+          &:hover {
+
+          }
+        }
+      }
+    }
+  }
+}
