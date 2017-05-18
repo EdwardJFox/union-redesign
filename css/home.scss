@@ -731,23 +731,28 @@ main section:not(:first-child) {
     }
 
     &.officers {
-      height: 280px;
-      padding: 1em 0;
+      height: 300px;
       position: relative;
+      padding: 0;
+
+      .rowInner {
+        padding: 2em 0;
+      }
 
       .title {
         width: auto;
         height: 100%;
-        position: absolute;
+        position: relative;
         left: 0px;
         top: 0px;
+        background: #f8f8f8;
         @include flexFixed(82px);
         h2 {
           color: $union_green;
           position: absolute;
           transform: rotate(270deg);
-          bottom: 86px;
-          left: -64px;
+          bottom: 92px;
+          left: -70px;
           font-size: 4em;
         }
       }
