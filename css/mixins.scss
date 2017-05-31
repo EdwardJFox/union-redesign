@@ -20,19 +20,19 @@
 }
 
 /* Just so there is a default way of creating a flexbox*/
-@mixin displayFlex($important:""){
+@mixin displayFlex($important:"") {
   display: -webkit-box #{$important};
   display: -ms-flexbox #{$important};
   display: -webkit-flex #{$important};
   display: flex #{$important};
 }
-@mixin displayInlineFlex($important:""){
+@mixin displayInlineFlex($important:"") {
   display: -webkit-box #{$important};
   display: -ms-inline-flexbox #{$important};
   display: -webkit-inline-flex #{$important};
   display: inline-flex #{$important};
 }
-@mixin flex($grow){
+@mixin flex($grow) {
   -webkit-box-flex: $grow;
     -ms-flex: $grow;
   -webkit-flex: $grow;
@@ -44,30 +44,41 @@
   -webkit-flex: 0 0 $width;
           flex: 0 0 $width;
 }
-
-@mixin flexWrap($wrap){
+@mixin flexWrap($wrap) {
   -webkit-box-wrap: $wrap;
       -ms-flex-wrap: $wrap;
   -webkit-flex-wrap: $wrap;
           flex-wrap: $wrap;
 }
-
 @mixin flexAlign($align) {
   -webkit-box-align: $align;
       -ms-flex-align: $align;
   -webkit-align-items: $align;
           align-items: $align;
 }
-
 @mixin flexJustify($justify) {
   -webkit-box-pack: $justify;
       -ms-flex-pack: $justify;
   -webkit-justify-content: $justify;
           justify-content: $justify;
 }
-
-@mixin flexDirection($direction){
+@mixin flexDirection($direction) {
       -ms-flex-direction: $direction;
   -webkit-flex-direction: $direction;
           flex-direction: $direction;
+}
+
+// Fixed background, a better way of doing it which isnt so hard on the CPU
+@mixin fixedBackground($img) {
+  content: ' ';
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  background: url($img) no-repeat center center;
+  background-size: cover;
+  will-change: transform;
+  z-index: -101;
 }

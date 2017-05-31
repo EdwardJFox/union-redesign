@@ -1,587 +1,166 @@
 @import "colours";
 @import "mixins";
 
-/* Sort out the backgrounds on the homepage, to ensure they all have a default white */
-main section:not(:first-child) {
-  background: #fff;
-}
+.page_root {
 
-/* Homepage specific styling */
-.splash {
-  padding: 1em 0;
-
-  // Union branded
-  &.union {
-    background: rgba(0, 0, 0, 0.4);
-    display: none;
+  /* Sort out the backgrounds on the homepage, to ensure they all have a default white */
+  main section:not(:first-child) {
+    background: #fff;
   }
 
-  /* Leadership Race*/
-  &.leadership {
-    .logo {
-      width: 70%;
-    }
-    .content {
-      text-align: center;
-      padding: 0.2em 0.8em;
-      video {
-        display: none;
-      }
-    }
-  }
-  &.ptbs {
-    .logo {
-      width: 70%;
-    }
-    .content {
-      text-align: center;
-      padding: 0.2em 0.8em;
-    }
-  }
-  &.video {
-    .videoWrap {
-      background: #000;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      overflow: hidden;
-      video {
-        z-index: -1;
-        width: 200%;
-        margin-left: -50%;
-      }
-    }
-  }
-  &.basshunter {
-    padding: 3em 0;
-    .logo {
-      width: 70%;
-    }
-    overflow: hidden;
-    min-height: 40vh;
-    background: rgba(0, 0, 0, 0.6);
-    .content {
-      height: 100%;
-      @include displayFlex;
-      @include flexAlign(center);
-      h3 {
-        font-size: 1.6em;
-      }
-    }
-  }
-}
+  /* Homepage specific styling */
+  .splash {
+    padding: 1em 0;
 
-.row {
-  z-index: 100;
-  &.news {
-    padding: 0.4em 0.6em 1.2em;
-    overflow: hidden;
-    background: #e7e7e7;
-    .title {
-      width: 100%;
-      display: block;
-      h2 {
-        margin: 0;
-        padding: 0.1em 0.2em 0.1em 0.9em;
-      }
-    }
-    .newsWidget {
-      .newsItems {
-        overflow: hidden;
-        text-align: center;
-        .newsItem {
-          .image {
-            text-align: center;
-            img {
-              max-height: 270px;
-            }
-          }
-        }
-      }
-      .newsInfo {
-        .newsDescription {
-          padding: 0.6em;
-        }
-      }
-      .newsList {
-        ul {
-          list-style: none;
-          margin: 0;
-          padding: 0.6em 0.4em;
-          li {
-            background-color: #dfdfdf;
-            display: block;
-            cursor: pointer;
-            margin: 0 0 0.5em 0;
-            border-left: 4px solid $union_green_not_active;
-            transition: background-color 200ms;
-            &.active {
-              background-color: rgba(80, 184, 72, 0.13);
-              border-color: #50b848;
-            }
-            &:hover {
-              background-color: rgba(80, 184, 72, 0.18);
-            }
-            p {
-              padding: 0.4em 0.4em;
-            }
-          }
-        }
-      }
-    }
-  }
-  &.events {
-    background: #333;
-    background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_row_bg.png');
-    background-size: 33% auto;
-
-    .title {
-      width: 100%;
-      padding: 0.2em 0.8em;
-      background-color: $union_green;
-      background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_bg.svg');
-      background-size: auto 100%;
-
-      h2 {
-        color: #fff;
-        margin: 0;
-        padding: 0.2em 0;
-      }
-    }
-    .eventList {
-      padding: 0 0.8em 0.8em;
-      position: relative;
-      .msl_eventlist > div {
-        padding: 0.8em 0;
-        .event_item {
-          width: 100%;
-          margin-bottom: 0.5em;
-          border-left: 6px solid $union_green;
-          background-color: #fff;
-          .event_image {
-            display: none;
-          }
-          dl {
-            margin: 0;
-          }
-          .event_info {
-            dt {
-              background-color: $union_green;
-              padding: 0.4em 0.8em;
-              @include displayFlex;
-              @include flexAlign(center);
-              @include flexJustify(center);
-              a {
-                color: #fff;
-                font-size: 1.2em;
-                text-decoration: none;
-                text-align: center;
-              }
-            }
-            dd {
-              margin: 0;
-              padding: 0.4em;
-              @include displayFlex;
-              @include flexAlign(center);
-              font-size: 1.1em;
-              line-height: 160%;
-            }
-            .msl_event_time::before, .msl_event_location::before {
-              @include googleFont;
-              font-size: 1.5em;
-              padding: 0 0.3em;
-            }
-            .msl_event_time::before {
-              content: 'date_range';
-            }
-            .msl_event_location::before {
-              content: 'location_on';
-            }
-            .msl_event_time, .msl_event_location {
-
-            }
-            .msl_event_description {
-              padding: 0.2em 0.8em;
-            }
-          }
-        }
-      }
-      .eventsArrow {
-        display: block;
-        background: #50b848;
-        color: #fff;
-        padding: 0.4em;
-        .message {
-          background: none !important;
-          padding: 0 !important;
-        }
-        i {
-          float: right;
-        }
-      }
-    }
-  }
-  &.news {
-
-  }
-
-  &.studentVoiceRow {
-    .title {
-      width: 100%;
-      display: block;
-      background: #BCD059;
-
-      h2 {
-        color: #fff;
-        margin: 0;
-        padding: 0.1em 0.2em 0.1em 0.9em;
-      }
-    }
-    .logo {
-      text-align: center;
-      img {
-        width: 50%;
-      }
-    }
-    .intro {
-      padding: 0 0.8em;
-    }
-    .content {
-      ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        li {
-          a {
-            text-decoration: none;
-            padding: 0.8em 1.4em 0.8em 0.4em;
-            display: block;
-            width: 100%;
-            height: 100%;
-            text-align: right;
-            &:hover {
-              text-decoration: none;
-            }
-          }
-          &:nth-child(1){
-
-          }
-          &:nth-child(2){
-            background: #daffd7;
-          }
-          &:nth-child(3){
-            background: #9bf193;
-            a { color: $union_green_dark; }
-          }
-          &:nth-child(4){
-            background: #78db6f;
-            a { color: #fff; }
-          }
-          &:nth-child(5){
-            background: #62cd59;
-            a { color: #fff; }
-          }
-        }
-      }
-    }
-  }
-
-  .success {
-    position: relative;
-    padding: 0 0.8em;
-
-    @include displayFlex;
-    @include flexDirection(column);
-    @include flexAlign(center);
-    @include flexJustify(center);
-
-    li p {
-      text-align: center;
-    }
-
-    .blockLink {
-      margin: 0.4em 0;
-    }
-
-    .unslider-nav {
-      margin: 0 auto;
-      li {
-        height: 10px;
-        width: 10px;
-      }
-    }
-    .quote_icon {
+    // Union branded
+    &.union {
+      background: rgba(0, 0, 0, 0.4);
       display: none;
     }
-  }
 
-  .advert {
-    img {
-      padding: 1em;
-      width: 100%;
-    }
-  }
-
-  &.socialMedia {
-    background-color: $social_media_bg;
-    .rowInner {
-      padding: 1em 0;
-    }
-    .title {
-      width: 100%;
-      display: block;
-      background-color: $twitter;
-      color: #fff;
-
-      h2 {
-        margin: 0;
-        padding: 0.1em 0.2em;
-      }
-    }
-
-    .icons {
-      width: 100%;
-      ul {
-        @include displayFlex();
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        li {
-          flex: 1;
-          text-align: center;
-          img {
-            width: 90%;
-          }
-          .name {
-            display: none;
-          }
-        }
-      }
-    }
-    .timeline {
-      text-align: center;
-      iframe {
-        margin: 1em auto !important;
-        width: 95% !important;
-      }
-    }
-    .youtube {
-      text-align: center;
-      iframe {
-        margin: 1em auto;
-        border: none;
-        width: 95%;
-        height: 260px;
-      }
-    }
-  }
-
-  &.advice {
-    .title {
-      background: $advice_main;
-      h2 {
-        color: #fff;
-        margin: 0;
-        padding: 0.4em 0.8em;
-      }
-    }
-    .content {
-      .areas {
-        .area {
-          margin: 0.4em;
-          padding: 0.6em 0.8em;
-          color: #fff;
-          text-decoration: none;
-          background: $advice_main;
-          display: block;
-          &:hover {
-            background: $advice_main_hover;
-          }
-        }
-      }
-    }
-  }
-
-  &.officers {
-    padding: 1em 0.7em;
-    background: #f2f2f2;
-    .title {
-      h2 {
-        color: $union_green;
-      }
-    }
-    .image {
-        text-align: center;
-        img {
-          width: 70%;
-        }
-    }
-    .content {
-      .flex-middle {
-        @include flexDirection(column);
-      }
-    }
-  }
-}
-
-/* Tablets*/
-@media (min-width: 48em){
-  .splash {
+    /* Leadership Race*/
     &.leadership {
+      .logo {
+        width: 70%;
+      }
       .content {
-        padding: 0;
-        text-align: left;
+        text-align: center;
+        padding: 0.2em 0.8em;
         video {
-          display: block;
+          display: none;
         }
       }
-    }
-    &.union {
-      display: block;
     }
     &.ptbs {
-      padding: 2em 0;
+      .logo {
+        width: 70%;
+      }
       .content {
-        padding: 0;
-        text-align: left;
+        text-align: center;
+        padding: 0.2em 0.8em;
       }
     }
     &.video {
       .videoWrap {
-        width: 100%;
+        background: #000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        overflow: hidden;
         video {
           z-index: -1;
-          min-height: 100vh;
-          width: 100% !important;
-          margin: 0 auto;
+          width: 200%;
+          margin-left: -50%;
         }
       }
     }
     &.basshunter {
-      min-height: 60vh;
-      padding: 0;
-    }
-  }
-  .row {
-    &.news {
-      padding: 1em 0;
-      position: relative;
-      background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/news_bg.svg');
-      background-position: right center;
-      background-size: auto 100%;
-      background-repeat: no-repeat;
-      .title {
-        padding: 0 0.4em;
-        h2 {
-          padding: 0.1em 0.2em;
+      padding: 3em 0;
+      .logo {
+        width: 70%;
+      }
+      overflow: hidden;
+      min-height: 40vh;
+      background: rgba(0, 0, 0, 0.6);
+      .content {
+        height: 100%;
+        @include displayFlex;
+        @include flexAlign(center);
+        h3 {
+          font-size: 1.6em;
         }
       }
+    }
+  }
 
+  .row {
+    z-index: 100;
+    &.news {
+      padding: 0.4em 0.6em 1.2em;
+      overflow: hidden;
+      background: #e7e7e7;
+      .title {
+        width: 100%;
+        display: block;
+        h2 {
+          margin: 0;
+          padding: 0.1em 0.2em 0.1em 0.9em;
+        }
+      }
       .newsWidget {
-        @include displayFlex;
-        padding: 0 1em;
         .newsItems {
-          flex: 1 0;
+          overflow: hidden;
+          text-align: center;
           .newsItem {
-            @include displayFlex;
-            padding: 1em;
-
             .image {
-              @include flexFixed(55%);
-            }
-
-            .newsDescription {
-              @include displayFlex;
-              @include flex(1);
               text-align: center;
-              @include flexJustify(center);
-              @include flexDirection(column);
-              height: 270px;
-              padding: 0.4em 0.8em;
-              span {
-                padding: 0.4em;
+              img {
+                max-height: 270px;
               }
             }
           }
         }
-
+        .newsInfo {
+          .newsDescription {
+            padding: 0.6em;
+          }
+        }
         .newsList {
-          flex: 0 0 320px;
-          @include displayFlex;
-          flex-direction: column;
           ul {
-            flex: 1;
-            padding: 0;
-
+            list-style: none;
+            margin: 0;
+            padding: 0.6em 0.4em;
             li {
+              background-color: #dfdfdf;
+              display: block;
+              cursor: pointer;
+              margin: 0 0 0.5em 0;
+              border-left: 4px solid $union_green_not_active;
+              transition: background-color 200ms;
               &.active {
-
+                background-color: rgba(80, 184, 72, 0.13);
+                border-color: #50b848;
+              }
+              &:hover {
+                background-color: rgba(80, 184, 72, 0.18);
               }
               p {
-                display: block;
-                padding: 0.6em 0.4em;
+                padding: 0.4em 0.4em;
               }
             }
-          }
-          .content-center {
-            flex: 0 0 40px;
           }
         }
       }
     }
     &.events {
-      background-size: auto 33%;
-      .eventList {
-        padding: 0 !important;
-        -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
-        /* Small fix for the height of events*/
-        #whatson, .msl_eventlist, .msl_eventlist > div {
-          height: 100%;
-        }
+      background: #333;
+      background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_row_bg.png');
+      background-size: 33% auto;
 
+      .title {
+        width: 100%;
+        padding: 0.2em 0.8em;
+        background-color: $union_green;
+        background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_bg.svg');
+        background-size: auto 100%;
+
+        h2 {
+          color: #fff;
+          margin: 0;
+          padding: 0.2em 0;
+        }
+      }
+      .eventList {
+        padding: 0 0.8em 0.8em;
+        position: relative;
         .msl_eventlist > div {
           padding: 0.8em 0;
-          @include displayFlex();
-          @include flexJustify(space-around);
-          @include flexAlign(stretch);
-
           .event_item {
-            @include flexFixed(22%);
+            width: 100%;
+            margin-bottom: 0.5em;
+            border-left: 6px solid $union_green;
             background-color: #fff;
-            position: relative;
-            overflow: hidden;
-
-            &:nth-child(1):after {
-              background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_1.svg');
-            }
-
-            &:nth-child(2):after {
-              background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_2.svg');
-            }
-
-            &:nth-child(3):after {
-              background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_3.svg');
-            }
-
-            &:nth-child(4):after {
-              background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_4.svg');
-            }
-
-            &:after {
-              content: '';
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              width: 100%;
-              height: 16px;
-              background-repeat: no-repeat;
-              background-position: bottom;
-              background-size: cover;
-            }
-
             .event_image {
               display: none;
             }
@@ -590,413 +169,843 @@ main section:not(:first-child) {
             }
             .event_info {
               dt {
-                height: 78px;
-                padding: 0 0.6em;
+                background-color: $union_green;
+                padding: 0.4em 0.8em;
+                @include displayFlex;
+                @include flexAlign(center);
+                @include flexJustify(center);
+                a {
+                  color: #fff;
+                  font-size: 1.2em;
+                  text-decoration: none;
+                  text-align: center;
+                }
               }
               dd {
-                font-size: 1em;
+                margin: 0;
+                padding: 0.4em;
+                @include displayFlex;
+                @include flexAlign(center);
+                font-size: 1.1em;
+                line-height: 160%;
+              }
+              .msl_event_time::before, .msl_event_location::before {
+                @include googleFont;
+                font-size: 1.5em;
+                padding: 0 0.3em;
+              }
+              .msl_event_time::before {
+                content: 'date_range';
+              }
+              .msl_event_location::before {
+                content: 'location_on';
+              }
+              .msl_event_time, .msl_event_location {
+
               }
               .msl_event_description {
-                height: 100px;
-                overflow: hidden;
-                display: inline-block;
-                position: relative;
-                &:after {
-                  content: '';
-                  position: absolute;
-                  bottom: 0;
-                  left: 0;
-                  height: 16px;
-                  width: 100%;
+                padding: 0.2em 0.8em;
+              }
+            }
+          }
+        }
+        .eventsArrow {
+          display: block;
+          background: #50b848;
+          color: #fff;
+          padding: 0.4em;
+          .message {
+            background: none !important;
+            padding: 0 !important;
+          }
+          i {
+            float: right;
+          }
+        }
+      }
+    }
+    &.news {
+
+    }
+
+    &.studentVoiceRow {
+      .title {
+        width: 100%;
+        display: block;
+        background: #BCD059;
+
+        h2 {
+          color: #fff;
+          margin: 0;
+          padding: 0.1em 0.2em 0.1em 0.9em;
+        }
+      }
+      .logo {
+        text-align: center;
+        img {
+          width: 50%;
+        }
+      }
+      .intro {
+        padding: 0 0.8em;
+      }
+      .content {
+        ul {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          li {
+            a {
+              text-decoration: none;
+              padding: 0.8em 1.4em 0.8em 0.4em;
+              display: block;
+              width: 100%;
+              height: 100%;
+              text-align: right;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+            &:nth-child(1){
+
+            }
+            &:nth-child(2){
+              background: #daffd7;
+            }
+            &:nth-child(3){
+              background: #9bf193;
+              a { color: $union_green_dark; }
+            }
+            &:nth-child(4){
+              background: #78db6f;
+              a { color: #fff; }
+            }
+            &:nth-child(5){
+              background: #62cd59;
+              a { color: #fff; }
+            }
+          }
+        }
+      }
+    }
+
+    .success {
+      position: relative;
+      padding: 0 0.8em;
+
+      @include displayFlex;
+      @include flexDirection(column);
+      @include flexAlign(center);
+      @include flexJustify(center);
+
+      li p {
+        text-align: center;
+      }
+
+      .blockLink {
+        margin: 0.4em 0;
+      }
+
+      .unslider-nav {
+        margin: 0 auto;
+        li {
+          height: 10px;
+          width: 10px;
+        }
+      }
+      .quote_icon {
+        display: none;
+      }
+    }
+
+    .advert {
+      padding: 1em;
+      img {
+        padding: 1em;
+        width: 100%;
+      }
+    }
+
+    &.socialMedia {
+      background-color: $social_media_bg;
+      .rowInner {
+        padding: 1em 0;
+      }
+      .title {
+        width: 100%;
+        display: block;
+        background-color: $twitter;
+        color: #fff;
+
+        h2 {
+          margin: 0;
+          padding: 0.1em 0.2em;
+        }
+      }
+
+      .icons {
+        width: 100%;
+        ul {
+          @include displayFlex();
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          li {
+            flex: 1;
+            text-align: center;
+            img {
+              width: 90%;
+            }
+            .name {
+              display: none;
+            }
+          }
+        }
+      }
+      .timeline {
+        text-align: center;
+        iframe {
+          margin: 1em auto !important;
+          width: 95% !important;
+        }
+      }
+      .youtube {
+        text-align: center;
+        iframe {
+          margin: 1em auto;
+          border: none;
+          width: 95%;
+          height: 260px;
+        }
+      }
+    }
+
+    &.advice {
+      .title {
+        background: $advice_main;
+        h2 {
+          color: #fff;
+          margin: 0;
+          padding: 0.4em 0.8em;
+        }
+      }
+      .content {
+        .areas {
+          .area {
+            margin: 0.4em;
+            padding: 0.6em 0.8em;
+            color: #fff;
+            text-decoration: none;
+            background: $advice_main;
+            display: block;
+            &:hover {
+              background: $advice_main_hover;
+            }
+          }
+        }
+      }
+    }
+
+    &.officers {
+      padding: 1em 0.7em;
+      background: #f2f2f2;
+      .title {
+        h2 {
+          color: $union_green;
+        }
+      }
+      .image {
+          text-align: center;
+          img {
+            width: 70%;
+          }
+      }
+      .content {
+        .flex-middle {
+          @include flexDirection(column);
+        }
+      }
+    }
+  }
+}
+
+/* Tablets*/
+@media (min-width: 48em){
+  .page_root {
+    .splash {
+      &.leadership {
+        .content {
+          padding: 0;
+          text-align: left;
+          video {
+            display: block;
+          }
+        }
+      }
+      &.union {
+        display: block;
+        margin: 0 !important;
+      }
+      &.ptbs {
+        padding: 2em 0;
+        .content {
+          padding: 0;
+          text-align: left;
+        }
+      }
+      &.video {
+        .videoWrap {
+          width: 100%;
+          video {
+            z-index: -1;
+            min-height: 100vh;
+            width: 100% !important;
+            margin: 0 auto;
+          }
+        }
+      }
+      &.basshunter {
+        min-height: 60vh;
+        padding: 0;
+      }
+    }
+    .row {
+      &.news {
+        padding: 1em 0;
+        position: relative;
+        background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/news_bg.svg');
+        background-position: right center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        .title {
+          padding: 0 0.4em;
+          h2 {
+            padding: 0.1em 0.2em;
+          }
+        }
+
+        .newsWidget {
+          @include displayFlex;
+          padding: 0 1em;
+          .newsItems {
+            flex: 1 0;
+            .newsItem {
+              @include displayFlex;
+              padding: 1em;
+
+              .image {
+                @include flexFixed(55%);
+              }
+
+              .newsDescription {
+                @include displayFlex;
+                @include flex(1);
+                text-align: center;
+                @include flexJustify(center);
+                @include flexDirection(column);
+                height: 270px;
+                padding: 0.4em 0.8em;
+                span {
+                  padding: 0.4em;
+                }
+              }
+            }
+          }
+
+          .newsList {
+            flex: 0 0 320px;
+            @include displayFlex;
+            flex-direction: column;
+            ul {
+              flex: 1;
+              padding: 0;
+
+              li {
+                &.active {
+
+                }
+                p {
                   display: block;
-                  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+                  padding: 0.6em 0.4em;
+                }
+              }
+            }
+            .content-center {
+              flex: 0 0 40px;
+            }
+          }
+        }
+      }
+      &.events {
+        background-size: auto 33%;
+        .eventList {
+          padding: 0 !important;
+          -webkit-box-flex: 1;
+              -ms-flex: 1;
+                  flex: 1;
+          /* Small fix for the height of events*/
+          #whatson, .msl_eventlist, .msl_eventlist > div {
+            height: 100%;
+          }
+
+          .msl_eventlist > div {
+            padding: 0.8em 0;
+            @include displayFlex();
+            @include flexJustify(space-around);
+            @include flexAlign(stretch);
+
+            .event_item {
+              @include flexFixed(22%);
+              background-color: #fff;
+              position: relative;
+              overflow: hidden;
+
+              &:nth-child(1):after {
+                background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_1.svg');
+              }
+
+              &:nth-child(2):after {
+                background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_2.svg');
+              }
+
+              &:nth-child(3):after {
+                background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_3.svg');
+              }
+
+              &:nth-child(4):after {
+                background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_4.svg');
+              }
+
+              &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 16px;
+                background-repeat: no-repeat;
+                background-position: bottom;
+                background-size: cover;
+              }
+
+              .event_image {
+                display: none;
+              }
+              dl {
+                margin: 0;
+              }
+              .event_info {
+                dt {
+                  height: 78px;
+                  padding: 0 0.6em;
+                }
+                dd {
+                  font-size: 1em;
+                }
+                .msl_event_description {
+                  height: 100px;
+                  overflow: hidden;
+                  display: inline-block;
+                  position: relative;
+                  &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 16px;
+                    width: 100%;
+                    display: block;
+                    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+                  }
                 }
               }
             }
           }
         }
       }
-    }
 
 
-    &.socialMedia .span3 {
-      @include displayFlex;
+      &.socialMedia .span3 {
+        @include displayFlex;
 
-      .title {
-        width: auto;
-        height: 100%;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        @include flexFixed(82px);
-        h2 {
-          color: #878787;
+        .title {
+          width: auto;
+          height: 100%;
           position: absolute;
-          transform: rotate(270deg);
-          bottom: 128px;
-          left: -58px;
-          font-size: 4em;
+          left: 0px;
+          top: 0px;
+          @include flexFixed(82px);
+          h2 {
+            color: #878787;
+            position: absolute;
+            transform: rotate(270deg);
+            bottom: 128px;
+            left: -58px;
+            font-size: 4em;
+          }
         }
-      }
 
-      .icons {
-        width: auto;
-        @include flexFixed(80px);
-        ul {
-          @include displayFlex;
-          @include flexDirection(column);
-          li {
-            .platform {
-              position: relative;
-              display: block;
-              font-size: 1em;
-              &:hover .name {
-                width: 240px;
+        .icons {
+          width: auto;
+          @include flexFixed(80px);
+          ul {
+            @include displayFlex;
+            @include flexDirection(column);
+            li {
+              .platform {
+                position: relative;
+                display: block;
+                font-size: 1em;
+                &:hover .name {
+                  width: 240px;
+                }
+                &.facebook .name {
+                  background: $facebook_hover;
+                }
+                &.twitter .name {
+                  background: $twitter_hover;
+                }
+                &.snapchat .name {
+                  background: $snapchat_hover;
+                }
+                &.youtube .name {
+                  background: $youtube_hover;
+                }
+                &.instagram .name {
+                  background: $instagram_hover;
+                }
               }
-              &.facebook .name {
-                background: $facebook_hover;
+              .icon {
+                width: 80px;
+                height: 80px;
+                img {
+                  z-index: 80;
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                }
               }
-              &.twitter .name {
-                background: $twitter_hover;
-              }
-              &.snapchat .name {
-                background: $snapchat_hover;
-              }
-              &.youtube .name {
-                background: $youtube_hover;
-              }
-              &.instagram .name {
-                background: $instagram_hover;
-              }
-            }
-            .icon {
-              width: 80px;
-              height: 80px;
-              img {
-                z-index: 80;
+              .name {
+                z-index: 40;
+                overflow: hidden;
+                display: block;
+                width: 0;
+                height: 42px;
                 position: absolute;
-                left: 0;
-                top: 0;
-              }
-            }
-            .name {
-              z-index: 40;
-              overflow: hidden;
-              display: block;
-              width: 0;
-              height: 42px;
-              position: absolute;
-              left: 50%;
-              top: 15px;
-              transition: width 0.4s;
-              p {
-                color: #fff;
-                padding: 0.6em 0.8em 0.6em 0;
-                font-size: 0.9em;
-                text-align: right;
-              }
-              &:hover {
+                left: 50%;
+                top: 15px;
+                transition: width 0.4s;
+                p {
+                  color: #fff;
+                  padding: 0.6em 0.8em 0.6em 0;
+                  font-size: 0.9em;
+                  text-align: right;
+                }
+                &:hover {
+                }
               }
             }
           }
         }
-      }
-      .timeline {
-        @include flex(3);
-        @include displayFlex;
-        @include flexAlign(center);
-        @include flexJustify(flex-end);
-        iframe {
-          max-width: 400px !important;
-          margin: 0;
+        .timeline {
+          @include flex(3);
+          @include displayFlex;
+          @include flexAlign(center);
+          @include flexJustify(flex-end);
+          iframe {
+            max-width: 400px !important;
+            margin: 0;
+          }
+        }
+        .youtube {
+          @include flex(5);
+          @include displayFlex;
+          @include flexAlign(center);
+          @include flexJustify(flex-end);
+          iframe {
+            margin: 0;
+            border: none;
+            width: 96%;
+            height: 380px;
+          }
         }
       }
-      .youtube {
-        @include flex(5);
-        @include displayFlex;
-        @include flexAlign(center);
-        @include flexJustify(flex-end);
-        iframe {
-          margin: 0;
-          border: none;
-          width: 96%;
-          height: 380px;
-        }
-      }
-    }
 
-    &.advice {
-      overflow: hidden;
-      .content {
-         @include displayFlex;
-         .areas {
+      &.advice {
+        overflow: hidden;
+        .content {
            @include displayFlex;
-           @include flexJustify(space-around);
-           @include flexWrap(wrap);
-           .area {
-             margin: 0.4em 0;
-             @include flexFixed(32%);
+           .areas {
+             @include displayFlex;
+             @include flexJustify(space-around);
+             @include flexWrap(wrap);
+             .area {
+               margin: 0.4em 0;
+               @include flexFixed(32%);
+             }
            }
          }
-       }
-    }
-
-    &.studentVoiceRow {
-
-    }
-
-    &.officers {
-      height: 300px;
-      position: relative;
-      padding: 0;
-
-      .rowInner {
-        padding: 2em 0;
       }
 
-      .title {
-        width: auto;
-        height: 100%;
+      &.studentVoiceRow {
+
+      }
+
+      &.officers {
+        height: 300px;
         position: relative;
-        left: 0px;
-        top: 0px;
-        background: #f8f8f8;
-        @include flexFixed(82px);
-        h2 {
-          color: $union_green;
-          position: absolute;
-          transform: rotate(270deg);
-          bottom: 92px;
-          left: -70px;
-          font-size: 4em;
-        }
-      }
+        padding: 0;
 
-      .image {
-        height: 248px;
-        img {
-          width: auto !important;
+        .rowInner {
+          padding: 2em 0;
+        }
+
+        .title {
+          width: auto;
           height: 100%;
+          position: relative;
+          left: 0px;
+          top: 0px;
+          background: #f8f8f8;
+          @include flexFixed(82px);
+          h2 {
+            color: $union_green;
+            position: absolute;
+            transform: rotate(270deg);
+            bottom: 92px;
+            left: -70px;
+            font-size: 4em;
+          }
         }
-      }
-      .content {
-        .flex-middle {
-          height: 248px;
-        }
-      }
-    }
 
-    .success {
-      .quote_icon {
-        display: block;
-        position: absolute;
-        top: 4px;
-        right: 4px;
-        color: #d7d7d7;
-        font-size: 8em;
+        .image {
+          height: 248px;
+          img {
+            width: auto !important;
+            height: 100%;
+          }
+        }
+        .content {
+          .flex-middle {
+            height: 248px;
+          }
+        }
+      }
+
+      .success {
+        .quote_icon {
+          display: block;
+          position: absolute;
+          top: 4px;
+          right: 4px;
+          color: #d7d7d7;
+          font-size: 8em;
+        }
       }
     }
   }
 }
 /* Desktop*/
 @media (min-width: 80em){
-  .row {
-    &.news {
-      height: 332px;
-      .newsWidget {
-        width: 1200px;
-        margin: 0 auto;
-        padding: 0;
-      }
-      .title {
-        width: auto;
-        height: 100%;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        @include flexFixed(82px);
-        h2 {
-          color: #878787;
-          position: absolute;
-          transform: rotate(270deg);
-          bottom: 128px;
-          left: -58px;
-          font-size: 4em;
-        }
-      }
-    }
-    &.events {
-      height: 320px;
-      .title {
-        -ms-flex: 0 0 82px;
-            -webkit-box-flex: 0;
-                flex: 0 0 82px;
-        width: 82px;
-        overflow: hidden;
-        position: relative;
-        background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_bg_vert.svg');
-        background-size: 100% auto;
-
-        h2 {
-          -webkit-transform: rotate(-90deg);
-                  transform: rotate(-90deg);
+  .page_root {
+    .row {
+      &.news {
+        height: 332px;
+        .newsWidget {
+          width: 1200px;
+          margin: 0 auto;
           padding: 0;
-          position: absolute;
-          bottom: 94px;
-          left: -38px;
         }
-      }
-      #whatson {
-        width: 1200px;
-        margin: 0 auto;
-      }
-      .eventsArrow {
-        @include displayFlex(!important);
-        @include flexJustify(center);
-        @include flexAlign(center);
-        background-color: $event_highlight;
-        position: absolute;
-        right: 2em;
-        top: calc(50% - 2em);
-        height: 4em;
-        width: 4em;
-        border-radius: 2em;
-        cursor: pointer;
-        color: #fff;
-        text-decoration: none;
-
-        .message {
-          opacity: 0;
-          -webkit-transition: 0.3s;
-          transition: 0.3s;
-          display: block;
-          color: #fff;
+        .title {
+          width: auto;
+          height: 100%;
           position: absolute;
-          width: 6em;
-          bottom: -1.3em;
-          right: -1.3em;
-        }
-
-        &:hover {
-          .message {
-            opacity: 1;
+          left: 0px;
+          top: 0px;
+          @include flexFixed(82px);
+          h2 {
+            color: #878787;
+            position: absolute;
+            transform: rotate(270deg);
+            bottom: 128px;
+            left: -58px;
+            font-size: 4em;
           }
         }
+      }
+      &.events {
+        height: 320px;
+        .title {
+          -ms-flex: 0 0 82px;
+              -webkit-box-flex: 0;
+                  flex: 0 0 82px;
+          width: 82px;
+          overflow: hidden;
+          position: relative;
+          background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_bg_vert.svg');
+          background-size: 100% auto;
 
-        i {
+          h2 {
+            -webkit-transform: rotate(-90deg);
+                    transform: rotate(-90deg);
+            padding: 0;
+            position: absolute;
+            bottom: 94px;
+            left: -38px;
+          }
+        }
+        #whatson {
+          width: 1200px;
+          margin: 0 auto;
+        }
+        .eventsArrow {
+          @include displayFlex(!important);
+          @include flexJustify(center);
+          @include flexAlign(center);
+          background-color: $event_highlight;
+          position: absolute;
+          right: 2em;
+          top: calc(50% - 2em);
+          height: 4em;
+          width: 4em;
+          border-radius: 2em;
+          cursor: pointer;
           color: #fff;
-          font-size: 3em;
-          float: none;
+          text-decoration: none;
+
+          .message {
+            opacity: 0;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            display: block;
+            color: #fff;
+            position: absolute;
+            width: 6em;
+            bottom: -1.3em;
+            right: -1.3em;
+          }
+
+          &:hover {
+            .message {
+              opacity: 1;
+            }
+          }
+
+          i {
+            color: #fff;
+            font-size: 3em;
+            float: none;
+          }
         }
       }
-    }
 
-    &.studentVoiceRow {
-      background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/logos/student_voice_logo_grey.svg');
-      background-position: left 7% top 50%;
-      background-size: auto 55%;
-      background-repeat: no-repeat;
-      .title {
+      &.studentVoiceRow {
+        background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/logos/student_voice_logo_grey.svg');
+        background-position: left 7% top 50%;
+        background-size: auto 55%;
+        background-repeat: no-repeat;
+        .title {
+          position: relative;
+          width: 82px;
+
+          h2 {
+            width: 416px;
+            transform: rotate(270deg);
+            position: absolute;
+            left: -166px;
+            top: 145px;
+            margin: 0.6em 0 !important;
+          }
+        }
+      }
+
+      &.socialMedia {
+        height: 440px;
+        .title {
+          position: relative;
+          width: 82px;
+
+          h2 {
+            transform: rotate(270deg);
+            position: absolute;
+            left: -42px;
+            top: 148px;
+            margin: 0.6em 0 !important;
+          }
+          &::after {
+            position: absolute;
+            right: -20px;
+            top: 0px;
+            content: '';
+          	width: 0;
+          	height: 0;
+          	border-bottom: 440px solid $twitter;
+          	border-right: 20px solid transparent;
+          }
+        }
+      }
+
+      &.advice {
+        height: 280px;
+        .content {
+          width: 1200px;
+          margin: 0 auto;
+          .areas {
+            @include flexFixed(800px);
+          }
+        }
+        .title {
+          position: relative;
+          width: 82px;
+
+          h2 {
+            transform: rotate(270deg);
+            position: absolute;
+            left: -82px;
+            top: 82px;
+            margin: 0.6em 0 !important;
+          }
+          &::after {
+            position: absolute;
+            right: -20px;
+            top: 0px;
+            content: '';
+          	width: 0;
+          	height: 0;
+          	border-top: 280px solid $advice_main;
+          	border-right: 20px solid transparent;
+          }
+        }
+      }
+
+      .studentVoice {
+        padding: 1em 0;
         position: relative;
-        width: 82px;
-
-        h2 {
-          width: 416px;
-          transform: rotate(270deg);
+        .logo {
           position: absolute;
-          left: -166px;
-          top: 145px;
-          margin: 0.6em 0 !important;
+          width: 200px;
+          top: 0;
+          left: 0;
+          img {
+            width: 80%;
+          }
         }
-      }
-    }
-
-    &.socialMedia {
-      height: 440px;
-      .title {
-        position: relative;
-        width: 82px;
-
-        h2 {
-          transform: rotate(270deg);
-          position: absolute;
-          left: -42px;
-          top: 148px;
-          margin: 0.6em 0 !important;
+        .intro {
+          padding-left: 200px;
         }
-        &::after {
-          position: absolute;
-          right: -20px;
-          top: 0px;
-          content: '';
-        	width: 0;
-        	height: 0;
-        	border-bottom: 440px solid $twitter;
-        	border-right: 20px solid transparent;
-        }
-      }
-    }
-
-    &.advice {
-      height: 280px;
-      .content {
-        width: 1200px;
-        margin: 0 auto;
-        .areas {
-          @include flexFixed(800px);
-        }
-      }
-      .title {
-        position: relative;
-        width: 82px;
-
-        h2 {
-          transform: rotate(270deg);
-          position: absolute;
-          left: -82px;
-          top: 82px;
-          margin: 0.6em 0 !important;
-        }
-        &::after {
-          position: absolute;
-          right: -20px;
-          top: 0px;
-          content: '';
-        	width: 0;
-        	height: 0;
-        	border-top: 280px solid $advice_main;
-        	border-right: 20px solid transparent;
-        }
-      }
-    }
-
-    .studentVoice {
-      padding: 1em 0;
-      position: relative;
-      .logo {
-        position: absolute;
-        width: 200px;
-        top: 0;
-        left: 0;
-        img {
-          width: 80%;
-        }
-      }
-      .intro {
-        padding-left: 200px;
-      }
-      .content {
-        flex: 1;
-        ul {
-          @include displayFlex;
-          flex-direction: column;
-          height: 100%;
-          justify-content: center;
-          li {
-            flex: 1;
+        .content {
+          flex: 1;
+          ul {
             @include displayFlex;
-            @include flexAlign(center);
-            @include flexJustify(flex-end);
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            li {
+              flex: 1;
+              @include displayFlex;
+              @include flexAlign(center);
+              @include flexJustify(flex-end);
+            }
           }
         }
       }
@@ -1006,11 +1015,13 @@ main section:not(:first-child) {
 
 /* Slightly bigger desktop */
 @media (min-width: 96em){
-  .row {
-    &.events {
-      #whatson {
-        width: 1400px;
-        margin: 0 auto;
+  .page_root {
+    .row {
+      &.events {
+        #whatson {
+          width: 1400px;
+          margin: 0 auto;
+        }
       }
     }
   }

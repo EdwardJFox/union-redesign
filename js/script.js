@@ -7,8 +7,18 @@
     }
   });
 
-  homepage();
+  if($('.page_root').length > 0){
+    homepage();
+  }
+
+  // Components
   setupAccordion();
+
+  // Widgets
+  rearrangeNews();
+  mailingList();
+  rearrangeEventList();
+  setupCalendar();
 });
 
 
@@ -52,7 +62,15 @@ function homepage(){
 
   $newsList.find('li').on('click', function(){
     newsItemClick($(this).attr('id'));
+    var toAppend = "";
   });
+
+  // Setup the events widget
+  $eventsItems = $('#whatson .event_item');
+
+  for(var i = 0; i < $eventsItems.length; i++){
+
+  }
 }
 
 function newsItemClick(index){
@@ -176,4 +194,63 @@ function setupAccordion(){
         console.error("Accordion Error: " + err);
     }
   });
+}
+
+/*Widgets*/
+/*News*/
+function rearrangeNews(){
+    $('.news_full').each(function(){
+        var items = $(this).find('.news_item_inner');
+        items.each(function(){
+            $(this).prepend($(this).find('.news_image'));
+            $(this).append('<div class="news_info"></div>');
+            $(this).find('.news_info').append($(this).find('h5'));
+            $(this).find('.news_info').append($(this).find('.leader'));
+            $(this).find('.news_item_hook').remove();
+        })
+    });
+}
+/*Mailing List*/
+function mailingList(){
+    $('.mailingListWidget').each(function(){
+        var rows = $(this).find('tr');
+        rows.each(function(i){
+            $(rows).eq(0).append($(this).find("> td"));
+            if(i > 0){
+                $(this).remove();
+            }
+        })
+        $(rows).find('td label').prepend('<span></span>');
+    })
+}
+
+/*Event List*/
+function rearrangeEventList(){
+    $('.msl_eventlist').each(function(){
+        var events = $(this).find('.event_item');
+        events.each(function(){
+            event = $(this).find('>dl');
+            $(this).prepend('<div class="event_image"></div>');
+            $(this).find('.event_image').append($(this).find('dt > a:eq(0)'));
+            $(this).find('dt, dd').wrapAll("<div class='event_info' />");
+        });
+    });
+}
+
+/*Calendar*/
+function setupCalendar(){
+    $('.msl_event_calendar').each(function(){
+        var selectedDays = $(this).find('.msl_event_calendar_selected_day');
+        selectedDays.each(function(){
+            $(this).click(function(e){
+                var hoverbox = $(this).find('.msl-cal-hoverbox');
+                if($(hoverbox).is(":visible")){
+                    $(hoverbox).css({display: "none"});
+                }
+                else {
+                    $(hoverbox).css({display: "block"});
+                }
+            })
+        })
+    })
 }

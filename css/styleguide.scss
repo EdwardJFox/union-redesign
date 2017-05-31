@@ -1,0 +1,80 @@
+.example {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    border: 1px solid #aaa;
+    -webkit-box-shadow: inset 0px 0px 16px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: inset 0px 0px 16px 0px rgba(0,0,0,0.15);
+    box-shadow: inset 0px 0px 16px 0px rgba(0,0,0,0.15);
+    overflow: auto;
+}
+.selector {
+    background-color: red;
+    display: inline-block;
+}
+
+/* ROYGBIV */
+pre {
+    background-color: #efefef;
+    width: 95%;
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    border: 1px solid #aaa;
+}
+code {
+    word-wrap: break-word;
+}
+/*Make it so all tags display inline*/
+.HTMLTag, .HTMLQuote, .HTMLPunc, .HTMLComment, .HTMLColour, .CSSPunc, .CSSNum, .CSSSelector, .CSSProperty, .CSSUnit, .CSSColour, .CSSTextValue, .CSSComment, .JSGroup1, .JSGroup2, .JSNum, .JSPunc, .JSQuote, .JSFuncName, .JSComment, .FileHighlight, .FileExtension{
+    display: inline;
+}
+/*Colour 1*/
+.HTMLQuote, .JSGroup1, .CSSTextValue, .CSSSelector, .FileExtension {
+    color: #f92572;
+}
+/*Colour 2*/
+.HTMLTag, .CSSUnit, .JSPunc, .JSGroup2, .FileHighlight{
+    color: #0096db;
+}
+/*Colour 3 (green)*/
+.CSSProperty, .JSFuncName {
+    color: #8ac02b;
+}
+/*Colour 4 (cream)*/
+.JSQuote {
+    color:#e6db74;
+}
+/*Colour 5 (purple)*/
+.CSSNum, .JSNum {
+    color:#ae81ff;
+}
+/*Colour 6 (white)*/
+.HTMLPunc, .CSSPunc {
+    color:#000;
+}
+/*Comment colours*/
+.HTMLComment, .CSSComment, .JSComment{
+    color:#666;
+}
+/*Tablet*/
+@media (min-width: 48em){
+    article h3 {
+        padding-left: 0.2em;
+    }
+    article p {
+        padding-left: 0.6em;
+    }
+}
+/*Desktop*/
+@media (min-width: 80em){
+    .example {
+        width: 90%;
+        margin: 0 auto;
+        padding: 1em 2em;
+    }
+    pre {
+        width: 90%;
+        margin: 0 auto;
+        padding: 1em 2em;
+    }
+}
