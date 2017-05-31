@@ -1,0 +1,80 @@
+// What to do dashboard
+
+.page_whattodo {
+  .whattodoHeader {
+    min-height: 35vh;
+    background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/whattodo/whattodo_header_shaded.jpg');
+    background-size: cover;
+    background-position: top center;
+    text-align: center;
+    @include flexAlign(center);
+
+    .title {}
+
+    .rowInner {
+      @include flexDirection(column);
+      .span1 {
+        padding: 0.4em;
+      }
+    }
+
+    h1, h2 {
+      width: 100%;
+    }
+
+  }
+
+  #events {
+    padding: 1em 0;
+    background: #333;
+    position: relative;
+      .title {
+        background-color: #fff;
+        text-align: center;
+
+        h2 {
+          width: 100%;
+          color: #000;
+          margin: 0 0 0.6em !important;
+        }
+      }
+  }
+}
+
+/* Tablet */
+@media (min-width: 48em){
+  .page_whattodo {
+    .whattodoHeader {
+      min-height: 40vh !important;
+    }
+
+
+
+  }
+}
+
+/* Desktop */
+@media (min-width: 80em){
+  .page_whattodo {
+    .whattodoHeader {
+      min-height: 50vh !important;
+      background-position: top -8em center;
+    }
+    #events {
+      overflow: hidden;
+      .title {
+        transform: rotate(315deg);
+        position: absolute;
+        width: 400px;
+        padding: 1em;
+        top: 92px;
+        left: -10px;
+
+        h2 {
+          width: 100%;
+          margin: 0.6em 0 !important;
+        }
+      }
+    }
+  }
+}

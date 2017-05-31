@@ -6,6 +6,11 @@ main {
     &.row {
       .span1, .span2, .span3 {
         width: 100%;
+        margin: 0 0.4em;
+      }
+
+      .rowInner {
+        padding: 0 0.8em;
       }
 
       video.background {
@@ -22,13 +27,37 @@ main {
         background-size: cover;
         transition: 1s opacity;
       }
+
+      &.header {
+        padding: 0 2em 0 3.2em;
+
+        // Cheeky font size override for mobile
+        h1 {
+          font-size: 3.4em;
+        }
+        h2 {
+          font-size: 2.6em;
+        }
+      }
     }
   }
 }
 
 /* Tablets*/
 @media (min-width: 48em){
+  main {
+    section {
+      &.row {
+        &.header {
+          padding-left: 0;
 
+          h1 {
+            font-size: 4.2em;
+          }
+        }
+      }
+    }
+  }
 }
 /* Desktop*/
 @media (min-width: 80em){
@@ -51,6 +80,7 @@ main {
         .rowInner {
           width: 1200px;
           margin: 0 auto;
+          padding: 0;
           @include displayFlex;
           .span1, .span2, .span3 {
             position: relative;

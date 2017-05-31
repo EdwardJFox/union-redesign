@@ -5,17 +5,6 @@
     background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/engagement/engagement_header_shaded.jpg');
     background-size: cover;
     background-position: top center;
-
-    .rowInner {
-      position: relative;
-
-      h1 {
-        position: absolute;
-        bottom: 0.4em;
-        right: 0.2em;
-        color: #fff;
-      }
-    }
   }
 
   #reps {
@@ -148,6 +137,15 @@
         li {
           @include flexFixed(49%);
         }
+      }
+    }
+    .engagementHeader .rowInner {
+      position: relative;
+
+      h1 {
+        position: absolute;
+        bottom: 0.4em;
+        right: 0.2em;
       }
     }
   }

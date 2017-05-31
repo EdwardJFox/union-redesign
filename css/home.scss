@@ -226,7 +226,18 @@ main section:not(:first-child) {
 
   }
 
-  .studentVoice {
+  &.studentVoiceRow {
+    .title {
+      width: 100%;
+      display: block;
+      background: #BCD059;
+
+      h2 {
+        color: #fff;
+        margin: 0;
+        padding: 0.1em 0.2em 0.1em 0.9em;
+      }
+    }
     .logo {
       text-align: center;
       img {
@@ -730,6 +741,10 @@ main section:not(:first-child) {
        }
     }
 
+    &.studentVoiceRow {
+
+    }
+
     &.officers {
       height: 300px;
       position: relative;
@@ -827,8 +842,8 @@ main section:not(:first-child) {
                   transform: rotate(-90deg);
           padding: 0;
           position: absolute;
-          bottom: 64px;
-          left: -37px;
+          bottom: 94px;
+          left: -38px;
         }
       }
       #whatson {
@@ -878,9 +893,22 @@ main section:not(:first-child) {
 
     &.studentVoiceRow {
       background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/logos/student_voice_logo_grey.svg');
-      background-position: left 1% top 50%;
+      background-position: left 7% top 50%;
       background-size: auto 55%;
       background-repeat: no-repeat;
+      .title {
+        position: relative;
+        width: 82px;
+
+        h2 {
+          width: 416px;
+          transform: rotate(270deg);
+          position: absolute;
+          left: -166px;
+          top: 145px;
+          margin: 0.6em 0 !important;
+        }
+      }
     }
 
     &.socialMedia {
@@ -892,7 +920,7 @@ main section:not(:first-child) {
         h2 {
           transform: rotate(270deg);
           position: absolute;
-          left: -44px;
+          left: -42px;
           top: 148px;
           margin: 0.6em 0 !important;
         }
