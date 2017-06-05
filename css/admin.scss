@@ -89,6 +89,14 @@
   }
 }
 
+/* Fix for the tree view */
+#page_tree table {
+  width: auto !important;
+}
+#page_tree table td {
+  padding: 0 !important;
+}
+
 /* Old import specific fixes */
 input#ctl00_ctl00_Main_AdminPageContent_cbIsEnabled_chkItem {
   display: block !important;

@@ -13,22 +13,25 @@
     background-color: $union_green_hover;
 
     &.greenBg:hover {
-      background-color: darken($union_green, 5%);
+      background-color: darken($union_green, 5%) !important;
     }
     &.pinkBg:hover {
-      background-color: darken($pink, 5%);
+      background-color: darken($pink, 5%) !important;
     }
     &.redBg:hover {
-      background-color: darken($blue, 5%);
+      background-color: darken($red, 5%) !important;
+    }
+    &.blueBg:hover {
+      background-color: darken($blue, 5%) !important;
     }
     &.cyanBg:hover {
-      background-color: darken($cyan, 5%);
+      background-color: darken($cyan, 5%) !important;
     }
     &.darkCyanBg:hover {
-      background-color: darken($darkCyan, 5%);
+      background-color: darken($darkCyan, 5%) !important;
     }
     &.adviceBg:hover {
-      background-color: darken($advice_main, 5%);
+      background-color: darken($advice_main, 5%) !important;
     }
   }
 }

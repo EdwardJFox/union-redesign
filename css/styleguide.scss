@@ -1,80 +1,109 @@
-.example {
-    width: 95%;
-    margin: 0 auto;
-    padding: 0.5em 1em;
-    border: 1px solid #aaa;
-    -webkit-box-shadow: inset 0px 0px 16px 0px rgba(0,0,0,0.15);
-    -moz-box-shadow: inset 0px 0px 16px 0px rgba(0,0,0,0.15);
-    box-shadow: inset 0px 0px 16px 0px rgba(0,0,0,0.15);
-    overflow: auto;
-}
-.selector {
-    background-color: red;
-    display: inline-block;
-}
+.page_siteguide {
+  .preview {
+      width: 95%;
+      margin: 0 auto;
+      padding: 1.4em 1em 0.6em;
+      border: 1px solid #aaa;
+      overflow: auto;
+      position: relative;
 
-/* ROYGBIV */
-pre {
-    background-color: #efefef;
-    width: 95%;
-    margin: 0 auto;
-    padding: 0.5em 1em;
-    border: 1px solid #aaa;
-}
-code {
-    word-wrap: break-word;
-}
-/*Make it so all tags display inline*/
-.HTMLTag, .HTMLQuote, .HTMLPunc, .HTMLComment, .HTMLColour, .CSSPunc, .CSSNum, .CSSSelector, .CSSProperty, .CSSUnit, .CSSColour, .CSSTextValue, .CSSComment, .JSGroup1, .JSGroup2, .JSNum, .JSPunc, .JSQuote, .JSFuncName, .JSComment, .FileHighlight, .FileExtension{
-    display: inline;
-}
-/*Colour 1*/
-.HTMLQuote, .JSGroup1, .CSSTextValue, .CSSSelector, .FileExtension {
-    color: #f92572;
-}
-/*Colour 2*/
-.HTMLTag, .CSSUnit, .JSPunc, .JSGroup2, .FileHighlight{
-    color: #0096db;
-}
-/*Colour 3 (green)*/
-.CSSProperty, .JSFuncName {
-    color: #8ac02b;
-}
-/*Colour 4 (cream)*/
-.JSQuote {
-    color:#e6db74;
-}
-/*Colour 5 (purple)*/
-.CSSNum, .JSNum {
-    color:#ae81ff;
-}
-/*Colour 6 (white)*/
-.HTMLPunc, .CSSPunc {
-    color:#000;
-}
-/*Comment colours*/
-.HTMLComment, .CSSComment, .JSComment{
-    color:#666;
+      &:before {
+        content: 'preview';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 0.2em 0.4em;
+        background-color: #e7e7e7;
+        font-size: 0.9em;
+        color: #333;
+      }
+  }
+  .selector {
+      background-color: red;
+      display: inline-block;
+  }
+
+  /* ROYGBIV */
+  pre {
+      background-color: #f2f2f2;
+      width: 95%;
+      margin: 0 auto;
+      padding: 1.4em 1em 0.5em;
+      border: 1px solid #aaa;
+      border-top: none !important;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      position: relative;
+      overflow: visible;
+
+      &:before {
+        content: 'code';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 0.2em 0.4em;
+        background-color: #e7e7e7;
+        font-size: 0.9em;
+        color: #333;
+      }
+  }
+  code {
+    overflow: visible;
+  }
+  /*Make it so all tags display inline*/
+  .HTMLTag, .HTMLQuote, .HTMLPunc, .HTMLComment, .HTMLColour, .CSSPunc, .CSSNum, .CSSSelector, .CSSProperty, .CSSUnit, .CSSColour, .CSSTextValue, .CSSComment, .JSGroup1, .JSGroup2, .JSNum, .JSPunc, .JSQuote, .JSFuncName, .JSComment, .FileHighlight, .FileExtension{
+      display: inline;
+  }
+  /*Colour 1*/
+  .HTMLQuote, .JSGroup1, .CSSTextValue, .CSSSelector, .FileExtension {
+      color: #f92572;
+  }
+  /*Colour 2*/
+  .HTMLTag, .CSSUnit, .JSPunc, .JSGroup2, .FileHighlight{
+      color: #0096db;
+  }
+  /*Colour 3 (green)*/
+  .CSSProperty, .JSFuncName {
+      color: #8ac02b;
+  }
+  /*Colour 4 (cream)*/
+  .JSQuote {
+      color:#e6db74;
+  }
+  /*Colour 5 (purple)*/
+  .CSSNum, .JSNum {
+      color:#ae81ff;
+  }
+  /*Colour 6 (white)*/
+  .HTMLPunc, .CSSPunc {
+      color:#000;
+  }
+  /*Comment colours*/
+  .HTMLComment, .CSSComment, .JSComment{
+      color:#666;
+  }
 }
 /*Tablet*/
 @media (min-width: 48em){
+  .page_siteguide {
     article h3 {
         padding-left: 0.2em;
     }
     article p {
         padding-left: 0.6em;
     }
+  }
 }
 /*Desktop*/
 @media (min-width: 80em){
+  .page_siteguide {
     .example {
-        width: 90%;
         margin: 0 auto;
-        padding: 1em 2em;
+        padding: 0.8em 1.6em;
     }
     pre {
-        width: 90%;
         margin: 0 auto;
-        padding: 1em 2em;
+        padding: 0.8em 1.6em 0em;
     }
+  }
 }

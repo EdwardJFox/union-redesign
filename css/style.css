@@ -15,7 +15,7 @@ $advice_main_dark: #2e266b;
 /* Useful Mixins, do not declare classes in this file */
 /* For when you want to use a google material icon in a ::before or ::after*/
 /* Just so there is a default way of creating a flexbox*/
-/* For all the default html styling, not to be used classes */
+/* For all the default html elements styling, not to be used classes */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -29,6 +29,54 @@ body {
 
 video {
   width: 100%;
+}
+
+/* lists */
+ul {
+  list-style: square;
+}
+
+/* Table */
+table {
+  width: 100%;
+  background: #f2f2f2;
+}
+
+table tr td, table tr th {
+  padding: 0.2em 0.4em;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+}
+
+table tr {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+table tr:last-of-type {
+  border-bottom: none !important;
+}
+
+table tr:hover {
+  background: #f7f7f7;
+}
+
+table tr td {
+  border-right: 1px solid #e7e7e7;
+}
+
+table tr td:last-of-type {
+  border-right: none !important;
+}
+
+table tr th {
+  background: #e7e7e7;
+}
+
+/*Tablet*/
+@media (min-width: 48em) {
+  table tr td, table tr th {
+    padding: 0.4em 0.6em;
+  }
 }
 
 /* CSS classes to use around the site to make some things easier */
@@ -49,6 +97,14 @@ video {
   margin: 0 auto;
 }
 
+.is-left {
+  float: left;
+}
+
+.is-right {
+  float: right;
+}
+
 .flex-middle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,6 +115,10 @@ video {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.clearer {
+  clear: both;
 }
 
 /* Helper colour classes*/
@@ -169,6 +229,11 @@ img.imgStretch {
   width: 100%;
 }
 
+/* Lists */
+ul.inline li {
+  display: inline-block;
+}
+
 /* Fonts and Typography */
 h1, h2, h3, h4 {
   font-family: 'Raleway', sans-serif;
@@ -269,27 +334,31 @@ b {
 }
 
 .button:hover.greenBg:hover, input.button:hover:hover, .btn:hover.greenBg:hover, input.btn.button:hover:hover, .blockLink:hover.greenBg:hover, input.blockLink.button:hover:hover {
-  background-color: #48a640;
+  background-color: #48a640 !important;
 }
 
 .button:hover.pinkBg:hover, .btn:hover.pinkBg:hover, .blockLink:hover.pinkBg:hover {
-  background-color: #de136c;
+  background-color: #de136c !important;
 }
 
 .button:hover.redBg:hover, .btn:hover.redBg:hover, .blockLink:hover.redBg:hover {
-  background-color: #0085c2;
+  background-color: #cc1631 !important;
+}
+
+.button:hover.blueBg:hover, .btn:hover.blueBg:hover, .blockLink:hover.blueBg:hover {
+  background-color: #0085c2 !important;
 }
 
 .button:hover.cyanBg:hover, .btn:hover.cyanBg:hover, .blockLink:hover.cyanBg:hover {
-  background-color: #4a736d;
+  background-color: #4a736d !important;
 }
 
 .button:hover.darkCyanBg:hover, .btn:hover.darkCyanBg:hover, .blockLink:hover.darkCyanBg:hover {
-  background-color: #385752;
+  background-color: #385752 !important;
 }
 
 .button:hover.adviceBg:hover, .btn:hover.adviceBg:hover, .blockLink:hover.adviceBg:hover {
-  background-color: #48a640;
+  background-color: #48a640 !important;
 }
 
 .blockLink {
@@ -1507,6 +1576,15 @@ footer #footerBottom a {
   background-color: rgba(80, 184, 72, 0.2) !important;
 }
 
+/* Fix for the tree view */
+#page_tree table {
+  width: auto !important;
+}
+
+#page_tree table td {
+  padding: 0 !important;
+}
+
 /* Old import specific fixes */
 input#ctl00_ctl00_Main_AdminPageContent_cbIsEnabled_chkItem {
   display: block !important;
@@ -2689,6 +2767,125 @@ input#ctl00_Main_btnRecipients {
   }
   to {
     opacity: 0;
+  }
+}
+
+.page_siteguide {
+  /* ROYGBIV */
+  /*Make it so all tags display inline*/
+  /*Colour 1*/
+  /*Colour 2*/
+  /*Colour 3 (green)*/
+  /*Colour 4 (cream)*/
+  /*Colour 5 (purple)*/
+  /*Colour 6 (white)*/
+  /*Comment colours*/
+}
+
+.page_siteguide .preview {
+  width: 95%;
+  margin: 0 auto;
+  padding: 1.4em 1em 0.6em;
+  border: 1px solid #aaa;
+  overflow: auto;
+  position: relative;
+}
+
+.page_siteguide .preview:before {
+  content: 'preview';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 0.2em 0.4em;
+  background-color: #e7e7e7;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.page_siteguide .selector {
+  background-color: red;
+  display: inline-block;
+}
+
+.page_siteguide pre {
+  background-color: #f2f2f2;
+  width: 95%;
+  margin: 0 auto;
+  padding: 1.4em 1em 0.5em;
+  border: 1px solid #aaa;
+  border-top: none !important;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  position: relative;
+  overflow: visible;
+}
+
+.page_siteguide pre:before {
+  content: 'code';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 0.2em 0.4em;
+  background-color: #e7e7e7;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.page_siteguide code {
+  overflow: visible;
+}
+
+.page_siteguide .HTMLTag, .page_siteguide .HTMLQuote, .page_siteguide .HTMLPunc, .page_siteguide .HTMLComment, .page_siteguide .HTMLColour, .page_siteguide .CSSPunc, .page_siteguide .CSSNum, .page_siteguide .CSSSelector, .page_siteguide .CSSProperty, .page_siteguide .CSSUnit, .page_siteguide .CSSColour, .page_siteguide .CSSTextValue, .page_siteguide .CSSComment, .page_siteguide .JSGroup1, .page_siteguide .JSGroup2, .page_siteguide .JSNum, .page_siteguide .JSPunc, .page_siteguide .JSQuote, .page_siteguide .JSFuncName, .page_siteguide .JSComment, .page_siteguide .FileHighlight, .page_siteguide .FileExtension {
+  display: inline;
+}
+
+.page_siteguide .HTMLQuote, .page_siteguide .JSGroup1, .page_siteguide .CSSTextValue, .page_siteguide .CSSSelector, .page_siteguide .FileExtension {
+  color: #f92572;
+}
+
+.page_siteguide .HTMLTag, .page_siteguide .CSSUnit, .page_siteguide .JSPunc, .page_siteguide .JSGroup2, .page_siteguide .FileHighlight {
+  color: #0096db;
+}
+
+.page_siteguide .CSSProperty, .page_siteguide .JSFuncName {
+  color: #8ac02b;
+}
+
+.page_siteguide .JSQuote {
+  color: #e6db74;
+}
+
+.page_siteguide .CSSNum, .page_siteguide .JSNum {
+  color: #ae81ff;
+}
+
+.page_siteguide .HTMLPunc, .page_siteguide .CSSPunc {
+  color: #000;
+}
+
+.page_siteguide .HTMLComment, .page_siteguide .CSSComment, .page_siteguide .JSComment {
+  color: #666;
+}
+
+/*Tablet*/
+@media (min-width: 48em) {
+  .page_siteguide article h3 {
+    padding-left: 0.2em;
+  }
+  .page_siteguide article p {
+    padding-left: 0.6em;
+  }
+}
+
+/*Desktop*/
+@media (min-width: 80em) {
+  .page_siteguide .example {
+    margin: 0 auto;
+    padding: 0.8em 1.6em;
+  }
+  .page_siteguide pre {
+    margin: 0 auto;
+    padding: 0.8em 1.6em 0em;
   }
 }
 

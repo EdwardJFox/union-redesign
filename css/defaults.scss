@@ -1,4 +1,4 @@
-/* For all the default html styling, not to be used classes */
+/* For all the default html elements styling, not to be used classes */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -13,4 +13,53 @@ body {
 
 video {
   width: 100%;
+}
+
+/* lists */
+ul {
+  list-style: square;
+}
+
+/* Table */
+table {
+  width: 100%;
+  background: #f2f2f2;
+}
+
+table tr {
+
+}
+
+table tr td, table tr th {
+  padding: 0.2em 0.4em;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+}
+
+table tr {
+  border-bottom: 1px solid #e7e7e7;
+  &:last-of-type {
+    border-bottom: none !important;
+  }
+  &:hover {
+    background: #f7f7f7;
+  }
+}
+
+table tr td {
+  border-right: 1px solid #e7e7e7;
+  &:last-of-type {
+    border-right: none !important;
+  }
+}
+
+table tr th {
+  background: #e7e7e7;
+}
+
+/*Tablet*/
+@media (min-width: 48em) {
+  table tr td, table tr th {
+    padding: 0.4em 0.6em;
+  }
 }

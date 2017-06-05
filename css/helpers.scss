@@ -12,6 +12,12 @@
 .is-center {
   margin: 0 auto;
 }
+.is-left {
+  float: left;
+}
+.is-right {
+  float: right;
+}
 .flex-middle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,6 +28,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.clearer {
+  clear: both;
 }
 
 /* Helper colour classes*/
@@ -98,7 +107,6 @@
   background-color: $advice_main;
 }
 
-
 /* Images */
 img.imgResponsive {
   max-width: 100%;
@@ -108,4 +116,9 @@ img.imgResponsive {
 
 img.imgStretch {
   width: 100%;
+}
+
+/* Lists */
+ul.inline li {
+  display: inline-block;
 }
