@@ -1,5 +1,5 @@
-/* Engagement Dashboard */
-.page_engagement main {
+/* Get Involved Dashboard */
+.page_getinvolved main {
   .header {
     min-height: 35vh;
     background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/engagement/engagement_header_shaded.jpg');
@@ -124,7 +124,7 @@
 
 /* Tablet */
 @media (min-width: 48em){
-  .page_engagement main {
+  .page_getinvolved main {
     .header {
       min-height: 40vh !important;
     }
@@ -153,7 +153,7 @@
 
 /* Desktop */
 @media (min-width: 80em){
-  .page_engagement main {
+  .page_getinvolved main {
     .header {
       min-height: 50vh !important;
       background-position: top -8em center;

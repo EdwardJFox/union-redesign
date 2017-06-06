@@ -2890,38 +2890,38 @@ input#ctl00_Main_btnRecipients {
 }
 
 /* Dashboard */
-/* Engagement Dashboard */
-.page_engagement main .header {
+/* Get Involved Dashboard */
+.page_getinvolved main .header {
   min-height: 35vh;
   background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/engagement/engagement_header_shaded.jpg");
   background-size: cover;
   background-position: top center;
 }
 
-.page_engagement main #reps {
+.page_getinvolved main #reps {
   padding: 0.8em 0;
   background: rgba(227, 24, 54, 0.1);
 }
 
-.page_engagement main #reps .rowInner {
+.page_getinvolved main #reps .rowInner {
   -webkit-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
 }
 
-.page_engagement main #reps h2 {
+.page_getinvolved main #reps h2 {
   color: #E31836;
 }
 
-.page_engagement main #reps p {
+.page_getinvolved main #reps p {
   font-size: 1.4em;
   padding: 0.6em 0.6em;
   color: #fff;
   background: #E31836;
 }
 
-.page_engagement main #reps a {
+.page_getinvolved main #reps a {
   background: #E31836;
   padding: 0.6em 0.8em;
   width: 100%;
@@ -2931,34 +2931,34 @@ input#ctl00_Main_btnRecipients {
   text-decoration: none;
 }
 
-.page_engagement main #reps .logo {
+.page_getinvolved main #reps .logo {
   width: 300px;
 }
 
-.page_engagement main #reps ul {
+.page_getinvolved main #reps ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.page_engagement main #clubsandsocs .rowHeader {
+.page_getinvolved main #clubsandsocs .rowHeader {
   background: #50b848;
 }
 
-.page_engagement main #clubsandsocs .rowInner {
+.page_getinvolved main #clubsandsocs .rowInner {
   padding: 0.8em 0 1.2em;
 }
 
-.page_engagement main #clubsandsocs ul {
+.page_getinvolved main #clubsandsocs ul {
   list-style: none;
   padding: 0;
 }
 
-.page_engagement main #clubsandsocs ul li {
+.page_getinvolved main #clubsandsocs ul li {
   margin-bottom: 0.6em;
 }
 
-.page_engagement main #clubsandsocs ul li a {
+.page_getinvolved main #clubsandsocs ul li a {
   display: -webkit-box ;
   display: -ms-flexbox ;
   display: -webkit-flex ;
@@ -2968,7 +2968,7 @@ input#ctl00_Main_btnRecipients {
   text-decoration: none;
 }
 
-.page_engagement main #clubsandsocs ul li a img {
+.page_getinvolved main #clubsandsocs ul li a img {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 25%;
   -webkit-flex: 0 0 25%;
@@ -2977,7 +2977,7 @@ input#ctl00_Main_btnRecipients {
   padding: 0.2em;
 }
 
-.page_engagement main #clubsandsocs ul li a .name {
+.page_getinvolved main #clubsandsocs ul li a .name {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   -webkit-flex: 1;
@@ -2985,16 +2985,16 @@ input#ctl00_Main_btnRecipients {
   padding: 0.4em 0.8em;
 }
 
-.page_engagement main #clubsandsocs ul li a:hover img {
+.page_getinvolved main #clubsandsocs ul li a:hover img {
   animation: pulse .8s ease-out;
   animation-fill-mode: both;
 }
 
-.page_engagement main #employability {
+.page_getinvolved main #employability {
   background: #eee;
 }
 
-.page_engagement main #employability .rowHeader span {
+.page_getinvolved main #employability .rowHeader span {
   display: -webkit-box ;
   display: -ms-flexbox ;
   display: -webkit-flex ;
@@ -3003,16 +3003,16 @@ input#ctl00_Main_btnRecipients {
   justify-content: flex-start;
 }
 
-.page_engagement main #employability .rowHeader span i {
+.page_getinvolved main #employability .rowHeader span i {
   font-size: 3em;
   padding-right: 0.8em;
 }
 
-.page_engagement main #employability .rowInner {
+.page_getinvolved main #employability .rowInner {
   padding: 0 0 0.8em;
 }
 
-.page_engagement main #employability .rowInner .button {
+.page_getinvolved main #employability .rowInner .button {
   width: 100%;
   height: 100%;
   display: block;
@@ -3027,20 +3027,20 @@ input#ctl00_Main_btnRecipients {
   font-size: 1.2em;
 }
 
-.page_engagement main #saps {
+.page_getinvolved main #saps {
   padding: 1em 0;
 }
 
-.page_engagement main #saps .saps img {
+.page_getinvolved main #saps .saps img {
   width: 50%;
 }
 
 /* Tablet */
 @media (min-width: 48em) {
-  .page_engagement main .header {
+  .page_getinvolved main .header {
     min-height: 40vh !important;
   }
-  .page_engagement main #clubsandsocs ul {
+  .page_getinvolved main #clubsandsocs ul {
     display: -webkit-box ;
     display: -ms-flexbox ;
     display: -webkit-flex ;
@@ -3054,16 +3054,16 @@ input#ctl00_Main_btnRecipients {
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
   }
-  .page_engagement main #clubsandsocs ul li {
+  .page_getinvolved main #clubsandsocs ul li {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 49%;
     -webkit-flex: 0 0 49%;
     flex: 0 0 49%;
   }
-  .page_engagement main .engagementHeader .rowInner {
+  .page_getinvolved main .engagementHeader .rowInner {
     position: relative;
   }
-  .page_engagement main .engagementHeader .rowInner h1 {
+  .page_getinvolved main .engagementHeader .rowInner h1 {
     position: absolute;
     bottom: 0.4em;
     right: 0.2em;
@@ -3072,11 +3072,11 @@ input#ctl00_Main_btnRecipients {
 
 /* Desktop */
 @media (min-width: 80em) {
-  .page_engagement main .header {
+  .page_getinvolved main .header {
     min-height: 50vh !important;
     background-position: top -8em center;
   }
-  .page_engagement main #clubsandsocs ul li {
+  .page_getinvolved main #clubsandsocs ul li {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 32%;
     -webkit-flex: 0 0 32%;
