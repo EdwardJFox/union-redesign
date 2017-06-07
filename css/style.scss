@@ -15,7 +15,9 @@
 @import "anims";
 
 /* Components */
-@import "accordion";
+@import "components/accordion";
+@import "components/dropdown";
+@import "components/tabnavigation";
 
 /* More specific stylesheets */
 @import "msl";
