@@ -1,18 +1,15 @@
 /*Config Variables*/var navSlideSpeed = 300,    dropdownOptions = {        duration : 300,        complete: function(){}    },    accordionOptions = {        duration : 300,        complete: function(){}    };$(document).ready(function(){  setupHeader();
+  setupNav();
 
-  $('.openMenu').on('click', function(){    $('nav').removeClass('close').addClass('open opening');    setTimeout(function(){      $('nav').removeClass('opening');    }, 800)  });  $('.closeButton').on('click', function(){    $('nav').removeClass('open').addClass('close');  });
-  $(document).on('click', function closeMenu (e){
-    if(!$('nav').hasClass('opening') && $('nav').attr('class') != undefined && $('nav').has(e.target).length === 0){
-        $('nav').removeClass('open').addClass('close');
-    }
-  });
-
+  // If on homepage, run the homepage stuff
   if($('.page_root').length > 0){
     homepage();
   }
 
   // Components
   setupAccordion();
+  setupDropdown();
+  setupTabs();
 
   // Widgets
   rearrangeNews();
@@ -71,6 +68,24 @@ function homepage(){
   for(var i = 0; i < $eventsItems.length; i++){
 
   }
+}
+
+function setupNav(){
+  $('.openMenu').on('click', function(){
+    $('nav').removeClass('close').addClass('open opening');
+    setTimeout(function(){
+      $('nav').removeClass('opening');
+    }, 800)
+  });
+  $('.closeButton').on('click', function(){
+    $('nav').removeClass('open').addClass('close');
+  });
+
+  $(document).on('click', function closeMenu (e){
+    if(!$('nav').hasClass('opening') && $('nav').attr('class') != undefined && $('nav').has(e.target).length === 0){
+        $('nav').removeClass('open').addClass('close');
+    }
+  });
 }
 
 function newsItemClick(index){
@@ -196,6 +211,84 @@ function setupAccordion(){
   });
 }
 
+// Setup Dropdown
+function setupDropdown(){
+  //For each of the .dropdown class on the page
+  $('.dropdown').each(function(){
+    try {
+      //Get the list which is directly under the .dropdown class
+      var list = $(this).find('> ul');
+      var title = $(this).find(' > .dropdownTitle');
+      //Only run if there is a ul directly underneath, otherwise don't run
+      if ($(list).length) {
+        //Hide the dropdown content
+        $(list).hide();
+        $(title).click(function () {
+          //If the list is currently visible
+          if ($(list).is(':visible')) {
+            $(list).slideUp(dropdownOptions);
+            //Add back the default background image
+            $(title).removeClass('dropped');
+          }
+          //If it is hidden
+          else {
+            $(list).slideDown(dropdownOptions);
+            //Add the rotated background image
+            $(title).addClass('dropped');
+          }
+          ga('send', 'event', 'Components', 'Dropdown', $(this).text());
+        });
+      }
+      //If there isn't a list directly underneath (e.g. not following the rules of the component), then error handle
+      else {
+        throw "No <ul> found under the .dropdown class, please refer to the component guide for the layout of dropdown menus.";
+      }
+    }
+    catch(err){
+      console.error("Dropdown Error: " + err);
+    }
+  });
+}
+
+//Setting up the tabbales
+function setupTabs(){
+  $('.tabs').each(function(){
+    try {
+      var nav = $(this).find('> .nav-tabs > li');
+      var panes = $(this).find('> .panes > div');
+      if($(panes).length < $(nav).length){
+        throw "There are too few .panes for the number of links in the .nav-tabs";
+      }
+      else if($(panes).length < $(nav).length){
+        throw "There are too many .panes for the number of links in the .nav-tabs";
+      }
+      else {
+        $(nav).each(function(i){
+          var link = $(this).find('a');
+          if(!link){
+            throw "No link found in the nav list at index " + i;
+          }
+          $(link).click(function(e){
+            e.preventDefault();
+            $(panes).hide();
+            $(nav).removeClass('active');
+            $(this).parent().addClass('active');
+            $($(this).attr('href')).show();
+            ga('send', 'event', 'Components', 'Tabs', $(this).text());
+          })
+        })
+      }
+      //Setup initial
+      $(panes).hide();
+      $(nav).eq(0).addClass('active');
+      $(panes).eq(0).show();
+    }
+    catch(err){
+      console.error("Tabs Error: " + err);
+    }
+  })
+}
+
 /*Widgets*/
 /*News*/
 function rearrangeNews(){
@@ -253,4 +346,85 @@ function setupCalendar(){
             })
         })
     })
+}
+
+/* Helpers */
+
+/*Accessability*/
+function setupStyles(){
+    var temp = readCookie("style");
+    if(temp){
+        setPassiveStyleSheet()
+    }
+}
+function createCookie(name,value,days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca;
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+function setActiveStyleSheet(title) {
+    var i, a, main;
+    for(i=0; (a = document.getElementsByTagName("link")); i++) {
+        if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
+            a.disabled = true;
+            if(a.getAttribute("title") == title) {
+                a.disabled = false;
+                createCookie("style", title, 365);
+            }
+        }
+    }
+}
+
+function setPassiveStyleSheet(title) {
+    var i, a, main;
+    for(i=0; (a = document.getElementsByTagName("link")); i++) {
+        if(a.getAttribute("rel") && a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
+            a.disabled = true;
+            if(a.getAttribute("title") == title) a.disabled = false;
+        }
+    }
+}
+
+
+/* For detecing those pesky IE users */
+function detectIE() {
+    var ua = window.navigator.userAgent;
+
+    var msie = ua.indexOf('MSIE ');
+    if (msie > 0) {
+        // IE 10 or older => return version number
+        return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+    }
+
+    var trident = ua.indexOf('Trident/');
+    if (trident > 0) {
+        // IE 11 => return version number
+        var rv = ua.indexOf('rv:');
+        return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+    }
+
+    var edge = ua.indexOf('Edge/');
+    if (edge > 0) {
+       // Edge (IE 12+) => return version number
+       return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+    }
+
+    // other browser
+    return false;
 }
