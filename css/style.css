@@ -953,6 +953,7 @@ nav#sidebar section .links a:hover {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 200;
 }
 
 .quickbar .openMenu {
@@ -1370,14 +1371,14 @@ footer #footerBottom a {
 }
 
 /*Dropdown Menu*/
-.dropdown {
+main .dropdown {
   display: inline-block;
   width: 100%;
   text-align: center;
   margin: 0.3em 0;
 }
 
-.dropdown > .dropdownTitle {
+main .dropdown > .dropdownTitle {
   padding: 0.5em 0.6em;
   font-size: 1.2em;
   font-weight: 300;
@@ -1391,34 +1392,69 @@ footer #footerBottom a {
   user-select: none;
 }
 
-.dropdown > .dropdownTitle.dropped {
+main .dropdown > .dropdownTitle.dropped {
   background-image: url(//staffsunion.s3.amazonaws.com/images/icons/icon_arrow_white_up.svg);
 }
 
-.dropdown > ul {
+main .dropdown > ul {
   list-style: none;
   padding: 0;
   margin: 0;
   z-index: 101;
 }
 
-.dropdown > ul > li {
+main .dropdown > ul > li {
   padding: 0.2em 0.6em;
   font-weight: 300;
 }
 
-.dropdown > ul > li:hover {
+main .dropdown > ul > li:hover {
   background-color: rgba(0, 0, 0, 0.06);
 }
 
-.dropdown > ul > li > a {
+main .dropdown > ul > li > a {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-.dropdown > ul > li a, .dropdown > ul > li p {
+main .dropdown > ul > li a, main .dropdown > ul > li p {
   padding: 0.4em 0.8em !important;
+}
+
+/*Nav Tabs*/
+.nav-tabs {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #50b848;
+}
+
+.nav-tabs li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 0.2em;
+}
+
+.nav-tabs > .active {
+  background-color: #50b848;
+}
+
+.nav-tabs > .active > a {
+  color: #fff;
+}
+
+.nav-tabs > .active > a:hover {
+  background: none;
+}
+
+.nav-tabs a {
+  padding: 0.4em 0.8em;
+  display: block;
+  text-decoration: none;
+}
+
+.nav-tabs a:hover {
+  background-color: rgba(80, 184, 72, 0.2);
 }
 
 /* More specific stylesheets */
@@ -1523,6 +1559,7 @@ footer #footerBottom a {
 
 .msl_navbar li {
   display: inline-block;
+  margin-bottom: 0.4em;
 }
 
 .msl_navbar li a {
@@ -1531,6 +1568,7 @@ footer #footerBottom a {
   color: #fff;
   background-color: #50b848;
   text-decoration: none;
+  display: block;
 }
 
 .msl_navbar li a:hover {
@@ -2864,8 +2902,6 @@ input#ctl00_Main_btnRecipients {
   width: 95%;
   margin: 0 auto;
   padding: 1.4em 1em 0.5em;
-  border: 1px solid #aaa;
-  border-top: none !important;
   white-space: pre-wrap;
   word-wrap: break-word;
   position: relative;

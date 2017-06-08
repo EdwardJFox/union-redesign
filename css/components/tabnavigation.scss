@@ -1,0 +1,28 @@
+/*Nav Tabs*/
+.nav-tabs {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #50b848;
+  li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 0.2em;
+  }
+  > .active {
+    background-color: #50b848;
+    > a {
+      color: #fff;
+      &:hover {
+        background: none;
+      }
+    }
+  }
+  a {
+    padding: 0.4em 0.8em;
+    display: block;
+    text-decoration: none;
+    &:hover {
+      background-color: $union_green_hover_clear;
+    }
+  }
+}
