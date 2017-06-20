@@ -129,6 +129,12 @@
       min-height: 40vh !important;
     }
 
+    #reps {
+      .span2 {
+        padding-right: 0.8em;
+      }
+    }
+
     #clubsandsocs {
       ul {
         @include displayFlex;

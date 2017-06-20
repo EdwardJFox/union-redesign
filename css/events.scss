@@ -325,6 +325,145 @@
   }
 }
 
+.page_ents.page_all {
+  .events {
+    padding: 0.2em 0 0.8em;
+    .event_item {
+      width: 96%;
+      background: #f4f4f4;
+      position: relative;
+      padding-bottom: 2.2em;
+
+      .event_image a {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 180px;
+        background: #e7e7e7;
+        background-position: center;
+        background-size: cover;
+
+        .eventTime {
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
+          width: auto;
+          height: 28px;
+          background: #fff;
+          color: $union_green;
+          padding: 0.2em 0.4em;
+          font-size: 0.9em;
+        }
+      }
+
+      dl {
+        margin: 0;
+      }
+
+      .event_info {
+        dt {
+          background: $union_green;
+          a {
+            margin: 0;
+            display: block;
+            color: #fff;
+            padding: 0.4em 0.6em;
+            text-decoration: none;
+          }
+        }
+
+        dd {
+          margin: 0;
+        }
+
+        .msl_event_time {
+          padding: 0.2em 0.4em;
+          text-align: right;
+          color: #555;
+        }
+
+        .msl_event_description {
+          font-size: 0.9em;
+          padding-top: 0.8em;
+          .eventLocation, .eventDescription {
+            @include displayFlex;
+          }
+          .locIcon, .descIcon {
+            text-align: center;
+            @include flexFixed(2.4em);
+          }
+          .eventLocationText, .eventDescriptionText {
+            @include flex(1);
+            padding-right: 0.4em;
+          }
+        }
+
+        .details {
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          width: 100%;
+          display: block;
+          transition: background 0.2s;
+          text-align: center;
+          padding: 0.4em 0.6em;
+          text-decoration: none;
+          &:hover {
+            background: $union_green_hover_clear;
+          }
+        }
+      }
+
+      &:hover {
+        -webkit-animation: pulse 0.6s ease-out;
+        animation: pulse 0.6s ease-out;
+      }
+    }
+  }
+
+  #intro {
+    padding: 0.8em 0;
+    p {
+      text-align: center;
+      font-size: 1.3em;
+    }
+  }
+
+  #featured {
+    .event_item {
+      background: #fff;
+    }
+    background-image: url('//staffsunion.s3.amazonaws.com/2017/images/assets/events/event_crowd.svg');
+    background-position: bottom;
+    background-repeat: repeat-x;
+  }
+
+  #allEvents {
+    .nav-tabs {
+      li {
+        margin: 0;
+      }
+      a {
+        font-size: 1em;
+        padding: 0.4em 0.6em !important;
+      }
+    
+    }
+    .panes {
+      padding-top: 1em;
+      .missing {
+        img {
+          width: 40%;
+        }
+      }
+    }
+  }
+
+  .msl_rss {
+    display: none;
+  }
+}
+
 /*Tablet*/
 @media (min-width: 48em){
   .page_mukky, .page_gobble {
@@ -334,6 +473,18 @@
 
     .gallery .images .image {
       flex: 0 0 24%;
+    }
+  }
+
+  .page_ents.page_all {
+    .events {
+      @include displayFlex;
+      @include flexJustify(flex-start);
+      @include flexWrap(wrap);
+      .event_item {
+        width: 48%;
+        margin: 0 1% 0.8em;
+      }
     }
   }
 }
@@ -360,6 +511,53 @@
     .gallery h2 {
       width: 1200px;
       margin: 0 auto;
+    }
+  }
+
+  .page_ents.page_all {
+    .events {
+      .event_item {
+        width: 24%;
+        margin: 0 0.5% 0.8em;
+      }
+    }
+
+    #allEvents {
+      .span3 {
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          left: -50px;
+          top: 94px;
+          background-image: url('//staffsunion.s3.amazonaws.com/2017/images/assets/events/events_hint_arrow_laptop.png');
+          background-position: left 0px top 0px;
+          background-size: 50px auto;
+          width: 50px;
+          height: 310px;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 96em){
+  .page_ents.page_all {
+    #allEvents {
+      .span3 {
+        position: relative;
+        &:before {
+          left: -155px;
+          top: 94px;
+          background-image: url('//staffsunion.s3.amazonaws.com/2017/images/assets/events/events_hint_arrow.png');
+          background-position: left 0px top 0px;
+          background-size: 150px auto;
+          width: 150px;
+          height: 130px;
+          background-repeat: no-repeat;
+        }
+      }
     }
   }
 }

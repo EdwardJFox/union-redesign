@@ -41,6 +41,14 @@
   display: inline-block;
 }
 
+ul, ol {
+  li {
+    .blockLink {
+      margin-bottom: 0.4em;
+    }
+  }
+}
+
 /* Add Button */
 .add, .msl_add {
   background: none;

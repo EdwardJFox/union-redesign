@@ -59,6 +59,7 @@
   li {
     display: inline-block;
     margin-bottom: 0.4em;
+    width: 100%;
     a {
       padding: 0.4em 0.8em;
       margin: 0 0.4em 0 0;
@@ -71,5 +72,12 @@
         background-color: $union_green_hover;
       }
     }
+  }
+}
+
+/* MSL Dropdown */
+.msl_controls_selectpage_tree {
+  table {
+    width: auto !important;
   }
 }

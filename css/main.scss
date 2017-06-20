@@ -6,7 +6,6 @@ main {
     &.row {
       .span1, .span2, .span3 {
         width: 100%;
-        margin: 0 0.4em;
       }
 
       .rowInner {
@@ -30,10 +29,16 @@ main {
 
       &.header {
         padding: 0 2em 0 3.2em;
-
+        min-height: 176px;
         // Cheeky font size override for mobile
+        .span3 {
+          min-height: 196px;
+          @include displayFlex;
+          @include flexAlign(center);
+        }
         h1 {
           font-size: 3.4em;
+          padding: 0;
         }
         h2 {
           font-size: 2.6em;
@@ -48,6 +53,9 @@ main {
   main {
     section {
       &.row {
+        .span1, .span2, .span3 {
+          //margin: 0 0.4em;
+        }
         &.header {
           padding-left: 0;
 
@@ -64,7 +72,7 @@ main {
   main {
     section {
       &.row {
-        @include displayFlex
+        @include displayFlex;
         @include flexWrap(wrap);
         .rowHeader {
           flex: 0 0 100%;
@@ -87,9 +95,9 @@ main {
           }
           .span1 {
             -webkit-box-flex: 0;
-            -webkit-flex: 0 0 calc((100% / 3);
-                -ms-flex: 0 0 calc((100% / 3);
-                    flex: 0 0 calc((100% / 3);
+            -webkit-flex: 0 0 calc(100% / 3);
+                -ms-flex: 0 0 calc(100% / 3);
+                    flex: 0 0 calc(100% / 3);
           }
           .span2 {
             -webkit-box-flex: 0;
@@ -112,7 +120,10 @@ main {
         }
 
         &.header {
-          min-height: 176px;
+          min-height: 176px !important;
+          .span3 {
+            min-height: 176px !important;
+          }
         }
       }
     }
