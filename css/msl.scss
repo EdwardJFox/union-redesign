@@ -76,8 +76,50 @@
 }
 
 /* MSL Dropdown */
-.msl_controls_selectpage_tree {
+.msl_controls_selectpage_tree, #ctl00_Main_OrganisationID_pnlTree, #ctl00_Main_SelectRequirement1_sgSelectGrouping1_pnlTree {
   table {
     width: auto !important;
+    td {
+      padding: 0.1em 0.2em;
+      font-size: 0.8em;
+    }
+  }
+}
+
+/* MSL Table */
+table.msl_table {
+  border: none !important;
+  th {
+    background: $union_green !important;
+    border-bottom: none !important;
+    border-right: none !important;
+    padding: 0.3em 0.6em !important;
+    font-size: 1.1em;
+    font-weight: 400;
+  }
+  td {
+    padding: 0.3em 0.5em !important;
+    a {
+      text-decoration: none;
+    }
+    .msl_delete {
+      background: none !important;
+      visibility: hidden;
+      padding: 0;
+      text-indent: 0px !important;
+      overflow: initial !important;
+      &:before {
+        color: $red;
+        @include googleFont;
+        content: 'delete';
+        visibility: visible;
+        padding: 0.1em;
+      }
+      &:hover {
+        &:before {
+          background: $red_hover_clear;
+        }
+      }
+    }
   }
 }

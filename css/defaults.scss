@@ -9,6 +9,10 @@
 body {
   margin: 0;
   padding: 0;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -webkit-font-smoothing: antialiased!important;
+  font-smoothing: antialiased!important;
 }
 
 video {

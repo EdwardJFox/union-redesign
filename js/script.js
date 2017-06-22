@@ -1,4 +1,16 @@
-/*Config Variables*/var navSlideSpeed = 300,    dropdownOptions = {        duration : 300,        complete: function(){}    },    accordionOptions = {        duration : 300,        complete: function(){}    };$(document).ready(function(){  setupHeader();
+/*Config Variables*/
+var navSlideSpeed = 300,
+    dropdownOptions = {
+        duration : 300,
+        complete: function(){}
+    },
+    accordionOptions = {
+        duration : 300,
+        complete: function(){}
+    };
+
+$(document).ready(function(){
+  setupHeader();
   setupNav();
 
   // If on homepage, run the homepage stuff
@@ -16,6 +28,9 @@
   mailingList();
   rearrangeEventList();
   setupCalendar();
+
+  // Admin
+  setupAdminInput();
 });
 
 
@@ -346,6 +361,36 @@ function setupCalendar(){
             })
         })
     })
+}
+
+/* Admin text highlighted input */
+function setupAdminInput(){
+  if($('#ctl00_Main_txtHTML').length > 0){
+    var htmlCodeMirror = CodeMirror.fromTextArea($('#ctl00_Main_txtHTML')[0], {lineNumbers: true, mode:  "htmlmixed", theme: "monokai"})
+  }
+  if($('#ctl00_Main_txtCSS').length > 0){
+    var cssCodeMirror = CodeMirror.fromTextArea($('#ctl00_Main_txtCSS')[0], {lineNumbers: true, mode:  "css", theme: "monokai"})
+    $('#ctl00_Main_lnkCSS').on('click', function(){
+      cssCodeMirror.refresh();
+    }.bind(this))
+  }
+  if($('#ctl00_Main_txtScript').length > 0){
+    var jsCodeMirror = CodeMirror.fromTextArea($('#ctl00_Main_txtScript')[0], {lineNumbers: true, mode:  "javascript", theme: "monokai"})
+    $('#ctl00_Main_lnkScript').on('click', function(){
+      jsCodeMirror.refresh();
+    }.bind(this))
+  }
+
+  // Replace the gross default images with nice google material icons
+  if($('#ctl00_Main_btnInsertAsset').length > 0){
+    $('#ctl00_Main_btnInsertAsset').after('<label for="ctl00_Main_btnInsertAsset" class="icon image" alt="Insert an image">image<div class="tip">Insert an image</div></label>');
+  }
+  if($('#ctl00_Main_btnInsertDocument').length > 0){
+    $('#ctl00_Main_btnInsertDocument').after('<label for="ctl00_Main_btnInsertDocument" class="icon file" alt="Insert a file">insert_drive_file<div class="tip">Insert a file</div></label>');
+  }
+  if($('#ctl00_Main_btnInsertCSSAsset').length > 0){
+    $('#ctl00_Main_btnInsertCSSAsset').after('<label for="ctl00_Main_btnInsertCSSAsset" class="icon image" alt="Insert an image">image<div class="tip">Insert an image</div></label>');
+  }
 }
 
 /* Helpers */
