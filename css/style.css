@@ -523,7 +523,8 @@ header {
       header .user .dropdown ul {
         list-style: none;
         padding: 0;
-        margin: 0; }
+        margin: 0;
+        display: block !important; }
         header .user .dropdown ul a {
           display: block;
           text-decoration: none;
@@ -942,9 +943,9 @@ main {
         -ms-flex: 0 0 50%;
         flex: 0 0 50%; }
     main section.row.header {
-      min-height: 176px !important; }
+      min-height: 176px; }
       main section.row.header .span3 {
-        min-height: 176px !important; }
+        min-height: 176px; }
   main video.background {
     position: absolute;
     top: 50%;
@@ -3055,36 +3056,117 @@ input#ctl00_Main_btnRecipients {
     width: 100%; }
 
 .page_whattodo #events {
-  padding: 1em 0;
-  background: #333;
+  background-image: url("//staffsunion.s3.amazonaws.com/2017/images/assets/whattodo/event_row_bg_dark_circle.png");
+  background-size: auto 12.5%;
+  background-color: #111;
+  padding: 2em 0;
   position: relative; }
-  .page_whattodo #events .title {
-    background-color: #fff;
-    text-align: center; }
-    .page_whattodo #events .title h2 {
-      width: 100%;
-      color: #000;
-      margin: 0 0 0.6em !important; }
+  .page_whattodo #events:before, .page_whattodo #events:after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1.2em;
+    content: '';
+    background-size: auto 100%; }
+  .page_whattodo #events:before {
+    top: -1.1em;
+    background-image: url("//staffsunion.s3.amazonaws.com/2017/images/assets/whattodo/whattodo_events_tooth_up.svg"); }
+  .page_whattodo #events:after {
+    bottom: -1.1em;
+    background-image: url("//staffsunion.s3.amazonaws.com/2017/images/assets/whattodo/whattodo_events_tooth_down.svg"); }
+  .page_whattodo #events .mukky {
+    padding-top: 1.6em; }
+  .page_whattodo #events .nightout .logo {
+    height: 150px; }
+    .page_whattodo #events .nightout .logo img {
+      width: 75%; }
+  .page_whattodo #events .nightout p {
+    color: #fff;
+    font-size: 1.3em; }
+  .page_whattodo #events .nightout a.blockLink {
+    border: 1px solid #fff;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+    background: transparent; }
+    .page_whattodo #events .nightout a.blockLink:hover {
+      background: rgba(255, 255, 255, 0.2); }
+
+.page_whattodo .nightout .logo, .page_whattodo .venue .logo, .page_whattodo .squeeze {
+  display: -webkit-box ;
+  display: -ms-flexbox ;
+  display: -webkit-flex ;
+  display: flex ;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center; }
+
+.page_whattodo #foodanddrink {
+  background-color: #fcfbf5;
+  padding: 1em 0; }
+  .page_whattodo #foodanddrink .title {
+    width: 95%; }
+  .page_whattodo #foodanddrink p {
+    color: #160603; }
+    .page_whattodo #foodanddrink p.leader {
+      font-size: 1.4em;
+      text-align: center; }
+  .page_whattodo #foodanddrink a.blockLink {
+    color: #160603;
+    border: 1px solid #160603;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+    background: transparent; }
+    .page_whattodo #foodanddrink a.blockLink:hover {
+      background: rgba(22, 6, 3, 0.2); }
+  .page_whattodo #foodanddrink .venue .logo {
+    height: 170px; }
+    .page_whattodo #foodanddrink .venue .logo a {
+      width: 100%; }
+  .page_whattodo #foodanddrink .venue.verve img {
+    width: 62%; }
+  .page_whattodo #foodanddrink .venue.ember img {
+    width: 90%; }
+  .page_whattodo #foodanddrink .squeezeLogo {
+    padding: 2em; }
+    .page_whattodo #foodanddrink .squeezeLogo img {
+      width: 90%; }
+  .page_whattodo #foodanddrink .venue, .page_whattodo #foodanddrink .squeeze {
+    position: relative; }
+  .page_whattodo #foodanddrink .venue .status {
+    top: 0px;
+    right: 0px; }
+  .page_whattodo #foodanddrink .squeezeBox .status {
+    top: 0px;
+    left: 0px; }
+  .page_whattodo #foodanddrink .status {
+    position: absolute;
+    padding: 0.2em 0.5em; }
+    .page_whattodo #foodanddrink .status.open {
+      background: #30c129; }
+    .page_whattodo #foodanddrink .status.closed {
+      background: #c12929; }
+    .page_whattodo #foodanddrink .status p {
+      color: #fff;
+      padding: 0 !important; }
 
 /* Tablet */
 @media (min-width: 48em) {
   .page_whattodo .whattodoHeader {
-    min-height: 40vh !important; } }
+    min-height: 40vh !important; }
+  .page_whattodo #events .mukky {
+    padding-top: 0 !important; }
+  .page_whattodo #events .nightout .logo {
+    height: 180px; }
+  .page_whattodo #foodanddrink .title {
+    width: 80%; } }
 
 /* Desktop */
 @media (min-width: 80em) {
   .page_whattodo .whattodoHeader {
     min-height: 50vh !important;
-    background-position: top -8em center; }
-  .page_whattodo #events {
-    overflow: hidden; }
-    .page_whattodo #events .title {
-      transform: rotate(315deg);
-      position: absolute;
-      width: 400px;
-      padding: 1em;
-      top: 92px;
-      left: -10px; }
-      .page_whattodo #events .title h2 {
-        width: 100%;
-        margin: 0.6em 0 !important; } }
+    background-position: top -8em center; } }

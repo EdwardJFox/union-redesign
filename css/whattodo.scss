@@ -25,19 +25,147 @@
   }
 
   #events {
-    padding: 1em 0;
-    background: #333;
+    background-image: url('//staffsunion.s3.amazonaws.com/2017/images/assets/whattodo/event_row_bg_dark_circle.png');
+    background-size: auto 12.5%;
+    background-color: #111;
+    padding: 2em 0;
     position: relative;
-      .title {
-        background-color: #fff;
-        text-align: center;
 
-        h2 {
-          width: 100%;
-          color: #000;
-          margin: 0 0 0.6em !important;
+    &:before, &:after {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1.2em;
+      content: '';
+      background-size: auto 100%;
+    }
+    &:before {
+      top: -1.1em;
+      background-image: url('//staffsunion.s3.amazonaws.com/2017/images/assets/whattodo/whattodo_events_tooth_up.svg');
+    }
+    &:after {
+      bottom: -1.1em;
+      background-image: url('//staffsunion.s3.amazonaws.com/2017/images/assets/whattodo/whattodo_events_tooth_down.svg');
+    }
+
+    .gobble {
+
+    }
+    .mukky {
+      padding-top: 1.6em;
+    }
+    .nightout {
+      .logo {
+        height: 150px;
+        img {
+          width: 75%;
         }
       }
+      p {
+        color: #fff;
+        font-size: 1.3em;
+      }
+      a.blockLink {
+        border: 1px solid #fff;
+        -webkit-transition: background 0.3s;
+        transition: background 0.3s;
+        background: transparent;
+        &:hover {
+          background: rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+  }
+
+  .nightout .logo, .venue .logo, .squeeze {
+    @include displayFlex;
+    @include flexAlign(center);
+    @include flexJustify(center);
+  }
+
+  #foodanddrink {
+    background-color: #fcfbf5;
+    padding: 1em 0;
+    .title {
+      width: 95%;
+    }
+    p {
+      color: #160603;
+      &.leader {
+        font-size: 1.4em;
+        text-align: center;
+      }
+    }
+    a {
+      &.blockLink {
+        color: #160603;
+        border: 1px solid #160603;
+        -webkit-transition: background 0.3s;
+        transition: background 0.3s;
+        background: transparent;
+        &:hover {
+          background: rgba(22, 6, 3, 0.2)
+        }
+      }
+    }
+    .venue {
+      .logo {
+        height: 170px;
+        a {
+          width: 100%;
+        }
+      }
+      &.verve {
+        img {
+          width: 62%;
+        }
+      }
+      &.ember {
+        img {
+          width: 90%;
+        }
+      }
+    }
+
+    .squeezeLogo {
+      padding: 2em;
+      img {
+        width: 90%;
+      }
+    }
+
+    .venue, .squeeze {
+      position: relative;
+    }
+
+    .venue {
+      .status {
+        top: 0px;
+        right: 0px;
+      }
+    }
+
+    .squeezeBox {
+      .status {
+        top: 0px;
+        left: 0px;
+      }
+    }
+
+    .status {
+      position: absolute;
+      padding: 0.2em 0.5em;
+      &.open {
+        background: #30c129;
+      }
+      &.closed {
+        background: #c12929;
+      }
+      p {
+        color: #fff;
+        padding: 0 !important;
+      }
+    }
   }
 }
 
@@ -48,8 +176,22 @@
       min-height: 40vh !important;
     }
 
+    #events {
+      .mukky {
+        padding-top: 0 !important;
+      }
+      .nightout {
+        .logo {
+          height: 180px;
+        }
+      }
+    }
 
-
+    #foodanddrink {
+      .title {
+        width: 80%;
+      }
+    }
   }
 }
 
@@ -61,19 +203,8 @@
       background-position: top -8em center;
     }
     #events {
-      overflow: hidden;
       .title {
-        transform: rotate(315deg);
-        position: absolute;
-        width: 400px;
-        padding: 1em;
-        top: 92px;
-        left: -10px;
 
-        h2 {
-          width: 100%;
-          margin: 0.6em 0 !important;
-        }
       }
     }
   }
