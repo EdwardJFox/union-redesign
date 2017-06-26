@@ -102,22 +102,48 @@ table.msl_table {
     a {
       text-decoration: none;
     }
-    .msl_delete {
+    .msl_delete, .msl_basket, .msl_save {
       background: none !important;
       visibility: hidden;
       padding: 0;
       text-indent: 0px !important;
       overflow: initial !important;
       &:before {
-        color: $red;
         @include googleFont;
-        content: 'delete';
         visibility: visible;
         padding: 0.1em;
+      }
+    }
+    .msl_delete {
+      &:before {
+        content: 'delete';
+        color: $red;
       }
       &:hover {
         &:before {
           background: $red_hover_clear;
+        }
+      }
+    }
+    .msl_basket {
+      &:before {
+        content: 'shopping_basket';
+        color: $union_green;
+      }
+      &:hover {
+        &:before {
+          background: $union_green_hover_clear;
+        }
+      }
+    }
+    .msl_save {
+      &:before {
+        content: 'save';
+        color: $blue;
+      }
+      &:hover {
+        &:before {
+          background: $blue_hover_clear;
         }
       }
     }

@@ -1,0 +1,40 @@
+// For the basket flow of the site
+// Review basket page /shop/reviewbasket/
+#reviewbasket {
+    h1 {
+        display: none;
+    }
+    td {
+        border-left: none !important;
+        border-bottom: none !important;
+        border-right: none !important;
+        vertical-align: middle;
+    }
+    tr {
+        td {
+            border-right: 1px solid #d2d2d2 !important;
+        }
+        td:last-of-type {
+            border-right: none !important;
+        }
+    }
+    #ctl00_Main_pnlSavedItems {
+        border: none;
+        background: #f1f1f1;
+        border-radius: 0 !important;
+    }
+    .footer {
+        td {
+            background: none !important;
+            color: #000 !important;
+            &.total {
+                color: $union_green !important;
+            }
+        }
+    }
+    .checkout_next {
+        input {
+            padding: 0.4em 0.8em !important;
+        }
+    }
+}
