@@ -2,7 +2,6 @@ footer {
   position: relative;
   background-color: $cyan;
   min-height: 200px;
-  margin-top: 200px;
 
   &:before {
     content: '';
@@ -13,6 +12,7 @@ footer {
   	height: 0;
   	border-bottom: 200px solid $cyan;
   	border-right: 99vw solid transparent;
+    z-index: 1;
   }
 
   &:after {
@@ -24,7 +24,7 @@ footer {
   	height: 0;
   	border-bottom: 180px solid $darkCyan;
   	border-left: 70vw solid transparent;
-    z-index: -100;
+    z-index: 0;
   }
   #footerLinks {
     padding-bottom: 2em;

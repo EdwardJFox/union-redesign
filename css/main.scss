@@ -2,7 +2,6 @@
 main {
   overflow: hidden;
   section {
-
     &.row {
       .span1, .span2, .span3 {
         width: 100%;
@@ -44,6 +43,10 @@ main {
           font-size: 2.6em;
         }
       }
+    }
+
+    &:last-of-type {
+      padding-bottom: 200px !important;
     }
   }
 }
