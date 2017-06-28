@@ -1,6 +1,63 @@
 /* Venue pages for ember, verve and squeeze */
 
+// All
+.page_ents.page_emberlounge {
+	.header {
+		position: relative;
+	}
+	.status {
+		position: absolute;
+		bottom: 0;
+		right: 4px;
+		padding: 0.2em 0.5em;
+		&.open {
+			background: #30c129;
+		}
+		&.closed {
+			background: #c12929;
+		}
+		p {
+			color: #fff;
+			padding: 0 !important;
+		}
+	}
+}
+
 // Ember
 .page_ents.page_emberlounge {
-    
+	.header {
+		background-image: url('//staffs-dev.ukmsl.net/pageassets/ents/emberlounge/Ember002.jpg');
+		background-position: center;
+		background-color: #000;
+		background-size: cover;
+		
+		.span3 {
+			padding: 1.2em 0;
+		}
+
+		img {
+			width: 85%;
+			margin: 0 auto;
+			padding: 1em;
+			background: rgba(0, 0, 0, 0.6);
+		}
+	}
 }
+
+@media (min-width: 48em) {
+	.page_ents.page_emberlounge {
+		.header {
+			.span3 {
+				padding: 3em 0;
+			}
+			img {
+				width: 60%;
+			}
+		}
+	}
+}
+
+
+/*Desktop*/
+
+@media (min-width: 80em) {}

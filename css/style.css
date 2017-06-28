@@ -2951,6 +2951,42 @@ input#ctl00_Main_btnRecipients {
     content: 'settings'; }
 
 /* Venue pages for ember, verve and squeeze */
+.page_ents.page_emberlounge .header {
+  position: relative; }
+
+.page_ents.page_emberlounge .status {
+  position: absolute;
+  bottom: 0;
+  right: 4px;
+  padding: 0.2em 0.5em; }
+  .page_ents.page_emberlounge .status.open {
+    background: #30c129; }
+  .page_ents.page_emberlounge .status.closed {
+    background: #c12929; }
+  .page_ents.page_emberlounge .status p {
+    color: #fff;
+    padding: 0 !important; }
+
+.page_ents.page_emberlounge .header {
+  background-image: url("//staffs-dev.ukmsl.net/pageassets/ents/emberlounge/Ember002.jpg");
+  background-position: center;
+  background-color: #000;
+  background-size: cover; }
+  .page_ents.page_emberlounge .header .span3 {
+    padding: 1.2em 0; }
+  .page_ents.page_emberlounge .header img {
+    width: 85%;
+    margin: 0 auto;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.6); }
+
+@media (min-width: 48em) {
+  .page_ents.page_emberlounge .header .span3 {
+    padding: 3em 0; }
+  .page_ents.page_emberlounge .header img {
+    width: 60%; } }
+
+/*Desktop*/
 /* Dashboard */
 /* Get Involved Dashboard */
 .page_getinvolved main .header {
