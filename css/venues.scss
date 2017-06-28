@@ -21,6 +21,19 @@
 			padding: 0 !important;
 		}
 	}
+	.times {
+		padding: 0.4em;
+		table {
+			tr, td {
+				border: none !important;
+			}
+		}
+		#bestBarNone {
+			padding: 1em 0;
+			width: 55%;
+			margin: 0 auto;
+		}
+	}
 }
 
 // Ember
@@ -30,16 +43,102 @@
 		background-position: center;
 		background-color: #000;
 		background-size: cover;
-		
 		.span3 {
 			padding: 1.2em 0;
 		}
-
 		img {
 			width: 85%;
 			margin: 0 auto;
 			padding: 1em;
 			background: rgba(0, 0, 0, 0.6);
+		}
+	}
+	.intro {
+		.leader {
+			font-size: 1.3em;
+			padding: 1.2em 0;
+		}
+	}
+	#map {
+		width: 100%;
+		height: 300px;
+	}
+	.widgetwrapper {
+		a {
+			display: none;
+		}
+		.widgetcontainer > div > div:first-of-type {
+			display: none;
+		}
+	}
+	.gallery {
+		padding-bottom: 1em;
+		.unslider {
+			position: relative;
+		}
+		.unslider-carousel {
+			li {
+				position: relative;
+				height: 300px;
+				overflow: hidden;
+			}
+			img {
+				width: 100%;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+		.unslider-nav {
+			margin: 0 auto;
+			padding: 0.4em 0;
+			li {
+				height: 8px;
+				width: 8px;
+				border-color: #fff !important;
+				&.unslider-active {
+					background: #fff !important;
+				}
+			}
+		}
+	}
+	.menuTitle {
+		margin-top: 0.8em;
+		@include displayFlex;
+		@include flexAlign(center);
+		i {
+			padding: 0 0.4em 0 0.4em;
+			font-size: 4em;
+		}
+	}
+	.menu {
+		padding: 0.4em;
+		.menuCol {
+			width: 100%;
+			background: #fff;
+			margin: 0 0.4em;
+			padding: 0.2em;
+			h2 {
+				padding: 0 0 0.2em;
+			}
+			.menuItem {
+				position: relative;
+				margin-bottom: 0.6em;
+				.title {
+					font-size: 1.4em;
+				}
+				.price {
+					position: absolute;
+					top: 4px;
+					right: 4px;
+					font-size: 1.1em;
+				}
+				.extra {
+					p {
+						font-size: 0.9em;
+					}
+				}
+			}
 		}
 	}
 }
@@ -54,10 +153,50 @@
 				width: 60%;
 			}
 		}
+		#map {
+			height: 340px;
+		}
+		.intro {
+			.pure-u-lg-2-3 {
+				padding-right: 0.8em;
+			}
+		}
+		.unslider-carousel {
+			li {
+				position: relative;
+				height: 400px;
+			}
+		}
+		.menu {
+			padding: 0.8em;
+			.menuContainer {
+				@include displayFlex;
+				@include flexWrap(no-wrap);
+			}
+			overflow-x: scroll;
+			.menuCol {
+				@include flexFixed(40%);
+				padding: 0.4em 0.8em;
+			}
+		}
 	}
 }
 
 
 /*Desktop*/
 
-@media (min-width: 80em) {}
+@media (min-width: 80em) {
+	.page_ents.page_emberlounge {
+		.unslider-carousel {
+			li {
+				position: relative;
+				height: 600px !important;
+			}
+		}
+		.menu {
+			.menuCol {
+				@include flexFixed(22%);
+			}
+		}
+	}
+}
