@@ -147,11 +147,12 @@
     }
     .engagementHeader .rowInner {
       position: relative;
+      @include displayFlex;
+      @include flexAlign(center);
 
       h1 {
-        position: absolute;
-        bottom: 0.4em;
-        right: 0.2em;
+        width: 100%;
+        text-align: center;
       }
     }
   }

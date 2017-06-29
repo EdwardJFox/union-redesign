@@ -2951,51 +2951,88 @@ input#ctl00_Main_btnRecipients {
     content: 'settings'; }
 
 /* Venue pages for ember, verve and squeeze */
-.page_ents.page_emberlounge .header {
-  position: relative; }
+.page_ents.page_emberlounge .header, .page_ents.page_verve .header {
+  position: relative;
+  background-position: center;
+  background-color: #000;
+  background-size: cover; }
+  .page_ents.page_emberlounge .header .span3, .page_ents.page_verve .header .span3 {
+    padding: 1.2em 0; }
+  .page_ents.page_emberlounge .header img, .page_ents.page_verve .header img {
+    width: 85%;
+    margin: 0 auto;
+    padding: 1em; }
 
-.page_ents.page_emberlounge .status {
+.page_ents.page_emberlounge .intro .leader, .page_ents.page_verve .intro .leader {
+  font-size: 1.3em;
+  padding: 1.2em 0; }
+
+.page_ents.page_emberlounge .status, .page_ents.page_verve .status {
   position: absolute;
   bottom: 0;
   right: 4px;
   padding: 0.2em 0.5em; }
-  .page_ents.page_emberlounge .status.open {
+  .page_ents.page_emberlounge .status.open, .page_ents.page_verve .status.open {
     background: #30c129; }
-  .page_ents.page_emberlounge .status.closed {
+  .page_ents.page_emberlounge .status.closed, .page_ents.page_verve .status.closed {
     background: #c12929; }
-  .page_ents.page_emberlounge .status p {
+  .page_ents.page_emberlounge .status p, .page_ents.page_verve .status p {
     color: #fff;
     padding: 0 !important; }
 
-.page_ents.page_emberlounge .times {
+.page_ents.page_emberlounge #map, .page_ents.page_verve #map {
+  width: 100%;
+  height: 300px; }
+
+.page_ents.page_emberlounge .times, .page_ents.page_verve .times {
   padding: 0.4em; }
-  .page_ents.page_emberlounge .times table tr, .page_ents.page_emberlounge .times table td {
+  .page_ents.page_emberlounge .times table tr, .page_ents.page_emberlounge .times table td, .page_ents.page_verve .times table tr, .page_ents.page_verve .times table td {
     border: none !important; }
-  .page_ents.page_emberlounge .times #bestBarNone {
+  .page_ents.page_emberlounge .times #bestBarNone, .page_ents.page_verve .times #bestBarNone {
     padding: 1em 0;
     width: 55%;
     margin: 0 auto; }
 
+.page_ents.page_emberlounge .menuTitle, .page_ents.page_verve .menuTitle {
+  margin-top: 0.8em;
+  display: -webkit-box ;
+  display: -ms-flexbox ;
+  display: -webkit-flex ;
+  display: flex ;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center; }
+  .page_ents.page_emberlounge .menuTitle i, .page_ents.page_verve .menuTitle i {
+    padding: 0 0.4em 0 0.4em;
+    font-size: 4em; }
+
+.page_ents.page_emberlounge .menu, .page_ents.page_verve .menu {
+  padding: 0.4em; }
+  .page_ents.page_emberlounge .menu .menuCol, .page_ents.page_verve .menu .menuCol {
+    width: 100%;
+    background: #fff;
+    margin: 0 0.4em;
+    padding: 0.2em; }
+    .page_ents.page_emberlounge .menu .menuCol h2, .page_ents.page_verve .menu .menuCol h2 {
+      padding: 0 0 0.2em; }
+    .page_ents.page_emberlounge .menu .menuCol .menuItem, .page_ents.page_verve .menu .menuCol .menuItem {
+      position: relative;
+      margin-bottom: 0.6em; }
+      .page_ents.page_emberlounge .menu .menuCol .menuItem .title, .page_ents.page_verve .menu .menuCol .menuItem .title {
+        font-size: 1.4em; }
+      .page_ents.page_emberlounge .menu .menuCol .menuItem .price, .page_ents.page_verve .menu .menuCol .menuItem .price {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        font-size: 1.1em; }
+      .page_ents.page_emberlounge .menu .menuCol .menuItem .extra p, .page_ents.page_verve .menu .menuCol .menuItem .extra p {
+        font-size: 0.9em; }
+
 .page_ents.page_emberlounge .header {
-  background-image: url("//staffs-dev.ukmsl.net/pageassets/ents/emberlounge/Ember002.jpg");
-  background-position: center;
-  background-color: #000;
-  background-size: cover; }
-  .page_ents.page_emberlounge .header .span3 {
-    padding: 1.2em 0; }
+  background-image: url("//staffs-dev.ukmsl.net/pageassets/ents/emberlounge/Ember002.jpg"); }
   .page_ents.page_emberlounge .header img {
-    width: 85%;
-    margin: 0 auto;
-    padding: 1em;
     background: rgba(0, 0, 0, 0.6); }
-
-.page_ents.page_emberlounge .intro .leader {
-  font-size: 1.3em;
-  padding: 1.2em 0; }
-
-.page_ents.page_emberlounge #map {
-  width: 100%;
-  height: 300px; }
 
 .page_ents.page_emberlounge .widgetwrapper a {
   display: none; }
@@ -3026,58 +3063,27 @@ input#ctl00_Main_btnRecipients {
       .page_ents.page_emberlounge .gallery .unslider-nav li.unslider-active {
         background: #fff !important; }
 
-.page_ents.page_emberlounge .menuTitle {
-  margin-top: 0.8em;
-  display: -webkit-box ;
-  display: -ms-flexbox ;
-  display: -webkit-flex ;
-  display: flex ;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center; }
-  .page_ents.page_emberlounge .menuTitle i {
-    padding: 0 0.4em 0 0.4em;
-    font-size: 4em; }
-
-.page_ents.page_emberlounge .menu {
-  padding: 0.4em; }
-  .page_ents.page_emberlounge .menu .menuCol {
-    width: 100%;
-    background: #fff;
-    margin: 0 0.4em;
-    padding: 0.2em; }
-    .page_ents.page_emberlounge .menu .menuCol h2 {
-      padding: 0 0 0.2em; }
-    .page_ents.page_emberlounge .menu .menuCol .menuItem {
-      position: relative;
-      margin-bottom: 0.6em; }
-      .page_ents.page_emberlounge .menu .menuCol .menuItem .title {
-        font-size: 1.4em; }
-      .page_ents.page_emberlounge .menu .menuCol .menuItem .price {
-        position: absolute;
-        top: 4px;
-        right: 4px;
-        font-size: 1.1em; }
-      .page_ents.page_emberlounge .menu .menuCol .menuItem .extra p {
-        font-size: 0.9em; }
+.page_ents.page_verve .header {
+  background-image: url("//www.staffsunion.com/pageassets/ents/verve/hire/cara15.jpg"); }
+  .page_ents.page_verve .header img {
+    background: rgba(255, 255, 255, 0.9); }
 
 @media (min-width: 48em) {
-  .page_ents.page_emberlounge .header .span3 {
+  .page_ents.page_emberlounge .header .span3, .page_ents.page_verve .header .span3 {
     padding: 3em 0; }
-  .page_ents.page_emberlounge .header img {
+  .page_ents.page_emberlounge .header img, .page_ents.page_verve .header img {
     width: 60%; }
-  .page_ents.page_emberlounge #map {
+  .page_ents.page_emberlounge #map, .page_ents.page_verve #map {
     height: 340px; }
-  .page_ents.page_emberlounge .intro .pure-u-lg-2-3 {
+  .page_ents.page_emberlounge .intro .pure-u-lg-2-3, .page_ents.page_verve .intro .pure-u-lg-2-3 {
     padding-right: 0.8em; }
-  .page_ents.page_emberlounge .unslider-carousel li {
+  .page_ents.page_emberlounge .unslider-carousel li, .page_ents.page_verve .unslider-carousel li {
     position: relative;
     height: 400px; }
-  .page_ents.page_emberlounge .menu {
+  .page_ents.page_emberlounge .menu, .page_ents.page_verve .menu {
     padding: 0.8em;
     overflow-x: scroll; }
-    .page_ents.page_emberlounge .menu .menuContainer {
+    .page_ents.page_emberlounge .menu .menuContainer, .page_ents.page_verve .menu .menuContainer {
       display: -webkit-box ;
       display: -ms-flexbox ;
       display: -webkit-flex ;
@@ -3086,7 +3092,7 @@ input#ctl00_Main_btnRecipients {
       -ms-flex-wrap: no-wrap;
       -webkit-flex-wrap: no-wrap;
       flex-wrap: no-wrap; }
-    .page_ents.page_emberlounge .menu .menuCol {
+    .page_ents.page_emberlounge .menu .menuCol, .page_ents.page_verve .menu .menuCol {
       -webkit-box-flex: 0;
       -ms-flex: 0 0 40%;
       -webkit-flex: 0 0 40%;
@@ -3095,14 +3101,17 @@ input#ctl00_Main_btnRecipients {
 
 /*Desktop*/
 @media (min-width: 80em) {
-  .page_ents.page_emberlounge .unslider-carousel li {
+  .page_ents.page_emberlounge .unslider-carousel li, .page_ents.page_verve .unslider-carousel li {
     position: relative;
     height: 600px !important; }
-  .page_ents.page_emberlounge .menu .menuCol {
+  .page_ents.page_emberlounge .menu .menuCol, .page_ents.page_verve .menu .menuCol {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 22%;
     -webkit-flex: 0 0 22%;
     flex: 0 0 22%; } }
+
+.page_shop.page_product .actions {
+  padding: 0.8em 0; }
 
 /* Dashboard */
 /* Get Involved Dashboard */
@@ -3236,11 +3245,18 @@ input#ctl00_Main_btnRecipients {
       -webkit-flex: 0 0 49%;
       flex: 0 0 49%; }
   .page_getinvolved main .engagementHeader .rowInner {
-    position: relative; }
+    position: relative;
+    display: -webkit-box ;
+    display: -ms-flexbox ;
+    display: -webkit-flex ;
+    display: flex ;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center; }
     .page_getinvolved main .engagementHeader .rowInner h1 {
-      position: absolute;
-      bottom: 0.4em;
-      right: 0.2em; } }
+      width: 100%;
+      text-align: center; } }
 
 /* Desktop */
 @media (min-width: 80em) {
@@ -3263,6 +3279,20 @@ input#ctl00_Main_btnRecipients {
 .page_union #breadcrumb, .page_strategy #breadcrumb {
   padding: 0.4em 0;
   text-align: left; }
+
+.page_union .header.dashboard {
+  display: -webkit-box ;
+  display: -ms-flexbox ;
+  display: -webkit-flex ;
+  display: flex ;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 2em 0; }
+  .page_union .header.dashboard h1 {
+    width: 100%;
+    text-align: center; }
 
 .page_union #officers .officers .officer {
   margin-bottom: 0.8em;
@@ -3300,6 +3330,8 @@ input#ctl00_Main_btnRecipients {
   padding: 1em 0; }
 
 @media (min-width: 48em) {
+  .page_union .header.dashboard {
+    min-height: 300px; }
   .page_union #officers .officers {
     display: -webkit-box ;
     display: -ms-flexbox ;

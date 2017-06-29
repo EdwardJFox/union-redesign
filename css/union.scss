@@ -15,6 +15,15 @@
 }
 
 .page_union {
+  .header.dashboard {
+    @include displayFlex;
+    @include flexAlign(center);
+    padding: 2em 0;
+    h1 {
+      width: 100%;
+      text-align: center;
+    }
+  }
   #officers {
     .officers {
 
@@ -73,6 +82,9 @@
 
 @media (min-width: 48em){
   .page_union {
+    .header.dashboard {
+      min-height: 300px;
+    }
     #officers {
       .officers {
         @include displayFlex;

@@ -1,9 +1,26 @@
 /* Venue pages for ember, verve and squeeze */
 
 // All
-.page_ents.page_emberlounge {
+.page_ents.page_emberlounge, .page_ents.page_verve {
 	.header {
 		position: relative;
+		background-position: center;
+		background-color: #000;
+		background-size: cover;
+		.span3 {
+			padding: 1.2em 0;
+		}
+		img {
+			width: 85%;
+			margin: 0 auto;
+			padding: 1em;
+		}
+	}
+	.intro {
+		.leader {
+			font-size: 1.3em;
+			padding: 1.2em 0;
+		}
 	}
 	.status {
 		position: absolute;
@@ -21,6 +38,10 @@
 			padding: 0 !important;
 		}
 	}
+	#map {
+		width: 100%;
+		height: 300px;
+	}
 	.times {
 		padding: 0.4em;
 		table {
@@ -32,74 +53,6 @@
 			padding: 1em 0;
 			width: 55%;
 			margin: 0 auto;
-		}
-	}
-}
-
-// Ember
-.page_ents.page_emberlounge {
-	.header {
-		background-image: url('//staffs-dev.ukmsl.net/pageassets/ents/emberlounge/Ember002.jpg');
-		background-position: center;
-		background-color: #000;
-		background-size: cover;
-		.span3 {
-			padding: 1.2em 0;
-		}
-		img {
-			width: 85%;
-			margin: 0 auto;
-			padding: 1em;
-			background: rgba(0, 0, 0, 0.6);
-		}
-	}
-	.intro {
-		.leader {
-			font-size: 1.3em;
-			padding: 1.2em 0;
-		}
-	}
-	#map {
-		width: 100%;
-		height: 300px;
-	}
-	.widgetwrapper {
-		a {
-			display: none;
-		}
-		.widgetcontainer > div > div:first-of-type {
-			display: none;
-		}
-	}
-	.gallery {
-		padding-bottom: 1em;
-		.unslider {
-			position: relative;
-		}
-		.unslider-carousel {
-			li {
-				position: relative;
-				height: 300px;
-				overflow: hidden;
-			}
-			img {
-				width: 100%;
-				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
-			}
-		}
-		.unslider-nav {
-			margin: 0 auto;
-			padding: 0.4em 0;
-			li {
-				height: 8px;
-				width: 8px;
-				border-color: #fff !important;
-				&.unslider-active {
-					background: #fff !important;
-				}
-			}
 		}
 	}
 	.menuTitle {
@@ -143,8 +96,67 @@
 	}
 }
 
+// Ember
+.page_ents.page_emberlounge {
+	.header {
+		background-image: url('//staffs-dev.ukmsl.net/pageassets/ents/emberlounge/Ember002.jpg');
+		img {
+			background: rgba(0, 0, 0, 0.6);
+		}
+	}
+	.widgetwrapper {
+		a {
+			display: none;
+		}
+		.widgetcontainer > div > div:first-of-type {
+			display: none;
+		}
+	}
+	.gallery {
+		padding-bottom: 1em;
+		.unslider {
+			position: relative;
+		}
+		.unslider-carousel {
+			li {
+				position: relative;
+				height: 300px;
+				overflow: hidden;
+			}
+			img {
+				width: 100%;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+		.unslider-nav {
+			margin: 0 auto;
+			padding: 0.4em 0;
+			li {
+				height: 8px;
+				width: 8px;
+				border-color: #fff !important;
+				&.unslider-active {
+					background: #fff !important;
+				}
+			}
+		}
+	}
+}
+
+// Verve
+.page_ents.page_verve {
+	.header {
+		background-image: url('//www.staffsunion.com/pageassets/ents/verve/hire/cara15.jpg');
+		img {
+			background: rgba(255, 255, 255, 0.9);
+		}
+	}
+}
+
 @media (min-width: 48em) {
-	.page_ents.page_emberlounge {
+	.page_ents.page_emberlounge, .page_ents.page_verve {
 		.header {
 			.span3 {
 				padding: 3em 0;
@@ -186,7 +198,7 @@
 /*Desktop*/
 
 @media (min-width: 80em) {
-	.page_ents.page_emberlounge {
+	.page_ents.page_emberlounge, .page_ents.page_verve {
 		.unslider-carousel {
 			li {
 				position: relative;
