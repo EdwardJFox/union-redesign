@@ -12,6 +12,7 @@ $advice_main_dark: #2e266b;
 */
 /* Social Media */
 /* Notifications */
+/* Squeezebox */
 /* Useful Mixins, do not declare classes in this file */
 /* For when you want to use a google material icon in a ::before or ::after*/
 /* Just so there is a default way of creating a flexbox*/
@@ -2951,49 +2952,49 @@ input#ctl00_Main_btnRecipients {
     content: 'settings'; }
 
 /* Venue pages for ember, verve and squeeze */
-.page_ents.page_emberlounge .header, .page_ents.page_verve .header {
+.page_ents.page_emberlounge main .header, .page_ents.page_verve main .header, .page_ents.page_squeezebox main .header {
   position: relative;
   background-position: center;
   background-color: #000;
   background-size: cover; }
-  .page_ents.page_emberlounge .header .span3, .page_ents.page_verve .header .span3 {
+  .page_ents.page_emberlounge main .header .span3, .page_ents.page_verve main .header .span3, .page_ents.page_squeezebox main .header .span3 {
     padding: 1.2em 0; }
-  .page_ents.page_emberlounge .header img, .page_ents.page_verve .header img {
+  .page_ents.page_emberlounge main .header img, .page_ents.page_verve main .header img, .page_ents.page_squeezebox main .header img {
     width: 85%;
     margin: 0 auto;
     padding: 1em; }
 
-.page_ents.page_emberlounge .intro .leader, .page_ents.page_verve .intro .leader {
+.page_ents.page_emberlounge main .intro .leader, .page_ents.page_verve main .intro .leader, .page_ents.page_squeezebox main .intro .leader {
   font-size: 1.3em;
   padding: 1.2em 0; }
 
-.page_ents.page_emberlounge .status, .page_ents.page_verve .status {
+.page_ents.page_emberlounge main .status, .page_ents.page_verve main .status, .page_ents.page_squeezebox main .status {
   position: absolute;
   bottom: 0;
   right: 4px;
   padding: 0.2em 0.5em; }
-  .page_ents.page_emberlounge .status.open, .page_ents.page_verve .status.open {
+  .page_ents.page_emberlounge main .status.open, .page_ents.page_verve main .status.open, .page_ents.page_squeezebox main .status.open {
     background: #30c129; }
-  .page_ents.page_emberlounge .status.closed, .page_ents.page_verve .status.closed {
+  .page_ents.page_emberlounge main .status.closed, .page_ents.page_verve main .status.closed, .page_ents.page_squeezebox main .status.closed {
     background: #c12929; }
-  .page_ents.page_emberlounge .status p, .page_ents.page_verve .status p {
+  .page_ents.page_emberlounge main .status p, .page_ents.page_verve main .status p, .page_ents.page_squeezebox main .status p {
     color: #fff;
     padding: 0 !important; }
 
-.page_ents.page_emberlounge #map, .page_ents.page_verve #map {
+.page_ents.page_emberlounge main #map, .page_ents.page_verve main #map, .page_ents.page_squeezebox main #map {
   width: 100%;
   height: 300px; }
 
-.page_ents.page_emberlounge .times, .page_ents.page_verve .times {
+.page_ents.page_emberlounge main .times, .page_ents.page_verve main .times, .page_ents.page_squeezebox main .times {
   padding: 0.4em; }
-  .page_ents.page_emberlounge .times table tr, .page_ents.page_emberlounge .times table td, .page_ents.page_verve .times table tr, .page_ents.page_verve .times table td {
+  .page_ents.page_emberlounge main .times table tr, .page_ents.page_emberlounge main .times table td, .page_ents.page_verve main .times table tr, .page_ents.page_verve main .times table td, .page_ents.page_squeezebox main .times table tr, .page_ents.page_squeezebox main .times table td {
     border: none !important; }
-  .page_ents.page_emberlounge .times #bestBarNone, .page_ents.page_verve .times #bestBarNone {
+  .page_ents.page_emberlounge main .times #bestBarNone, .page_ents.page_verve main .times #bestBarNone, .page_ents.page_squeezebox main .times #bestBarNone {
     padding: 1em 0;
     width: 55%;
     margin: 0 auto; }
 
-.page_ents.page_emberlounge .menuTitle, .page_ents.page_verve .menuTitle {
+.page_ents.page_emberlounge main .menuTitle, .page_ents.page_verve main .menuTitle, .page_ents.page_squeezebox main .menuTitle {
   margin-top: 0.8em;
   display: -webkit-box ;
   display: -ms-flexbox ;
@@ -3003,87 +3004,169 @@ input#ctl00_Main_btnRecipients {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center; }
-  .page_ents.page_emberlounge .menuTitle i, .page_ents.page_verve .menuTitle i {
+  .page_ents.page_emberlounge main .menuTitle i, .page_ents.page_verve main .menuTitle i, .page_ents.page_squeezebox main .menuTitle i {
     padding: 0 0.4em 0 0.4em;
     font-size: 4em; }
 
-.page_ents.page_emberlounge .menu, .page_ents.page_verve .menu {
+.page_ents.page_emberlounge main .menu, .page_ents.page_verve main .menu, .page_ents.page_squeezebox main .menu {
   padding: 0.4em; }
-  .page_ents.page_emberlounge .menu .menuCol, .page_ents.page_verve .menu .menuCol {
+  .page_ents.page_emberlounge main .menu .menuCol, .page_ents.page_verve main .menu .menuCol, .page_ents.page_squeezebox main .menu .menuCol {
     width: 100%;
     background: #fff;
     margin: 0 0.4em;
     padding: 0.2em; }
-    .page_ents.page_emberlounge .menu .menuCol h2, .page_ents.page_verve .menu .menuCol h2 {
+    .page_ents.page_emberlounge main .menu .menuCol h2, .page_ents.page_verve main .menu .menuCol h2, .page_ents.page_squeezebox main .menu .menuCol h2 {
       padding: 0 0 0.2em; }
-    .page_ents.page_emberlounge .menu .menuCol .menuItem, .page_ents.page_verve .menu .menuCol .menuItem {
+    .page_ents.page_emberlounge main .menu .menuCol .menuItem, .page_ents.page_verve main .menu .menuCol .menuItem, .page_ents.page_squeezebox main .menu .menuCol .menuItem {
       position: relative;
       margin-bottom: 0.6em; }
-      .page_ents.page_emberlounge .menu .menuCol .menuItem .title, .page_ents.page_verve .menu .menuCol .menuItem .title {
+      .page_ents.page_emberlounge main .menu .menuCol .menuItem .title, .page_ents.page_verve main .menu .menuCol .menuItem .title, .page_ents.page_squeezebox main .menu .menuCol .menuItem .title {
         font-size: 1.4em; }
-      .page_ents.page_emberlounge .menu .menuCol .menuItem .price, .page_ents.page_verve .menu .menuCol .menuItem .price {
+      .page_ents.page_emberlounge main .menu .menuCol .menuItem .price, .page_ents.page_verve main .menu .menuCol .menuItem .price, .page_ents.page_squeezebox main .menu .menuCol .menuItem .price {
         position: absolute;
         top: 4px;
         right: 4px;
         font-size: 1.1em; }
-      .page_ents.page_emberlounge .menu .menuCol .menuItem .extra p, .page_ents.page_verve .menu .menuCol .menuItem .extra p {
+      .page_ents.page_emberlounge main .menu .menuCol .menuItem .extra p, .page_ents.page_verve main .menu .menuCol .menuItem .extra p, .page_ents.page_squeezebox main .menu .menuCol .menuItem .extra p {
         font-size: 0.9em; }
 
-.page_ents.page_emberlounge .header {
+.page_ents.page_emberlounge main .header {
   background-image: url("//staffs-dev.ukmsl.net/pageassets/ents/emberlounge/Ember002.jpg"); }
-  .page_ents.page_emberlounge .header img {
+  .page_ents.page_emberlounge main .header img {
     background: rgba(0, 0, 0, 0.6); }
 
-.page_ents.page_emberlounge .widgetwrapper a {
+.page_ents.page_emberlounge main .widgetwrapper a {
   display: none; }
 
-.page_ents.page_emberlounge .widgetwrapper .widgetcontainer > div > div:first-of-type {
+.page_ents.page_emberlounge main .widgetwrapper .widgetcontainer > div > div:first-of-type {
   display: none; }
 
-.page_ents.page_emberlounge .gallery {
+.page_ents.page_emberlounge main .gallery {
   padding-bottom: 1em; }
-  .page_ents.page_emberlounge .gallery .unslider {
+  .page_ents.page_emberlounge main .gallery .unslider {
     position: relative; }
-  .page_ents.page_emberlounge .gallery .unslider-carousel li {
+  .page_ents.page_emberlounge main .gallery .unslider-carousel li {
     position: relative;
     height: 300px;
     overflow: hidden; }
-  .page_ents.page_emberlounge .gallery .unslider-carousel img {
+  .page_ents.page_emberlounge main .gallery .unslider-carousel img {
     width: 100%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%); }
-  .page_ents.page_emberlounge .gallery .unslider-nav {
+  .page_ents.page_emberlounge main .gallery .unslider-nav {
     margin: 0 auto;
     padding: 0.4em 0; }
-    .page_ents.page_emberlounge .gallery .unslider-nav li {
+    .page_ents.page_emberlounge main .gallery .unslider-nav li {
       height: 8px;
       width: 8px;
       border-color: #fff !important; }
-      .page_ents.page_emberlounge .gallery .unslider-nav li.unslider-active {
+      .page_ents.page_emberlounge main .gallery .unslider-nav li.unslider-active {
         background: #fff !important; }
 
-.page_ents.page_verve .header {
+.page_ents.page_verve main .header {
   background-image: url("//www.staffsunion.com/pageassets/ents/verve/hire/cara15.jpg"); }
-  .page_ents.page_verve .header img {
+  .page_ents.page_verve main .header img {
     background: rgba(255, 255, 255, 0.9); }
 
+.page_ents.page_squeezebox main .header {
+  background-image: url("//staffsunion.s3.amazonaws.com/images/squeezebox/squeeze_3.jpg"); }
+  .page_ents.page_squeezebox main .header img {
+    background: rgba(0, 0, 0, 0.9); }
+
+.page_ents.page_squeezebox main .unslider {
+  position: relative;
+  overflow: hidden; }
+  .page_ents.page_squeezebox main .unslider > .unslider-nav {
+    margin: 0 auto;
+    padding: 0.4em 0;
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    right: 0; }
+    .page_ents.page_squeezebox main .unslider > .unslider-nav li {
+      height: 8px;
+      width: 8px;
+      border-color: #fff !important; }
+      .page_ents.page_squeezebox main .unslider > .unslider-nav li.unslider-active {
+        background: #fff !important; }
+
+.page_ents.page_squeezebox main .unslider-carousel li {
+  position: relative;
+  height: 300px;
+  overflow: hidden; }
+
+.page_ents.page_squeezebox main .unslider-carousel img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.page_ents.page_squeezebox main .menu {
+  background-image: url("https://staffsunion.s3.amazonaws.com/images/squeezebox/wall.jpg");
+  background-size: 50%;
+  padding: 2em 0; }
+  .page_ents.page_squeezebox main .menu .menuCol {
+    background: rgba(0, 0, 0, 0.8); }
+    .page_ents.page_squeezebox main .menu .menuCol h2, .page_ents.page_squeezebox main .menu .menuCol .title, .page_ents.page_squeezebox main .menu .menuCol .price {
+      color: #fff;
+      font-family: 'Amatic SC', cursive; }
+    .page_ents.page_squeezebox main .menu .menuCol h2 {
+      font-weight: 700; }
+    .page_ents.page_squeezebox main .menu .menuCol .menuItem .title {
+      font-size: 2em;
+      font-weight: 700; }
+    .page_ents.page_squeezebox main .menu .menuCol .menuItem .price {
+      font-size: 1.6em; }
+    .page_ents.page_squeezebox main .menu .menuCol .menuItem .extra p {
+      color: #fff;
+      font-size: 1.3em;
+      font-family: 'Patrick Hand SC', cursive; }
+
+.page_ents.page_verve.page_hire main .header h1 {
+  padding: 0.4em 0.8em;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  margin: 0 auto; }
+
+.page_ents.page_verve.page_hire main #venueGallery {
+  padding: 1em;
+  background: #333; }
+
+.page_ents.page_verve.page_hire main .unslider-carousel > li {
+  text-align: center;
+  position: relative; }
+  .page_ents.page_verve.page_hire main .unslider-carousel > li .slidemeCaption {
+    background: #fff;
+    padding: 0.4em 0.8em;
+    margin: 0.2em auto 0;
+    width: 98%; }
+    .page_ents.page_verve.page_hire main .unslider-carousel > li .slidemeCaption p {
+      color: #333; }
+
+.page_ents.page_verve.page_hire main .unslider-nav {
+  margin: 0 auto; }
+
 @media (min-width: 48em) {
-  .page_ents.page_emberlounge .header .span3, .page_ents.page_verve .header .span3 {
-    padding: 3em 0; }
-  .page_ents.page_emberlounge .header img, .page_ents.page_verve .header img {
-    width: 60%; }
-  .page_ents.page_emberlounge #map, .page_ents.page_verve #map {
-    height: 340px; }
-  .page_ents.page_emberlounge .intro .pure-u-lg-2-3, .page_ents.page_verve .intro .pure-u-lg-2-3 {
-    padding-right: 0.8em; }
-  .page_ents.page_emberlounge .unslider-carousel li, .page_ents.page_verve .unslider-carousel li {
+  .page_ents.page_squeezebox main .unslider-carousel li img {
+    width: 100%; }
+  .page_ents.page_squeezebox main .header img {
+    width: 35% !important; }
+  .page_ents.page_emberlounge .unslider-carousel li, .page_ents.page_squeezebox .unslider-carousel li {
     position: relative;
     height: 400px; }
-  .page_ents.page_emberlounge .menu, .page_ents.page_verve .menu {
+  .page_ents.page_emberlounge main .header .span3, .page_ents.page_verve main .header .span3, .page_ents.page_squeezebox main .header .span3 {
+    padding: 3em 0; }
+  .page_ents.page_emberlounge main .header img, .page_ents.page_verve main .header img, .page_ents.page_squeezebox main .header img {
+    width: 60%; }
+  .page_ents.page_emberlounge main #map, .page_ents.page_verve main #map, .page_ents.page_squeezebox main #map {
+    height: 340px; }
+  .page_ents.page_emberlounge main .intro .pure-u-lg-2-3, .page_ents.page_verve main .intro .pure-u-lg-2-3, .page_ents.page_squeezebox main .intro .pure-u-lg-2-3 {
+    padding-right: 0.8em; }
+  .page_ents.page_emberlounge main .menu, .page_ents.page_verve main .menu, .page_ents.page_squeezebox main .menu {
     padding: 0.8em;
     overflow-x: scroll; }
-    .page_ents.page_emberlounge .menu .menuContainer, .page_ents.page_verve .menu .menuContainer {
+    .page_ents.page_emberlounge main .menu .menuContainer, .page_ents.page_verve main .menu .menuContainer, .page_ents.page_squeezebox main .menu .menuContainer {
       display: -webkit-box ;
       display: -ms-flexbox ;
       display: -webkit-flex ;
@@ -3092,7 +3175,7 @@ input#ctl00_Main_btnRecipients {
       -ms-flex-wrap: no-wrap;
       -webkit-flex-wrap: no-wrap;
       flex-wrap: no-wrap; }
-    .page_ents.page_emberlounge .menu .menuCol, .page_ents.page_verve .menu .menuCol {
+    .page_ents.page_emberlounge main .menu .menuCol, .page_ents.page_verve main .menu .menuCol, .page_ents.page_squeezebox main .menu .menuCol {
       -webkit-box-flex: 0;
       -ms-flex: 0 0 40%;
       -webkit-flex: 0 0 40%;
@@ -3101,10 +3184,10 @@ input#ctl00_Main_btnRecipients {
 
 /*Desktop*/
 @media (min-width: 80em) {
-  .page_ents.page_emberlounge .unslider-carousel li, .page_ents.page_verve .unslider-carousel li {
+  .page_ents.page_emberlounge main .unslider-carousel li {
     position: relative;
     height: 600px !important; }
-  .page_ents.page_emberlounge .menu .menuCol, .page_ents.page_verve .menu .menuCol {
+  .page_ents.page_emberlounge main .menu .menuCol, .page_ents.page_verve main .menu .menuCol, .page_ents.page_squeezebox main .menu .menuCol {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 22%;
     -webkit-flex: 0 0 22%;

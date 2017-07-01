@@ -1,7 +1,7 @@
 /* Venue pages for ember, verve and squeeze */
 
 // All
-.page_ents.page_emberlounge, .page_ents.page_verve {
+.page_ents.page_emberlounge main, .page_ents.page_verve main, .page_ents.page_squeezebox main {
 	.header {
 		position: relative;
 		background-position: center;
@@ -97,7 +97,7 @@
 }
 
 // Ember
-.page_ents.page_emberlounge {
+.page_ents.page_emberlounge main {
 	.header {
 		background-image: url('//staffs-dev.ukmsl.net/pageassets/ents/emberlounge/Ember002.jpg');
 		img {
@@ -146,7 +146,7 @@
 }
 
 // Verve
-.page_ents.page_verve {
+.page_ents.page_verve main {
 	.header {
 		background-image: url('//www.staffsunion.com/pageassets/ents/verve/hire/cara15.jpg');
 		img {
@@ -155,8 +155,138 @@
 	}
 }
 
+// Squeezebox
+.page_ents.page_squeezebox main {
+	.header {
+		background-image: url('//staffsunion.s3.amazonaws.com/images/squeezebox/squeeze_3.jpg');
+		img {
+			background: rgba(0, 0, 0, 0.9);
+		}
+	}
+	.unslider {
+		position: relative;
+		overflow: hidden;
+		> .unslider-nav {
+			margin: 0 auto;
+			padding: 0.4em 0;
+			position: absolute;
+			bottom: 24px;
+			left: 0;
+			right: 0;
+			li {
+				height: 8px;
+				width: 8px;
+				border-color: #fff !important;
+				&.unslider-active {
+					background: #fff !important;
+				}
+			}
+		}
+	}
+	.unslider-carousel {
+			li {
+				position: relative;
+				height: 300px;
+				overflow: hidden;
+			}
+			img {
+				width: 100%;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	.menu {
+		background-image: url('https://staffsunion.s3.amazonaws.com/images/squeezebox/wall.jpg');
+		background-size: 50%;
+		padding: 2em 0;
+		.menuCol {
+			background: rgba(0, 0, 0, 0.8);
+			h2, .title, .price {
+				color: #fff;
+				font-family: 'Amatic SC', cursive;
+			}
+			h2 {
+				font-weight: 700;
+			}
+			.menuItem {
+				.title {
+					font-size: 2em;
+					font-weight: 700;
+				}
+				.price {
+					font-size: 1.6em;
+				}
+				.extra {
+					p {
+						color: #fff;
+						font-size: 1.3em;
+						font-family: 'Patrick Hand SC', cursive;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Venue hire
+.page_ents.page_verve.page_hire main {
+	.header {
+		h1 {
+			padding: 0.4em 0.8em;
+			background: rgba(0, 0, 0, 0.8);
+			color: #fff;
+			margin: 0 auto;
+		}
+	}
+	#venueGallery {
+		padding: 1em;
+		background: #333;
+	}
+	.unslider-carousel {
+		> li {
+			text-align: center;
+			position: relative;
+			.slidemeCaption {
+				background: #fff;
+				padding: 0.4em 0.8em;
+				margin: 0.2em auto 0;
+				width: 98%;
+				p {
+					color: #333;
+				}
+			}
+		}
+	}
+	.unslider-nav {
+		margin: 0 auto;
+	}
+}
+
 @media (min-width: 48em) {
-	.page_ents.page_emberlounge, .page_ents.page_verve {
+	.page_ents.page_squeezebox main {
+		.unslider-carousel {
+			li {
+				img {
+					width: 100%;
+				}
+			}
+		}
+		.header {
+			img {
+				width: 35% !important;
+			}
+		}
+	}
+	.page_ents.page_emberlounge, .page_ents.page_squeezebox {
+		.unslider-carousel {
+			li {
+				position: relative;
+				height: 400px;
+			}
+		}
+	}
+	.page_ents.page_emberlounge main, .page_ents.page_verve main, .page_ents.page_squeezebox main {
 		.header {
 			.span3 {
 				padding: 3em 0;
@@ -171,12 +301,6 @@
 		.intro {
 			.pure-u-lg-2-3 {
 				padding-right: 0.8em;
-			}
-		}
-		.unslider-carousel {
-			li {
-				position: relative;
-				height: 400px;
 			}
 		}
 		.menu {
@@ -198,13 +322,15 @@
 /*Desktop*/
 
 @media (min-width: 80em) {
-	.page_ents.page_emberlounge, .page_ents.page_verve {
+	.page_ents.page_emberlounge main {
 		.unslider-carousel {
 			li {
 				position: relative;
 				height: 600px !important;
 			}
 		}
+	}
+	.page_ents.page_emberlounge main, .page_ents.page_verve main, .page_ents.page_squeezebox main {
 		.menu {
 			.menuCol {
 				@include flexFixed(22%);
