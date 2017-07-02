@@ -59,8 +59,217 @@
 }
 
 // Club and Society template pages
-.page_activities.page_society {
-  
+.page_activities.page_society #organisation, .page_activities.page_club #organisation {
+  .orgHead {
+    position: relative;
+    padding: 0 0.6em;
+    .orgLogo {
+      display: block;
+      margin: 0 auto;
+      width: 160px;
+      height: 160px;
+      padding: 0.6em;
+      margin-top: 0.8em;
+      background: #fff;
+      img {
+        width: 100%;
+      }
+    }
+    .span3 {
+      @include flexDirection(column-reverse);
+      h1 {
+        padding: 0.4em 0;
+      }
+    }
+  }
+  .orgDetails {
+    .join_list {
+      padding: 0;
+      margin: 0;
+      .join-item {
+        padding: 0.6em;
+        margin-bottom: 1.2em;
+        position: relative;
+        padding-right: 5.2em;
+        .product-name {
+          font-size: 1.2em;
+          .product-price {
+            position: absolute;
+            right: 4px;
+            top: 4px;
+            font-size: 1em;
+          }
+        }
+        .button {
+          display: block;
+          margin: 0.2em 0 0;
+        }
+      }
+    }
+    .mslwidget {
+      > a {
+        text-decoration: none;
+        margin-bottom: 0.4em;
+        width: 100%;
+      }
+    }
+    .msl_email, .msl_web {
+      padding: 0.4em 0.6em;
+      @include displayFlex;
+      @include flexAlign(center);
+      &:before {
+        @include googleFont;
+        padding: 0 0.4em 0 0;
+      }
+    }
+    .msl_email {
+      background: $grey;
+      
+      &:before {
+        content: 'email';
+
+      }
+    }
+    .msl_web {
+      background: $union_green;
+      color: #fff;
+      &:before {
+        content: 'web';
+
+      }
+    }
+    .msl_facebook {
+      padding: 0.4em 0.6em 0.4em 2.4em;
+      background: url('//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/facebook_f_dark.svg'), #3d5a98;
+      background-position: bottom left;
+      background-repeat: no-repeat;
+      background-size: auto 80%;
+      color: #fff;
+      &:hover {
+        background: url('//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/facebook_f_white_transparent.svg'), #3d5a98;
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        background-size: auto 80%;
+      }
+    }
+    .msl_twitter {
+      padding: 0.4em 0.6em 0.4em 2.4em;
+      background: url('//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/twitter_bird_dark.svg'), #1da1f2;
+      background-position: center left 4px;
+      background-repeat: no-repeat;
+      background-size: auto 80%;
+      color: #fff;
+      &:hover {
+        background: url('//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/twitter_bird_white_transparent.svg'), #1da1f2;
+        background-position: center left 4px;
+        background-repeat: no-repeat;
+       background-size: auto 80%;
+      }
+    }
+    .msl_instagram {
+      padding: 0.4em 0.6em 0.4em 2.4em;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffd776+0,f3a554+24,f15c3c+38,c32f87+70,5c6cb3+98 */
+      background-image: url('//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/instagram_logo_no_bg_dark_transparent.svg'), #ffd776; /* Old browsers */
+      background-image: url('//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/instagram_logo_no_bg_dark_transparent.svg'), -moz-linear-gradient(45deg,  #ffd776 0%, #f3a554 24%, #f15c3c 38%, #c32f87 70%, #5c6cb3 98%); /* FF3.6-15 */
+      background-image: url('//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/instagram_logo_no_bg_dark_transparent.svg'), -webkit-linear-gradient(45deg,  #ffd776 0%,#f3a554 24%,#f15c3c 38%,#c32f87 70%,#5c6cb3 98%); /* Chrome10-25,Safari5.1-6 */
+      background-image: url('//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/instagram_logo_no_bg_dark_transparent.svg'), linear-gradient(45deg,  #ffd776 0%,#f3a554 24%,#f15c3c 38%,#c32f87 70%,#5c6cb3 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd776', endColorstr='#5c6cb3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+      background-position: center left;
+      background-size: auto 95%, 100% 100%;
+      background-repeat: no-repeat;
+      color: #fff;
+    }
+
+    .msl_eventlist {
+      .event_item {
+        margin-bottom: 0.6em;
+        .event_image {
+          img {
+             width: 100%;
+             display: block;
+          }
+        }
+        dl {
+          margin: 0;
+        }
+        .event_info {
+          background: #eee;
+          padding: 0.4em 0.6em;
+          .msl_event_name {
+            font-size: 1.3em;
+            text-decoration: none;
+          }
+          .msl_event_time, .msl_event_types, .msl_event_hook {
+            display: none;
+          }
+          .msl_event_location, .msl_event_description {
+            @include displayFlex;
+            @include flexAlign(center);
+            padding: 0.4em 0.6em 0.4em 0.2em;
+            font-size: 1.1em;
+            &:before {
+              @include googleFont;
+              padding: 0 0.4em 0 0;
+            }
+          }
+          .msl_event_location {
+            margin: 0;
+            &:before {
+              content: 'location_on';
+            }
+          }
+          .msl_event_description {
+            margin: 0;
+            &:before {
+              content: 'date_range';
+            }
+          }
+        }
+      }
+      .msl_rss {
+        display: none;
+      }
+    }
+  }
+  .orgDescription {
+    .links {
+      > a {
+        display: none;
+      }
+    }
+    .news {
+      padding: 0.4em 0.8em;
+      margin-bottom: 0.6em;
+      background: $grey;
+    }
+    .msl-news {
+      .msl-item {
+        background: #fff;
+        margin-bottom: 0.6em;
+        .msl-image {
+          img {
+            width: 100%;
+            height: auto;
+            display: block;
+          }
+        }
+        .msl-title {
+          font-size: 1.3em;
+          padding: 0.4em 0.4em 0.2em;
+          a {
+            text-decoration: none;
+          }
+        }
+        .msl-leader {
+          font-size: 1em;
+          padding: 0 0.6em 0.4em;
+        }
+      }
+    }
+    .news_all {
+      display: none;
+    }
+  }
 }
 
 /* Tablets*/
@@ -82,6 +291,47 @@
       }
     }
   }
+
+  // Club and Society template pages
+  .page_activities.page_society #organisation, .page_activities.page_club #organisation {
+    .orgHead {
+      padding: 0 !important;
+      min-height: 220px;
+      .span3 {
+        @include flexDirection(row);
+      }
+      .orgLogo {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        width: 154px;
+        height: 154px;
+      }
+    }
+    .orgDetails {
+      padding-left: 0.6em;
+    }
+    .orgDescription {
+      .links {
+        .qualityMark {
+          @include displayFlex;
+          @include flexAlign(center);
+        }
+        .greenBg {
+          display: block;
+          padding:0.4em 0.8em;
+          text-decoration: none;
+        }
+      }
+      .msl-news {
+        @include displayFlex;
+        @include flexJustify(space-between);
+        .msl-item {
+          @include flexFixed(48%);
+        }
+      }
+    }
+  }
 }
 /* Desktop*/
 @media (min-width: 80em){
@@ -96,6 +346,14 @@
           }
         }
       }
+    }
+  }
+
+  // Club and Society template pages
+  .page_activities.page_society #organisation, .page_activities.page_club #organisation {
+    .orgHead {
+      padding: 0 !important;
+      min-height: 250px;
     }
   }
 }

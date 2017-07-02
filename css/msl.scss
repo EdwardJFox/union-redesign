@@ -102,7 +102,7 @@ table.msl_table {
     a {
       text-decoration: none;
     }
-    .msl_delete, .msl_basket, .msl_save {
+    .msl_delete, .msl_basket, .msl_save, .msl_view {
       background: none !important;
       visibility: hidden;
       padding: 0;
@@ -147,5 +147,119 @@ table.msl_table {
         }
       }
     }
+    .msl_view {
+      &:before {
+        content: 'pageview';
+        color: $blue;
+      }
+      &:hover {
+        &:before {
+          background: $blue_hover_clear;
+        }
+      }
+    }
   }
+}
+
+/* MSL Ratings */
+.msl-rating {
+  > div > div  {
+    @include displayFlex;
+    @include flexAlign(center);
+    & > div {
+      width: auto !important;
+    }
+  }
+  .rating-star {
+    float: none !important;
+    background: none;
+    width: auto;
+    height: auto;
+    &:before {
+      @include googleFont;
+    }
+    &.empty {
+      &:before {
+        content: 'star_border';
+        color: #666;
+      }
+    }
+    &.filled {
+      &:before {
+        content: 'star';
+        color: #fede30;
+      }
+    }
+  }
+  .msl-rating-text {
+    font-size: 1.1em;
+  }
+}
+
+/* News Comments, hopefully all over comments too */
+dl.comments {
+  @include displayFlex;
+  dd {
+    @include flex(1);
+    margin: 0 0 0.6em;
+    padding: 0;
+    border: none !important;
+    @include displayFlex;
+    @include flexDirection(column);
+    .comment_details {
+      background: $union_green !important;
+      padding: 0.6em 0.8em;
+      h3 {
+        font-size: 1.4em;
+      }
+      .comment_date {
+        color: #fff;
+        font-size: 1.2em;
+      }
+      .comment_delete {
+        background: $red;
+        padding: 0.4em 0.6em;
+        font-size: 1.2em;
+        a {
+          color: #fff;
+        }
+      }
+    }
+    .comment {
+      @include flex(1);
+      background: $grey;
+      textarea {
+        background: #fff;
+        border: none;
+        border-bottom: 4px solid #e2e2e2;
+      }
+    }
+  }
+  dt {
+    @include flexFixed(120px);
+    width: auto;
+    float: none;
+    margin: 0 0 0.6em;
+    padding: 0.6em 0.4em;
+    background: $grey !important;
+    .avatar {
+      border-radius: 6em;
+      width: 80px !important;
+      height: 80px !important;
+    }
+    a {
+      padding: 0.6em 0;
+      font-size: 1.1em;
+      text-decoration: none;
+      display: block;
+    }
+  }
+}
+#add_comment {
+  
+}
+
+/* Tablets*/
+@media (min-width: 48em){
+
 }

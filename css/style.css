@@ -1225,13 +1225,13 @@ table.msl_table {
     padding: 0.3em 0.5em !important; }
     table.msl_table td a {
       text-decoration: none; }
-    table.msl_table td .msl_delete, table.msl_table td .msl_basket, table.msl_table td .msl_save {
+    table.msl_table td .msl_delete, table.msl_table td .msl_basket, table.msl_table td .msl_save, table.msl_table td .msl_view {
       background: none !important;
       visibility: hidden;
       padding: 0;
       text-indent: 0px !important;
       overflow: initial !important; }
-      table.msl_table td .msl_delete:before, table.msl_table td .msl_basket:before, table.msl_table td .msl_save:before {
+      table.msl_table td .msl_delete:before, table.msl_table td .msl_basket:before, table.msl_table td .msl_save:before, table.msl_table td .msl_view:before {
         font-family: 'Material Icons';
         font-weight: normal;
         font-style: normal;
@@ -1264,7 +1264,122 @@ table.msl_table {
       color: #0096db; }
     table.msl_table td .msl_save:hover:before {
       background: rgba(0, 150, 219, 0.2); }
+    table.msl_table td .msl_view:before {
+      content: 'pageview';
+      color: #0096db; }
+    table.msl_table td .msl_view:hover:before {
+      background: rgba(0, 150, 219, 0.2); }
 
+/* MSL Ratings */
+.msl-rating > div > div {
+  display: -webkit-box ;
+  display: -ms-flexbox ;
+  display: -webkit-flex ;
+  display: flex ;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center; }
+  .msl-rating > div > div > div {
+    width: auto !important; }
+
+.msl-rating .rating-star {
+  float: none !important;
+  background: none;
+  width: auto;
+  height: auto; }
+  .msl-rating .rating-star:before {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    text-align: center; }
+  .msl-rating .rating-star.empty:before {
+    content: 'star_border';
+    color: #666; }
+  .msl-rating .rating-star.filled:before {
+    content: 'star';
+    color: #fede30; }
+
+.msl-rating .msl-rating-text {
+  font-size: 1.1em; }
+
+/* News Comments, hopefully all over comments too */
+dl.comments {
+  display: -webkit-box ;
+  display: -ms-flexbox ;
+  display: -webkit-flex ;
+  display: flex ; }
+  dl.comments dd {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 0 0 0.6em;
+    padding: 0;
+    border: none !important;
+    display: -webkit-box ;
+    display: -ms-flexbox ;
+    display: -webkit-flex ;
+    display: flex ;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+    dl.comments dd .comment_details {
+      background: #50b848 !important;
+      padding: 0.6em 0.8em; }
+      dl.comments dd .comment_details h3 {
+        font-size: 1.4em; }
+      dl.comments dd .comment_details .comment_date {
+        color: #fff;
+        font-size: 1.2em; }
+      dl.comments dd .comment_details .comment_delete {
+        background: #E31836;
+        padding: 0.4em 0.6em;
+        font-size: 1.2em; }
+        dl.comments dd .comment_details .comment_delete a {
+          color: #fff; }
+    dl.comments dd .comment {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      -webkit-flex: 1;
+      flex: 1;
+      background: #eee; }
+      dl.comments dd .comment textarea {
+        background: #fff;
+        border: none;
+        border-bottom: 4px solid #e2e2e2; }
+  dl.comments dt {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 120px;
+    -webkit-flex: 0 0 120px;
+    flex: 0 0 120px;
+    width: auto;
+    float: none;
+    margin: 0 0 0.6em;
+    padding: 0.6em 0.4em;
+    background: #eee !important; }
+    dl.comments dt .avatar {
+      border-radius: 6em;
+      width: 80px !important;
+      height: 80px !important; }
+    dl.comments dt a {
+      padding: 0.6em 0;
+      font-size: 1.1em;
+      text-decoration: none;
+      display: block; }
+
+/* Tablets*/
 /* Admin Context Control */
 .msl-grouping-context-control {
   padding: 0.4em 0; }
@@ -2183,6 +2298,215 @@ input#ctl00_Main_btnRecipients {
   .page_clubsandsocs #clubs .itemList .item.akuma img, .page_clubsandsocs #clubs .itemList .item.akuma .image, .page_clubsandsocs #socs .itemList .item.akuma img, .page_clubsandsocs #socs .itemList .item.akuma .image {
     width: 100%; }
 
+.page_activities.page_society #organisation .orgHead, .page_activities.page_club #organisation .orgHead {
+  position: relative;
+  padding: 0 0.6em; }
+  .page_activities.page_society #organisation .orgHead .orgLogo, .page_activities.page_club #organisation .orgHead .orgLogo {
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+    height: 160px;
+    padding: 0.6em;
+    margin-top: 0.8em;
+    background: #fff; }
+    .page_activities.page_society #organisation .orgHead .orgLogo img, .page_activities.page_club #organisation .orgHead .orgLogo img {
+      width: 100%; }
+  .page_activities.page_society #organisation .orgHead .span3, .page_activities.page_club #organisation .orgHead .span3 {
+    -ms-flex-direction: column-reverse;
+    -webkit-flex-direction: column-reverse;
+    flex-direction: column-reverse; }
+    .page_activities.page_society #organisation .orgHead .span3 h1, .page_activities.page_club #organisation .orgHead .span3 h1 {
+      padding: 0.4em 0; }
+
+.page_activities.page_society #organisation .orgDetails .join_list, .page_activities.page_club #organisation .orgDetails .join_list {
+  padding: 0;
+  margin: 0; }
+  .page_activities.page_society #organisation .orgDetails .join_list .join-item, .page_activities.page_club #organisation .orgDetails .join_list .join-item {
+    padding: 0.6em;
+    margin-bottom: 1.2em;
+    position: relative;
+    padding-right: 5.2em; }
+    .page_activities.page_society #organisation .orgDetails .join_list .join-item .product-name, .page_activities.page_club #organisation .orgDetails .join_list .join-item .product-name {
+      font-size: 1.2em; }
+      .page_activities.page_society #organisation .orgDetails .join_list .join-item .product-name .product-price, .page_activities.page_club #organisation .orgDetails .join_list .join-item .product-name .product-price {
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        font-size: 1em; }
+    .page_activities.page_society #organisation .orgDetails .join_list .join-item .button, .page_activities.page_club #organisation .orgDetails .join_list .join-item .button {
+      display: block;
+      margin: 0.2em 0 0; }
+
+.page_activities.page_society #organisation .orgDetails .mslwidget > a, .page_activities.page_club #organisation .orgDetails .mslwidget > a {
+  text-decoration: none;
+  margin-bottom: 0.4em;
+  width: 100%; }
+
+.page_activities.page_society #organisation .orgDetails .msl_email, .page_activities.page_society #organisation .orgDetails .msl_web, .page_activities.page_club #organisation .orgDetails .msl_email, .page_activities.page_club #organisation .orgDetails .msl_web {
+  padding: 0.4em 0.6em;
+  display: -webkit-box ;
+  display: -ms-flexbox ;
+  display: -webkit-flex ;
+  display: flex ;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center; }
+  .page_activities.page_society #organisation .orgDetails .msl_email:before, .page_activities.page_society #organisation .orgDetails .msl_web:before, .page_activities.page_club #organisation .orgDetails .msl_email:before, .page_activities.page_club #organisation .orgDetails .msl_web:before {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    padding: 0 0.4em 0 0; }
+
+.page_activities.page_society #organisation .orgDetails .msl_email, .page_activities.page_club #organisation .orgDetails .msl_email {
+  background: #eee; }
+  .page_activities.page_society #organisation .orgDetails .msl_email:before, .page_activities.page_club #organisation .orgDetails .msl_email:before {
+    content: 'email'; }
+
+.page_activities.page_society #organisation .orgDetails .msl_web, .page_activities.page_club #organisation .orgDetails .msl_web {
+  background: #50b848;
+  color: #fff; }
+  .page_activities.page_society #organisation .orgDetails .msl_web:before, .page_activities.page_club #organisation .orgDetails .msl_web:before {
+    content: 'web'; }
+
+.page_activities.page_society #organisation .orgDetails .msl_facebook, .page_activities.page_club #organisation .orgDetails .msl_facebook {
+  padding: 0.4em 0.6em 0.4em 2.4em;
+  background: url("//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/facebook_f_dark.svg"), #3d5a98;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: auto 80%;
+  color: #fff; }
+  .page_activities.page_society #organisation .orgDetails .msl_facebook:hover, .page_activities.page_club #organisation .orgDetails .msl_facebook:hover {
+    background: url("//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/facebook_f_white_transparent.svg"), #3d5a98;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: auto 80%; }
+
+.page_activities.page_society #organisation .orgDetails .msl_twitter, .page_activities.page_club #organisation .orgDetails .msl_twitter {
+  padding: 0.4em 0.6em 0.4em 2.4em;
+  background: url("//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/twitter_bird_dark.svg"), #1da1f2;
+  background-position: center left 4px;
+  background-repeat: no-repeat;
+  background-size: auto 80%;
+  color: #fff; }
+  .page_activities.page_society #organisation .orgDetails .msl_twitter:hover, .page_activities.page_club #organisation .orgDetails .msl_twitter:hover {
+    background: url("//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/twitter_bird_white_transparent.svg"), #1da1f2;
+    background-position: center left 4px;
+    background-repeat: no-repeat;
+    background-size: auto 80%; }
+
+.page_activities.page_society #organisation .orgDetails .msl_instagram, .page_activities.page_club #organisation .orgDetails .msl_instagram {
+  padding: 0.4em 0.6em 0.4em 2.4em;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffd776+0,f3a554+24,f15c3c+38,c32f87+70,5c6cb3+98 */
+  background-image: url("//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/instagram_logo_no_bg_dark_transparent.svg"), #ffd776;
+  /* Old browsers */
+  background-image: url("//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/instagram_logo_no_bg_dark_transparent.svg"), -moz-linear-gradient(45deg, #ffd776 0%, #f3a554 24%, #f15c3c 38%, #c32f87 70%, #5c6cb3 98%);
+  /* FF3.6-15 */
+  background-image: url("//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/instagram_logo_no_bg_dark_transparent.svg"), -webkit-linear-gradient(45deg, #ffd776 0%, #f3a554 24%, #f15c3c 38%, #c32f87 70%, #5c6cb3 98%);
+  /* Chrome10-25,Safari5.1-6 */
+  background-image: url("//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/instagram_logo_no_bg_dark_transparent.svg"), linear-gradient(45deg, #ffd776 0%, #f3a554 24%, #f15c3c 38%, #c32f87 70%, #5c6cb3 98%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd776', endColorstr='#5c6cb3',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  background-position: center left;
+  background-size: auto 95%, 100% 100%;
+  background-repeat: no-repeat;
+  color: #fff; }
+
+.page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item {
+  margin-bottom: 0.6em; }
+  .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_image img, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_image img {
+    width: 100%;
+    display: block; }
+  .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item dl, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item dl {
+    margin: 0; }
+  .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info {
+    background: #eee;
+    padding: 0.4em 0.6em; }
+    .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_name, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_name {
+      font-size: 1.3em;
+      text-decoration: none; }
+    .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_time, .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_types, .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_hook, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_time, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_types, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_hook {
+      display: none; }
+    .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location, .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description {
+      display: -webkit-box ;
+      display: -ms-flexbox ;
+      display: -webkit-flex ;
+      display: flex ;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      padding: 0.4em 0.6em 0.4em 0.2em;
+      font-size: 1.1em; }
+      .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location:before, .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description:before, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location:before, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description:before {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+        text-align: center;
+        padding: 0 0.4em 0 0; }
+    .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location {
+      margin: 0; }
+      .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location:before, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location:before {
+        content: 'location_on'; }
+    .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description {
+      margin: 0; }
+      .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description:before, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description:before {
+        content: 'date_range'; }
+
+.page_activities.page_society #organisation .orgDetails .msl_eventlist .msl_rss, .page_activities.page_club #organisation .orgDetails .msl_eventlist .msl_rss {
+  display: none; }
+
+.page_activities.page_society #organisation .orgDescription .links > a, .page_activities.page_club #organisation .orgDescription .links > a {
+  display: none; }
+
+.page_activities.page_society #organisation .orgDescription .news, .page_activities.page_club #organisation .orgDescription .news {
+  padding: 0.4em 0.8em;
+  margin-bottom: 0.6em;
+  background: #eee; }
+
+.page_activities.page_society #organisation .orgDescription .msl-news .msl-item, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item {
+  background: #fff;
+  margin-bottom: 0.6em; }
+  .page_activities.page_society #organisation .orgDescription .msl-news .msl-item .msl-image img, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item .msl-image img {
+    width: 100%;
+    height: auto;
+    display: block; }
+  .page_activities.page_society #organisation .orgDescription .msl-news .msl-item .msl-title, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item .msl-title {
+    font-size: 1.3em;
+    padding: 0.4em 0.4em 0.2em; }
+    .page_activities.page_society #organisation .orgDescription .msl-news .msl-item .msl-title a, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item .msl-title a {
+      text-decoration: none; }
+  .page_activities.page_society #organisation .orgDescription .msl-news .msl-item .msl-leader, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item .msl-leader {
+    font-size: 1em;
+    padding: 0 0.6em 0.4em; }
+
+.page_activities.page_society #organisation .orgDescription .news_all, .page_activities.page_club #organisation .orgDescription .news_all {
+  display: none; }
+
 /* Tablets*/
 @media (min-width: 48em) {
   .page_clubsandsocs #clubs .itemList, .page_clubsandsocs #socs .itemList {
@@ -2202,6 +2526,48 @@ input#ctl00_Main_btnRecipients {
       -webkit-box-flex: 0;
       -ms-flex: 0 0 48%;
       -webkit-flex: 0 0 48%;
+      flex: 0 0 48%; }
+  .page_activities.page_society #organisation .orgHead, .page_activities.page_club #organisation .orgHead {
+    padding: 0 !important;
+    min-height: 220px; }
+    .page_activities.page_society #organisation .orgHead .span3, .page_activities.page_club #organisation .orgHead .span3 {
+      -ms-flex-direction: row;
+      -webkit-flex-direction: row;
+      flex-direction: row; }
+    .page_activities.page_society #organisation .orgHead .orgLogo, .page_activities.page_club #organisation .orgHead .orgLogo {
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      width: 154px;
+      height: 154px; }
+  .page_activities.page_society #organisation .orgDetails, .page_activities.page_club #organisation .orgDetails {
+    padding-left: 0.6em; }
+  .page_activities.page_society #organisation .orgDescription .links .qualityMark, .page_activities.page_club #organisation .orgDescription .links .qualityMark {
+    display: -webkit-box ;
+    display: -ms-flexbox ;
+    display: -webkit-flex ;
+    display: flex ;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center; }
+  .page_activities.page_society #organisation .orgDescription .links .greenBg, .page_activities.page_society #organisation .orgDescription .links input.button, .page_activities.page_club #organisation .orgDescription .links .greenBg, .page_activities.page_club #organisation .orgDescription .links input.button {
+    display: block;
+    padding: 0.4em 0.8em;
+    text-decoration: none; }
+  .page_activities.page_society #organisation .orgDescription .msl-news, .page_activities.page_club #organisation .orgDescription .msl-news {
+    display: -webkit-box ;
+    display: -ms-flexbox ;
+    display: -webkit-flex ;
+    display: flex ;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between; }
+    .page_activities.page_society #organisation .orgDescription .msl-news .msl-item, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 48%;
+      -webkit-flex: 0 0 48%;
       flex: 0 0 48%; } }
 
 /* Desktop*/
@@ -2210,7 +2576,10 @@ input#ctl00_Main_btnRecipients {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 31.5%;
     -webkit-flex: 0 0 31.5%;
-    flex: 0 0 31.5%; } }
+    flex: 0 0 31.5%; }
+  .page_activities.page_society #organisation .orgHead, .page_activities.page_club #organisation .orgHead {
+    padding: 0 !important;
+    min-height: 250px; } }
 
 /* Templating for the Mukky and Gobble events pages */
 .page_mukky:before {
@@ -3195,6 +3564,37 @@ input#ctl00_Main_btnRecipients {
 
 .page_shop.page_product .actions {
   padding: 0.8em 0; }
+
+/* Tablets*/
+#profile {
+  padding-top: 2em; }
+  #profile #profile_side #profile_photo {
+    border-radius: 8em;
+    overflow: hidden;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto; }
+    #profile #profile_side #profile_photo img {
+      height: 100%; }
+  #profile #profile_side .edit_profile {
+    padding: 0.4em 0.8em;
+    text-decoration: none; }
+    #profile #profile_side .edit_profile:hover {
+      background-color: rgba(80, 184, 72, 0.2); }
+  #profile #profile_main h1 {
+    text-align: center;
+    padding-bottom: 0; }
+  #profile #profile_main .profile_tagline {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 70%; }
+  #profile #profile_main #profile_about h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 3.2em; }
+  #profile #profile_main #profile_about dl {
+    margin: 0;
+    padding: 0; }
 
 /* Dashboard */
 /* Get Involved Dashboard */
