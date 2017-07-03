@@ -1,8 +1,55 @@
 // Styling relating to news sections of the site
 
-// News Article Stlying
+// All news page
+.page_allnews, .page_news {
+    .news_list, .news_full {
+        padding: 0.6em 0;
+        .news_item {
+            background: $grey;
+            margin: 0 0 0.6em;
+            .news_item_inner {
+                margin: 0;
+            }
+            .news_image {
+                display: none;
+            }
+            h5 a {
+                font-size: 1.4em;
+                padding: 0.6em 0.8em;
+                display: block;
+                text-decoration: none;
+                &:hover {
+                    background: $union_green_hover_clear;
+                }
+            }
+            .leader {
+                display: block;
+                font-size: 1em;
+                padding: 0 0.8em 0.4em;
+            }
+        }
+        .news_all {
+            display: none;
+        }
+    }
+    .paging {
+        text-align: center;
+        a {
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 0 0.2em;
+            padding: 0.4em;
+            &:hover {
+                background: $union_green_hover_clear;
+            }
+        }
+    }
+}
+
 .page_news.page_article {
-    
+    .news_footer {
+        border: none !important;
+    }
 }
 
 /* Tablets*/

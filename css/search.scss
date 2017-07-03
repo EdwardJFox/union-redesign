@@ -1,0 +1,32 @@
+// Search
+.page_searchresults {
+    .gsc-control-cse {
+        table {
+            background: none !important;
+            tr {
+                &:hover {
+                    background: none !important;
+                }
+            }
+        }
+        .gs-title, .gs-title b {
+            color: $union_green;
+        }
+        .gsc-cursor-box {
+            text-align: center;
+        }
+        .gsc-cursor-page {
+            color: $union_green !important;
+            padding: 0.4em;
+            margin: 0 0.2em;
+            &:hover {
+                background: $union_green_hover_clear;
+                text-decoration: none !important;
+            }
+            &.gsc-cursor-current-page {
+                background: $union_green;
+                color: #fff !important;
+            }
+        }
+    }
+}

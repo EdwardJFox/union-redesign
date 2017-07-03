@@ -67,6 +67,11 @@
   -webkit-flex-direction: $direction;
           flex-direction: $direction;
 }
+@mixin flexBasis($basis) {
+      -ms-flex-basis: $basis;
+  -webkit-flex-basis: $basis;
+          flex-basis: $basis;
+}
 
 // Fixed background, a better way of doing it which isnt so hard on the CPU
 @mixin fixedBackground($img) {

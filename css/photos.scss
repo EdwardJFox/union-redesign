@@ -1,0 +1,32 @@
+// /photos/ section
+.page_photos {
+    #galleries {
+        display: none;
+        h1 {
+            display: none;
+        }
+    }
+
+    .thumbnails {
+        .pure-u-md-1-3 {
+            @include displayFlex;
+            @include flexAlign(center);
+            @include flexJustify(center);
+            margin-bottom: 0.8em;
+            a {
+                padding: 0.4em;
+                margin: 0.4em;
+                background: $grey;
+                width: 100%;
+                height: 100%;
+                @include displayFlex;
+                @include flexAlign(center);
+                @include flexJustify(center);
+                img {
+                    display: block;
+                    max-width: 80%;
+                }
+            }
+        }
+    }
+}

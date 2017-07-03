@@ -175,6 +175,13 @@ function setupHeader(){
       $header_basket.find('.itemCount').addClass('active').text(total);
     }
   }
+
+  // Search bar
+  var searchUrl = "/searchresults/?q=";
+  var $searchIcon = $('.search .icon');
+  $searchIcon.on('click', function(){
+    location.href = searchUrl + $('.searchInput input').val();
+  });
 }
 
 function userDropdownClick(){

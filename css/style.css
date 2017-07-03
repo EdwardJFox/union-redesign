@@ -188,7 +188,7 @@ ul.inline li {
   display: inline-block; }
 
 /* Fonts and Typography */
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h1 a, h2 a, h3 a, h4 a, h5 a {
   font-family: 'Raleway', sans-serif;
   margin: 0; }
 
@@ -430,7 +430,8 @@ header {
       display: flex ;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+      cursor: pointer; }
       header .search .icon i {
         color: #fff;
         font-size: 2em; }
@@ -1319,7 +1320,11 @@ dl.comments {
   display: -webkit-box ;
   display: -ms-flexbox ;
   display: -webkit-flex ;
-  display: flex ; }
+  display: flex ;
+  -webkit-box-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap; }
   dl.comments dd {
     -webkit-box-flex: 1;
     -ms-flex: 1;
@@ -1334,7 +1339,10 @@ dl.comments {
     display: flex ;
     -ms-flex-direction: column;
     -webkit-flex-direction: column;
-    flex-direction: column; }
+    flex-direction: column;
+    -ms-flex-basis: 82%;
+    -webkit-flex-basis: 82%;
+    flex-basis: 82%; }
     dl.comments dd .comment_details {
       background: #50b848 !important;
       padding: 0.6em 0.8em; }
@@ -1378,6 +1386,22 @@ dl.comments {
       font-size: 1.1em;
       text-decoration: none;
       display: block; }
+
+/* Memberships widget */
+.mslwidget .memberships {
+  border: none; }
+  .mslwidget .memberships .msl-membership {
+    border: none;
+    background: #eee;
+    padding: 0;
+    margin: 0 0 0.6em;
+    min-height: 0; }
+    .mslwidget .memberships .msl-membership a {
+      text-decoration: none;
+      padding: 0.6em 0.8em;
+      display: block; }
+      .mslwidget .memberships .msl-membership a:hover {
+        background: rgba(80, 184, 72, 0.2); }
 
 /* Tablets*/
 /* Admin Context Control */
@@ -3565,6 +3589,42 @@ input#ctl00_Main_btnRecipients {
 .page_shop.page_product .actions {
   padding: 0.8em 0; }
 
+.page_allnews .news_list, .page_allnews .news_full, .page_news .news_list, .page_news .news_full {
+  padding: 0.6em 0; }
+  .page_allnews .news_list .news_item, .page_allnews .news_full .news_item, .page_news .news_list .news_item, .page_news .news_full .news_item {
+    background: #eee;
+    margin: 0 0 0.6em; }
+    .page_allnews .news_list .news_item .news_item_inner, .page_allnews .news_full .news_item .news_item_inner, .page_news .news_list .news_item .news_item_inner, .page_news .news_full .news_item .news_item_inner {
+      margin: 0; }
+    .page_allnews .news_list .news_item .news_image, .page_allnews .news_full .news_item .news_image, .page_news .news_list .news_item .news_image, .page_news .news_full .news_item .news_image {
+      display: none; }
+    .page_allnews .news_list .news_item h5 a, .page_allnews .news_full .news_item h5 a, .page_news .news_list .news_item h5 a, .page_news .news_full .news_item h5 a {
+      font-size: 1.4em;
+      padding: 0.6em 0.8em;
+      display: block;
+      text-decoration: none; }
+      .page_allnews .news_list .news_item h5 a:hover, .page_allnews .news_full .news_item h5 a:hover, .page_news .news_list .news_item h5 a:hover, .page_news .news_full .news_item h5 a:hover {
+        background: rgba(80, 184, 72, 0.2); }
+    .page_allnews .news_list .news_item .leader, .page_allnews .news_full .news_item .leader, .page_news .news_list .news_item .leader, .page_news .news_full .news_item .leader {
+      display: block;
+      font-size: 1em;
+      padding: 0 0.8em 0.4em; }
+  .page_allnews .news_list .news_all, .page_allnews .news_full .news_all, .page_news .news_list .news_all, .page_news .news_full .news_all {
+    display: none; }
+
+.page_allnews .paging, .page_news .paging {
+  text-align: center; }
+  .page_allnews .paging a, .page_news .paging a {
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 0.2em;
+    padding: 0.4em; }
+    .page_allnews .paging a:hover, .page_news .paging a:hover {
+      background: rgba(80, 184, 72, 0.2); }
+
+.page_news.page_article .news_footer {
+  border: none !important; }
+
 /* Tablets*/
 #profile {
   padding-top: 2em; }
@@ -3595,6 +3655,69 @@ input#ctl00_Main_btnRecipients {
   #profile #profile_main #profile_about dl {
     margin: 0;
     padding: 0; }
+
+.page_searchresults .gsc-control-cse table {
+  background: none !important; }
+  .page_searchresults .gsc-control-cse table tr:hover {
+    background: none !important; }
+
+.page_searchresults .gsc-control-cse .gs-title, .page_searchresults .gsc-control-cse .gs-title b {
+  color: #50b848; }
+
+.page_searchresults .gsc-control-cse .gsc-cursor-box {
+  text-align: center; }
+
+.page_searchresults .gsc-control-cse .gsc-cursor-page {
+  color: #50b848 !important;
+  padding: 0.4em;
+  margin: 0 0.2em; }
+  .page_searchresults .gsc-control-cse .gsc-cursor-page:hover {
+    background: rgba(80, 184, 72, 0.2);
+    text-decoration: none !important; }
+  .page_searchresults .gsc-control-cse .gsc-cursor-page.gsc-cursor-current-page {
+    background: #50b848;
+    color: #fff !important; }
+
+.page_photos #galleries {
+  display: none; }
+  .page_photos #galleries h1 {
+    display: none; }
+
+.page_photos .thumbnails .pure-u-md-1-3 {
+  display: -webkit-box ;
+  display: -ms-flexbox ;
+  display: -webkit-flex ;
+  display: flex ;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-bottom: 0.8em; }
+  .page_photos .thumbnails .pure-u-md-1-3 a {
+    padding: 0.4em;
+    margin: 0.4em;
+    background: #eee;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box ;
+    display: -ms-flexbox ;
+    display: -webkit-flex ;
+    display: flex ;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center; }
+    .page_photos .thumbnails .pure-u-md-1-3 a img {
+      display: block;
+      max-width: 80%; }
 
 /* Dashboard */
 /* Get Involved Dashboard */
