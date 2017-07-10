@@ -1,4 +1,9 @@
 .page_advice {
+    .adviceHeader {
+        .span3 {
+            @include flexJustify(center);
+        }
+    }
     ul.inline {
         padding: 0;
         li {

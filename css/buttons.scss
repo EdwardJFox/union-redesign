@@ -7,10 +7,12 @@
 
   // A default colour of the Union's green
   background-color: $union_green;
+  color: #fff;
 
   &:hover {
     text-decoration: none;
     background-color: $union_green_hover;
+    color: #fff;
 
     &.greenBg:hover {
       background-color: darken($union_green, 5%) !important;

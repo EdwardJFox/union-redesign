@@ -1,0 +1,16 @@
+/* Jobs section /jobs/ */
+.page_jobs {
+    .sideLinks {
+        a {
+            background: $union_green;
+            display: block;
+            margin-bottom: 0.4em;
+            font-size: 1em;
+            padding: 0.4em 0.6em;
+            text-decoration: none;
+            span {
+                color: #fff;
+            }
+        }
+    }
+}

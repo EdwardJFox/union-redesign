@@ -9,6 +9,11 @@
             margin: 0 0 0.6em;
             .news_item_inner {
                 margin: 0;
+                position: relative;
+            }
+            .msl_pubdate {
+                padding: 0 0.8em 0.4em;
+                font-size: 1em;
             }
             .news_image {
                 display: none;
@@ -47,6 +52,9 @@
 }
 
 .page_news.page_article {
+    .header {
+        margin-bottom: 0.8em;
+    }
     .news_footer {
         border: none !important;
     }

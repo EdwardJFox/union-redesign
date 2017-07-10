@@ -1,0 +1,163 @@
+/* Academic rep pages */
+.page_academicreps {
+    .header {
+        background-color: rgba(227, 24, 54, 0.1);
+        margin-bottom: 0.8em;
+    }
+
+    // Intranet page
+    &.page_intranet {
+        .repLinks {
+            display: flex;
+            justify-content: space-between;
+        }
+        .repLink {
+            position: relative;
+            flex: 0 0 30%;
+            color: #fff;
+            &:hover span {
+                display: block;
+            }
+            span {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                display: none;
+                background-color: $red_hover_dark;
+                z-index: 1000;
+            }
+            span a {
+                display: block;
+                color: #fff;
+                padding: 0.6em 1em;
+            }
+            span a:hover {
+                background-color: $red_hover_dark;
+            }
+        }
+        .repLinkBox {
+            text-align: center;
+            padding: 0.6em 0;
+            background-color: $red;
+        }
+        .repInfoBox {
+            .repTitle h1 {
+            padding: 0.5em 0 0;
+            margin-bottom: -0.2em;
+            }
+
+            .repBox {
+            background-color: $red;
+            font-size: 1.1em;
+            padding: 1em 1.6em;
+            }
+            .repBox p {
+            color: #fff; 
+            }
+        }
+        .repSidebar {
+            padding: 1em 1.5em;
+            position: relative;
+        }
+        .repNewsWrap {
+            position: relative;
+        }
+
+        .repNews {
+            text-align: center;
+            height: 100%;
+            @include displayFlex;
+            @include flexAlign(center);
+            @include flexJustify(center);
+            text-decoration: none;
+            .text {
+                background-color: $red;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 350px;
+            }
+            h2 {
+                font-size: 2.2em;
+                color: $red !important;
+                text-align: center;
+            }
+            img {
+                max-height: 350px;
+                display: inline-block;
+            }
+        }
+
+        .repNewsList li {
+            height: 350px;
+            text-align: center;
+        }
+
+        .unslider-nav {
+            margin: 0 auto;
+        }
+        .unslider-arrow {
+            padding: 0.4em 1em;
+            color: #fff;
+            background-color: #E31836;
+            &:hover {
+                color: #fff;
+            }
+        }
+        .unslider-arrow.next {
+            right: 0;
+        }
+        .unslider-arrow.prev {
+            left: 0;
+        }
+    }
+
+    &.page_becomearep {
+        .repVideo {
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    &.page_learnmore {
+        .repNewsWrap {
+            position: relative;
+            margin-bottom: 2em;
+        }
+        .repNews {
+        text-align: center;
+        }
+        .repNews.text {
+        height: 300px;
+        }
+        .repNews h2 {
+        font-size: 2.2em;
+        text-align: center;
+        }
+
+        .repNews img {
+        max-height: 300px;
+        display: inline-block;
+        }
+
+        .repNewsList li {
+        height: 300px;
+        text-align: center;
+        }
+
+
+        .unslider-arrow {
+        padding: 0.4em 1em;
+        color: #fff !important;
+        background-color: #E31836;
+        }
+        .unslider-arrow.next {
+        right: 0;
+        }
+        .unslider-arrow.prev {
+        left: 0;
+        }
+    }
+}

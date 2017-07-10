@@ -78,6 +78,19 @@
     background: #eee;
     padding: 1em 0;
   }
+
+  // Your finances page
+  &.page_yourunion.page_finances {
+    &:before {
+      @include fixedBackground('https://staffsunion.s3.amazonaws.com/images/union/Union%20Web%20Background-01.png');
+    }
+    .content {
+      .span3 {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 0.4em 0.8em;
+      }
+    }
+  }
 }
 
 @media (min-width: 48em){

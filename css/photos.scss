@@ -1,5 +1,8 @@
 // /photos/ section
 .page_photos {
+    .header h1 {
+       margin: 0 0.1em; 
+    }
     #galleries {
         display: none;
         h1 {
@@ -12,7 +15,7 @@
             @include displayFlex;
             @include flexAlign(center);
             @include flexJustify(center);
-            margin-bottom: 0.8em;
+            margin: 0.4em 0;
             a {
                 padding: 0.4em;
                 margin: 0.4em;

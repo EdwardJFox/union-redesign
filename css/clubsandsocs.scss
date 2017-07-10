@@ -59,7 +59,7 @@
 }
 
 // Club and Society template pages
-.page_activities.page_society #organisation, .page_activities.page_club #organisation {
+.page_activities.page_society #organisation, .page_activities.page_club #organisation, .page_liberationnetworks #organisation {
   .orgHead {
     position: relative;
     padding: 0 0.6em;
@@ -241,6 +241,7 @@
       padding: 0.4em 0.8em;
       margin-bottom: 0.6em;
       background: $grey;
+      display: none;
     }
     .msl-news {
       .msl-item {
@@ -272,6 +273,51 @@
   }
 }
 
+// Liberation networks browse page
+.page_liberationnetworks {
+  .network {
+    padding: 0.4em;
+    > div {
+      min-height: 300px;
+    }
+    h4 {
+      font-size: 1.4em;
+    }
+    &.lgbt {
+      div {
+        background: $liberation_lgbt_clear;
+      }
+      h4 {
+        color: $liberation_lgbt;
+      }
+    }
+    &.womens {
+      div {
+        background: $liberation_womens_clear;
+      }
+      h4 {
+        color: $liberation_womens;
+      }
+    }
+    &.disabled {
+      div {
+        background: $liberation_disabled_clear;
+      }
+      h4 {
+        color: $liberation_disabled;
+      }
+    }
+    &.multi {
+      div {
+        background: $liberation_multi_clear;
+      }
+      h4 {
+        color: $liberation_multi;
+      }
+    }
+  }
+}
+
 /* Tablets*/
 @media (min-width: 48em){
   .page_clubsandsocs {
@@ -293,7 +339,7 @@
   }
 
   // Club and Society template pages
-  .page_activities.page_society #organisation, .page_activities.page_club #organisation {
+  .page_activities.page_society #organisation, .page_activities.page_club #organisation, .page_liberationnetworks #organisation {
     .orgHead {
       padding: 0 !important;
       min-height: 220px;
@@ -331,6 +377,9 @@
         }
       }
     }
+    .news {
+      display: inline-block !important;
+    }
   }
 }
 /* Desktop*/
@@ -350,7 +399,7 @@
   }
 
   // Club and Society template pages
-  .page_activities.page_society #organisation, .page_activities.page_club #organisation {
+  .page_activities.page_society #organisation, .page_activities.page_club #organisation, .page_liberationnetworks #organisation {
     .orgHead {
       padding: 0 !important;
       min-height: 250px;

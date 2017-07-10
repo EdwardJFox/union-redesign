@@ -22,8 +22,8 @@
   height: 180px;
   display: inline-block;
   margin-bottom: 0.8em;
-  background-size: cover;
-  background-position: center;
+  background-size: cover !important;
+  background-position: center !important;
   background-repeat: no-repeat;
 }
 .vol-skills-list li.workingwithothers {
@@ -86,24 +86,45 @@
 #provider-details h1 a, .opportunity-list h3 a {
   font-family: 'league_gothicregular', sans-serif;
 }
-.msl-vol-opportunity-types {
+#provider-details h1 {
+  font-size: 2.4em;
+}
+.provider-image {
+  float: right;
+  img {
+
+  }
+}
+
+.opportunity-apply {
+  padding: 0.4em 0.8em 0.6em;
+  a {
+    background: $union_green !important;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+.msl-vol-opportunity-types, .opportunity-types {
   background-color: #eee;
-  padding: 0.8em 1em;
+  padding: 0.6em 1em !important;
 }
 
 .opportunity-list > ul {
   list-style: none;
 }
 
-.opportunity-list > ul > li {
-  margin-bottom: 0.6em;
-  padding-left: 0.8em;
-  border-left: 4px solid #50B848;
+.opportunity-list > ul > li, .opportunity-types > li {
+  margin-bottom: 0.6em !important;;
+  padding-left: 0.8em !important;
+  border: none !important;
+  border-left: 4px solid #50B848 !important;
 }
 
 /* Profile */
 .vol-profile .vol-skills-list li {
   margin-bottom: 2.8em;
+  background-size: cover !important;
+  background-position: center;
 }
 .vol-profile .vol-skills-list li span:first-of-type {
   position: absolute;
@@ -179,6 +200,17 @@
       margin: 0.4em 0;
     }
 
+    td {
+      padding: 0.4em;
+      label {
+        font-size: 0.9em;
+      }
+    }
+
+    tr {
+      border: none !important;
+    }
+
     input[type="checkbox"] {
       margin-right: 0.4em;
     }
@@ -222,6 +254,14 @@
     td {
       display: block;
       padding: 0.2em;
+    }
+  }
+}
+
+.page_activities.page_volunteering {
+  .msl_navbar {
+    li {
+      width: auto;
     }
   }
 }

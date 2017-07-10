@@ -13,6 +13,9 @@ $advice_main_dark: #2e266b;
 /* Social Media */
 /* Notifications */
 /* Squeezebox */
+/* Liberation Networks */
+/* Academic Reps */
+/* Better Staffs */
 /* Useful Mixins, do not declare classes in this file */
 /* For when you want to use a google material icon in a ::before or ::after*/
 /* Just so there is a default way of creating a flexbox*/
@@ -187,6 +190,25 @@ img.imgStretch {
 ul.inline li {
   display: inline-block; }
 
+ul.noListStyle {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* Video */
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0; }
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 /* Fonts and Typography */
 h1, h2, h3, h4, h5, h1 a, h2 a, h3 a, h4 a, h5 a {
   font-family: 'Raleway', sans-serif;
@@ -259,10 +281,12 @@ b {
   font-weight: 300;
   text-decoration: none;
   border: none;
-  background-color: #50b848; }
+  background-color: #50b848;
+  color: #fff; }
   .button:hover, .btn:hover, .blockLink:hover {
     text-decoration: none;
-    background-color: #46a63f; }
+    background-color: #46a63f;
+    color: #fff; }
     .button:hover.greenBg:hover, input.button:hover:hover, .btn:hover.greenBg:hover, input.btn.button:hover:hover, .blockLink:hover.greenBg:hover, input.blockLink.button:hover:hover {
       background-color: #48a640 !important; }
     .button:hover.pinkBg:hover, .btn:hover.pinkBg:hover, .blockLink:hover.pinkBg:hover {
@@ -893,7 +917,8 @@ main {
 /* Tablets*/
 @media (min-width: 48em) {
   main section.row.header {
-    padding-left: 0; }
+    padding-left: 0;
+    padding-right: 0; }
     main section.row.header h1 {
       font-size: 4.2em; } }
 
@@ -1868,8 +1893,8 @@ input#ctl00_Main_btnRecipients {
   height: 180px;
   display: inline-block;
   margin-bottom: 0.8em;
-  background-size: cover;
-  background-position: center;
+  background-size: cover !important;
+  background-position: center !important;
   background-repeat: no-repeat; }
 
 .vol-skills-list li.workingwithothers {
@@ -1932,21 +1957,37 @@ input#ctl00_Main_btnRecipients {
 #provider-details h1 a, .opportunity-list h3 a {
   font-family: 'league_gothicregular', sans-serif; }
 
-.msl-vol-opportunity-types {
+#provider-details h1 {
+  font-size: 2.4em; }
+
+.provider-image {
+  float: right; }
+
+.opportunity-apply {
+  padding: 0.4em 0.8em 0.6em; }
+  .opportunity-apply a {
+    background: #50b848 !important;
+    color: #fff;
+    text-decoration: none; }
+
+.msl-vol-opportunity-types, .opportunity-types {
   background-color: #eee;
-  padding: 0.8em 1em; }
+  padding: 0.6em 1em !important; }
 
 .opportunity-list > ul {
   list-style: none; }
 
-.opportunity-list > ul > li {
-  margin-bottom: 0.6em;
-  padding-left: 0.8em;
-  border-left: 4px solid #50B848; }
+.opportunity-list > ul > li, .opportunity-types > li {
+  margin-bottom: 0.6em !important;
+  padding-left: 0.8em !important;
+  border: none !important;
+  border-left: 4px solid #50B848 !important; }
 
 /* Profile */
 .vol-profile .vol-skills-list li {
-  margin-bottom: 2.8em; }
+  margin-bottom: 2.8em;
+  background-size: cover !important;
+  background-position: center; }
 
 .vol-profile .vol-skills-list li span:first-of-type {
   position: absolute;
@@ -2033,6 +2074,14 @@ input#ctl00_Main_btnRecipients {
   display: block;
   margin: 0.4em 0; }
 
+#browse-opps .filters td {
+  padding: 0.4em; }
+  #browse-opps .filters td label {
+    font-size: 0.9em; }
+
+#browse-opps .filters tr {
+  border: none !important; }
+
 #browse-opps .filters input[type="checkbox"] {
   margin-right: 0.4em; }
 
@@ -2066,6 +2115,9 @@ input#ctl00_Main_btnRecipients {
 #browse-opps table td {
   display: block;
   padding: 0.2em; }
+
+.page_activities.page_volunteering .msl_navbar li {
+  width: auto; }
 
 /*Tablet*/
 @media (min-width: 48em) {
@@ -2322,10 +2374,10 @@ input#ctl00_Main_btnRecipients {
   .page_clubsandsocs #clubs .itemList .item.akuma img, .page_clubsandsocs #clubs .itemList .item.akuma .image, .page_clubsandsocs #socs .itemList .item.akuma img, .page_clubsandsocs #socs .itemList .item.akuma .image {
     width: 100%; }
 
-.page_activities.page_society #organisation .orgHead, .page_activities.page_club #organisation .orgHead {
+.page_activities.page_society #organisation .orgHead, .page_activities.page_club #organisation .orgHead, .page_liberationnetworks #organisation .orgHead {
   position: relative;
   padding: 0 0.6em; }
-  .page_activities.page_society #organisation .orgHead .orgLogo, .page_activities.page_club #organisation .orgHead .orgLogo {
+  .page_activities.page_society #organisation .orgHead .orgLogo, .page_activities.page_club #organisation .orgHead .orgLogo, .page_liberationnetworks #organisation .orgHead .orgLogo {
     display: block;
     margin: 0 auto;
     width: 160px;
@@ -2333,40 +2385,40 @@ input#ctl00_Main_btnRecipients {
     padding: 0.6em;
     margin-top: 0.8em;
     background: #fff; }
-    .page_activities.page_society #organisation .orgHead .orgLogo img, .page_activities.page_club #organisation .orgHead .orgLogo img {
+    .page_activities.page_society #organisation .orgHead .orgLogo img, .page_activities.page_club #organisation .orgHead .orgLogo img, .page_liberationnetworks #organisation .orgHead .orgLogo img {
       width: 100%; }
-  .page_activities.page_society #organisation .orgHead .span3, .page_activities.page_club #organisation .orgHead .span3 {
+  .page_activities.page_society #organisation .orgHead .span3, .page_activities.page_club #organisation .orgHead .span3, .page_liberationnetworks #organisation .orgHead .span3 {
     -ms-flex-direction: column-reverse;
     -webkit-flex-direction: column-reverse;
     flex-direction: column-reverse; }
-    .page_activities.page_society #organisation .orgHead .span3 h1, .page_activities.page_club #organisation .orgHead .span3 h1 {
+    .page_activities.page_society #organisation .orgHead .span3 h1, .page_activities.page_club #organisation .orgHead .span3 h1, .page_liberationnetworks #organisation .orgHead .span3 h1 {
       padding: 0.4em 0; }
 
-.page_activities.page_society #organisation .orgDetails .join_list, .page_activities.page_club #organisation .orgDetails .join_list {
+.page_activities.page_society #organisation .orgDetails .join_list, .page_activities.page_club #organisation .orgDetails .join_list, .page_liberationnetworks #organisation .orgDetails .join_list {
   padding: 0;
   margin: 0; }
-  .page_activities.page_society #organisation .orgDetails .join_list .join-item, .page_activities.page_club #organisation .orgDetails .join_list .join-item {
+  .page_activities.page_society #organisation .orgDetails .join_list .join-item, .page_activities.page_club #organisation .orgDetails .join_list .join-item, .page_liberationnetworks #organisation .orgDetails .join_list .join-item {
     padding: 0.6em;
     margin-bottom: 1.2em;
     position: relative;
     padding-right: 5.2em; }
-    .page_activities.page_society #organisation .orgDetails .join_list .join-item .product-name, .page_activities.page_club #organisation .orgDetails .join_list .join-item .product-name {
+    .page_activities.page_society #organisation .orgDetails .join_list .join-item .product-name, .page_activities.page_club #organisation .orgDetails .join_list .join-item .product-name, .page_liberationnetworks #organisation .orgDetails .join_list .join-item .product-name {
       font-size: 1.2em; }
-      .page_activities.page_society #organisation .orgDetails .join_list .join-item .product-name .product-price, .page_activities.page_club #organisation .orgDetails .join_list .join-item .product-name .product-price {
+      .page_activities.page_society #organisation .orgDetails .join_list .join-item .product-name .product-price, .page_activities.page_club #organisation .orgDetails .join_list .join-item .product-name .product-price, .page_liberationnetworks #organisation .orgDetails .join_list .join-item .product-name .product-price {
         position: absolute;
         right: 4px;
         top: 4px;
         font-size: 1em; }
-    .page_activities.page_society #organisation .orgDetails .join_list .join-item .button, .page_activities.page_club #organisation .orgDetails .join_list .join-item .button {
+    .page_activities.page_society #organisation .orgDetails .join_list .join-item .button, .page_activities.page_club #organisation .orgDetails .join_list .join-item .button, .page_liberationnetworks #organisation .orgDetails .join_list .join-item .button {
       display: block;
       margin: 0.2em 0 0; }
 
-.page_activities.page_society #organisation .orgDetails .mslwidget > a, .page_activities.page_club #organisation .orgDetails .mslwidget > a {
+.page_activities.page_society #organisation .orgDetails .mslwidget > a, .page_activities.page_club #organisation .orgDetails .mslwidget > a, .page_liberationnetworks #organisation .orgDetails .mslwidget > a {
   text-decoration: none;
   margin-bottom: 0.4em;
   width: 100%; }
 
-.page_activities.page_society #organisation .orgDetails .msl_email, .page_activities.page_society #organisation .orgDetails .msl_web, .page_activities.page_club #organisation .orgDetails .msl_email, .page_activities.page_club #organisation .orgDetails .msl_web {
+.page_activities.page_society #organisation .orgDetails .msl_email, .page_activities.page_society #organisation .orgDetails .msl_web, .page_activities.page_club #organisation .orgDetails .msl_email, .page_activities.page_club #organisation .orgDetails .msl_web, .page_liberationnetworks #organisation .orgDetails .msl_email, .page_liberationnetworks #organisation .orgDetails .msl_web {
   padding: 0.4em 0.6em;
   display: -webkit-box ;
   display: -ms-flexbox ;
@@ -2376,7 +2428,7 @@ input#ctl00_Main_btnRecipients {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center; }
-  .page_activities.page_society #organisation .orgDetails .msl_email:before, .page_activities.page_society #organisation .orgDetails .msl_web:before, .page_activities.page_club #organisation .orgDetails .msl_email:before, .page_activities.page_club #organisation .orgDetails .msl_web:before {
+  .page_activities.page_society #organisation .orgDetails .msl_email:before, .page_activities.page_society #organisation .orgDetails .msl_web:before, .page_activities.page_club #organisation .orgDetails .msl_email:before, .page_activities.page_club #organisation .orgDetails .msl_web:before, .page_liberationnetworks #organisation .orgDetails .msl_email:before, .page_liberationnetworks #organisation .orgDetails .msl_web:before {
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
@@ -2394,44 +2446,44 @@ input#ctl00_Main_btnRecipients {
     text-align: center;
     padding: 0 0.4em 0 0; }
 
-.page_activities.page_society #organisation .orgDetails .msl_email, .page_activities.page_club #organisation .orgDetails .msl_email {
+.page_activities.page_society #organisation .orgDetails .msl_email, .page_activities.page_club #organisation .orgDetails .msl_email, .page_liberationnetworks #organisation .orgDetails .msl_email {
   background: #eee; }
-  .page_activities.page_society #organisation .orgDetails .msl_email:before, .page_activities.page_club #organisation .orgDetails .msl_email:before {
+  .page_activities.page_society #organisation .orgDetails .msl_email:before, .page_activities.page_club #organisation .orgDetails .msl_email:before, .page_liberationnetworks #organisation .orgDetails .msl_email:before {
     content: 'email'; }
 
-.page_activities.page_society #organisation .orgDetails .msl_web, .page_activities.page_club #organisation .orgDetails .msl_web {
+.page_activities.page_society #organisation .orgDetails .msl_web, .page_activities.page_club #organisation .orgDetails .msl_web, .page_liberationnetworks #organisation .orgDetails .msl_web {
   background: #50b848;
   color: #fff; }
-  .page_activities.page_society #organisation .orgDetails .msl_web:before, .page_activities.page_club #organisation .orgDetails .msl_web:before {
+  .page_activities.page_society #organisation .orgDetails .msl_web:before, .page_activities.page_club #organisation .orgDetails .msl_web:before, .page_liberationnetworks #organisation .orgDetails .msl_web:before {
     content: 'web'; }
 
-.page_activities.page_society #organisation .orgDetails .msl_facebook, .page_activities.page_club #organisation .orgDetails .msl_facebook {
+.page_activities.page_society #organisation .orgDetails .msl_facebook, .page_activities.page_club #organisation .orgDetails .msl_facebook, .page_liberationnetworks #organisation .orgDetails .msl_facebook {
   padding: 0.4em 0.6em 0.4em 2.4em;
   background: url("//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/facebook_f_dark.svg"), #3d5a98;
   background-position: bottom left;
   background-repeat: no-repeat;
   background-size: auto 80%;
   color: #fff; }
-  .page_activities.page_society #organisation .orgDetails .msl_facebook:hover, .page_activities.page_club #organisation .orgDetails .msl_facebook:hover {
+  .page_activities.page_society #organisation .orgDetails .msl_facebook:hover, .page_activities.page_club #organisation .orgDetails .msl_facebook:hover, .page_liberationnetworks #organisation .orgDetails .msl_facebook:hover {
     background: url("//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/facebook_f_white_transparent.svg"), #3d5a98;
     background-position: bottom left;
     background-repeat: no-repeat;
     background-size: auto 80%; }
 
-.page_activities.page_society #organisation .orgDetails .msl_twitter, .page_activities.page_club #organisation .orgDetails .msl_twitter {
+.page_activities.page_society #organisation .orgDetails .msl_twitter, .page_activities.page_club #organisation .orgDetails .msl_twitter, .page_liberationnetworks #organisation .orgDetails .msl_twitter {
   padding: 0.4em 0.6em 0.4em 2.4em;
   background: url("//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/twitter_bird_dark.svg"), #1da1f2;
   background-position: center left 4px;
   background-repeat: no-repeat;
   background-size: auto 80%;
   color: #fff; }
-  .page_activities.page_society #organisation .orgDetails .msl_twitter:hover, .page_activities.page_club #organisation .orgDetails .msl_twitter:hover {
+  .page_activities.page_society #organisation .orgDetails .msl_twitter:hover, .page_activities.page_club #organisation .orgDetails .msl_twitter:hover, .page_liberationnetworks #organisation .orgDetails .msl_twitter:hover {
     background: url("//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/twitter_bird_white_transparent.svg"), #1da1f2;
     background-position: center left 4px;
     background-repeat: no-repeat;
     background-size: auto 80%; }
 
-.page_activities.page_society #organisation .orgDetails .msl_instagram, .page_activities.page_club #organisation .orgDetails .msl_instagram {
+.page_activities.page_society #organisation .orgDetails .msl_instagram, .page_activities.page_club #organisation .orgDetails .msl_instagram, .page_liberationnetworks #organisation .orgDetails .msl_instagram {
   padding: 0.4em 0.6em 0.4em 2.4em;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffd776+0,f3a554+24,f15c3c+38,c32f87+70,5c6cb3+98 */
   background-image: url("//staffsunion.s3.amazonaws.com/2017/images/assets/socialmedia/instagram_logo_no_bg_dark_transparent.svg"), #ffd776;
@@ -2449,22 +2501,22 @@ input#ctl00_Main_btnRecipients {
   background-repeat: no-repeat;
   color: #fff; }
 
-.page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item {
+.page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item {
   margin-bottom: 0.6em; }
-  .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_image img, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_image img {
+  .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_image img, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_image img, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_image img {
     width: 100%;
     display: block; }
-  .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item dl, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item dl {
+  .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item dl, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item dl, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item dl {
     margin: 0; }
-  .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info {
+  .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_info {
     background: #eee;
     padding: 0.4em 0.6em; }
-    .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_name, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_name {
+    .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_name, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_name, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_name {
       font-size: 1.3em;
       text-decoration: none; }
-    .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_time, .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_types, .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_hook, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_time, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_types, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_hook {
+    .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_time, .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_types, .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_hook, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_time, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_types, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_hook, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_time, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_types, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_hook {
       display: none; }
-    .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location, .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description {
+    .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location, .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description {
       display: -webkit-box ;
       display: -ms-flexbox ;
       display: -webkit-flex ;
@@ -2475,7 +2527,7 @@ input#ctl00_Main_btnRecipients {
       align-items: center;
       padding: 0.4em 0.6em 0.4em 0.2em;
       font-size: 1.1em; }
-      .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location:before, .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description:before, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location:before, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description:before {
+      .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location:before, .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description:before, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location:before, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description:before, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location:before, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description:before {
         font-family: 'Material Icons';
         font-weight: normal;
         font-style: normal;
@@ -2492,44 +2544,68 @@ input#ctl00_Main_btnRecipients {
         -webkit-font-smoothing: antialiased;
         text-align: center;
         padding: 0 0.4em 0 0; }
-    .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location {
+    .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location {
       margin: 0; }
-      .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location:before, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location:before {
+      .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location:before, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location:before, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location:before {
         content: 'location_on'; }
-    .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description {
+    .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description {
       margin: 0; }
-      .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description:before, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description:before {
+      .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description:before, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description:before, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description:before {
         content: 'date_range'; }
 
-.page_activities.page_society #organisation .orgDetails .msl_eventlist .msl_rss, .page_activities.page_club #organisation .orgDetails .msl_eventlist .msl_rss {
+.page_activities.page_society #organisation .orgDetails .msl_eventlist .msl_rss, .page_activities.page_club #organisation .orgDetails .msl_eventlist .msl_rss, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .msl_rss {
   display: none; }
 
-.page_activities.page_society #organisation .orgDescription .links > a, .page_activities.page_club #organisation .orgDescription .links > a {
+.page_activities.page_society #organisation .orgDescription .links > a, .page_activities.page_club #organisation .orgDescription .links > a, .page_liberationnetworks #organisation .orgDescription .links > a {
   display: none; }
 
-.page_activities.page_society #organisation .orgDescription .news, .page_activities.page_club #organisation .orgDescription .news {
+.page_activities.page_society #organisation .orgDescription .news, .page_activities.page_club #organisation .orgDescription .news, .page_liberationnetworks #organisation .orgDescription .news {
   padding: 0.4em 0.8em;
   margin-bottom: 0.6em;
-  background: #eee; }
+  background: #eee;
+  display: none; }
 
-.page_activities.page_society #organisation .orgDescription .msl-news .msl-item, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item {
+.page_activities.page_society #organisation .orgDescription .msl-news .msl-item, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item, .page_liberationnetworks #organisation .orgDescription .msl-news .msl-item {
   background: #fff;
   margin-bottom: 0.6em; }
-  .page_activities.page_society #organisation .orgDescription .msl-news .msl-item .msl-image img, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item .msl-image img {
+  .page_activities.page_society #organisation .orgDescription .msl-news .msl-item .msl-image img, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item .msl-image img, .page_liberationnetworks #organisation .orgDescription .msl-news .msl-item .msl-image img {
     width: 100%;
     height: auto;
     display: block; }
-  .page_activities.page_society #organisation .orgDescription .msl-news .msl-item .msl-title, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item .msl-title {
+  .page_activities.page_society #organisation .orgDescription .msl-news .msl-item .msl-title, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item .msl-title, .page_liberationnetworks #organisation .orgDescription .msl-news .msl-item .msl-title {
     font-size: 1.3em;
     padding: 0.4em 0.4em 0.2em; }
-    .page_activities.page_society #organisation .orgDescription .msl-news .msl-item .msl-title a, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item .msl-title a {
+    .page_activities.page_society #organisation .orgDescription .msl-news .msl-item .msl-title a, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item .msl-title a, .page_liberationnetworks #organisation .orgDescription .msl-news .msl-item .msl-title a {
       text-decoration: none; }
-  .page_activities.page_society #organisation .orgDescription .msl-news .msl-item .msl-leader, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item .msl-leader {
+  .page_activities.page_society #organisation .orgDescription .msl-news .msl-item .msl-leader, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item .msl-leader, .page_liberationnetworks #organisation .orgDescription .msl-news .msl-item .msl-leader {
     font-size: 1em;
     padding: 0 0.6em 0.4em; }
 
-.page_activities.page_society #organisation .orgDescription .news_all, .page_activities.page_club #organisation .orgDescription .news_all {
+.page_activities.page_society #organisation .orgDescription .news_all, .page_activities.page_club #organisation .orgDescription .news_all, .page_liberationnetworks #organisation .orgDescription .news_all {
   display: none; }
+
+.page_liberationnetworks .network {
+  padding: 0.4em; }
+  .page_liberationnetworks .network > div {
+    min-height: 300px; }
+  .page_liberationnetworks .network h4 {
+    font-size: 1.4em; }
+  .page_liberationnetworks .network.lgbt div {
+    background: rgba(195, 29, 37, 0.1); }
+  .page_liberationnetworks .network.lgbt h4 {
+    color: #C31D25; }
+  .page_liberationnetworks .network.womens div {
+    background: rgba(103, 28, 121, 0.1); }
+  .page_liberationnetworks .network.womens h4 {
+    color: #671C79; }
+  .page_liberationnetworks .network.disabled div {
+    background: rgba(42, 39, 111, 0.1); }
+  .page_liberationnetworks .network.disabled h4 {
+    color: #2A276F; }
+  .page_liberationnetworks .network.multi div {
+    background: rgba(0, 177, 181, 0.1); }
+  .page_liberationnetworks .network.multi h4 {
+    color: #00B1B5; }
 
 /* Tablets*/
 @media (min-width: 48em) {
@@ -2551,22 +2627,22 @@ input#ctl00_Main_btnRecipients {
       -ms-flex: 0 0 48%;
       -webkit-flex: 0 0 48%;
       flex: 0 0 48%; }
-  .page_activities.page_society #organisation .orgHead, .page_activities.page_club #organisation .orgHead {
+  .page_activities.page_society #organisation .orgHead, .page_activities.page_club #organisation .orgHead, .page_liberationnetworks #organisation .orgHead {
     padding: 0 !important;
     min-height: 220px; }
-    .page_activities.page_society #organisation .orgHead .span3, .page_activities.page_club #organisation .orgHead .span3 {
+    .page_activities.page_society #organisation .orgHead .span3, .page_activities.page_club #organisation .orgHead .span3, .page_liberationnetworks #organisation .orgHead .span3 {
       -ms-flex-direction: row;
       -webkit-flex-direction: row;
       flex-direction: row; }
-    .page_activities.page_society #organisation .orgHead .orgLogo, .page_activities.page_club #organisation .orgHead .orgLogo {
+    .page_activities.page_society #organisation .orgHead .orgLogo, .page_activities.page_club #organisation .orgHead .orgLogo, .page_liberationnetworks #organisation .orgHead .orgLogo {
       position: absolute;
       bottom: 0px;
       right: 0px;
       width: 154px;
       height: 154px; }
-  .page_activities.page_society #organisation .orgDetails, .page_activities.page_club #organisation .orgDetails {
+  .page_activities.page_society #organisation .orgDetails, .page_activities.page_club #organisation .orgDetails, .page_liberationnetworks #organisation .orgDetails {
     padding-left: 0.6em; }
-  .page_activities.page_society #organisation .orgDescription .links .qualityMark, .page_activities.page_club #organisation .orgDescription .links .qualityMark {
+  .page_activities.page_society #organisation .orgDescription .links .qualityMark, .page_activities.page_club #organisation .orgDescription .links .qualityMark, .page_liberationnetworks #organisation .orgDescription .links .qualityMark {
     display: -webkit-box ;
     display: -ms-flexbox ;
     display: -webkit-flex ;
@@ -2575,11 +2651,11 @@ input#ctl00_Main_btnRecipients {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center; }
-  .page_activities.page_society #organisation .orgDescription .links .greenBg, .page_activities.page_society #organisation .orgDescription .links input.button, .page_activities.page_club #organisation .orgDescription .links .greenBg, .page_activities.page_club #organisation .orgDescription .links input.button {
+  .page_activities.page_society #organisation .orgDescription .links .greenBg, .page_activities.page_society #organisation .orgDescription .links input.button, .page_activities.page_club #organisation .orgDescription .links .greenBg, .page_activities.page_club #organisation .orgDescription .links input.button, .page_liberationnetworks #organisation .orgDescription .links .greenBg, .page_liberationnetworks #organisation .orgDescription .links input.button {
     display: block;
     padding: 0.4em 0.8em;
     text-decoration: none; }
-  .page_activities.page_society #organisation .orgDescription .msl-news, .page_activities.page_club #organisation .orgDescription .msl-news {
+  .page_activities.page_society #organisation .orgDescription .msl-news, .page_activities.page_club #organisation .orgDescription .msl-news, .page_liberationnetworks #organisation .orgDescription .msl-news {
     display: -webkit-box ;
     display: -ms-flexbox ;
     display: -webkit-flex ;
@@ -2588,11 +2664,13 @@ input#ctl00_Main_btnRecipients {
     -ms-flex-pack: space-between;
     -webkit-justify-content: space-between;
     justify-content: space-between; }
-    .page_activities.page_society #organisation .orgDescription .msl-news .msl-item, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item {
+    .page_activities.page_society #organisation .orgDescription .msl-news .msl-item, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item, .page_liberationnetworks #organisation .orgDescription .msl-news .msl-item {
       -webkit-box-flex: 0;
       -ms-flex: 0 0 48%;
       -webkit-flex: 0 0 48%;
-      flex: 0 0 48%; } }
+      flex: 0 0 48%; }
+  .page_activities.page_society #organisation .news, .page_activities.page_club #organisation .news, .page_liberationnetworks #organisation .news {
+    display: inline-block !important; } }
 
 /* Desktop*/
 @media (min-width: 80em) {
@@ -2601,7 +2679,7 @@ input#ctl00_Main_btnRecipients {
     -ms-flex: 0 0 31.5%;
     -webkit-flex: 0 0 31.5%;
     flex: 0 0 31.5%; }
-  .page_activities.page_society #organisation .orgHead, .page_activities.page_club #organisation .orgHead {
+  .page_activities.page_society #organisation .orgHead, .page_activities.page_club #organisation .orgHead, .page_liberationnetworks #organisation .orgHead {
     padding: 0 !important;
     min-height: 250px; } }
 
@@ -3109,6 +3187,12 @@ input#ctl00_Main_btnRecipients {
     margin: 0 auto;
     padding: 0.8em 1.6em 0em; } }
 
+.page_advice .adviceHeader .span3 {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center; }
+
 .page_advice ul.inline {
   padding: 0; }
   .page_advice ul.inline li {
@@ -3402,7 +3486,8 @@ input#ctl00_Main_btnRecipients {
     font-size: 4em; }
 
 .page_ents.page_emberlounge main .menu, .page_ents.page_verve main .menu, .page_ents.page_squeezebox main .menu {
-  padding: 0.4em; }
+  padding: 0.4em;
+  cursor: move; }
   .page_ents.page_emberlounge main .menu .menuCol, .page_ents.page_verve main .menu .menuCol, .page_ents.page_squeezebox main .menu .menuCol {
     width: 100%;
     background: #fff;
@@ -3496,25 +3581,9 @@ input#ctl00_Main_btnRecipients {
   transform: translateY(-50%); }
 
 .page_ents.page_squeezebox main .menu {
-  background-image: url("https://staffsunion.s3.amazonaws.com/images/squeezebox/wall.jpg");
-  background-size: 50%;
-  padding: 2em 0; }
+  padding: 0.4em; }
   .page_ents.page_squeezebox main .menu .menuCol {
-    background: rgba(0, 0, 0, 0.8); }
-    .page_ents.page_squeezebox main .menu .menuCol h2, .page_ents.page_squeezebox main .menu .menuCol .title, .page_ents.page_squeezebox main .menu .menuCol .price {
-      color: #fff;
-      font-family: 'Amatic SC', cursive; }
-    .page_ents.page_squeezebox main .menu .menuCol h2 {
-      font-weight: 700; }
-    .page_ents.page_squeezebox main .menu .menuCol .menuItem .title {
-      font-size: 2em;
-      font-weight: 700; }
-    .page_ents.page_squeezebox main .menu .menuCol .menuItem .price {
-      font-size: 1.6em; }
-    .page_ents.page_squeezebox main .menu .menuCol .menuItem .extra p {
-      color: #fff;
-      font-size: 1.3em;
-      font-family: 'Patrick Hand SC', cursive; }
+    background: #fff; }
 
 .page_ents.page_verve.page_hire main .header h1 {
   padding: 0.4em 0.8em;
@@ -3595,7 +3664,11 @@ input#ctl00_Main_btnRecipients {
     background: #eee;
     margin: 0 0 0.6em; }
     .page_allnews .news_list .news_item .news_item_inner, .page_allnews .news_full .news_item .news_item_inner, .page_news .news_list .news_item .news_item_inner, .page_news .news_full .news_item .news_item_inner {
-      margin: 0; }
+      margin: 0;
+      position: relative; }
+    .page_allnews .news_list .news_item .msl_pubdate, .page_allnews .news_full .news_item .msl_pubdate, .page_news .news_list .news_item .msl_pubdate, .page_news .news_full .news_item .msl_pubdate {
+      padding: 0 0.8em 0.4em;
+      font-size: 1em; }
     .page_allnews .news_list .news_item .news_image, .page_allnews .news_full .news_item .news_image, .page_news .news_list .news_item .news_image, .page_news .news_full .news_item .news_image {
       display: none; }
     .page_allnews .news_list .news_item h5 a, .page_allnews .news_full .news_item h5 a, .page_news .news_list .news_item h5 a, .page_news .news_full .news_item h5 a {
@@ -3621,6 +3694,9 @@ input#ctl00_Main_btnRecipients {
     padding: 0.4em; }
     .page_allnews .paging a:hover, .page_news .paging a:hover {
       background: rgba(80, 184, 72, 0.2); }
+
+.page_news.page_article .header {
+  margin-bottom: 0.8em; }
 
 .page_news.page_article .news_footer {
   border: none !important; }
@@ -3678,6 +3754,9 @@ input#ctl00_Main_btnRecipients {
     background: #50b848;
     color: #fff !important; }
 
+.page_photos .header h1 {
+  margin: 0 0.1em; }
+
 .page_photos #galleries {
   display: none; }
   .page_photos #galleries h1 {
@@ -3696,7 +3775,7 @@ input#ctl00_Main_btnRecipients {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  margin-bottom: 0.8em; }
+  margin: 0.4em 0; }
   .page_photos .thumbnails .pure-u-md-1-3 a {
     padding: 0.4em;
     margin: 0.4em;
@@ -3718,6 +3797,590 @@ input#ctl00_Main_btnRecipients {
     .page_photos .thumbnails .pure-u-md-1-3 a img {
       display: block;
       max-width: 80%; }
+
+/* Jobs section /jobs/ */
+.page_jobs .sideLinks a {
+  background: #50b848;
+  display: block;
+  margin-bottom: 0.4em;
+  font-size: 1em;
+  padding: 0.4em 0.6em;
+  text-decoration: none; }
+  .page_jobs .sideLinks a span {
+    color: #fff; }
+
+/* Academic rep pages */
+.page_academicreps .header {
+  background-color: rgba(227, 24, 54, 0.1);
+  margin-bottom: 0.8em; }
+
+.page_academicreps.page_intranet .repLinks {
+  display: flex;
+  justify-content: space-between; }
+
+.page_academicreps.page_intranet .repLink {
+  position: relative;
+  flex: 0 0 30%;
+  color: #fff; }
+  .page_academicreps.page_intranet .repLink:hover span {
+    display: block; }
+  .page_academicreps.page_intranet .repLink span {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
+    background-color: #a10e23;
+    z-index: 1000; }
+  .page_academicreps.page_intranet .repLink span a {
+    display: block;
+    color: #fff;
+    padding: 0.6em 1em; }
+  .page_academicreps.page_intranet .repLink span a:hover {
+    background-color: #a10e23; }
+
+.page_academicreps.page_intranet .repLinkBox {
+  text-align: center;
+  padding: 0.6em 0;
+  background-color: #E31836; }
+
+.page_academicreps.page_intranet .repInfoBox .repTitle h1 {
+  padding: 0.5em 0 0;
+  margin-bottom: -0.2em; }
+
+.page_academicreps.page_intranet .repInfoBox .repBox {
+  background-color: #E31836;
+  font-size: 1.1em;
+  padding: 1em 1.6em; }
+
+.page_academicreps.page_intranet .repInfoBox .repBox p {
+  color: #fff; }
+
+.page_academicreps.page_intranet .repSidebar {
+  padding: 1em 1.5em;
+  position: relative; }
+
+.page_academicreps.page_intranet .repNewsWrap {
+  position: relative; }
+
+.page_academicreps.page_intranet .repNews {
+  text-align: center;
+  height: 100%;
+  display: -webkit-box ;
+  display: -ms-flexbox ;
+  display: -webkit-flex ;
+  display: flex ;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-decoration: none; }
+  .page_academicreps.page_intranet .repNews .text {
+    background-color: #E31836;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px; }
+  .page_academicreps.page_intranet .repNews h2 {
+    font-size: 2.2em;
+    color: #E31836 !important;
+    text-align: center; }
+  .page_academicreps.page_intranet .repNews img {
+    max-height: 350px;
+    display: inline-block; }
+
+.page_academicreps.page_intranet .repNewsList li {
+  height: 350px;
+  text-align: center; }
+
+.page_academicreps.page_intranet .unslider-nav {
+  margin: 0 auto; }
+
+.page_academicreps.page_intranet .unslider-arrow {
+  padding: 0.4em 1em;
+  color: #fff;
+  background-color: #E31836; }
+  .page_academicreps.page_intranet .unslider-arrow:hover {
+    color: #fff; }
+
+.page_academicreps.page_intranet .unslider-arrow.next {
+  right: 0; }
+
+.page_academicreps.page_intranet .unslider-arrow.prev {
+  left: 0; }
+
+.page_academicreps.page_becomearep .repVideo {
+  width: 50%;
+  margin: 0 auto; }
+
+.page_academicreps.page_learnmore .repNewsWrap {
+  position: relative;
+  margin-bottom: 2em; }
+
+.page_academicreps.page_learnmore .repNews {
+  text-align: center; }
+
+.page_academicreps.page_learnmore .repNews.text {
+  height: 300px; }
+
+.page_academicreps.page_learnmore .repNews h2 {
+  font-size: 2.2em;
+  text-align: center; }
+
+.page_academicreps.page_learnmore .repNews img {
+  max-height: 300px;
+  display: inline-block; }
+
+.page_academicreps.page_learnmore .repNewsList li {
+  height: 300px;
+  text-align: center; }
+
+.page_academicreps.page_learnmore .unslider-arrow {
+  padding: 0.4em 1em;
+  color: #fff !important;
+  background-color: #E31836; }
+
+.page_academicreps.page_learnmore .unslider-arrow.next {
+  right: 0; }
+
+.page_academicreps.page_learnmore .unslider-arrow.prev {
+  left: 0; }
+
+/* Management hub pages */
+.page_managementhub #contact, .page_managementhub #officeHours, .page_managementhub #liveChat, .page_managementhub #fillForm {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
+  margin-bottom: 0.8em;
+  padding: 0.4em 0.8em; }
+
+.page_managementhub #officeHours {
+  background-image: url("https://staffsunion.s3.amazonaws.com/images/committee/office%20hours.jpg"); }
+
+.page_managementhub #liveChat {
+  background-image: url("https://staffsunion.s3.amazonaws.com/images/committee/live%20chat.jpg");
+  cursor: pointer; }
+
+.page_managementhub #fillForm {
+  background-image: url("https://staffsunion.s3.amazonaws.com/images/committee/forms.jpg");
+  text-decoration: none; }
+
+.page_managementhub #contact {
+  background-image: url("https://staffsunion.s3.amazonaws.com/images/committee/contact%20the%20team.jpg"); }
+
+.page_managementhub #fillForm .flex-middle, .page_managementhub #liveChat .flex-middle {
+  height: 100%; }
+  .page_managementhub #fillForm .flex-middle h3, .page_managementhub #liveChat .flex-middle h3 {
+    text-align: center; }
+
+.page_managementhub .sideLinks a {
+  display: block;
+  text-decoration: none;
+  background: #50b848;
+  padding: 0.4em 0.8em;
+  margin-bottom: 0.6em; }
+  .page_managementhub .sideLinks a span {
+    color: #fff; }
+
+.page_managementhub .unslider {
+  position: relative; }
+
+.page_managementhub .unslider-arrow {
+  position: absolute;
+  color: #fff;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1em 0.4em;
+  top: 42%; }
+
+.page_managementhub .unslider-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-decoration: none; }
+
+.page_managementhub .unslider-arrow.next {
+  right: 0; }
+
+.page_managementhub .unslider-arrow.prev {
+  left: 0; }
+
+.page_managementhub .unslider-nav {
+  padding: 0.2em 0 0.4em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto; }
+
+.page_managementhub .unslider-nav ol li {
+  height: 10px;
+  width: 10px;
+  color: #fff;
+  border-color: #fff; }
+  .page_managementhub .unslider-nav ol li.unslider-active {
+    background-color: #fff; }
+
+.page_managementhub .eventTitle, .page_managementhub .newsTitle {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 0.8em; }
+
+.page_managementhub .eventInfo, .page_managementhub .newsInfo {
+  padding: 0.8em 2em; }
+
+.page_managementhub .news, .page_managementhub .events {
+  margin-bottom: 0.8em; }
+  .page_managementhub .news h2, .page_managementhub .events h2 {
+    text-align: center; }
+
+.page_managementhub .newsInfo {
+  display: -webkit-box ;
+  display: -ms-flexbox ;
+  display: -webkit-flex ;
+  display: flex ;
+  -webkit-box-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.page_managementhub .newsImage {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  -webkit-flex: 0 0 100%;
+  flex: 0 0 100%; }
+
+.page_managementhub .newsLink {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  -webkit-flex: 0 0 100%;
+  flex: 0 0 100%; }
+
+.page_managementhub .newsImage img {
+  width: 100%; }
+
+.page_managementhub .eventDescription, .page_managementhub .newsLeader {
+  -webkit-flex: 1 0;
+  flex: 1 0; }
+
+.page_managementhub .eventTime, .page_managementhub .eventLocation, .page_managementhub .eventDescription {
+  display: -webkit-box ;
+  display: -ms-flexbox ;
+  display: -webkit-flex ;
+  display: flex ;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  color: #fff; }
+
+.page_managementhub .eventTime i, .page_managementhub .eventLocation i, .page_managementhub .eventDescription i {
+  flex: 0 0 1.6em;
+  text-align: center;
+  color: #fff; }
+
+.page_managementhub .eventTime p, .page_managementhub .eventLocation p, .page_managementhub .eventDescription p, .page_managementhub .newsLeader p {
+  flex: 1;
+  text-align: left;
+  color: #fff; }
+
+/*Tablet*/
+@media (min-width: 48em) {
+  .page_managementhub .sideLinks {
+    padding-right: 0.8em; }
+  .page_managementhub #contact, .page_managementhub #officeHours, .page_managementhub #liveChat, .page_managementhub #fillForm {
+    min-height: 200px; } }
+
+/*Desktop*/
+/* Better Staffs Forum styling */
+.page_betterstaffsforum {
+  /* Idea Styling */
+  /* Idealist Widget */ }
+  .page_betterstaffsforum h1, .page_betterstaffsforum h2, .page_betterstaffsforum h3 {
+    font-family: 'Muli', sans-serif;
+    font-weight: 300; }
+  .page_betterstaffsforum .header {
+    background: #282424; }
+    .page_betterstaffsforum .header h1 {
+      color: #fff; }
+  .page_betterstaffsforum .leader {
+    padding: 1em 0; }
+  .page_betterstaffsforum .bsHeader {
+    position: relative;
+    margin: 2em 0 3em;
+    overflow: visible; }
+    .page_betterstaffsforum .bsHeader h3 {
+      padding: 0.4em 1em;
+      color: #fff;
+      background: #282424;
+      -webkit-clip-path: polygon(5% 0, 95% 2%, 100% 95%, 3% 100%, 0 40%);
+      clip-path: polygon(5% 0, 95% 2%, 100% 95%, 3% 100%, 0 40%); }
+    .page_betterstaffsforum .bsHeader:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      bottom: -28px;
+      right: 10%;
+      width: 0;
+      height: 0;
+      border-left: 16px solid transparent;
+      border-right: 16px solid transparent;
+      border-top: 36px solid #191717; }
+  .page_betterstaffsforum .msl-idea-title a {
+    color: #000; }
+  .page_betterstaffsforum .msl-idea-title {
+    line-height: 1em;
+    margin-top: 10px;
+    font-size: 16px; }
+  .page_betterstaffsforum .msl-idea-comments > a {
+    display: none; }
+  .page_betterstaffsforum .msl-idea {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .page_betterstaffsforum .msl-idea-submitted {
+    font-style: normal; }
+  .page_betterstaffsforum .msl-idea-submitted a {
+    color: #000; }
+  .page_betterstaffsforum .msl-idea-score {
+    width: 64px;
+    height: 64px;
+    box-sizing: border-box;
+    padding: 5px !important;
+    text-align: center;
+    margin-top: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: stretch; }
+  .page_betterstaffsforum .thumbs-up, .page_betterstaffsforum .thumbs-down {
+    text-align: center; }
+  .page_betterstaffsforum .thumbs-up a, .page_betterstaffsforum .thumbs-down a {
+    color: #fff;
+    text-decoration: none; }
+  .page_betterstaffsforum .thumbs-up.voted a, .page_betterstaffsforum .thumbs-down.voted a {
+    color: #fff; }
+  .page_betterstaffsforum .thumbs-up a:hover, .page_betterstaffsforum .thumbs-down a:hover {
+    text-decoration: none; }
+  .page_betterstaffsforum .msl-idealist {
+    clear: both; }
+  .page_betterstaffsforum #ctl00_idealist_btnAddIdea {
+    float: right; }
+  .page_betterstaffsforum .collapse {
+    background: none !important; }
+  .page_betterstaffsforum .btn-success {
+    width: 280px;
+    height: 35px;
+    font-size: 18px;
+    float: right; }
+  .page_betterstaffsforum #ctl00_idealist2014_pnlList {
+    margin-top: -50px; }
+  .page_betterstaffsforum #betterStaffsBanner, .page_betterstaffsforum #betterStaffsBanner #tab-nav {
+    background-color: #2bb753 !important; }
+  .page_betterstaffsforum #betterStaffsBanner {
+    padding: 0.5em 1em;
+    color: #fff;
+    text-align: center; }
+  .page_betterstaffsforum #betterStaffsBanner a {
+    color: #fff; }
+  .page_betterstaffsforum .nav-tabs li {
+    width: 33.1%;
+    text-align: center;
+    font-size: 1.4em;
+    margin: 0; }
+  .page_betterstaffsforum .suggesthead {
+    display: inline-block; }
+  .page_betterstaffsforum .suggesthead a {
+    text-decoration: none;
+    color: #50B848 !important;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 300 !important;
+    font-family: "league_gothicregular",sans-serif !important;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    margin: 0.2em 0px -0.1em; }
+  .page_betterstaffsforum .ideaslist {
+    text-decoration: none;
+    color: #000 !important;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 300 !important;
+    font-family: "league_gothicregular",sans-serif !important;
+    letter-spacing: 0px;
+    padding: 0.2em;
+    margin: 0 0.4em; }
+  .page_betterstaffsforum .ideaslist .news_item a {
+    display: block;
+    width: 100%;
+    padding: 0.4em 0.8em;
+    background: #eee;
+    text-decoration: none;
+    margin-bottom: 0.4em; }
+  .page_betterstaffsforum .news_all {
+    display: none; }
+  .page_betterstaffsforum .news_1leadtop .item1 .news_image {
+    position: relative;
+    display: none;
+    float: left;
+    width: 20px;
+    height: 10px;
+    margin: 0px 0.5em 0.5em 0px; }
+  .page_betterstaffsforum #ideaslist .news_item a {
+    border-left: 4px solid #666;
+    background-color: #eee;
+    padding: 0.4em 0.6em;
+    display: block;
+    text-decoration: none;
+    font-size: 1.2em !important; }
+  .page_betterstaffsforum #ideaslist .news_item h5 {
+    width: 100%;
+    text-align: left; }
+  .page_betterstaffsforum #ideaslist .news_item a:hover {
+    border-color: #50B848; }
+  .page_betterstaffsforum .msl-idea-title {
+    text-transform: none !important;
+    font-size: 1.4em; }
+  .page_betterstaffsforum .msl-idea-score {
+    width: 5em;
+    height: 100%;
+    margin: 0;
+    background: #50b848 !important;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    color: #fff; }
+  .page_betterstaffsforum .msl-idea-score .icon-thumbs-up::before, .page_betterstaffsforum .msl-idea-score .icon-thumbs-down::before {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    text-align: center; }
+  .page_betterstaffsforum .msl-idea-score .icon-thumbs-up::before {
+    content: 'thumb_up'; }
+  .page_betterstaffsforum .msl-idea-score .icon-thumbs-down::before {
+    content: 'thumb_down'; }
+  .page_betterstaffsforum .msl-idea-score .thumbs-down, .page_betterstaffsforum .msl-idea-score .thumbs-up {
+    display: flex;
+    display: -webkit-flex;
+    align-items: -webkit-center;
+    align-items: center;
+    padding: 0.4em 0;
+    font-size: 1.2em; }
+  .page_betterstaffsforum .msl-idea-description-content {
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 160%; }
+  .page_betterstaffsforum .comments .comment {
+    display: -webkit-flex;
+    display: flex;
+    margin-bottom: 0.8em; }
+  .page_betterstaffsforum .comment dt {
+    float: none !important;
+    margin: 0 !important;
+    width: auto !important;
+    text-align: left !important;
+    display: -webkit-flex;
+    display: flex;
+    align-items: -webkit-center;
+    align-items: center;
+    -webkit-flex: 0 0 7em;
+    flex: 0 0 7em;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    background: #50b848 !important;
+    padding: 0.8em !important; }
+  .page_betterstaffsforum .comments dt .avatar {
+    max-height: 48px !important;
+    max-width: none !important;
+    margin: 0 !important; }
+  .page_betterstaffsforum .comment dt a {
+    -webkit-flex: 1;
+    flex: 1;
+    font-size: 1.1em !important;
+    color: #fff !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0.4em 0 0; }
+  .page_betterstaffsforum .comment dt a:hover {
+    text-decoration: none; }
+  .page_betterstaffsforum .comment dd {
+    background-color: #eee;
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important; }
+  .page_betterstaffsforum .comment dd .comment {
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 160%;
+    padding: 0.6em 1em !important; }
+  .page_betterstaffsforum .comment .comment_details {
+    background: none !important;
+    margin: 0 !important;
+    border: none !important;
+    padding: 0.4em 0.8em !important;
+    background: #50b848 !important;
+    color: #fff;
+    border: none !important;
+    overflow: hidden; }
+  .page_betterstaffsforum .comment .comment_details .comment_date {
+    color: #fff; }
+  .page_betterstaffsforum .comment .comment_details .comment_delete {
+    top: 7px !important;
+    right: 0px !important; }
+  .page_betterstaffsforum .comment .comment_details .comment_delete a {
+    background-color: #e22727;
+    color: #fff;
+    padding: 0.6em 0.8em !important; }
+  .page_betterstaffsforum .comment .comment_details h3 {
+    color: #fff !important; }
+  .page_betterstaffsforum .comment .button {
+    background-color: #50b848 !important;
+    color: #fff !important;
+    border-radius: 0 !important;
+    border: none !important;
+    padding: 0.4em 0.8em !important;
+    font-size: 1em !important;
+    font-weight: 300 !important; }
+  .page_betterstaffsforum .comment textarea {
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: 4px solid #ccc; }
+  .page_betterstaffsforum .comment textarea:focus {
+    border-bottom: 4px solid #50b848; }
+  .page_betterstaffsforum .comment .button:hover {
+    background-color: #4daa46 !important; }
+  .page_betterstaffsforum #ctl00_idealist_hlAddIdea {
+    width: auto !important;
+    -webkit-display: inline-flex;
+    display: inline-flex;
+    padding: 0.6em 0.8em !important;
+    border: none !important;
+    background-color: #50b848 !important;
+    color: #fff !important; }
 
 /* Dashboard */
 /* Get Involved Dashboard */
@@ -3934,6 +4597,23 @@ input#ctl00_Main_btnRecipients {
 .page_union #proudtobestaffs {
   background: #eee;
   padding: 1em 0; }
+
+.page_union.page_yourunion.page_finances:before {
+  content: ' ';
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  background: url("https://staffsunion.s3.amazonaws.com/images/union/Union%20Web%20Background-01.png") no-repeat center center;
+  background-size: cover;
+  will-change: transform;
+  z-index: -101; }
+
+.page_union.page_yourunion.page_finances .content .span3 {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.4em 0.8em; }
 
 @media (min-width: 48em) {
   .page_union .header.dashboard {

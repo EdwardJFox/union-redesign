@@ -1,0 +1,377 @@
+/* Better Staffs Forum styling */
+
+.page_betterstaffsforum {
+    h1, h2, h3 {
+        font-family: 'Muli', sans-serif;
+        font-weight: 300;
+    }
+    .header {
+        background: $better_staffs_bg;
+        h1 {
+            color: #fff;
+        }
+    }
+    .leader {
+        padding: 1em 0;
+    }
+    .bsHeader {
+        position: relative;
+        margin: 2em 0 3em;
+        overflow: visible;
+        h3 {
+            padding: 0.4em 1em;
+            color: #fff;
+            background: $better_staffs_bg;
+            -webkit-clip-path: polygon(5% 0, 95% 2%, 100% 95%, 3% 100%, 0 40%);
+            clip-path: polygon(5% 0, 95% 2%, 100% 95%, 3% 100%, 0 40%);
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            bottom: -28px;
+            right: 10%;
+            width: 0;
+            height: 0;
+            border-left: 16px solid transparent;
+            border-right: 16px solid transparent;
+            border-top: 36px solid $better_staffs_dark;
+        }
+    }
+
+    /* Idea Styling */
+    .msl-idea-title a {
+        color: #000;
+    }
+
+    .msl-idea-title {
+        line-height: 1em;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .msl-idea-comments > a {
+    display: none;
+    }
+
+    .msl-idea {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .msl-idea-submitted {
+    font-style: normal;
+    }
+
+    .msl-idea-submitted a { color: #000; }
+
+    .msl-idea-score {
+        width: 64px;
+        height: 64px;
+        box-sizing: border-box;
+        padding: 5px!important;
+        text-align: center;
+        margin-top: 10px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: stretch;
+    }
+
+    .thumbs-up, .thumbs-down {
+        text-align: center;
+    }
+
+    .thumbs-up a, .thumbs-down a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .thumbs-up.voted a, .thumbs-down.voted a {
+        color: #fff;
+    }
+
+    .thumbs-up a:hover, .thumbs-down a:hover {
+        text-decoration: none;
+    }
+
+    .msl-idealist {
+    clear: both;
+    }
+
+    #ctl00_idealist_btnAddIdea { float: right; }
+
+    .collapse { background: none!important; }
+
+    .btn-success {
+        width: 280px;
+        height: 35px;
+        font-size: 18px;
+        float: right;
+    }
+    #ctl00_idealist2014_pnlList {
+        margin-top: -50px;
+    }
+    #betterStaffsBanner, #betterStaffsBanner #tab-nav {
+        background-color: #2bb753 !important;
+    }
+    #betterStaffsBanner {
+        padding: 0.5em 1em;
+        color: #fff;
+        text-align: center;
+    }
+    #betterStaffsBanner a {
+        color: #fff;
+    }
+    .nav-tabs li {
+        width: 33.1%;
+        text-align: center;
+        font-size: 1.4em;
+        margin: 0;
+    }
+    .suggesthead {
+        display: inline-block;
+    }
+    .suggesthead a {
+        text-decoration: none;
+        color: #50B848 !important;
+        font-size: 1.2em;
+        text-align:center;
+        font-weight: 300 !important;
+        font-family: "league_gothicregular",sans-serif !important;
+        text-transform: uppercase;
+        letter-spacing: 0px;
+        margin: 0.2em 0px -0.1em;
+    }
+    .ideaslist {
+        text-decoration: none;
+        color: #000 !important;
+        font-size: 1.2em;
+        text-align:center;
+        font-weight: 300 !important;
+        font-family: "league_gothicregular",sans-serif !important;
+        letter-spacing: 0px;
+        padding: 0.2em;
+        margin: 0 0.4em;
+    }
+    .ideaslist .news_item a {
+        display: block;
+        width: 100%;
+        padding: 0.4em 0.8em;
+        background: $grey;
+        text-decoration: none;
+        margin-bottom: 0.4em;
+    }
+    .news_all {
+        display: none;
+    }
+
+    .news_1leadtop .item1 .news_image {
+        position: relative;
+        display: none;
+        float: left;
+        width: 20px;
+        height: 10px;
+        margin: 0px 0.5em 0.5em 0px;
+    }
+
+    #ideaslist .news_item a {
+        border-left: 4px solid #666;
+        background-color: $grey;
+        padding: 0.4em 0.6em;
+        display: block;
+        text-decoration: none;
+        font-size: 1.2em !important;
+    }
+    #ideaslist .news_item h5 {
+        width: 100%;
+    text-align: left;
+    }
+    #ideaslist .news_item a:hover {
+        border-color: #50B848;
+    }
+
+    /* Idealist Widget */
+    .msl-idea-title {
+    text-transform: none !important;
+    font-size: 1.4em;
+    }
+
+    .msl-idea-score {
+    width: 5em;
+    height: 100%;
+    margin: 0;
+    background: #50b848 !important;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    color: #fff;
+    }
+
+    .msl-idea-score .icon-thumbs-up::before, .msl-idea-score .icon-thumbs-down::before {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    }
+
+    .msl-idea-score .icon-thumbs-up::before {
+    content: 'thumb_up';
+    }
+
+    .msl-idea-score .icon-thumbs-down::before {
+    content: 'thumb_down';
+    }
+
+    .msl-idea-score .thumbs-down, .msl-idea-score .thumbs-up {
+    display: flex;
+    display: -webkit-flex;
+    align-items: -webkit-center;
+    align-items: center;
+    padding: 0.4em 0;
+    font-size: 1.2em;
+    }
+    .msl-idea-description-content {
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 160%;
+    }
+    .comments .comment {
+    display: -webkit-flex;
+    display: flex;
+    margin-bottom: 0.8em;
+    }
+    .comment dt {
+    float: none !important;
+    margin: 0 !important;
+    width: auto !important;
+    text-align: left !important;
+    display: -webkit-flex;
+    display: flex;
+    align-items: -webkit-center;
+    align-items: center;
+    -webkit-flex: 0 0 7em;
+    flex: 0 0 7em;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    background: #50b848 !important;
+    padding: 0.8em !important;
+    }
+
+    .comments dt .avatar {
+    max-height: 48px !important;
+    max-width: none !important;
+    margin: 0 !important;
+    }
+
+    .comment dt a {
+    -webkit-flex: 1;
+    flex: 1;
+    font-size: 1.1em !important;
+    color: #fff !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0.4em 0 0;
+    }
+
+    .comment dt a:hover {
+    text-decoration: none;
+    }
+
+    .comment dd {
+    background-color: #eee;
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    }
+
+    .comment dd .comment {
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 160%;
+    padding: 0.6em 1em !important;
+    }
+
+    .comment .comment_details {
+    background: none !important;
+    margin: 0 !important;
+    border: none !important;
+    padding: 0.4em 0.8em !important;
+    background: #50b848 !important;
+    color: #fff;
+    border: none !important;
+    overflow: hidden;
+    }
+
+    .comment .comment_details .comment_date {
+    color: #fff;
+    }
+
+    .comment .comment_details .comment_delete {
+    top: 7px !important;
+    right: 0px !important;
+    }
+
+    .comment .comment_details .comment_delete a {
+    background-color: #e22727;
+    color: #fff;
+    padding: 0.6em 0.8em !important;
+    }
+
+    .comment .comment_details h3 {
+    color: #fff !important;
+    }
+
+    .comment .button {
+    background-color: #50b848 !important;
+    color: #fff !important;
+    border-radius: 0 !important;
+    border: none !important;
+    padding: 0.4em 0.8em !important;
+    font-size: 1em !important;
+    font-weight: 300 !important;
+    }
+
+    .comment textarea {
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: 4px solid #ccc;
+    }
+
+    .comment textarea:focus {
+    border-bottom: 4px solid #50b848;
+    }
+
+    .comment .button:hover {
+    background-color: #4daa46 !important;
+    }
+
+    #ctl00_idealist_hlAddIdea {
+        width: auto !important;
+        -webkit-display: inline-flex;
+        display: inline-flex;
+        padding: 0.6em 0.8em !important;
+        border: none !important;
+        background-color: $union_green !important;
+        color: #fff !important;
+    }
+
+}

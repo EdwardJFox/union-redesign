@@ -14,6 +14,7 @@ $white_hover: rgba(255, 255, 255, 0.2);
 $pink: #ec1e79;
 $red: #E31836;
 $red_hover_clear: rgba(227,24,54, 0.2);
+$red_hover_dark: #a10e23;
 $dark_red: darken($red, 30%);
 $blue: #0096db;
 $blue_hover_clear: rgba(0, 150, 219, 0.2);
@@ -64,3 +65,21 @@ $notification_warning: #e98918;
 
 /* Squeezebox */
 $squeezebox: #f8991c;
+
+/* Liberation Networks */
+$liberation_lgbt: #C31D25;
+$liberation_lgbt_clear: rgba(195, 29, 37, 0.1);
+$liberation_womens: #671C79;
+$liberation_womens_clear: rgba(103, 28, 121, 0.1);
+$liberation_disabled: #2A276F;
+$liberation_disabled_clear: rgba(42, 39, 111, 0.1);
+$liberation_multi: #00B1B5;
+$liberation_multi_clear: rgba(0, 177, 181, 0.1);
+
+/* Academic Reps */
+$academic_reps: $red;
+$academic_clear: $red_hover_clear;
+
+/* Better Staffs */
+$better_staffs_bg: #282424;
+$better_staffs_dark: #191717;
