@@ -1,5 +1,9 @@
 .page_advice {
     .adviceHeader {
+        background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/advice/advice_header.jpg');
+        background-position: center;
+        background-size: cover;
+        min-height: 250px;
         .span3 {
             @include flexJustify(center);
         }
@@ -140,6 +144,17 @@
             .span1, .span2, .span3 {
                 margin-bottom: 0em;
             }
+        }
+        .adviceHeader {
+            min-height: 350px !important;
+        }
+    }
+}
+
+@media (min-width: 80em){
+    .page_advice {
+        .adviceHeader {
+            min-height: 400px !important;
         }
     }
 }

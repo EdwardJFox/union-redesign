@@ -31,6 +31,12 @@ $(document).ready(function(){
 
   // Admin
   setupAdminInput();
+
+  // Profile images aspect ratio fix
+  fixProfileImages();
+
+  // Google Analytics
+  setupAnalytics();
 });
 
 
@@ -90,7 +96,7 @@ function setupNav(){
     $('nav').removeClass('close').addClass('open opening');
     setTimeout(function(){
       $('nav').removeClass('opening');
-    }, 800)
+    }, 800);
   });
   $('.closeButton').on('click', function(){
     $('nav').removeClass('open').addClass('close');
@@ -403,6 +409,190 @@ function setupAdminInput(){
   if($('#ctl00_Main_btnInsertCSSAsset').length > 0){
     $('#ctl00_Main_btnInsertCSSAsset').after('<label for="ctl00_Main_btnInsertCSSAsset" class="icon image" alt="Insert an image">image<div class="tip">Insert an image</div></label>');
   }
+}
+
+function fixProfileImages(){
+  $images = $('main img');
+  // Check if it is a profile image, has to be done like this due to inconsistent class names
+  for(var i = 0; i < $images.length; i++){
+    var url =$images.eq(i).attr('src');
+    if(url.match(/\/asset\/profilephoto\//)){
+      $images.eq(i).attr('src', "/asset/profilephoto/" + url.match(/\w+\.jpg/g)[0] + "?thumbnail_width=512&thumbnail_height=512&resize_type=CropToFit");
+    }
+  }
+}
+
+// Setup deeper Google Analytics tracking on the site
+function setupAnalytics(){
+  // All links on the main page
+  $('main a').on('click', function(e){
+    ga('send', 'event', {
+      eventCategory: 'Link',
+      eventAction: 'click',
+      eventLabel: e.target.href,
+      transport: 'beacon'
+    });
+  })
+
+  // Nav menu
+  $('.openMenu').on('click', function(){
+    ga('send', 'event', {
+      eventCategory: 'Nav',
+      eventAction: 'click',
+      eventLabel: 'open'
+    });
+  });
+  $('.closeMenu').on('click', function(){
+    ga('send', 'event', {
+      eventCategory: 'Nav',
+      eventAction: 'click',
+      eventLabel: 'close'
+    });
+  });
+  $('nav section a').on('click', function(e){
+    ga('send', 'event', {
+      eventCategory: 'Nav link',
+      eventAction: 'click',
+      eventLabel: e.target.href,
+      transport: 'beacon'
+    });
+  });
+
+  // Searchbar
+  $('.searchInput input').on('keypress', function(e){
+    if(e.keyCode == 13){
+      ga('send', 'event', {
+        eventCategory: 'Search',
+        eventAction: 'enter',
+        eventLabel: $('.searchInput input').val(),
+        transport: 'beacon'
+      });
+    }
+  });
+  $('.search .icon').on('click', function(e){
+    ga('send', 'event', {
+      eventCategory: 'Search',
+      eventAction: 'click',
+      eventLabel: $('.searchInput input').val(),
+      transport: 'beacon'
+    });
+  });
+  
+  // User dropdown menu
+  $('.chevron').on('click', function(e){
+    ga('send', 'event', {
+      eventCategory: 'User menu',
+      eventAction: 'click',
+      eventLabel: $('.searchInput input').val()
+    });
+  });
+  $('.user .dropdown a', function(e){
+    var value = $(e.target).text();
+    ga('send', 'event', {
+      eventCategory: 'User menu item',
+      eventAction: 'click',
+      eventLabel: value,
+      transport: 'beacon'
+    });
+  });
+
+  // Basket icon
+  $('header .basket').on('click', function(){
+    ga('send', 'event', {
+      eventCategory: 'Basket icon',
+      eventAction: 'click',
+      eventLabel: $('.basket .itemCount').text()
+    });
+  });
+
+  // Footer
+  $('footer a').on('click', function(e){
+    ga('send', 'event', {
+      eventCategory: 'Footer Link',
+      eventAction: 'click',
+      eventLabel: $(e.target).text(),
+      transport: 'beacon'
+    });
+  });
+
+  // Homepage
+  $('.newsList li').on('click', function(e){
+    ga('send', 'event', {
+      eventCategory: 'News',
+      eventAction: 'click',
+      eventLabel: $(e.target).text()
+    });
+  });
+  $('.newsItem a').on('click', function(e){
+    ga('send', 'event', {
+      eventCategory: 'News Item Image',
+      eventAction: 'click',
+      eventLabel: e.target.href,
+      transport: 'beacon'
+    });
+  });
+
+  // Unslider
+  $('.unslider-nav li').on('click', function(e){
+    ga('send', 'event', {
+      eventCategory: 'Unslider',
+      eventAction: 'button click',
+      eventLabel: $(e.target).text()
+    });
+  });
+  $('.unslider-arrow').on('click', function(e){
+    ga('send', 'event', {
+      eventCategory: 'Unslider',
+      eventAction: 'arrow click',
+      eventLabel: $(e.target).text()
+    });
+  });
+
+  // Accordion
+  $('.accordion .accordionTitle', function(){
+    ga('send', 'event', {
+      eventCategory: 'Component',
+      eventAction: 'accordion',
+      eventLabel: 'click'
+    });
+  });
+
+  // Dropdown
+  $('.dropdown .dropdownTitle', function(){
+    ga('send', 'event', {
+      eventCategory: 'Component',
+      eventAction: 'dropdown',
+      eventLabel: 'click'
+    });
+  });
+
+  // Tabbed Navigation
+  $('.tabs .nav-tabs a').on('click', function(e){
+    ga('send', 'event', {
+      eventCategory: 'Component',
+      eventAction: 'tabbed navigation',
+      eventLabel: $(e.target).text()
+    });
+  });
+
+  // Quickbar
+  $('.quickbar a').on('click', function(e){
+    ga('send', 'event', {
+      eventCategory: 'Quickbar',
+      eventAction: 'click',
+      eventLabel: $(e.target).text(),
+      transport: 'beacon'
+    });
+  });
+
+  // Header logo
+  $('header .logo a').on('click', function(){
+    ga('send', 'event', {
+      eventCategory: 'Header logo',
+      eventAction: 'click',
+      transport: 'beacon'
+    });
+  });
 }
 
 /* Helpers */

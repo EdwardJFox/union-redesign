@@ -5,6 +5,86 @@
         margin-bottom: 0.8em;
     }
 
+    // Home
+    .repHomeLinks {
+        text-align: center;
+    }
+
+    .repHomeLinks a {
+        display: block;
+        padding: 0.4em 0.8em;
+        background-color: #E31836;
+        margin: 0 0.6em 1em;
+        color: #fff;
+        font-size: 1.2em;
+        text-decoration: none;
+    }
+
+    .repInfoBox .repTitle h1 {
+    padding: 0.8em 0 0;
+    }
+
+    .repInfoBox .repBox {
+        background-color: $red;
+        color: #fff;
+        font-size: 1.1em;
+        padding: 1em 1.6em;
+    }
+
+    .repInfoBox .repBox p {
+    color: #fff;
+    }
+
+    .repNewsWrap {
+    position: relative;
+    }
+
+    .repNews {
+    text-align: center;
+    }
+    .repNews.text {
+    background-color: $red;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    }
+    .repNews.image {
+        background-color: #FF4C4C;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+    }
+    .repNews h2 {
+    font-size: 2.2em;
+    color: #fff !important;
+    text-align: center;
+    }
+
+    .repNews img {
+    max-height: 300px;
+    display: inline-block;
+    }
+
+    .repNewsList li {
+    height: 300px;
+    text-align: center;
+    }
+
+    .unslider-arrow {
+    padding: 0.4em 1em;
+    color: #fff;
+    background-color: #E31836;
+    }
+    .unslider-arrow.next {
+    right: 0;
+    }
+    .unslider-arrow.prev {
+    left: 0;
+    }
+
     // Intranet page
     &.page_intranet {
         .repLinks {

@@ -3187,11 +3187,16 @@ input#ctl00_Main_btnRecipients {
     margin: 0 auto;
     padding: 0.8em 1.6em 0em; } }
 
-.page_advice .adviceHeader .span3 {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center; }
+.page_advice .adviceHeader {
+  background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/advice/advice_header.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 250px; }
+  .page_advice .adviceHeader .span3 {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center; }
 
 .page_advice ul.inline {
   padding: 0; }
@@ -3311,7 +3316,13 @@ input#ctl00_Main_btnRecipients {
 /* Tablets*/
 @media (min-width: 48em) {
   .page_advice .hub .span1, .page_advice .hub .span2, .page_advice .hub .span3 {
-    margin-bottom: 0em; } }
+    margin-bottom: 0em; }
+  .page_advice .adviceHeader {
+    min-height: 350px !important; } }
+
+@media (min-width: 80em) {
+  .page_advice .adviceHeader {
+    min-height: 400px !important; } }
 
 #reviewbasket h1 {
   display: none; }
@@ -3705,7 +3716,7 @@ input#ctl00_Main_btnRecipients {
 #profile {
   padding-top: 2em; }
   #profile #profile_side #profile_photo {
-    border-radius: 8em;
+    border-radius: 10em;
     overflow: hidden;
     width: 250px;
     height: 250px;
@@ -3813,6 +3824,75 @@ input#ctl00_Main_btnRecipients {
 .page_academicreps .header {
   background-color: rgba(227, 24, 54, 0.1);
   margin-bottom: 0.8em; }
+
+.page_academicreps .repHomeLinks {
+  text-align: center; }
+
+.page_academicreps .repHomeLinks a {
+  display: block;
+  padding: 0.4em 0.8em;
+  background-color: #E31836;
+  margin: 0 0.6em 1em;
+  color: #fff;
+  font-size: 1.2em;
+  text-decoration: none; }
+
+.page_academicreps .repInfoBox .repTitle h1 {
+  padding: 0.8em 0 0; }
+
+.page_academicreps .repInfoBox .repBox {
+  background-color: #E31836;
+  color: #fff;
+  font-size: 1.1em;
+  padding: 1em 1.6em; }
+
+.page_academicreps .repInfoBox .repBox p {
+  color: #fff; }
+
+.page_academicreps .repNewsWrap {
+  position: relative; }
+
+.page_academicreps .repNews {
+  text-align: center; }
+
+.page_academicreps .repNews.text {
+  background-color: #E31836;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; }
+
+.page_academicreps .repNews.image {
+  background-color: #FF4C4C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; }
+
+.page_academicreps .repNews h2 {
+  font-size: 2.2em;
+  color: #fff !important;
+  text-align: center; }
+
+.page_academicreps .repNews img {
+  max-height: 300px;
+  display: inline-block; }
+
+.page_academicreps .repNewsList li {
+  height: 300px;
+  text-align: center; }
+
+.page_academicreps .unslider-arrow {
+  padding: 0.4em 1em;
+  color: #fff;
+  background-color: #E31836; }
+
+.page_academicreps .unslider-arrow.next {
+  right: 0; }
+
+.page_academicreps .unslider-arrow.prev {
+  left: 0; }
 
 .page_academicreps.page_intranet .repLinks {
   display: flex;
@@ -4294,7 +4374,8 @@ input#ctl00_Main_btnRecipients {
   .page_betterstaffsforum .comments .comment {
     display: -webkit-flex;
     display: flex;
-    margin-bottom: 0.8em; }
+    margin-bottom: 0.8em;
+    width: 100%; }
   .page_betterstaffsforum .comment dt {
     float: none !important;
     margin: 0 !important;
@@ -4310,9 +4391,11 @@ input#ctl00_Main_btnRecipients {
     flex-direction: column;
     background: #50b848 !important;
     padding: 0.8em !important; }
-  .page_betterstaffsforum .comments dt .avatar {
-    max-height: 48px !important;
-    max-width: none !important;
+  .page_betterstaffsforum [id*="idea-comments"] dl.comments dt img.avatar {
+    height: 80px !important;
+    width: 80px !important;
+    max-height: 80px !important;
+    max-width: 80px !important;
     margin: 0 !important; }
   .page_betterstaffsforum .comment dt a {
     -webkit-flex: 1;
@@ -4336,7 +4419,7 @@ input#ctl00_Main_btnRecipients {
     font-size: 1.2em;
     line-height: 160%;
     padding: 0.6em 1em !important; }
-  .page_betterstaffsforum .comment .comment_details {
+  .page_betterstaffsforum [id*="idea-comments"] dl.comments span.comment_details {
     background: none !important;
     margin: 0 !important;
     border: none !important;
@@ -4344,16 +4427,13 @@ input#ctl00_Main_btnRecipients {
     background: #50b848 !important;
     color: #fff;
     border: none !important;
-    overflow: hidden; }
+    overflow: hidden;
+    font-size: 80%; }
   .page_betterstaffsforum .comment .comment_details .comment_date {
     color: #fff; }
   .page_betterstaffsforum .comment .comment_details .comment_delete {
-    top: 7px !important;
+    top: 0px !important;
     right: 0px !important; }
-  .page_betterstaffsforum .comment .comment_details .comment_delete a {
-    background-color: #e22727;
-    color: #fff;
-    padding: 0.6em 0.8em !important; }
   .page_betterstaffsforum .comment .comment_details h3 {
     color: #fff !important; }
   .page_betterstaffsforum .comment .button {
@@ -4691,6 +4771,10 @@ input#ctl00_Main_btnRecipients {
     background: transparent; }
     .page_whattodo #events .nightout a.blockLink:hover {
       background: rgba(255, 255, 255, 0.2); }
+  .page_whattodo #events .allEvents {
+    padding: 1.8em 0 1.2em; }
+    .page_whattodo #events .allEvents h2 {
+      padding: 0.2em 0 0.6em; }
 
 .page_whattodo .nightout .logo, .page_whattodo .venue .logo, .page_whattodo .squeeze {
   display: -webkit-box ;

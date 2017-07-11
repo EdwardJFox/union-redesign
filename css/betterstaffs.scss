@@ -255,6 +255,7 @@
     display: -webkit-flex;
     display: flex;
     margin-bottom: 0.8em;
+    width: 100%;
     }
     .comment dt {
     float: none !important;
@@ -273,10 +274,12 @@
     padding: 0.8em !important;
     }
 
-    .comments dt .avatar {
-    max-height: 48px !important;
-    max-width: none !important;
-    margin: 0 !important;
+    [id*="idea-comments"] dl.comments dt img.avatar {
+        height: 80px !important;
+        width: 80px !important;
+        max-height: 80px !important;
+        max-width: 80px !important;
+        margin: 0 !important;
     }
 
     .comment dt a {
@@ -309,7 +312,7 @@
     padding: 0.6em 1em !important;
     }
 
-    .comment .comment_details {
+    [id*="idea-comments"] dl.comments span.comment_details {
     background: none !important;
     margin: 0 !important;
     border: none !important;
@@ -318,6 +321,7 @@
     color: #fff;
     border: none !important;
     overflow: hidden;
+    font-size: 80%;
     }
 
     .comment .comment_details .comment_date {
@@ -325,14 +329,11 @@
     }
 
     .comment .comment_details .comment_delete {
-    top: 7px !important;
+    top: 0px !important;
     right: 0px !important;
     }
 
     .comment .comment_details .comment_delete a {
-    background-color: #e22727;
-    color: #fff;
-    padding: 0.6em 0.8em !important;
     }
 
     .comment .comment_details h3 {
