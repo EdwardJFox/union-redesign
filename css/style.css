@@ -313,12 +313,8 @@ ul li .blockLink, ol li .blockLink {
 .add, .msl_add {
   background: none;
   text-decoration: none;
-  display: -webkit-box ;
-  display: -ms-inline-flexbox ;
   display: -webkit-inline-flex ;
   display: inline-flex ;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
   padding: 0.4em 0.8em; }
@@ -340,8 +336,6 @@ ul li .blockLink, ol li .blockLink {
     font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
     text-align: center;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 1em;
     -webkit-flex: 0 0 1em;
     flex: 0 0 1em;
     content: 'add';
@@ -448,8 +442,6 @@ header {
     -ms-flex: 0 0 220px;
     flex: 0 0 220px; }
     header .search .icon {
-      display: -webkit-box ;
-      display: -ms-flexbox ;
       display: -webkit-flex ;
       display: flex ;
       -webkit-box-align: center;
@@ -481,20 +473,12 @@ header {
         /* Firefox 18- */
         color: #388332; }
   header .login {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 120px;
     -webkit-flex: 0 0 120px;
     flex: 0 0 120px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     -webkit-justify-content: center;
     justify-content: center; }
     header .login .link {
@@ -563,20 +547,12 @@ header {
       header .user .dropdown.open {
         display: block; }
     header .user.active {
-      display: -webkit-box ;
-      display: -ms-flexbox ;
       display: -webkit-flex ;
       display: flex ;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 180px;
       -webkit-flex: 0 0 180px;
       flex: 0 0 180px;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       -webkit-align-items: center;
       align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
       -webkit-justify-content: center;
       justify-content: center;
       padding: 0 0.4em; }
@@ -613,8 +589,6 @@ header {
 /* Tablets*/
 @media (min-width: 48em) {
   header .search {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ; }
   header .user .dropdown {
@@ -653,22 +627,20 @@ nav#sidebar {
       font-size: 2.5em;
       color: #fff; }
   nav#sidebar .header {
-    text-align: center; }
+    text-align: center;
+    background-image: url(https://staffsunion.s3.amazonaws.com/2017/images/assets/union/union_background_pale.png);
+    background-size: contain !important;
+    background-position: center center;
+    background-attachment: fixed; }
     nav#sidebar .header img {
       width: 90%; }
   nav#sidebar .search {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
     padding: 0.4em 1em 0.4em 0.6em; }
     nav#sidebar .search .icon {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 32px;
       -webkit-flex: 0 0 32px;
       flex: 0 0 32px;
-      display: -webkit-box ;
-      display: -ms-flexbox ;
       display: -webkit-flex ;
       display: flex ;
       -webkit-box-align: center;
@@ -678,10 +650,8 @@ nav#sidebar {
         color: #fff;
         font-size: 2em; }
     nav#sidebar .search .searchInput {
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
-      -webkit-flex: 1;
-      flex: 1; }
+      -webkit-flex: 1 0;
+      flex: 1 0; }
       nav#sidebar .search .searchInput input[type="search"] {
         width: 100%;
         font-size: 1.1em;
@@ -898,12 +868,8 @@ main {
     min-height: 176px; }
     main section.row.header .span3 {
       min-height: 196px;
-      display: -webkit-box ;
-      display: -ms-flexbox ;
       display: -webkit-flex ;
       display: flex ;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       -webkit-align-items: center;
       align-items: center; }
     main section.row.header h1 {
@@ -925,12 +891,8 @@ main {
 /* Desktop*/
 @media (min-width: 80em) {
   main section.row {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
-    -webkit-box-wrap: wrap;
-    -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap; }
     main section.row .rowHeader {
@@ -945,31 +907,25 @@ main {
       width: 1200px;
       margin: 0 auto;
       padding: 0;
-      display: -webkit-box ;
-      display: -ms-flexbox ;
       display: -webkit-flex ;
       display: flex ; }
       main section.row .rowInner .span1, main section.row .rowInner .span2, main section.row .rowInner .span3 {
         position: relative; }
       main section.row .rowInner .span1 {
         -webkit-box-flex: 0;
-        -webkit-flex: 0 0 calc(100% / 3);
-        -ms-flex: 0 0 calc(100% / 3);
-        flex: 0 0 calc(100% / 3); }
+        -webkit-flex: 0 0 33.33%;
+        flex: 0 0 33.33%; }
       main section.row .rowInner .span2 {
         -webkit-box-flex: 0;
-        -webkit-flex: 0 0 calc((100% / 3) * 2);
-        -ms-flex: 0 0 calc((100% / 3) * 2);
-        flex: 0 0 calc((100% / 3) * 2); }
+        -webkit-flex: 0 0 66.66%;
+        flex: 0 0 66.66%; }
       main section.row .rowInner .span3 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 100%;
-        -ms-flex: 0 0 100%;
         flex: 0 0 100%; }
       main section.row .rowInner .span1-2 {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 50%;
-        -ms-flex: 0 0 50%;
         flex: 0 0 50%; }
     main section.row.header {
       min-height: 176px; }
@@ -1139,12 +1095,8 @@ main .dropdown {
 .msl_info {
   padding: 0.4em 0.6em;
   background: none !important;
-  display: -webkit-box ;
-  display: -ms-flexbox ;
   display: -webkit-flex ;
   display: flex ;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center; }
   .msl_info::before {
@@ -1177,12 +1129,8 @@ main .dropdown {
     padding: 0.4em 0.8em;
     border: none !important;
     background-image: none !important;
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
     font-weight: 400; }
@@ -1298,12 +1246,8 @@ table.msl_table {
 
 /* MSL Ratings */
 .msl-rating > div > div {
-  display: -webkit-box ;
-  display: -ms-flexbox ;
   display: -webkit-flex ;
   display: flex ;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center; }
   .msl-rating > div > div > div {
@@ -1342,30 +1286,20 @@ table.msl_table {
 
 /* News Comments, hopefully all over comments too */
 dl.comments {
-  display: -webkit-box ;
-  display: -ms-flexbox ;
   display: -webkit-flex ;
   display: flex ;
-  -webkit-box-wrap: wrap;
-  -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap; }
   dl.comments dd {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
+    -webkit-flex: 1 0;
+    flex: 1 0;
     margin: 0 0 0.6em;
     padding: 0;
     border: none !important;
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
-    -ms-flex-direction: column;
     -webkit-flex-direction: column;
     flex-direction: column;
-    -ms-flex-basis: 82%;
     -webkit-flex-basis: 82%;
     flex-basis: 82%; }
     dl.comments dd .comment_details {
@@ -1383,18 +1317,14 @@ dl.comments {
         dl.comments dd .comment_details .comment_delete a {
           color: #fff; }
     dl.comments dd .comment {
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
-      -webkit-flex: 1;
-      flex: 1;
+      -webkit-flex: 1 0;
+      flex: 1 0;
       background: #eee; }
       dl.comments dd .comment textarea {
         background: #fff;
         border: none;
         border-bottom: 4px solid #e2e2e2; }
   dl.comments dt {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 120px;
     -webkit-flex: 0 0 120px;
     flex: 0 0 120px;
     width: auto;
@@ -1451,12 +1381,8 @@ dl.comments {
 
 /* Admin Tool bar */
 .tools ul {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
   display: -webkit-flex !important;
   display: flex !important;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center; }
   .tools ul li {
@@ -1519,12 +1445,8 @@ input#ctl00_Main_btnRecipients {
 #edit_page_buttons li a {
   background-image: none !important;
   padding: 0.4em 0.6em;
-  display: -webkit-box ;
-  display: -ms-inline-flexbox ;
   display: -webkit-inline-flex ;
   display: inline-flex ;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
   text-decoration: none; }
@@ -1615,17 +1537,11 @@ input#ctl00_Main_btnRecipients {
   background: #e7e7e7 !important; }
 
 .ajax__tab_panel .list_controls {
-  display: -webkit-box ;
-  display: -ms-flexbox ;
   display: -webkit-flex ;
   display: flex ;
-  -webkit-box-wrap: wrap;
-  -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap; }
   .ajax__tab_panel .list_controls > a {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 96px;
     -webkit-flex: 0 0 96px;
     flex: 0 0 96px;
     height: auto !important;
@@ -1633,16 +1549,10 @@ input#ctl00_Main_btnRecipients {
     border: none !important;
     background-color: #fff !important;
     background-position: top 6px center !important;
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     -webkit-justify-content: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center; }
     .ajax__tab_panel .list_controls > a:hover {
@@ -1653,12 +1563,8 @@ input#ctl00_Main_btnRecipients {
   #edit_body .panel_options {
     background: #50b848 !important;
     border: none !important;
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
     position: relative;
@@ -1725,12 +1631,8 @@ input#ctl00_Main_btnRecipients {
     #ctl00_Main_upControl .mvMenu li a {
       padding: 0.4em 0.8em;
       color: #fff;
-      display: -webkit-box ;
-      display: -ms-flexbox ;
       display: -webkit-flex ;
       display: flex ;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       -webkit-align-items: center;
       align-items: center;
       font-weight: 400; }
@@ -1801,28 +1703,18 @@ input#ctl00_Main_btnRecipients {
     margin: 0.8em 0.2em 0.6em; }
 
 .page_login .rowInner .login#ctl00_logincontrol_pnlStandardLogin {
-  display: -webkit-box ;
-  display: -ms-flexbox ;
   display: -webkit-flex ;
   display: flex ;
-  -webkit-box-wrap: wrap;
-  -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center; }
   .page_login .rowInner .login#ctl00_logincontrol_pnlStandardLogin label {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 90px;
     -webkit-flex: 0 0 90px;
     flex: 0 0 90px; }
   .page_login .rowInner .login#ctl00_logincontrol_pnlStandardLogin input.textbox {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
+    -webkit-flex: 1 0;
+    flex: 1 0;
     min-width: 75%;
     background: #fff; }
     .page_login .rowInner .login#ctl00_logincontrol_pnlStandardLogin input.textbox:hover {
@@ -1830,10 +1722,8 @@ input#ctl00_Main_btnRecipients {
     .page_login .rowInner .login#ctl00_logincontrol_pnlStandardLogin input.textbox:focus {
       background: #fff; }
   .page_login .rowInner .login#ctl00_logincontrol_pnlStandardLogin .msl-rememberme {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    -webkit-flex: 1;
-    flex: 1; }
+    -webkit-flex: 1 0;
+    flex: 1 0; }
     .page_login .rowInner .login#ctl00_logincontrol_pnlStandardLogin .msl-rememberme label {
       padding-left: 0.2em; }
 
@@ -2097,15 +1987,11 @@ input#ctl00_Main_btnRecipients {
       float: right;
       text-decoration: none; }
   #browse-opps .allopps #ctl00_Main_ActivityListPaged1_dp2 {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ; }
     #browse-opps .allopps #ctl00_Main_ActivityListPaged1_dp2 span {
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
-      -webkit-flex: 1;
-      flex: 1;
+      -webkit-flex: 1 0;
+      flex: 1 0;
       text-align: center; }
     #browse-opps .allopps #ctl00_Main_ActivityListPaged1_dp2 span, #browse-opps .allopps #ctl00_Main_ActivityListPaged1_dp2 a {
       padding: 0.4em 0.8em; }
@@ -2128,24 +2014,16 @@ input#ctl00_Main_btnRecipients {
     margin-right: 1%; }
   /* Browse page */
   #browse-opps {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
-    -webkit-box-wrap: wrap;
-    -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap; }
     #browse-opps .filters {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 200px;
       -webkit-flex: 0 0 200px;
       flex: 0 0 200px; }
     #browse-opps .allopps {
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
-      -webkit-flex: 1;
-      flex: 1; } }
+      -webkit-flex: 1 0;
+      flex: 1 0; } }
 
 /* General */
 .page_drawingboard p {
@@ -2388,7 +2266,6 @@ input#ctl00_Main_btnRecipients {
     .page_activities.page_society #organisation .orgHead .orgLogo img, .page_activities.page_club #organisation .orgHead .orgLogo img, .page_liberationnetworks #organisation .orgHead .orgLogo img {
       width: 100%; }
   .page_activities.page_society #organisation .orgHead .span3, .page_activities.page_club #organisation .orgHead .span3, .page_liberationnetworks #organisation .orgHead .span3 {
-    -ms-flex-direction: column-reverse;
     -webkit-flex-direction: column-reverse;
     flex-direction: column-reverse; }
     .page_activities.page_society #organisation .orgHead .span3 h1, .page_activities.page_club #organisation .orgHead .span3 h1, .page_liberationnetworks #organisation .orgHead .span3 h1 {
@@ -2420,12 +2297,8 @@ input#ctl00_Main_btnRecipients {
 
 .page_activities.page_society #organisation .orgDetails .msl_email, .page_activities.page_society #organisation .orgDetails .msl_web, .page_activities.page_club #organisation .orgDetails .msl_email, .page_activities.page_club #organisation .orgDetails .msl_web, .page_liberationnetworks #organisation .orgDetails .msl_email, .page_liberationnetworks #organisation .orgDetails .msl_web {
   padding: 0.4em 0.6em;
-  display: -webkit-box ;
-  display: -ms-flexbox ;
   display: -webkit-flex ;
   display: flex ;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center; }
   .page_activities.page_society #organisation .orgDetails .msl_email:before, .page_activities.page_society #organisation .orgDetails .msl_web:before, .page_activities.page_club #organisation .orgDetails .msl_email:before, .page_activities.page_club #organisation .orgDetails .msl_web:before, .page_liberationnetworks #organisation .orgDetails .msl_email:before, .page_liberationnetworks #organisation .orgDetails .msl_web:before {
@@ -2517,12 +2390,8 @@ input#ctl00_Main_btnRecipients {
     .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_time, .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_types, .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_hook, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_time, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_types, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_hook, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_time, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_types, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_hook {
       display: none; }
     .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location, .page_activities.page_society #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location, .page_activities.page_club #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_location, .page_liberationnetworks #organisation .orgDetails .msl_eventlist .event_item .event_info .msl_event_description {
-      display: -webkit-box ;
-      display: -ms-flexbox ;
       display: -webkit-flex ;
       display: flex ;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       -webkit-align-items: center;
       align-items: center;
       padding: 0.4em 0.6em 0.4em 0.2em;
@@ -2610,28 +2479,19 @@ input#ctl00_Main_btnRecipients {
 /* Tablets*/
 @media (min-width: 48em) {
   .page_clubsandsocs #clubs .itemList, .page_clubsandsocs #socs .itemList {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
-    -webkit-box-pack: space-around;
-    -ms-flex-pack: space-around;
     -webkit-justify-content: space-around;
     justify-content: space-around;
-    -webkit-box-wrap: wrap;
-    -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap; }
     .page_clubsandsocs #clubs .itemList .item, .page_clubsandsocs #socs .itemList .item {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 48%;
       -webkit-flex: 0 0 48%;
       flex: 0 0 48%; }
   .page_activities.page_society #organisation .orgHead, .page_activities.page_club #organisation .orgHead, .page_liberationnetworks #organisation .orgHead {
     padding: 0 !important;
     min-height: 220px; }
     .page_activities.page_society #organisation .orgHead .span3, .page_activities.page_club #organisation .orgHead .span3, .page_liberationnetworks #organisation .orgHead .span3 {
-      -ms-flex-direction: row;
       -webkit-flex-direction: row;
       flex-direction: row; }
     .page_activities.page_society #organisation .orgHead .orgLogo, .page_activities.page_club #organisation .orgHead .orgLogo, .page_liberationnetworks #organisation .orgHead .orgLogo {
@@ -2643,12 +2503,8 @@ input#ctl00_Main_btnRecipients {
   .page_activities.page_society #organisation .orgDetails, .page_activities.page_club #organisation .orgDetails, .page_liberationnetworks #organisation .orgDetails {
     padding-left: 0.6em; }
   .page_activities.page_society #organisation .orgDescription .links .qualityMark, .page_activities.page_club #organisation .orgDescription .links .qualityMark, .page_liberationnetworks #organisation .orgDescription .links .qualityMark {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center; }
   .page_activities.page_society #organisation .orgDescription .links .greenBg, .page_activities.page_society #organisation .orgDescription .links input.button, .page_activities.page_club #organisation .orgDescription .links .greenBg, .page_activities.page_club #organisation .orgDescription .links input.button, .page_liberationnetworks #organisation .orgDescription .links .greenBg, .page_liberationnetworks #organisation .orgDescription .links input.button {
@@ -2656,17 +2512,11 @@ input#ctl00_Main_btnRecipients {
     padding: 0.4em 0.8em;
     text-decoration: none; }
   .page_activities.page_society #organisation .orgDescription .msl-news, .page_activities.page_club #organisation .orgDescription .msl-news, .page_liberationnetworks #organisation .orgDescription .msl-news {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
-    -webkit-box-pack: space-between;
-    -ms-flex-pack: space-between;
     -webkit-justify-content: space-between;
     justify-content: space-between; }
     .page_activities.page_society #organisation .orgDescription .msl-news .msl-item, .page_activities.page_club #organisation .orgDescription .msl-news .msl-item, .page_liberationnetworks #organisation .orgDescription .msl-news .msl-item {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 48%;
       -webkit-flex: 0 0 48%;
       flex: 0 0 48%; }
   .page_activities.page_society #organisation .news, .page_activities.page_club #organisation .news, .page_liberationnetworks #organisation .news {
@@ -2675,8 +2525,6 @@ input#ctl00_Main_btnRecipients {
 /* Desktop*/
 @media (min-width: 80em) {
   .page_clubsandsocs #clubs .itemList .item, .page_clubsandsocs #socs .itemList .item {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 31.5%;
     -webkit-flex: 0 0 31.5%;
     flex: 0 0 31.5%; }
   .page_activities.page_society #organisation .orgHead, .page_activities.page_club #organisation .orgHead, .page_liberationnetworks #organisation .orgHead {
@@ -2970,21 +2818,15 @@ input#ctl00_Main_btnRecipients {
       font-size: 0.9em;
       padding-top: 0.8em; }
       .page_ents.page_all .events .event_item .event_info .msl_event_description .eventLocation, .page_ents.page_all .events .event_item .event_info .msl_event_description .eventDescription {
-        display: -webkit-box ;
-        display: -ms-flexbox ;
         display: -webkit-flex ;
         display: flex ; }
       .page_ents.page_all .events .event_item .event_info .msl_event_description .locIcon, .page_ents.page_all .events .event_item .event_info .msl_event_description .descIcon {
         text-align: center;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 2.4em;
         -webkit-flex: 0 0 2.4em;
         flex: 0 0 2.4em; }
       .page_ents.page_all .events .event_item .event_info .msl_event_description .eventLocationText, .page_ents.page_all .events .event_item .event_info .msl_event_description .eventDescriptionText {
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
-        -webkit-flex: 1;
-        flex: 1;
+        -webkit-flex: 1 0;
+        flex: 1 0;
         padding-right: 0.4em; }
     .page_ents.page_all .events .event_item .event_info .details {
       position: absolute;
@@ -3037,16 +2879,10 @@ input#ctl00_Main_btnRecipients {
   .page_mukky .gallery .images .image, .page_gobble .gallery .images .image {
     flex: 0 0 24%; }
   .page_ents.page_all .events {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
-    -webkit-box-pack: flex-start;
-    -ms-flex-pack: flex-start;
     -webkit-justify-content: flex-start;
     justify-content: flex-start;
-    -webkit-box-wrap: wrap;
-    -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap; }
     .page_ents.page_all .events .event_item {
@@ -3193,8 +3029,6 @@ input#ctl00_Main_btnRecipients {
   background-size: cover;
   min-height: 250px; }
   .page_advice .adviceHeader .span3 {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     -webkit-justify-content: center;
     justify-content: center; }
 
@@ -3253,37 +3087,25 @@ input#ctl00_Main_btnRecipients {
       color: #fff;
       padding: 0.2em 0 !important; }
   .page_advice .hub .contactus .detail {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ; }
     .page_advice .hub .contactus .detail .icon {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 1.8em;
       -webkit-flex: 0 0 1.8em;
       flex: 0 0 1.8em;
       padding: 0.3em; }
     .page_advice .hub .contactus .detail .text {
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
-      -webkit-flex: 1;
-      flex: 1; }
+      -webkit-flex: 1 0;
+      flex: 1 0; }
 
 .page_advice .hub .nursing, .page_advice .hub .bullying, .page_advice .hub .disabilities, .page_advice .hub .marriage, .page_advice .hub .consumer, .page_advice .hub .international, .page_advice .hub .crime {
   text-decoration: none;
   color: #fff;
   padding: 1em 0.8em;
   text-align: center;
-  display: -webkit-box ;
-  display: -ms-flexbox ;
   display: -webkit-flex ;
   display: flex ;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center; }
   .page_advice .hub .nursing:hover, .page_advice .hub .bullying:hover, .page_advice .hub .disabilities:hover, .page_advice .hub .marriage:hover, .page_advice .hub .consumer:hover, .page_advice .hub .international:hover, .page_advice .hub .crime:hover {
@@ -3297,16 +3119,10 @@ input#ctl00_Main_btnRecipients {
   padding: 1.2em 0.8em;
   background: #fdeaec; }
   .page_advice .hub .academicReps .pure-u-lg-1-3 {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     -webkit-justify-content: center;
     justify-content: center;
     padding: 0 0.4em; }
@@ -3409,12 +3225,8 @@ input#ctl00_Main_btnRecipients {
   #checkout #checkout_progress li a.basket, #checkout #checkout_progress li a.customisation {
     padding: 0.4em 0.6em;
     text-decoration: none;
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center; }
     #checkout #checkout_progress li a.basket:before, #checkout #checkout_progress li a.customisation:before {
@@ -3484,12 +3296,8 @@ input#ctl00_Main_btnRecipients {
 
 .page_ents.page_emberlounge main .menuTitle, .page_ents.page_verve main .menuTitle, .page_ents.page_squeezebox main .menuTitle {
   margin-top: 0.8em;
-  display: -webkit-box ;
-  display: -ms-flexbox ;
   display: -webkit-flex ;
   display: flex ;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center; }
   .page_ents.page_emberlounge main .menuTitle i, .page_ents.page_verve main .menuTitle i, .page_ents.page_squeezebox main .menuTitle i {
@@ -3640,17 +3448,11 @@ input#ctl00_Main_btnRecipients {
     padding: 0.8em;
     overflow-x: scroll; }
     .page_ents.page_emberlounge main .menu .menuContainer, .page_ents.page_verve main .menu .menuContainer, .page_ents.page_squeezebox main .menu .menuContainer {
-      display: -webkit-box ;
-      display: -ms-flexbox ;
       display: -webkit-flex ;
       display: flex ;
-      -webkit-box-wrap: no-wrap;
-      -ms-flex-wrap: no-wrap;
       -webkit-flex-wrap: no-wrap;
       flex-wrap: no-wrap; }
     .page_ents.page_emberlounge main .menu .menuCol, .page_ents.page_verve main .menu .menuCol, .page_ents.page_squeezebox main .menu .menuCol {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 40%;
       -webkit-flex: 0 0 40%;
       flex: 0 0 40%;
       padding: 0.4em 0.8em; } }
@@ -3661,8 +3463,6 @@ input#ctl00_Main_btnRecipients {
     position: relative;
     height: 600px !important; }
   .page_ents.page_emberlounge main .menu .menuCol, .page_ents.page_verve main .menu .menuCol, .page_ents.page_squeezebox main .menu .menuCol {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 22%;
     -webkit-flex: 0 0 22%;
     flex: 0 0 22%; } }
 
@@ -3774,16 +3574,10 @@ input#ctl00_Main_btnRecipients {
     display: none; }
 
 .page_photos .thumbnails .pure-u-md-1-3 {
-  display: -webkit-box ;
-  display: -ms-flexbox ;
   display: -webkit-flex ;
   display: flex ;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
   margin: 0.4em 0; }
@@ -3793,16 +3587,10 @@ input#ctl00_Main_btnRecipients {
     background: #eee;
     width: 100%;
     height: 100%;
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     -webkit-justify-content: center;
     justify-content: center; }
     .page_photos .thumbnails .pure-u-md-1-3 a img {
@@ -3946,16 +3734,10 @@ input#ctl00_Main_btnRecipients {
 .page_academicreps.page_intranet .repNews {
   text-align: center;
   height: 100%;
-  display: -webkit-box ;
-  display: -ms-flexbox ;
   display: -webkit-flex ;
   display: flex ;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
   text-decoration: none; }
@@ -4122,24 +3904,16 @@ input#ctl00_Main_btnRecipients {
     text-align: center; }
 
 .page_managementhub .newsInfo {
-  display: -webkit-box ;
-  display: -ms-flexbox ;
   display: -webkit-flex ;
   display: flex ;
-  -webkit-box-wrap: wrap;
-  -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap; }
 
 .page_managementhub .newsImage {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100%;
   -webkit-flex: 0 0 100%;
   flex: 0 0 100%; }
 
 .page_managementhub .newsLink {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100%;
   -webkit-flex: 0 0 100%;
   flex: 0 0 100%; }
 
@@ -4151,12 +3925,8 @@ input#ctl00_Main_btnRecipients {
   flex: 1 0; }
 
 .page_managementhub .eventTime, .page_managementhub .eventLocation, .page_managementhub .eventDescription {
-  display: -webkit-box ;
-  display: -ms-flexbox ;
   display: -webkit-flex ;
   display: flex ;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
   color: #fff; }
@@ -4474,8 +4244,6 @@ input#ctl00_Main_btnRecipients {
   padding: 0.8em 0;
   background: rgba(227, 24, 54, 0.1); }
   .page_getinvolved main #reps .rowInner {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center; }
   .page_getinvolved main #reps h2 {
@@ -4512,25 +4280,19 @@ input#ctl00_Main_btnRecipients {
   .page_getinvolved main #clubsandsocs ul li {
     margin-bottom: 0.6em; }
     .page_getinvolved main #clubsandsocs ul li a {
-      display: -webkit-box ;
-      display: -ms-flexbox ;
       display: -webkit-flex ;
       display: flex ;
       align-items: center;
       background-color: #f2f2f2;
       text-decoration: none; }
       .page_getinvolved main #clubsandsocs ul li a img {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
         -webkit-flex: 0 0 25%;
         flex: 0 0 25%;
         width: 25%;
         padding: 0.2em; }
       .page_getinvolved main #clubsandsocs ul li a .name {
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
-        -webkit-flex: 1;
-        flex: 1;
+        -webkit-flex: 1 0;
+        flex: 1 0;
         padding: 0.4em 0.8em; }
       .page_getinvolved main #clubsandsocs ul li a:hover img {
         animation: pulse .8s ease-out;
@@ -4539,8 +4301,6 @@ input#ctl00_Main_btnRecipients {
 .page_getinvolved main #employability {
   background: #eee; }
   .page_getinvolved main #employability .rowHeader span {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
     align-items: center;
@@ -4554,12 +4314,8 @@ input#ctl00_Main_btnRecipients {
       width: 100%;
       height: 100%;
       display: block;
-      display: -webkit-box ;
-      display: -ms-flexbox ;
       display: -webkit-flex ;
       display: flex ;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       -webkit-align-items: center;
       align-items: center;
       font-size: 1.2em; }
@@ -4576,31 +4332,19 @@ input#ctl00_Main_btnRecipients {
   .page_getinvolved main #reps .span2 {
     padding-right: 0.8em; }
   .page_getinvolved main #clubsandsocs ul {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
-    -webkit-box-pack: space-around;
-    -ms-flex-pack: space-around;
     -webkit-justify-content: space-around;
     justify-content: space-around;
-    -webkit-box-wrap: wrap;
-    -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap; }
     .page_getinvolved main #clubsandsocs ul li {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 49%;
       -webkit-flex: 0 0 49%;
       flex: 0 0 49%; }
   .page_getinvolved main .engagementHeader .rowInner {
     position: relative;
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center; }
     .page_getinvolved main .engagementHeader .rowInner h1 {
@@ -4613,8 +4357,6 @@ input#ctl00_Main_btnRecipients {
     min-height: 50vh !important;
     background-position: top -8em center; }
   .page_getinvolved main #clubsandsocs ul li {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 32%;
     -webkit-flex: 0 0 32%;
     flex: 0 0 32%; } }
 
@@ -4630,12 +4372,8 @@ input#ctl00_Main_btnRecipients {
   text-align: left; }
 
 .page_union .header.dashboard {
-  display: -webkit-box ;
-  display: -ms-flexbox ;
   display: -webkit-flex ;
   display: flex ;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
   padding: 2em 0; }
@@ -4699,21 +4437,13 @@ input#ctl00_Main_btnRecipients {
   .page_union .header.dashboard {
     min-height: 300px; }
   .page_union #officers .officers {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
     display: flex ;
-    -webkit-box-wrap: wrap;
-    -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-pack: space-around;
-    -ms-flex-pack: space-around;
     -webkit-justify-content: space-around;
     justify-content: space-around; }
     .page_union #officers .officers .officer {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 49%;
       -webkit-flex: 0 0 49%;
       flex: 0 0 49%; } }
 
@@ -4723,12 +4453,9 @@ input#ctl00_Main_btnRecipients {
   background-size: cover;
   background-position: top center;
   text-align: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center; }
   .page_whattodo .whattodoHeader .rowInner {
-    -ms-flex-direction: column;
     -webkit-flex-direction: column;
     flex-direction: column; }
     .page_whattodo .whattodoHeader .rowInner .span1 {
@@ -4777,16 +4504,10 @@ input#ctl00_Main_btnRecipients {
       padding: 0.2em 0 0.6em; }
 
 .page_whattodo .nightout .logo, .page_whattodo .venue .logo, .page_whattodo .squeeze {
-  display: -webkit-box ;
-  display: -ms-flexbox ;
   display: -webkit-flex ;
   display: flex ;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center; }
 

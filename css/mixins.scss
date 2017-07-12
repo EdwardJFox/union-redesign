@@ -21,54 +21,54 @@
 
 /* Just so there is a default way of creating a flexbox*/
 @mixin displayFlex($important:"") {
-  display: -webkit-box #{$important};
-  display: -ms-flexbox #{$important};
+  //display: -webkit-box #{$important};
+  //display: -ms-flexbox #{$important};
   display: -webkit-flex #{$important};
   display: flex #{$important};
 }
 @mixin displayInlineFlex($important:"") {
-  display: -webkit-box #{$important};
-  display: -ms-inline-flexbox #{$important};
+  //display: -webkit-box #{$important};
+  //display: -ms-inline-flexbox #{$important};
   display: -webkit-inline-flex #{$important};
   display: inline-flex #{$important};
 }
 @mixin flex($grow) {
-  -webkit-box-flex: $grow;
-    -ms-flex: $grow;
-  -webkit-flex: $grow;
-          flex: $grow;
+  //-webkit-box-flex: $grow 0 0;
+    //-ms-flex: $grow 0 0;
+  -webkit-flex: $grow 0;
+          flex: $grow 0;
 }
 @mixin flexFixed($width) {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 $width;
+  //-webkit-box-flex: 0;
+      //-ms-flex: 0 0 $width;
   -webkit-flex: 0 0 $width;
           flex: 0 0 $width;
 }
 @mixin flexWrap($wrap) {
-  -webkit-box-wrap: $wrap;
-      -ms-flex-wrap: $wrap;
+  //-webkit-box-wrap: $wrap;
+      //-ms-flex-wrap: $wrap;
   -webkit-flex-wrap: $wrap;
           flex-wrap: $wrap;
 }
 @mixin flexAlign($align) {
-  -webkit-box-align: $align;
-      -ms-flex-align: $align;
+  //-webkit-box-align: $align;
+      //ms-flex-align: $align;
   -webkit-align-items: $align;
           align-items: $align;
 }
 @mixin flexJustify($justify) {
-  -webkit-box-pack: $justify;
-      -ms-flex-pack: $justify;
+  //-webkit-box-pack: $justify;
+      //-ms-flex-pack: $justify;
   -webkit-justify-content: $justify;
           justify-content: $justify;
 }
 @mixin flexDirection($direction) {
-      -ms-flex-direction: $direction;
+      //-ms-flex-direction: $direction;
   -webkit-flex-direction: $direction;
           flex-direction: $direction;
 }
 @mixin flexBasis($basis) {
-      -ms-flex-basis: $basis;
+      //-ms-flex-basis: $basis;
   -webkit-flex-basis: $basis;
           flex-basis: $basis;
 }

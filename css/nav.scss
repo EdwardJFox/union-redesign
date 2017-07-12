@@ -39,6 +39,10 @@ nav#sidebar {
 
   .header {
     text-align: center;
+    background-image: url(https://staffsunion.s3.amazonaws.com/2017/images/assets/union/union_background_pale.png);
+    background-size: contain !important;
+    background-position: center center;
+    background-attachment: fixed;
     img {
       width: 90%;
     }

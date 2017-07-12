@@ -247,7 +247,7 @@ function setupAccordion(){
 // Setup Dropdown
 function setupDropdown(){
   //For each of the .dropdown class on the page
-  $('.dropdown').each(function(){
+  $('main .dropdown').each(function(){
     try {
       //Get the list which is directly under the .dropdown class
       var list = $(this).find('> ul');

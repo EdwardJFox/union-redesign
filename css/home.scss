@@ -306,6 +306,11 @@
         margin: 0.4em 0;
       }
 
+      .unslider {
+        overflow: hidden;
+        width: 100%;
+      }
+
       .unslider-nav {
         margin: 0 auto;
         li {
@@ -760,24 +765,6 @@
           padding: 2em 0;
         }
 
-        .title {
-          width: auto;
-          height: 100%;
-          position: relative;
-          left: 0px;
-          top: 0px;
-          background: #f8f8f8;
-          @include flexFixed(82px);
-          h2 {
-            color: $union_green;
-            position: absolute;
-            transform: rotate(270deg);
-            bottom: 92px;
-            left: -70px;
-            font-size: 4em;
-          }
-        }
-
         .image {
           height: 248px;
           img {
@@ -840,6 +827,7 @@
               -webkit-box-flex: 0;
                   flex: 0 0 82px;
           width: 82px;
+          max-width: 82px;
           overflow: hidden;
           position: relative;
           background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_bg_vert.svg');
@@ -859,7 +847,7 @@
           margin: 0 auto;
         }
         .eventsArrow {
-          @include displayFlex(!important);
+          @include displayFlex("!important");
           @include flexJustify(center);
           @include flexAlign(center);
           background-color: $event_highlight;
@@ -914,6 +902,23 @@
             position: absolute;
             left: -166px;
             top: 145px;
+            margin: 0.6em 0 !important;
+          }
+        }
+      }
+
+      &.officers {
+        overflow: hidden;
+        .title {
+          position: relative;
+          width: 82px;
+          background-color: #f8f8f8;
+          h2 {
+            width: 184px;
+            transform: rotate(270deg);
+            position: absolute;
+            left: -54px;
+            top: 84px;
             margin: 0.6em 0 !important;
           }
         }
@@ -995,18 +1000,6 @@
         }
         .content {
           flex: 1;
-          ul {
-            @include displayFlex;
-            flex-direction: column;
-            height: 100%;
-            justify-content: center;
-            li {
-              flex: 1;
-              @include displayFlex;
-              @include flexAlign(center);
-              @include flexJustify(flex-end);
-            }
-          }
         }
       }
     }

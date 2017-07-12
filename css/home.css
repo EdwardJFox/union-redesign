@@ -10,1160 +10,763 @@ $advice_main_dark: #2e266b;
 */
 /* Social Media */
 /* Notifications */
+/* Squeezebox */
+/* Liberation Networks */
+/* Academic Reps */
+/* Better Staffs */
 /* Useful Mixins, do not declare classes in this file */
 /* For when you want to use a google material icon in a ::before or ::after*/
 /* Just so there is a default way of creating a flexbox*/
 .page_root {
   /* Sort out the backgrounds on the homepage, to ensure they all have a default white */
-  /* Homepage specific styling */
-}
-
-.page_root main section:not(:first-child) {
-  background: #fff;
-}
-
-.page_root .splash {
-  padding: 1em 0;
-  /* Leadership Race*/
-}
-
-.page_root .splash.union {
-  background: rgba(0, 0, 0, 0.4);
-  display: none;
-}
-
-.page_root .splash.leadership .logo {
-  width: 70%;
-}
-
-.page_root .splash.leadership .content {
-  text-align: center;
-  padding: 0.2em 0.8em;
-}
-
-.page_root .splash.leadership .content video {
-  display: none;
-}
-
-.page_root .splash.ptbs .logo {
-  width: 70%;
-}
-
-.page_root .splash.ptbs .content {
-  text-align: center;
-  padding: 0.2em 0.8em;
-}
-
-.page_root .splash.video .videoWrap {
-  background: #000;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  overflow: hidden;
-}
-
-.page_root .splash.video .videoWrap video {
-  z-index: -1;
-  width: 200%;
-  margin-left: -50%;
-}
-
-.page_root .splash.basshunter {
-  padding: 3em 0;
-  overflow: hidden;
-  min-height: 40vh;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.page_root .splash.basshunter .logo {
-  width: 70%;
-}
-
-.page_root .splash.basshunter .content {
-  height: 100%;
-  display: -webkit-box ;
-  display: -ms-flexbox ;
-  display: -webkit-flex ;
-  display: flex ;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.page_root .splash.basshunter .content h3 {
-  font-size: 1.6em;
-}
-
-.page_root .row {
-  z-index: 100;
-}
-
-.page_root .row.news {
-  padding: 0.4em 0.6em 1.2em;
-  overflow: hidden;
-  background: #e7e7e7;
-}
-
-.page_root .row.news .title {
-  width: 100%;
-  display: block;
-}
-
-.page_root .row.news .title h2 {
-  margin: 0;
-  padding: 0.1em 0.2em 0.1em 0.9em;
-}
-
-.page_root .row.news .newsWidget .newsItems {
-  overflow: hidden;
-  text-align: center;
-}
-
-.page_root .row.news .newsWidget .newsItems .newsItem .image {
-  text-align: center;
-}
-
-.page_root .row.news .newsWidget .newsItems .newsItem .image img {
-  max-height: 270px;
-}
-
-.page_root .row.news .newsWidget .newsInfo .newsDescription {
-  padding: 0.6em;
-}
-
-.page_root .row.news .newsWidget .newsList ul {
-  list-style: none;
-  margin: 0;
-  padding: 0.6em 0.4em;
-}
-
-.page_root .row.news .newsWidget .newsList ul li {
-  background-color: #dfdfdf;
-  display: block;
-  cursor: pointer;
-  margin: 0 0 0.5em 0;
-  border-left: 4px solid #999;
-  transition: background-color 200ms;
-}
-
-.page_root .row.news .newsWidget .newsList ul li.active {
-  background-color: rgba(80, 184, 72, 0.13);
-  border-color: #50b848;
-}
-
-.page_root .row.news .newsWidget .newsList ul li:hover {
-  background-color: rgba(80, 184, 72, 0.18);
-}
-
-.page_root .row.news .newsWidget .newsList ul li p {
-  padding: 0.4em 0.4em;
-}
-
-.page_root .row.events {
-  background: #333;
-  background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_row_bg.png");
-  background-size: 33% auto;
-}
-
-.page_root .row.events .title {
-  width: 100%;
-  padding: 0.2em 0.8em;
-  background-color: #50b848;
-  background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_bg.svg");
-  background-size: auto 100%;
-}
-
-.page_root .row.events .title h2 {
-  color: #fff;
-  margin: 0;
-  padding: 0.2em 0;
-}
-
-.page_root .row.events .eventList {
-  padding: 0 0.8em 0.8em;
-  position: relative;
-}
-
-.page_root .row.events .eventList .msl_eventlist > div {
-  padding: 0.8em 0;
-}
-
-.page_root .row.events .eventList .msl_eventlist > div .event_item {
-  width: 100%;
-  margin-bottom: 0.5em;
-  border-left: 6px solid #50b848;
-  background-color: #fff;
-}
-
-.page_root .row.events .eventList .msl_eventlist > div .event_item .event_image {
-  display: none;
-}
-
-.page_root .row.events .eventList .msl_eventlist > div .event_item dl {
-  margin: 0;
-}
-
-.page_root .row.events .eventList .msl_eventlist > div .event_item .event_info dt {
-  background-color: #50b848;
-  padding: 0.4em 0.8em;
-  display: -webkit-box ;
-  display: -ms-flexbox ;
-  display: -webkit-flex ;
-  display: flex ;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.page_root .row.events .eventList .msl_eventlist > div .event_item .event_info dt a {
-  color: #fff;
-  font-size: 1.2em;
-  text-decoration: none;
-  text-align: center;
-}
-
-.page_root .row.events .eventList .msl_eventlist > div .event_item .event_info dd {
-  margin: 0;
-  padding: 0.4em;
-  display: -webkit-box ;
-  display: -ms-flexbox ;
-  display: -webkit-flex ;
-  display: flex ;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  font-size: 1.1em;
-  line-height: 160%;
-}
-
-.page_root .row.events .eventList .msl_eventlist > div .event_item .event_info .msl_event_time::before, .page_root .row.events .eventList .msl_eventlist > div .event_item .event_info .msl_event_location::before {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
-  text-align: center;
-  font-size: 1.5em;
-  padding: 0 0.3em;
-}
-
-.page_root .row.events .eventList .msl_eventlist > div .event_item .event_info .msl_event_time::before {
-  content: 'date_range';
-}
-
-.page_root .row.events .eventList .msl_eventlist > div .event_item .event_info .msl_event_location::before {
-  content: 'location_on';
-}
-
-.page_root .row.events .eventList .msl_eventlist > div .event_item .event_info .msl_event_description {
-  padding: 0.2em 0.8em;
-}
-
-.page_root .row.events .eventList .eventsArrow {
-  display: block;
-  background: #50b848;
-  color: #fff;
-  padding: 0.4em;
-}
-
-.page_root .row.events .eventList .eventsArrow .message {
-  background: none !important;
-  padding: 0 !important;
-}
-
-.page_root .row.events .eventList .eventsArrow i {
-  float: right;
-}
-
-.page_root .row.studentVoiceRow .title {
-  width: 100%;
-  display: block;
-  background: #BCD059;
-}
-
-.page_root .row.studentVoiceRow .title h2 {
-  color: #fff;
-  margin: 0;
-  padding: 0.1em 0.2em 0.1em 0.9em;
-}
-
-.page_root .row.studentVoiceRow .logo {
-  text-align: center;
-}
-
-.page_root .row.studentVoiceRow .logo img {
-  width: 50%;
-}
-
-.page_root .row.studentVoiceRow .intro {
-  padding: 0 0.8em;
-}
-
-.page_root .row.studentVoiceRow .content ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.page_root .row.studentVoiceRow .content ul li a {
-  text-decoration: none;
-  padding: 0.8em 1.4em 0.8em 0.4em;
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-align: right;
-}
-
-.page_root .row.studentVoiceRow .content ul li a:hover {
-  text-decoration: none;
-}
-
-.page_root .row.studentVoiceRow .content ul li:nth-child(2) {
-  background: #daffd7;
-}
-
-.page_root .row.studentVoiceRow .content ul li:nth-child(3) {
-  background: #9bf193;
-}
-
-.page_root .row.studentVoiceRow .content ul li:nth-child(3) a {
-  color: #388332;
-}
-
-.page_root .row.studentVoiceRow .content ul li:nth-child(4) {
-  background: #78db6f;
-}
-
-.page_root .row.studentVoiceRow .content ul li:nth-child(4) a {
-  color: #fff;
-}
-
-.page_root .row.studentVoiceRow .content ul li:nth-child(5) {
-  background: #62cd59;
-}
-
-.page_root .row.studentVoiceRow .content ul li:nth-child(5) a {
-  color: #fff;
-}
-
-.page_root .row .success {
-  position: relative;
-  padding: 0 0.8em;
-  display: -webkit-box ;
-  display: -ms-flexbox ;
-  display: -webkit-flex ;
-  display: flex ;
-  -ms-flex-direction: column;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.page_root .row .success li p {
-  text-align: center;
-}
-
-.page_root .row .success .blockLink {
-  margin: 0.4em 0;
-}
-
-.page_root .row .success .unslider-nav {
-  margin: 0 auto;
-}
-
-.page_root .row .success .unslider-nav li {
-  height: 10px;
-  width: 10px;
-}
-
-.page_root .row .success .quote_icon {
-  display: none;
-}
-
-.page_root .row .advert {
-  padding: 1em;
-}
-
-.page_root .row .advert img {
-  padding: 1em;
-  width: 100%;
-}
-
-.page_root .row.socialMedia {
-  background-color: rgba(80, 184, 72, 0.2);
-}
-
-.page_root .row.socialMedia .rowInner {
-  padding: 1em 0;
-}
-
-.page_root .row.socialMedia .title {
-  width: 100%;
-  display: block;
-  background-color: #55ACEE;
-  color: #fff;
-}
-
-.page_root .row.socialMedia .title h2 {
-  margin: 0;
-  padding: 0.1em 0.2em;
-}
-
-.page_root .row.socialMedia .icons {
-  width: 100%;
-}
-
-.page_root .row.socialMedia .icons ul {
-  display: -webkit-box ;
-  display: -ms-flexbox ;
-  display: -webkit-flex ;
-  display: flex ;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.page_root .row.socialMedia .icons ul li {
-  flex: 1;
-  text-align: center;
-}
-
-.page_root .row.socialMedia .icons ul li img {
-  width: 90%;
-}
-
-.page_root .row.socialMedia .icons ul li .name {
-  display: none;
-}
-
-.page_root .row.socialMedia .timeline {
-  text-align: center;
-}
-
-.page_root .row.socialMedia .timeline iframe {
-  margin: 1em auto !important;
-  width: 95% !important;
-}
-
-.page_root .row.socialMedia .youtube {
-  text-align: center;
-}
-
-.page_root .row.socialMedia .youtube iframe {
-  margin: 1em auto;
-  border: none;
-  width: 95%;
-  height: 260px;
-}
-
-.page_root .row.advice .title {
-  background: #50b848;
-}
-
-.page_root .row.advice .title h2 {
-  color: #fff;
-  margin: 0;
-  padding: 0.4em 0.8em;
-}
-
-.page_root .row.advice .content .areas .area {
-  margin: 0.4em;
-  padding: 0.6em 0.8em;
-  color: #fff;
-  text-decoration: none;
-  background: #50b848;
-  display: block;
-}
-
-.page_root .row.advice .content .areas .area:hover {
-  background: #46a63f;
-}
-
-.page_root .row.officers {
-  padding: 1em 0.7em;
-  background: #f2f2f2;
-}
-
-.page_root .row.officers .title h2 {
-  color: #50b848;
-}
-
-.page_root .row.officers .image {
-  text-align: center;
-}
-
-.page_root .row.officers .image img {
-  width: 70%;
-}
-
-.page_root .row.officers .content .flex-middle {
-  -ms-flex-direction: column;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-}
+  /* Homepage specific styling */ }
+  .page_root main section:not(:first-child) {
+    background: #fff; }
+  .page_root .splash {
+    padding: 1em 0;
+    /* Leadership Race*/ }
+    .page_root .splash.union {
+      background: rgba(0, 0, 0, 0.4);
+      display: none; }
+    .page_root .splash.leadership .logo {
+      width: 70%; }
+    .page_root .splash.leadership .content {
+      text-align: center;
+      padding: 0.2em 0.8em; }
+      .page_root .splash.leadership .content video {
+        display: none; }
+    .page_root .splash.ptbs .logo {
+      width: 70%; }
+    .page_root .splash.ptbs .content {
+      text-align: center;
+      padding: 0.2em 0.8em; }
+    .page_root .splash.video .videoWrap {
+      background: #000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      overflow: hidden; }
+      .page_root .splash.video .videoWrap video {
+        z-index: -1;
+        width: 200%;
+        margin-left: -50%; }
+    .page_root .splash.basshunter {
+      padding: 3em 0;
+      overflow: hidden;
+      min-height: 40vh;
+      background: rgba(0, 0, 0, 0.6); }
+      .page_root .splash.basshunter .logo {
+        width: 70%; }
+      .page_root .splash.basshunter .content {
+        height: 100%;
+        display: -webkit-flex ;
+        display: flex ;
+        -webkit-align-items: center;
+        align-items: center; }
+        .page_root .splash.basshunter .content h3 {
+          font-size: 1.6em; }
+  .page_root .row {
+    z-index: 100; }
+    .page_root .row.news {
+      padding: 0.4em 0.6em 1.2em;
+      overflow: hidden;
+      background: #e7e7e7; }
+      .page_root .row.news .title {
+        width: 100%;
+        display: block; }
+        .page_root .row.news .title h2 {
+          margin: 0;
+          padding: 0.1em 0.2em 0.1em 0.9em; }
+      .page_root .row.news .newsWidget .newsItems {
+        overflow: hidden;
+        text-align: center; }
+        .page_root .row.news .newsWidget .newsItems .newsItem .image {
+          text-align: center; }
+          .page_root .row.news .newsWidget .newsItems .newsItem .image img {
+            max-height: 270px; }
+      .page_root .row.news .newsWidget .newsInfo .newsDescription {
+        padding: 0.6em; }
+      .page_root .row.news .newsWidget .newsList ul {
+        list-style: none;
+        margin: 0;
+        padding: 0.6em 0.4em; }
+        .page_root .row.news .newsWidget .newsList ul li {
+          background-color: #dfdfdf;
+          display: block;
+          cursor: pointer;
+          margin: 0 0 0.5em 0;
+          border-left: 4px solid #999;
+          transition: background-color 200ms; }
+          .page_root .row.news .newsWidget .newsList ul li.active {
+            background-color: rgba(80, 184, 72, 0.13);
+            border-color: #50b848; }
+          .page_root .row.news .newsWidget .newsList ul li:hover {
+            background-color: rgba(80, 184, 72, 0.18); }
+          .page_root .row.news .newsWidget .newsList ul li p {
+            padding: 0.4em 0.4em; }
+    .page_root .row.events {
+      background: #333;
+      background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_row_bg.png");
+      background-size: 33% auto; }
+      .page_root .row.events .title {
+        width: 100%;
+        padding: 0.2em 0.8em;
+        background-color: #50b848;
+        background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_bg.svg");
+        background-size: auto 100%; }
+        .page_root .row.events .title h2 {
+          color: #fff;
+          margin: 0;
+          padding: 0.2em 0; }
+      .page_root .row.events .eventList {
+        padding: 0 0.8em 0.8em;
+        position: relative; }
+        .page_root .row.events .eventList .msl_eventlist > div {
+          padding: 0.8em 0; }
+          .page_root .row.events .eventList .msl_eventlist > div .event_item {
+            width: 100%;
+            margin-bottom: 0.5em;
+            border-left: 6px solid #50b848;
+            background-color: #fff; }
+            .page_root .row.events .eventList .msl_eventlist > div .event_item .event_image {
+              display: none; }
+            .page_root .row.events .eventList .msl_eventlist > div .event_item dl {
+              margin: 0; }
+            .page_root .row.events .eventList .msl_eventlist > div .event_item .event_info dt {
+              background-color: #50b848;
+              padding: 0.4em 0.8em;
+              display: -webkit-flex ;
+              display: flex ;
+              -webkit-align-items: center;
+              align-items: center;
+              -webkit-justify-content: center;
+              justify-content: center; }
+              .page_root .row.events .eventList .msl_eventlist > div .event_item .event_info dt a {
+                color: #fff;
+                font-size: 1.2em;
+                text-decoration: none;
+                text-align: center; }
+            .page_root .row.events .eventList .msl_eventlist > div .event_item .event_info dd {
+              margin: 0;
+              padding: 0.4em;
+              display: -webkit-flex ;
+              display: flex ;
+              -webkit-align-items: center;
+              align-items: center;
+              font-size: 1.1em;
+              line-height: 160%; }
+            .page_root .row.events .eventList .msl_eventlist > div .event_item .event_info .msl_event_time::before, .page_root .row.events .eventList .msl_eventlist > div .event_item .event_info .msl_event_location::before {
+              font-family: 'Material Icons';
+              font-weight: normal;
+              font-style: normal;
+              font-size: 24px;
+              line-height: 1;
+              letter-spacing: normal;
+              text-transform: none;
+              display: inline-block;
+              white-space: nowrap;
+              word-wrap: normal;
+              direction: ltr;
+              -webkit-font-feature-settings: 'liga';
+              font-feature-settings: 'liga';
+              -webkit-font-smoothing: antialiased;
+              text-align: center;
+              font-size: 1.5em;
+              padding: 0 0.3em; }
+            .page_root .row.events .eventList .msl_eventlist > div .event_item .event_info .msl_event_time::before {
+              content: 'date_range'; }
+            .page_root .row.events .eventList .msl_eventlist > div .event_item .event_info .msl_event_location::before {
+              content: 'location_on'; }
+            .page_root .row.events .eventList .msl_eventlist > div .event_item .event_info .msl_event_description {
+              padding: 0.2em 0.8em; }
+        .page_root .row.events .eventList .eventsArrow {
+          display: block;
+          background: #50b848;
+          color: #fff;
+          padding: 0.4em; }
+          .page_root .row.events .eventList .eventsArrow .message {
+            background: none !important;
+            padding: 0 !important; }
+          .page_root .row.events .eventList .eventsArrow i {
+            float: right; }
+    .page_root .row.studentVoiceRow .title {
+      width: 100%;
+      display: block;
+      background: #BCD059; }
+      .page_root .row.studentVoiceRow .title h2 {
+        color: #fff;
+        margin: 0;
+        padding: 0.1em 0.2em 0.1em 0.9em; }
+    .page_root .row.studentVoiceRow .logo {
+      text-align: center; }
+      .page_root .row.studentVoiceRow .logo img {
+        width: 50%; }
+    .page_root .row.studentVoiceRow .intro {
+      padding: 0 0.8em; }
+    .page_root .row.studentVoiceRow .content ul {
+      padding: 0;
+      margin: 0;
+      list-style: none; }
+      .page_root .row.studentVoiceRow .content ul li a {
+        text-decoration: none;
+        padding: 0.8em 1.4em 0.8em 0.4em;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: right; }
+        .page_root .row.studentVoiceRow .content ul li a:hover {
+          text-decoration: none; }
+      .page_root .row.studentVoiceRow .content ul li:nth-child(2) {
+        background: #daffd7; }
+      .page_root .row.studentVoiceRow .content ul li:nth-child(3) {
+        background: #9bf193; }
+        .page_root .row.studentVoiceRow .content ul li:nth-child(3) a {
+          color: #388332; }
+      .page_root .row.studentVoiceRow .content ul li:nth-child(4) {
+        background: #78db6f; }
+        .page_root .row.studentVoiceRow .content ul li:nth-child(4) a {
+          color: #fff; }
+      .page_root .row.studentVoiceRow .content ul li:nth-child(5) {
+        background: #62cd59; }
+        .page_root .row.studentVoiceRow .content ul li:nth-child(5) a {
+          color: #fff; }
+    .page_root .row .success {
+      position: relative;
+      padding: 0 0.8em;
+      display: -webkit-flex ;
+      display: flex ;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center; }
+      .page_root .row .success li p {
+        text-align: center; }
+      .page_root .row .success .blockLink {
+        margin: 0.4em 0; }
+      .page_root .row .success .unslider {
+        overflow: hidden;
+        width: 100%; }
+      .page_root .row .success .unslider-nav {
+        margin: 0 auto; }
+        .page_root .row .success .unslider-nav li {
+          height: 10px;
+          width: 10px; }
+      .page_root .row .success .quote_icon {
+        display: none; }
+    .page_root .row .advert {
+      padding: 1em; }
+      .page_root .row .advert img {
+        padding: 1em;
+        width: 100%; }
+    .page_root .row.socialMedia {
+      background-color: rgba(80, 184, 72, 0.2); }
+      .page_root .row.socialMedia .rowInner {
+        padding: 1em 0; }
+      .page_root .row.socialMedia .title {
+        width: 100%;
+        display: block;
+        background-color: #55ACEE;
+        color: #fff; }
+        .page_root .row.socialMedia .title h2 {
+          margin: 0;
+          padding: 0.1em 0.2em; }
+      .page_root .row.socialMedia .icons {
+        width: 100%; }
+        .page_root .row.socialMedia .icons ul {
+          display: -webkit-flex ;
+          display: flex ;
+          list-style: none;
+          padding: 0;
+          margin: 0; }
+          .page_root .row.socialMedia .icons ul li {
+            flex: 1;
+            text-align: center; }
+            .page_root .row.socialMedia .icons ul li img {
+              width: 90%; }
+            .page_root .row.socialMedia .icons ul li .name {
+              display: none; }
+      .page_root .row.socialMedia .timeline {
+        text-align: center; }
+        .page_root .row.socialMedia .timeline iframe {
+          margin: 1em auto !important;
+          width: 95% !important; }
+      .page_root .row.socialMedia .youtube {
+        text-align: center; }
+        .page_root .row.socialMedia .youtube iframe {
+          margin: 1em auto;
+          border: none;
+          width: 95%;
+          height: 260px; }
+    .page_root .row.advice .title {
+      background: #50b848; }
+      .page_root .row.advice .title h2 {
+        color: #fff;
+        margin: 0;
+        padding: 0.4em 0.8em; }
+    .page_root .row.advice .content .areas .area {
+      margin: 0.4em;
+      padding: 0.6em 0.8em;
+      color: #fff;
+      text-decoration: none;
+      background: #50b848;
+      display: block; }
+      .page_root .row.advice .content .areas .area:hover {
+        background: #46a63f; }
+    .page_root .row.officers {
+      padding: 1em 0.7em;
+      background: #f2f2f2; }
+      .page_root .row.officers .title h2 {
+        color: #50b848; }
+      .page_root .row.officers .image {
+        text-align: center; }
+        .page_root .row.officers .image img {
+          width: 70%; }
+      .page_root .row.officers .content .flex-middle {
+        -webkit-flex-direction: column;
+        flex-direction: column; }
 
 /* Tablets*/
 @media (min-width: 48em) {
   .page_root .splash.leadership .content {
     padding: 0;
-    text-align: left;
-  }
-  .page_root .splash.leadership .content video {
-    display: block;
-  }
+    text-align: left; }
+    .page_root .splash.leadership .content video {
+      display: block; }
   .page_root .splash.union {
     display: block;
-    margin: 0 !important;
-  }
+    margin: 0 !important; }
   .page_root .splash.ptbs {
-    padding: 2em 0;
-  }
-  .page_root .splash.ptbs .content {
-    padding: 0;
-    text-align: left;
-  }
+    padding: 2em 0; }
+    .page_root .splash.ptbs .content {
+      padding: 0;
+      text-align: left; }
   .page_root .splash.video .videoWrap {
-    width: 100%;
-  }
-  .page_root .splash.video .videoWrap video {
-    z-index: -1;
-    min-height: 100vh;
-    width: 100% !important;
-    margin: 0 auto;
-  }
+    width: 100%; }
+    .page_root .splash.video .videoWrap video {
+      z-index: -1;
+      min-height: 100vh;
+      width: 100% !important;
+      margin: 0 auto; }
   .page_root .splash.basshunter {
     min-height: 60vh;
-    padding: 0;
-  }
+    padding: 0; }
   .page_root .row.news {
     padding: 1em 0;
     position: relative;
     background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/home/news_bg.svg");
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .page_root .row.news .title {
-    padding: 0 0.4em;
-  }
-  .page_root .row.news .title h2 {
-    padding: 0.1em 0.2em;
-  }
-  .page_root .row.news .newsWidget {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
-    display: -webkit-flex ;
-    display: flex ;
-    padding: 0 1em;
-  }
-  .page_root .row.news .newsWidget .newsItems {
-    flex: 1 0;
-  }
-  .page_root .row.news .newsWidget .newsItems .newsItem {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
-    display: -webkit-flex ;
-    display: flex ;
-    padding: 1em;
-  }
-  .page_root .row.news .newsWidget .newsItems .newsItem .image {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 55%;
-    -webkit-flex: 0 0 55%;
-    flex: 0 0 55%;
-  }
-  .page_root .row.news .newsWidget .newsItems .newsItem .newsDescription {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
-    display: -webkit-flex ;
-    display: flex ;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
-    text-align: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -ms-flex-direction: column;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    height: 270px;
-    padding: 0.4em 0.8em;
-  }
-  .page_root .row.news .newsWidget .newsItems .newsItem .newsDescription span {
-    padding: 0.4em;
-  }
-  .page_root .row.news .newsWidget .newsList {
-    flex: 0 0 320px;
-    display: -webkit-box ;
-    display: -ms-flexbox ;
-    display: -webkit-flex ;
-    display: flex ;
-    flex-direction: column;
-  }
-  .page_root .row.news .newsWidget .newsList ul {
-    flex: 1;
-    padding: 0;
-  }
-  .page_root .row.news .newsWidget .newsList ul li p {
-    display: block;
-    padding: 0.6em 0.4em;
-  }
-  .page_root .row.news .newsWidget .newsList .content-center {
-    flex: 0 0 40px;
-  }
+    background-repeat: no-repeat; }
+    .page_root .row.news .title {
+      padding: 0 0.4em; }
+      .page_root .row.news .title h2 {
+        padding: 0.1em 0.2em; }
+    .page_root .row.news .newsWidget {
+      display: -webkit-flex ;
+      display: flex ;
+      padding: 0 1em; }
+      .page_root .row.news .newsWidget .newsItems {
+        flex: 1 0; }
+        .page_root .row.news .newsWidget .newsItems .newsItem {
+          display: -webkit-flex ;
+          display: flex ;
+          padding: 1em; }
+          .page_root .row.news .newsWidget .newsItems .newsItem .image {
+            -webkit-flex: 0 0 55%;
+            flex: 0 0 55%; }
+          .page_root .row.news .newsWidget .newsItems .newsItem .newsDescription {
+            display: -webkit-flex ;
+            display: flex ;
+            -webkit-flex: 1 0;
+            flex: 1 0;
+            text-align: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            height: 270px;
+            padding: 0.4em 0.8em; }
+            .page_root .row.news .newsWidget .newsItems .newsItem .newsDescription span {
+              padding: 0.4em; }
+      .page_root .row.news .newsWidget .newsList {
+        flex: 0 0 320px;
+        display: -webkit-flex ;
+        display: flex ;
+        flex-direction: column; }
+        .page_root .row.news .newsWidget .newsList ul {
+          flex: 1;
+          padding: 0; }
+          .page_root .row.news .newsWidget .newsList ul li p {
+            display: block;
+            padding: 0.6em 0.4em; }
+        .page_root .row.news .newsWidget .newsList .content-center {
+          flex: 0 0 40px; }
   .page_root .row.events {
-    background-size: auto 33%;
-  }
-  .page_root .row.events .eventList {
-    padding: 0 !important;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    /* Small fix for the height of events*/
-  }
-  .page_root .row.events .eventList #whatson, .page_root .row.events .eventList .msl_eventlist, .page_root .row.events .eventList .msl_eventlist > div {
-    height: 100%;
-  }
-  .page_root .row.events .eventList .msl_eventlist > div {
-    padding: 0.8em 0;
-    display: -webkit-box ;
-    display: -ms-flexbox ;
-    display: -webkit-flex ;
-    display: flex ;
-    -webkit-box-pack: space-around;
-    -ms-flex-pack: space-around;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    -webkit-align-items: stretch;
-    align-items: stretch;
-  }
-  .page_root .row.events .eventList .msl_eventlist > div .event_item {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 22%;
-    -webkit-flex: 0 0 22%;
-    flex: 0 0 22%;
-    background-color: #fff;
-    position: relative;
-    overflow: hidden;
-  }
-  .page_root .row.events .eventList .msl_eventlist > div .event_item:nth-child(1):after {
-    background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_1.svg");
-  }
-  .page_root .row.events .eventList .msl_eventlist > div .event_item:nth-child(2):after {
-    background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_2.svg");
-  }
-  .page_root .row.events .eventList .msl_eventlist > div .event_item:nth-child(3):after {
-    background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_3.svg");
-  }
-  .page_root .row.events .eventList .msl_eventlist > div .event_item:nth-child(4):after {
-    background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_4.svg");
-  }
-  .page_root .row.events .eventList .msl_eventlist > div .event_item:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 16px;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
-  }
-  .page_root .row.events .eventList .msl_eventlist > div .event_item .event_image {
-    display: none;
-  }
-  .page_root .row.events .eventList .msl_eventlist > div .event_item dl {
-    margin: 0;
-  }
-  .page_root .row.events .eventList .msl_eventlist > div .event_item .event_info dt {
-    height: 78px;
-    padding: 0 0.6em;
-  }
-  .page_root .row.events .eventList .msl_eventlist > div .event_item .event_info dd {
-    font-size: 1em;
-  }
-  .page_root .row.events .eventList .msl_eventlist > div .event_item .event_info .msl_event_description {
-    height: 100px;
-    overflow: hidden;
-    display: inline-block;
-    position: relative;
-  }
-  .page_root .row.events .eventList .msl_eventlist > div .event_item .event_info .msl_event_description:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 16px;
-    width: 100%;
-    display: block;
-    background: linear-gradient(rgba(255, 255, 255, 0), white);
-  }
+    background-size: auto 33%; }
+    .page_root .row.events .eventList {
+      padding: 0 !important;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      /* Small fix for the height of events*/ }
+      .page_root .row.events .eventList #whatson, .page_root .row.events .eventList .msl_eventlist, .page_root .row.events .eventList .msl_eventlist > div {
+        height: 100%; }
+      .page_root .row.events .eventList .msl_eventlist > div {
+        padding: 0.8em 0;
+        display: -webkit-flex ;
+        display: flex ;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+        -webkit-align-items: stretch;
+        align-items: stretch; }
+        .page_root .row.events .eventList .msl_eventlist > div .event_item {
+          -webkit-flex: 0 0 22%;
+          flex: 0 0 22%;
+          background-color: #fff;
+          position: relative;
+          overflow: hidden; }
+          .page_root .row.events .eventList .msl_eventlist > div .event_item:nth-child(1):after {
+            background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_1.svg"); }
+          .page_root .row.events .eventList .msl_eventlist > div .event_item:nth-child(2):after {
+            background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_2.svg"); }
+          .page_root .row.events .eventList .msl_eventlist > div .event_item:nth-child(3):after {
+            background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_3.svg"); }
+          .page_root .row.events .eventList .msl_eventlist > div .event_item:nth-child(4):after {
+            background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_barcode_4.svg"); }
+          .page_root .row.events .eventList .msl_eventlist > div .event_item:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 16px;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: cover; }
+          .page_root .row.events .eventList .msl_eventlist > div .event_item .event_image {
+            display: none; }
+          .page_root .row.events .eventList .msl_eventlist > div .event_item dl {
+            margin: 0; }
+          .page_root .row.events .eventList .msl_eventlist > div .event_item .event_info dt {
+            height: 78px;
+            padding: 0 0.6em; }
+          .page_root .row.events .eventList .msl_eventlist > div .event_item .event_info dd {
+            font-size: 1em; }
+          .page_root .row.events .eventList .msl_eventlist > div .event_item .event_info .msl_event_description {
+            height: 100px;
+            overflow: hidden;
+            display: inline-block;
+            position: relative; }
+            .page_root .row.events .eventList .msl_eventlist > div .event_item .event_info .msl_event_description:after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              height: 16px;
+              width: 100%;
+              display: block;
+              background: linear-gradient(rgba(255, 255, 255, 0), white); }
   .page_root .row.socialMedia .span3 {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
     display: -webkit-flex ;
-    display: flex ;
-  }
-  .page_root .row.socialMedia .span3 .title {
-    width: auto;
-    height: 100%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 82px;
-    -webkit-flex: 0 0 82px;
-    flex: 0 0 82px;
-  }
-  .page_root .row.socialMedia .span3 .title h2 {
-    color: #878787;
-    position: absolute;
-    transform: rotate(270deg);
-    bottom: 128px;
-    left: -58px;
-    font-size: 4em;
-  }
-  .page_root .row.socialMedia .span3 .icons {
-    width: auto;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 80px;
-    -webkit-flex: 0 0 80px;
-    flex: 0 0 80px;
-  }
-  .page_root .row.socialMedia .span3 .icons ul {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
-    display: -webkit-flex ;
-    display: flex ;
-    -ms-flex-direction: column;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
-  .page_root .row.socialMedia .span3 .icons ul li .platform {
-    position: relative;
-    display: block;
-    font-size: 1em;
-  }
-  .page_root .row.socialMedia .span3 .icons ul li .platform:hover .name {
-    width: 240px;
-  }
-  .page_root .row.socialMedia .span3 .icons ul li .platform.facebook .name {
-    background: #304d87;
-  }
-  .page_root .row.socialMedia .span3 .icons ul li .platform.twitter .name {
-    background: #4a9bd9;
-  }
-  .page_root .row.socialMedia .span3 .icons ul li .platform.snapchat .name {
-    background: #decc0b;
-  }
-  .page_root .row.socialMedia .span3 .icons ul li .platform.youtube .name {
-    background: #cd241f;
-  }
-  .page_root .row.socialMedia .span3 .icons ul li .platform.instagram .name {
-    background: #456d8e;
-  }
-  .page_root .row.socialMedia .span3 .icons ul li .icon {
-    width: 80px;
-    height: 80px;
-  }
-  .page_root .row.socialMedia .span3 .icons ul li .icon img {
-    z-index: 80;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-  .page_root .row.socialMedia .span3 .icons ul li .name {
-    z-index: 40;
-    overflow: hidden;
-    display: block;
-    width: 0;
-    height: 42px;
-    position: absolute;
-    left: 50%;
-    top: 15px;
-    transition: width 0.4s;
-  }
-  .page_root .row.socialMedia .span3 .icons ul li .name p {
-    color: #fff;
-    padding: 0.6em 0.8em 0.6em 0;
-    font-size: 0.9em;
-    text-align: right;
-  }
-  .page_root .row.socialMedia .span3 .timeline {
-    -webkit-box-flex: 3;
-    -ms-flex: 3;
-    -webkit-flex: 3;
-    flex: 3;
-    display: -webkit-box ;
-    display: -ms-flexbox ;
-    display: -webkit-flex ;
-    display: flex ;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-box-pack: flex-end;
-    -ms-flex-pack: flex-end;
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end;
-  }
-  .page_root .row.socialMedia .span3 .timeline iframe {
-    max-width: 400px !important;
-    margin: 0;
-  }
-  .page_root .row.socialMedia .span3 .youtube {
-    -webkit-box-flex: 5;
-    -ms-flex: 5;
-    -webkit-flex: 5;
-    flex: 5;
-    display: -webkit-box ;
-    display: -ms-flexbox ;
-    display: -webkit-flex ;
-    display: flex ;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-box-pack: flex-end;
-    -ms-flex-pack: flex-end;
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end;
-  }
-  .page_root .row.socialMedia .span3 .youtube iframe {
-    margin: 0;
-    border: none;
-    width: 96%;
-    height: 380px;
-  }
+    display: flex ; }
+    .page_root .row.socialMedia .span3 .title {
+      width: auto;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      -webkit-flex: 0 0 82px;
+      flex: 0 0 82px; }
+      .page_root .row.socialMedia .span3 .title h2 {
+        color: #878787;
+        position: absolute;
+        transform: rotate(270deg);
+        bottom: 128px;
+        left: -58px;
+        font-size: 4em; }
+    .page_root .row.socialMedia .span3 .icons {
+      width: auto;
+      -webkit-flex: 0 0 80px;
+      flex: 0 0 80px; }
+      .page_root .row.socialMedia .span3 .icons ul {
+        display: -webkit-flex ;
+        display: flex ;
+        -webkit-flex-direction: column;
+        flex-direction: column; }
+        .page_root .row.socialMedia .span3 .icons ul li .platform {
+          position: relative;
+          display: block;
+          font-size: 1em; }
+          .page_root .row.socialMedia .span3 .icons ul li .platform:hover .name {
+            width: 240px; }
+          .page_root .row.socialMedia .span3 .icons ul li .platform.facebook .name {
+            background: #304d87; }
+          .page_root .row.socialMedia .span3 .icons ul li .platform.twitter .name {
+            background: #4a9bd9; }
+          .page_root .row.socialMedia .span3 .icons ul li .platform.snapchat .name {
+            background: #decc0b; }
+          .page_root .row.socialMedia .span3 .icons ul li .platform.youtube .name {
+            background: #cd241f; }
+          .page_root .row.socialMedia .span3 .icons ul li .platform.instagram .name {
+            background: #456d8e; }
+        .page_root .row.socialMedia .span3 .icons ul li .icon {
+          width: 80px;
+          height: 80px; }
+          .page_root .row.socialMedia .span3 .icons ul li .icon img {
+            z-index: 80;
+            position: absolute;
+            left: 0;
+            top: 0; }
+        .page_root .row.socialMedia .span3 .icons ul li .name {
+          z-index: 40;
+          overflow: hidden;
+          display: block;
+          width: 0;
+          height: 42px;
+          position: absolute;
+          left: 50%;
+          top: 15px;
+          transition: width 0.4s; }
+          .page_root .row.socialMedia .span3 .icons ul li .name p {
+            color: #fff;
+            padding: 0.6em 0.8em 0.6em 0;
+            font-size: 0.9em;
+            text-align: right; }
+    .page_root .row.socialMedia .span3 .timeline {
+      -webkit-flex: 3 0;
+      flex: 3 0;
+      display: -webkit-flex ;
+      display: flex ;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: flex-end;
+      justify-content: flex-end; }
+      .page_root .row.socialMedia .span3 .timeline iframe {
+        max-width: 400px !important;
+        margin: 0; }
+    .page_root .row.socialMedia .span3 .youtube {
+      -webkit-flex: 5 0;
+      flex: 5 0;
+      display: -webkit-flex ;
+      display: flex ;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: flex-end;
+      justify-content: flex-end; }
+      .page_root .row.socialMedia .span3 .youtube iframe {
+        margin: 0;
+        border: none;
+        width: 96%;
+        height: 380px; }
   .page_root .row.advice {
-    overflow: hidden;
-  }
-  .page_root .row.advice .content {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
-    display: -webkit-flex ;
-    display: flex ;
-  }
-  .page_root .row.advice .content .areas {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
-    display: -webkit-flex ;
-    display: flex ;
-    -webkit-box-pack: space-around;
-    -ms-flex-pack: space-around;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-    -webkit-box-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-  .page_root .row.advice .content .areas .area {
-    margin: 0.4em 0;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 32%;
-    -webkit-flex: 0 0 32%;
-    flex: 0 0 32%;
-  }
+    overflow: hidden; }
+    .page_root .row.advice .content {
+      display: -webkit-flex ;
+      display: flex ; }
+      .page_root .row.advice .content .areas {
+        display: -webkit-flex ;
+        display: flex ;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        .page_root .row.advice .content .areas .area {
+          margin: 0.4em 0;
+          -webkit-flex: 0 0 32%;
+          flex: 0 0 32%; }
   .page_root .row.officers {
     height: 300px;
     position: relative;
-    padding: 0;
-  }
-  .page_root .row.officers .rowInner {
-    padding: 2em 0;
-  }
-  .page_root .row.officers .title {
-    width: auto;
-    height: 100%;
-    position: relative;
-    left: 0px;
-    top: 0px;
-    background: #f8f8f8;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 82px;
-    -webkit-flex: 0 0 82px;
-    flex: 0 0 82px;
-  }
-  .page_root .row.officers .title h2 {
-    color: #50b848;
-    position: absolute;
-    transform: rotate(270deg);
-    bottom: 92px;
-    left: -70px;
-    font-size: 4em;
-  }
-  .page_root .row.officers .image {
-    height: 248px;
-  }
-  .page_root .row.officers .image img {
-    width: auto !important;
-    height: 100%;
-  }
-  .page_root .row.officers .content .flex-middle {
-    height: 248px;
-  }
+    padding: 0; }
+    .page_root .row.officers .rowInner {
+      padding: 2em 0; }
+    .page_root .row.officers .image {
+      height: 248px; }
+      .page_root .row.officers .image img {
+        width: auto !important;
+        height: 100%; }
+    .page_root .row.officers .content .flex-middle {
+      height: 248px; }
   .page_root .row .success .quote_icon {
     display: block;
     position: absolute;
     top: 4px;
     right: 4px;
     color: #d7d7d7;
-    font-size: 8em;
-  }
-}
+    font-size: 8em; } }
 
 /* Desktop*/
 @media (min-width: 80em) {
   .page_root .row.news {
-    height: 332px;
-  }
-  .page_root .row.news .newsWidget {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0;
-  }
-  .page_root .row.news .title {
-    width: auto;
-    height: 100%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 82px;
-    -webkit-flex: 0 0 82px;
-    flex: 0 0 82px;
-  }
-  .page_root .row.news .title h2 {
-    color: #878787;
-    position: absolute;
-    transform: rotate(270deg);
-    bottom: 128px;
-    left: -58px;
-    font-size: 4em;
-  }
+    height: 332px; }
+    .page_root .row.news .newsWidget {
+      width: 1200px;
+      margin: 0 auto;
+      padding: 0; }
+    .page_root .row.news .title {
+      width: auto;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      -webkit-flex: 0 0 82px;
+      flex: 0 0 82px; }
+      .page_root .row.news .title h2 {
+        color: #878787;
+        position: absolute;
+        transform: rotate(270deg);
+        bottom: 128px;
+        left: -58px;
+        font-size: 4em; }
   .page_root .row.events {
-    height: 320px;
-  }
-  .page_root .row.events .title {
-    -ms-flex: 0 0 82px;
-    -webkit-box-flex: 0;
-    flex: 0 0 82px;
-    width: 82px;
-    overflow: hidden;
-    position: relative;
-    background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_bg_vert.svg");
-    background-size: 100% auto;
-  }
-  .page_root .row.events .title h2 {
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    padding: 0;
-    position: absolute;
-    bottom: 94px;
-    left: -38px;
-  }
-  .page_root .row.events #whatson {
-    width: 1200px;
-    margin: 0 auto;
-  }
-  .page_root .row.events .eventsArrow {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: -webkit-flex !important;
-    display: flex !important;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    background-color: #50b848;
-    position: absolute;
-    right: 2em;
-    top: calc(50% - 2em);
-    height: 4em;
-    width: 4em;
-    border-radius: 2em;
-    cursor: pointer;
-    color: #fff;
-    text-decoration: none;
-  }
-  .page_root .row.events .eventsArrow .message {
-    opacity: 0;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    display: block;
-    color: #fff;
-    position: absolute;
-    width: 6em;
-    bottom: -1.3em;
-    right: -1.3em;
-  }
-  .page_root .row.events .eventsArrow:hover .message {
-    opacity: 1;
-  }
-  .page_root .row.events .eventsArrow i {
-    color: #fff;
-    font-size: 3em;
-    float: none;
-  }
+    height: 320px; }
+    .page_root .row.events .title {
+      -ms-flex: 0 0 82px;
+      -webkit-box-flex: 0;
+      flex: 0 0 82px;
+      width: 82px;
+      max-width: 82px;
+      overflow: hidden;
+      position: relative;
+      background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/home/event_bg_vert.svg");
+      background-size: 100% auto; }
+      .page_root .row.events .title h2 {
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        padding: 0;
+        position: absolute;
+        bottom: 94px;
+        left: -38px; }
+    .page_root .row.events #whatson {
+      width: 1200px;
+      margin: 0 auto; }
+    .page_root .row.events .eventsArrow {
+      display: -webkit-flex !important;
+      display: flex !important;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      align-items: center;
+      background-color: #50b848;
+      position: absolute;
+      right: 2em;
+      top: calc(50% - 2em);
+      height: 4em;
+      width: 4em;
+      border-radius: 2em;
+      cursor: pointer;
+      color: #fff;
+      text-decoration: none; }
+      .page_root .row.events .eventsArrow .message {
+        opacity: 0;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        display: block;
+        color: #fff;
+        position: absolute;
+        width: 6em;
+        bottom: -1.3em;
+        right: -1.3em; }
+      .page_root .row.events .eventsArrow:hover .message {
+        opacity: 1; }
+      .page_root .row.events .eventsArrow i {
+        color: #fff;
+        font-size: 3em;
+        float: none; }
   .page_root .row.studentVoiceRow {
     background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/logos/student_voice_logo_grey.svg");
     background-position: left 7% top 50%;
     background-size: auto 55%;
-    background-repeat: no-repeat;
-  }
-  .page_root .row.studentVoiceRow .title {
-    position: relative;
-    width: 82px;
-  }
-  .page_root .row.studentVoiceRow .title h2 {
-    width: 416px;
-    transform: rotate(270deg);
-    position: absolute;
-    left: -166px;
-    top: 145px;
-    margin: 0.6em 0 !important;
-  }
+    background-repeat: no-repeat; }
+    .page_root .row.studentVoiceRow .title {
+      position: relative;
+      width: 82px; }
+      .page_root .row.studentVoiceRow .title h2 {
+        width: 416px;
+        transform: rotate(270deg);
+        position: absolute;
+        left: -166px;
+        top: 145px;
+        margin: 0.6em 0 !important; }
+  .page_root .row.officers {
+    overflow: hidden; }
+    .page_root .row.officers .title {
+      position: relative;
+      width: 82px;
+      background-color: #f8f8f8; }
+      .page_root .row.officers .title h2 {
+        width: 184px;
+        transform: rotate(270deg);
+        position: absolute;
+        left: -54px;
+        top: 84px;
+        margin: 0.6em 0 !important; }
   .page_root .row.socialMedia {
-    height: 440px;
-  }
-  .page_root .row.socialMedia .title {
-    position: relative;
-    width: 82px;
-  }
-  .page_root .row.socialMedia .title h2 {
-    transform: rotate(270deg);
-    position: absolute;
-    left: -42px;
-    top: 148px;
-    margin: 0.6em 0 !important;
-  }
-  .page_root .row.socialMedia .title::after {
-    position: absolute;
-    right: -20px;
-    top: 0px;
-    content: '';
-    width: 0;
-    height: 0;
-    border-bottom: 440px solid #55ACEE;
-    border-right: 20px solid transparent;
-  }
+    height: 440px; }
+    .page_root .row.socialMedia .title {
+      position: relative;
+      width: 82px; }
+      .page_root .row.socialMedia .title h2 {
+        transform: rotate(270deg);
+        position: absolute;
+        left: -42px;
+        top: 148px;
+        margin: 0.6em 0 !important; }
+      .page_root .row.socialMedia .title::after {
+        position: absolute;
+        right: -20px;
+        top: 0px;
+        content: '';
+        width: 0;
+        height: 0;
+        border-bottom: 440px solid #55ACEE;
+        border-right: 20px solid transparent; }
   .page_root .row.advice {
-    height: 280px;
-  }
-  .page_root .row.advice .content {
-    width: 1200px;
-    margin: 0 auto;
-  }
-  .page_root .row.advice .content .areas {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 800px;
-    -webkit-flex: 0 0 800px;
-    flex: 0 0 800px;
-  }
-  .page_root .row.advice .title {
-    position: relative;
-    width: 82px;
-  }
-  .page_root .row.advice .title h2 {
-    transform: rotate(270deg);
-    position: absolute;
-    left: -82px;
-    top: 82px;
-    margin: 0.6em 0 !important;
-  }
-  .page_root .row.advice .title::after {
-    position: absolute;
-    right: -20px;
-    top: 0px;
-    content: '';
-    width: 0;
-    height: 0;
-    border-top: 280px solid #50b848;
-    border-right: 20px solid transparent;
-  }
+    height: 280px; }
+    .page_root .row.advice .content {
+      width: 1200px;
+      margin: 0 auto; }
+      .page_root .row.advice .content .areas {
+        -webkit-flex: 0 0 800px;
+        flex: 0 0 800px; }
+    .page_root .row.advice .title {
+      position: relative;
+      width: 82px; }
+      .page_root .row.advice .title h2 {
+        transform: rotate(270deg);
+        position: absolute;
+        left: -82px;
+        top: 82px;
+        margin: 0.6em 0 !important; }
+      .page_root .row.advice .title::after {
+        position: absolute;
+        right: -20px;
+        top: 0px;
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 280px solid #50b848;
+        border-right: 20px solid transparent; }
   .page_root .row .studentVoice {
     padding: 1em 0;
-    position: relative;
-  }
-  .page_root .row .studentVoice .logo {
-    position: absolute;
-    width: 200px;
-    top: 0;
-    left: 0;
-  }
-  .page_root .row .studentVoice .logo img {
-    width: 80%;
-  }
-  .page_root .row .studentVoice .intro {
-    padding-left: 200px;
-  }
-  .page_root .row .studentVoice .content {
-    flex: 1;
-  }
-  .page_root .row .studentVoice .content ul {
-    display: -webkit-box ;
-    display: -ms-flexbox ;
-    display: -webkit-flex ;
-    display: flex ;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-  }
-  .page_root .row .studentVoice .content ul li {
-    flex: 1;
-    display: -webkit-box ;
-    display: -ms-flexbox ;
-    display: -webkit-flex ;
-    display: flex ;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-box-pack: flex-end;
-    -ms-flex-pack: flex-end;
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end;
-  }
-}
+    position: relative; }
+    .page_root .row .studentVoice .logo {
+      position: absolute;
+      width: 200px;
+      top: 0;
+      left: 0; }
+      .page_root .row .studentVoice .logo img {
+        width: 80%; }
+    .page_root .row .studentVoice .intro {
+      padding-left: 200px; }
+    .page_root .row .studentVoice .content {
+      flex: 1; } }
 
 /* Slightly bigger desktop */
 @media (min-width: 96em) {
   .page_root .row.events #whatson {
     width: 1400px;
-    margin: 0 auto;
-  }
-}
+    margin: 0 auto; } }
