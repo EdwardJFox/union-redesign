@@ -22,12 +22,17 @@ $advice_main_dark: #2e266b;
   /* Homepage specific styling */ }
   .page_root main section:not(:first-child) {
     background: #fff; }
+  .page_root .header {
+    padding: 0 !important; }
   .page_root .splash {
     padding: 1em 0;
     /* Leadership Race*/ }
     .page_root .splash.union {
       background: rgba(0, 0, 0, 0.4);
-      display: none; }
+      display: none;
+      min-height: 400px; }
+      .page_root .splash.union .pure-g {
+        width: 100%; }
     .page_root .splash.leadership .logo {
       width: 70%; }
     .page_root .splash.leadership .content {
@@ -327,9 +332,19 @@ $advice_main_dark: #2e266b;
       .page_root .row.officers .content .flex-middle {
         -webkit-flex-direction: column;
         flex-direction: column; }
+    .page_root .row.graduation {
+      padding: 2em 0; }
+      .page_root .row.graduation img {
+        width: 200px; }
+      .page_root .row.graduation h1, .page_root .row.graduation p {
+        color: #fff; }
+      .page_root .row.graduation h1 {
+        padding: 0 0 0.4em; }
 
 /* Tablets*/
 @media (min-width: 48em) {
+  .page_root .header video {
+    width: 160% !important; }
   .page_root .splash.leadership .content {
     padding: 0;
     text-align: left; }
@@ -337,7 +352,10 @@ $advice_main_dark: #2e266b;
       display: block; }
   .page_root .splash.union {
     display: block;
-    margin: 0 !important; }
+    margin: 0 !important;
+    min-height: 450px !important; }
+    .page_root .splash.union .pure-g {
+      padding: 2em 0; }
   .page_root .splash.ptbs {
     padding: 2em 0; }
     .page_root .splash.ptbs .content {
@@ -600,6 +618,10 @@ $advice_main_dark: #2e266b;
 
 /* Desktop*/
 @media (min-width: 80em) {
+  .page_root .header video {
+    width: 100% !important; }
+  .page_root .splash.union {
+    min-height: 550px !important; }
   .page_root .row.news {
     height: 332px; }
     .page_root .row.news .newsWidget {

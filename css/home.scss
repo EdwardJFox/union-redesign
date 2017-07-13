@@ -8,6 +8,10 @@
     background: #fff;
   }
 
+  .header {
+    padding: 0 !important;
+  }
+
   /* Homepage specific styling */
   .splash {
     padding: 1em 0;
@@ -16,6 +20,10 @@
     &.union {
       background: rgba(0, 0, 0, 0.4);
       display: none;
+      min-height: 400px;
+      .pure-g {
+        width: 100%;
+      }
     }
 
     /* Leadership Race*/
@@ -431,12 +439,27 @@
         }
       }
     }
+    &.graduation {
+      padding: 2em 0;
+      img {
+        width: 200px;
+      }
+      h1, p {
+        color: #fff;
+      }
+      h1 {
+        padding: 0 0 0.4em;
+      }
+    }
   }
 }
 
 /* Tablets*/
 @media (min-width: 48em){
   .page_root {
+    .header video {
+      width: 160% !important;
+    }
     .splash {
       &.leadership {
         .content {
@@ -450,6 +473,10 @@
       &.union {
         display: block;
         margin: 0 !important;
+        min-height: 450px !important;
+        .pure-g {
+          padding: 2em 0;
+        }
       }
       &.ptbs {
         padding: 2em 0;
@@ -795,6 +822,15 @@
 /* Desktop*/
 @media (min-width: 80em){
   .page_root {
+    .header video {
+      width: 100% !important;
+    }
+    .splash {
+      &.union {
+        min-height: 550px !important;
+
+      }
+    }
     .row {
       &.news {
         height: 332px;

@@ -7,19 +7,14 @@ header {
 
   padding-left: 40px;
 
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  @include displayFlex;
+  @include flexAlign(center);
 
   z-index: 200;
 
   .logo {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    display: none;
+    @include flex(1);
     padding: 0.2em;
     img {
       height: 32px;
@@ -30,18 +25,13 @@ header {
     /* MSL Default changes */
     padding: 0;
     background: none;
-
     display: none;
 
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 220px;
-            flex: 0 0 220px;
+    @include flexFixed(220px);
 
     .icon {
-      @include displayFlex
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
+      @include displayFlex;
+      @include flexAlign(center);
 
       cursor: pointer;
       i {
@@ -187,9 +177,7 @@ header {
   .basket {
     padding: 0;
     background: none;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 60px;
-            flex: 0 0 60px;
+    @include flexFixed(60px);
     position: relative;
     display: none;
 
@@ -218,6 +206,14 @@ header {
     }
 
     &.active {
+      display: block;
+    }
+  }
+}
+// screens larger than > 400px
+@media (min-width: 24em){
+  header {
+    .logo {
       display: block;
     }
   }
