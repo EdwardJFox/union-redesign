@@ -10,19 +10,23 @@
 
   .header {
     padding: 0 !important;
+    position: relative;
   }
 
   /* Homepage specific styling */
   .splash {
     padding: 1em 0;
-
+    overflow: hidden;
     // Union branded
     &.union {
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.5);
       display: none;
       min-height: 400px;
       .pure-g {
         width: 100%;
+      }
+      .blockLink {
+        font-size: 0.8em;
       }
     }
 
@@ -441,14 +445,16 @@
     }
     &.graduation {
       padding: 2em 0;
+      position: relative;
       img {
-        width: 200px;
+        width: 100px;
       }
       h1, p {
         color: #fff;
       }
       h1 {
         padding: 0 0 0.4em;
+        font-size: 2.4em;
       }
     }
   }
@@ -476,6 +482,9 @@
         min-height: 450px !important;
         .pure-g {
           padding: 2em 0;
+        }
+        .blockLink {
+          font-size: 1em;
         }
       }
       &.ptbs {
@@ -803,6 +812,16 @@
           .flex-middle {
             height: 248px;
           }
+        }
+      }
+      
+
+      &.graduation {
+        img {
+          width: 180px;
+        }
+        h1 {
+          font-size: 3.2em;
         }
       }
 

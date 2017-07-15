@@ -31,6 +31,7 @@ nav#sidebar {
     position: absolute;
     top: 0px;
     right: 4px;
+    z-index: 100 !important;
     i {
       font-size: 2.5em;
       color: #fff;
@@ -40,7 +41,7 @@ nav#sidebar {
   .header {
     text-align: center;
     background-image: url(https://staffsunion.s3.amazonaws.com/2017/images/assets/union/union_background_pale.png);
-    background-size: contain !important;
+    background-size: cover !important;
     background-position: center center;
     background-attachment: fixed;
     img {

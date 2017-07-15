@@ -23,16 +23,20 @@ $advice_main_dark: #2e266b;
   .page_root main section:not(:first-child) {
     background: #fff; }
   .page_root .header {
-    padding: 0 !important; }
+    padding: 0 !important;
+    position: relative; }
   .page_root .splash {
     padding: 1em 0;
+    overflow: hidden;
     /* Leadership Race*/ }
     .page_root .splash.union {
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.5);
       display: none;
       min-height: 400px; }
       .page_root .splash.union .pure-g {
         width: 100%; }
+      .page_root .splash.union .blockLink {
+        font-size: 0.8em; }
     .page_root .splash.leadership .logo {
       width: 70%; }
     .page_root .splash.leadership .content {
@@ -333,13 +337,15 @@ $advice_main_dark: #2e266b;
         -webkit-flex-direction: column;
         flex-direction: column; }
     .page_root .row.graduation {
-      padding: 2em 0; }
+      padding: 2em 0;
+      position: relative; }
       .page_root .row.graduation img {
-        width: 200px; }
+        width: 100px; }
       .page_root .row.graduation h1, .page_root .row.graduation p {
         color: #fff; }
       .page_root .row.graduation h1 {
-        padding: 0 0 0.4em; }
+        padding: 0 0 0.4em;
+        font-size: 2.4em; }
 
 /* Tablets*/
 @media (min-width: 48em) {
@@ -356,6 +362,8 @@ $advice_main_dark: #2e266b;
     min-height: 450px !important; }
     .page_root .splash.union .pure-g {
       padding: 2em 0; }
+    .page_root .splash.union .blockLink {
+      font-size: 1em; }
   .page_root .splash.ptbs {
     padding: 2em 0; }
     .page_root .splash.ptbs .content {
@@ -608,6 +616,10 @@ $advice_main_dark: #2e266b;
         height: 100%; }
     .page_root .row.officers .content .flex-middle {
       height: 248px; }
+  .page_root .row.graduation img {
+    width: 180px; }
+  .page_root .row.graduation h1 {
+    font-size: 3.2em; }
   .page_root .row .success .quote_icon {
     display: block;
     position: absolute;
