@@ -241,3 +241,14 @@
         }
     }
 }
+
+@media (min-width: 48em) {
+    .repHomeLinks {
+        @include displayFlex;
+        @include flexJustify(space-between);
+        a {
+            @include flexFixed(19.5%);
+            margin: 0 0 0.8em !important;
+        }
+    }
+}

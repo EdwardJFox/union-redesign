@@ -3816,6 +3816,17 @@ input#ctl00_Main_btnRecipients {
 .page_academicreps.page_learnmore .unslider-arrow.prev {
   left: 0; }
 
+@media (min-width: 48em) {
+  .repHomeLinks {
+    display: -webkit-flex ;
+    display: flex ;
+    -webkit-justify-content: space-between;
+    justify-content: space-between; }
+    .repHomeLinks a {
+      -webkit-flex: 0 0 19.5%;
+      flex: 0 0 19.5%;
+      margin: 0 0 0.8em !important; } }
+
 /* Management hub pages */
 .page_managementhub #contact, .page_managementhub #officeHours, .page_managementhub #liveChat, .page_managementhub #fillForm {
   background-position: center center;
