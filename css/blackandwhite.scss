@@ -1,0 +1,106 @@
+/* Black and white accessibility stylesheet */
+$text: #fff;
+$background: #000;
+
+body, html, section, header, nav, nav .title, footer, .footerBottom {
+    background: $background !important;
+}
+footer::before, footer::after {
+    display: none !important;
+}
+#footerBottom {
+    background: $background;
+}
+.quickbar {
+    .link {
+        color: $text !important;
+    }
+    .title {
+        background: rgba(255, 255, 255, 0.2) !important;
+        span {
+            color: $background !important;
+            background: $text !important;
+        }
+        &:before, &:after {
+            border-color: $text !important;
+        }
+    }
+}
+header {
+    .dropdown {
+        background: $text !important;
+        a {
+            color: $background;
+        }
+    }
+}
+body main, nav {
+    p, b, h1, h2, h3, h4, i, a {
+        color: $text !important;
+        background: none !important;
+        background-color: transparent !important;
+    }
+    a:hover, a.blockLink:hover.greenBg:hover {
+        background: $text !important;
+        background-color: $text !important;
+        color: $background !important;
+    }
+    .whiteBg, .blackBg, .greenBg, .redBg, .greyBg, .blueBg, .pinkBg, .cyanBg, .darkGreyBg {
+        background: $background !important;
+        background-color: $background !important;
+    }
+    .white, .black, .green, .red, .grey, .blue, .pink, .cyan, .darkGrey {
+        color: $text !important;
+    }
+
+    /* Home */
+    .title {
+        background-color: $text !important;
+        background-image: none !important;
+        h2 {
+            color: $background !important;
+        }
+    }
+    .rowHeader {
+        background: $background !important;
+    }
+    .news {
+        .newsList {
+            li {
+                background-color: $background !important;
+            }
+        }
+    }
+    .events {
+        .event_item {
+            dt {
+                background-color: $text !important;
+                a {
+                    color: $background !important;
+                }
+            }
+        }
+    }
+    .studentVoice {
+        .content {
+            li {
+                background: none !important;
+            }
+        }
+    }
+
+    /* Advice */
+    .contactus, .academicReps {
+        background-color: $background !important;
+    }
+
+    /* Comments */
+    .add_comment {
+        background-color: none !important;
+    }
+
+    /* Notification */
+    .msl_info {
+        background-color: $background !important;
+    }
+}

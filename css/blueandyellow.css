@@ -1,0 +1,65 @@
+/* Blue and yellow accessibility stylesheet */
+body, html, section, header, nav, nav .title, footer, .footerBottom {
+  background: #00f !important; }
+
+footer::before, footer::after {
+  display: none !important; }
+
+#footerBottom {
+  background: #00f; }
+
+.quickbar .link {
+  color: #ff0 !important; }
+
+.quickbar .title {
+  background: rgba(255, 255, 255, 0.2) !important; }
+  .quickbar .title span {
+    color: #00f !important;
+    background: #ff0 !important; }
+  .quickbar .title:before, .quickbar .title:after {
+    border-color: #ff0 !important; }
+
+header .dropdown {
+  background: #ff0 !important; }
+  header .dropdown a {
+    color: #00f; }
+
+body main, nav {
+  /* Home */
+  /* Advice */
+  /* Comments */
+  /* Notification */ }
+  body main p, body main b, body main h1, body main h2, body main h3, body main h4, body main i, body main a, nav p, nav b, nav h1, nav h2, nav h3, nav h4, nav i, nav a {
+    color: #ff0 !important;
+    background: none !important;
+    background-color: transparent !important; }
+  body main a:hover, body main a.blockLink:hover.greenBg:hover, nav a:hover, nav a.blockLink:hover.greenBg:hover {
+    background: #ff0 !important;
+    background-color: #ff0 !important;
+    color: #00f !important; }
+  body main .whiteBg, body main .blackBg, body main .greenBg, body main .redBg, body main .greyBg, body main .blueBg, body main .pinkBg, body main .cyanBg, body main .darkGreyBg, nav .whiteBg, nav .blackBg, nav .greenBg, nav .redBg, nav .greyBg, nav .blueBg, nav .pinkBg, nav .cyanBg, nav .darkGreyBg {
+    background: #00f !important;
+    background-color: #00f !important; }
+  body main .white, body main .black, body main .green, body main .red, body main .grey, body main .blue, body main .pink, body main .cyan, body main .darkGrey, nav .white, nav .black, nav .green, nav .red, nav .grey, nav .blue, nav .pink, nav .cyan, nav .darkGrey {
+    color: #ff0 !important; }
+  body main .title, nav .title {
+    background-color: #ff0 !important;
+    background-image: none !important; }
+    body main .title h2, nav .title h2 {
+      color: #00f !important; }
+  body main .rowHeader, nav .rowHeader {
+    background: #00f !important; }
+  body main .news .newsList li, nav .news .newsList li {
+    background-color: #00f !important; }
+  body main .events .event_item dt, nav .events .event_item dt {
+    background-color: #ff0 !important; }
+    body main .events .event_item dt a, nav .events .event_item dt a {
+      color: #00f !important; }
+  body main .studentVoice .content li, nav .studentVoice .content li {
+    background: none !important; }
+  body main .contactus, body main .academicReps, nav .contactus, nav .academicReps {
+    background-color: #00f !important; }
+  body main .add_comment, nav .add_comment {
+    background-color: none !important; }
+  body main .msl_info, nav .msl_info {
+    background-color: #00f !important; }

@@ -13,6 +13,16 @@
             "taskName": "css/home.scss",
             "isBuildCommand": true,
             "args": ["css/home.css"]
+        },
+        {
+            "taskName": "css/blackandwhite.scss",
+            "isBuildCommand": true,
+            "args": ["css/blackandwhite.css"]
+        },
+        {
+            "taskName": "css/blueandyellow.scss",
+            "isBuildCommand": true,
+            "args": ["css/blueandyellow.css"]
         }
     ]
 }
