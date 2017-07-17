@@ -3,8 +3,15 @@ main {
   overflow: hidden;
   section {
     &.row {
+      .rowHeader {
+        padding: 0 0.6em;
+      }
       .span1, .span2, .span3 {
         width: 100%;
+        p, h1, h2, h3, h4 {
+          padding-left: 0.4em;
+          padding-right: 0.4em;
+        }
       }
 
       .rowInner {
@@ -36,7 +43,7 @@ main {
           @include flexAlign(center);
         }
         h1 {
-          font-size: 3.4em;
+          font-size: 3em;
           padding: 0;
         }
         h2 {
@@ -58,6 +65,10 @@ main {
       &.row {
         .span1, .span2, .span3 {
           //margin: 0 0.4em;
+          p, h1, h2, h3, h4 {
+            padding-left: 0;
+            padding-right: 0;
+          }
         }
         &.header {
           padding-left: 0;

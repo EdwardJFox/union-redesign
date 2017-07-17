@@ -29,8 +29,12 @@ $(document).ready(function(){
   rearrangeEventList();
   setupCalendar();
 
+  // Clubs and Socs
+  headerBgImage();
+
   // Admin
   setupAdminInput();
+  setupAdminWarning();
 
   // Profile images aspect ratio fix
   fixProfileImages();
@@ -137,7 +141,8 @@ function setupHeader(){
     '<ul class="userActions">' +
     '<li><a href="/profile/" class="profile">Profile</a></li>' +
     '<li><a href="/memberships/" class="memberships">Memberships</a></li>' +
-    '<li><a href="/contactdetails/">Contact Details</a></li>'
+    '<li><a href="/contactdetails/">Contact Details</a></li>' +
+    '<li><a id="ctl00_MSLusercontrol_lbtnLogout" href="javascript:__doPostBack(\'ctl00$MSLusercontrol$lbtnLogout\',\'\')">Log out</a></li>';
 
     if($control.length == 1){
       var links = $control.find('a');
@@ -422,6 +427,12 @@ function fixProfileImages(){
   }
 }
 
+function setupAdminWarning(){
+  if($('#admin_page_content #edit_header').length > 0){
+    $('#admin_page_content #edit_header').prepend('<div id="editor_warning">WARNING: DO NOT EDIT THIS PAGE WITH THE WYSWYG SETTING ON IF YOU DO NOT KNOW WHAT YOU ARE DOING. It can cause the page to break</div>')
+  }
+}
+
 // Setup deeper Google Analytics tracking on the site
 function setupAnalytics(){
   // All links on the main page
@@ -548,33 +559,6 @@ function setupAnalytics(){
     });
   });
 
-  // Accordion
-  $('.accordion .accordionTitle', function(){
-    ga('send', 'event', {
-      eventCategory: 'Component',
-      eventAction: 'accordion',
-      eventLabel: 'click'
-    });
-  });
-
-  // Dropdown
-  $('.dropdown .dropdownTitle', function(){
-    ga('send', 'event', {
-      eventCategory: 'Component',
-      eventAction: 'dropdown',
-      eventLabel: 'click'
-    });
-  });
-
-  // Tabbed Navigation
-  $('.tabs .nav-tabs a').on('click', function(e){
-    ga('send', 'event', {
-      eventCategory: 'Component',
-      eventAction: 'tabbed navigation',
-      eventLabel: $(e.target).text()
-    });
-  });
-
   // Quickbar
   $('.quickbar a').on('click', function(e){
     ga('send', 'event', {
@@ -593,6 +577,12 @@ function setupAnalytics(){
       transport: 'beacon'
     });
   });
+}
+
+function headerBgImage(){
+  if($('.orgHeaderBg').text().trim().length > 2){
+    $('.orgHead').css('background-image', 'url(' +$('.orgHeaderBg').text().trim() + ')');
+  }
 }
 
 /* Helpers */

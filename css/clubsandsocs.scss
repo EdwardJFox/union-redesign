@@ -63,6 +63,8 @@
   .orgHead {
     position: relative;
     padding: 0 0.6em;
+    background-position: center;
+    background-size: cover;
     .orgLogo {
       display: block;
       margin: 0 auto;
@@ -78,9 +80,17 @@
     .span3 {
       @include flexDirection(column-reverse);
       h1 {
-        padding: 0.4em 0;
+        margin: 0.4em 0;
+        padding: 0.4em 0.8em;
+        //background: rgba(0, 0, 0, 0.8);
+        background: rgba(80, 184, 72, 0.8);
+        color: #fff;
       }
     }
+  }
+  .orgContent {
+    @include displayFlex;
+    @include flexDirection(column-reverse); 
   }
   .orgDetails {
     .join_list {
@@ -105,6 +115,9 @@
           margin: 0.2em 0 0;
         }
       }
+    }
+    .events {
+      display: none;
     }
     .mslwidget {
       > a {
@@ -231,13 +244,14 @@
       }
     }
   }
-  .orgDescription {
-    .links {
-      > a {
-        display: none;
-      }
+  .links {
+    .shop {
+      display: block;
     }
+  }
+  .orgDescription {
     .news {
+      width: 100%;
       padding: 0.4em 0.8em;
       margin-bottom: 0.6em;
       background: $grey;
@@ -354,21 +368,16 @@
         height: 154px;
       }
     }
+    .orgContent {
+      @include flexDirection(initial); 
+    }
     .orgDetails {
       padding-left: 0.6em;
+      .events {
+        display: block;
+      }
     }
     .orgDescription {
-      .links {
-        .qualityMark {
-          @include displayFlex;
-          @include flexAlign(center);
-        }
-        .greenBg {
-          display: block;
-          padding:0.4em 0.8em;
-          text-decoration: none;
-        }
-      }
       .msl-news {
         @include displayFlex;
         @include flexJustify(space-between);
@@ -379,6 +388,23 @@
     }
     .news {
       display: inline-block !important;
+    }
+    .links {
+      @include displayFlex;
+      @include flexAlign(center);
+      @include flexJustify(space-between);
+      > a {
+        @include flexFixed(49.5%);
+        text-decoration: none;
+      }
+      .qualityMark {
+        img {
+          width: 100%;
+        }
+      }
+      .shop {
+        padding: 0.4em 0.8em;
+      }
     }
   }
 }

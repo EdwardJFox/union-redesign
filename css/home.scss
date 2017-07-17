@@ -519,10 +519,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         .title {
-          padding: 0 0.4em;
-          h2 {
-            padding: 0.1em 0.2em;
-          }
+          display: none;
         }
 
         .newsWidget {
@@ -857,22 +854,6 @@
           width: 1200px;
           margin: 0 auto;
           padding: 0;
-        }
-        .title {
-          width: auto;
-          height: 100%;
-          position: absolute;
-          left: 0px;
-          top: 0px;
-          @include flexFixed(82px);
-          h2 {
-            color: #878787;
-            position: absolute;
-            transform: rotate(270deg);
-            bottom: 128px;
-            left: -58px;
-            font-size: 4em;
-          }
         }
       }
       &.events {

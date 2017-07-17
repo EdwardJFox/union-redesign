@@ -387,9 +387,7 @@ $advice_main_dark: #2e266b;
     background-size: cover;
     background-repeat: no-repeat; }
     .page_root .row.news .title {
-      padding: 0 0.4em; }
-      .page_root .row.news .title h2 {
-        padding: 0.1em 0.2em; }
+      display: none; }
     .page_root .row.news .newsWidget {
       display: -webkit-flex ;
       display: flex ;
@@ -640,21 +638,6 @@ $advice_main_dark: #2e266b;
       width: 1200px;
       margin: 0 auto;
       padding: 0; }
-    .page_root .row.news .title {
-      width: auto;
-      height: 100%;
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      -webkit-flex: 0 0 82px;
-      flex: 0 0 82px; }
-      .page_root .row.news .title h2 {
-        color: #878787;
-        position: absolute;
-        transform: rotate(270deg);
-        bottom: 128px;
-        left: -58px;
-        font-size: 4em; }
   .page_root .row.events {
     height: 320px; }
     .page_root .row.events .title {
