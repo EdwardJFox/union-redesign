@@ -689,6 +689,7 @@
           ul {
             @include displayFlex;
             @include flexDirection(column);
+            height: 100%;
             li {
               .platform {
                 position: relative;
@@ -963,9 +964,10 @@
       &.socialMedia {
         height: 440px;
         .title {
+          @include flexFixed(82px);
           position: relative;
           width: 82px;
-
+          max-width: 82px;
           h2 {
             transform: rotate(270deg);
             position: absolute;
@@ -984,13 +986,27 @@
           	border-right: 20px solid transparent;
           }
         }
+        .rowInner {
+          @include flex(1);
+          .span3 {
+            max-width: 1200px;
+            margin: 0 auto;
+          }
+        }
       }
 
       &.advice {
         height: 280px;
         .content {
-          width: 1200px;
+          max-width: 1200px;
           margin: 0 auto;
+          padding-left: 1em;
+          @include flex(1);
+          .span3 {
+            @include displayFlex;
+            max-width: 1200px;
+            margin: 0 auto;
+          }
           .areas {
             @include flexFixed(800px);
           }
@@ -998,7 +1014,7 @@
         .title {
           position: relative;
           width: 82px;
-
+          @include flexFixed(82px);
           h2 {
             transform: rotate(270deg);
             position: absolute;

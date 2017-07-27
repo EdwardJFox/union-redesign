@@ -37,9 +37,11 @@
             margin-bottom: 1em;
         }
         .money, .housing  {
-            padding: 1.6em 0.8em;
             background: rgba(0, 0, 0, 0.75);
             color: #fff;
+            .pure-g {
+                padding: 1.6em 0.8em;
+            }
             p {
                 color: #fff;
             }
@@ -59,6 +61,10 @@
             }
         }
         .academic {
+            span {
+                padding: 0 0.4em;
+                display: block;
+            }
             ul.inline {
                 padding: 0;
                 li {
@@ -68,7 +74,9 @@
         }
         .contactus {
             background: $grey;
-            padding: 0 0.8em 0.8em;
+            span {
+                padding: 0 0.8em 0.8em;
+            }
             .status {
                 text-align: center;
                 &.open {
@@ -96,15 +104,20 @@
         .nursing, .bullying, .disabilities, .marriage, .consumer, .international, .crime {
             text-decoration: none;
             color: #fff;
-            padding: 1em 0.8em;
             text-align: center;
             @include displayFlex;
             @include flexAlign(center);
             @include flexJustify(center);
+            h2, h3 {
+                padding: 0.8em 0.4em;
+            }
             &:hover {
                 text-decoration: none;
                 color: #fff;
             }
+        }
+        h3 {
+            font-size: 2em;
         }
         .housing {
             padding-bottom: 1.8em;
@@ -119,8 +132,10 @@
 
         }
         .academicReps {
-            padding: 1.2em 0.8em;
             background: #fdeaec;
+            .pure-g {
+                padding: 1.2em 0.8em;
+            }
             .pure-u-lg-1-3 {
                 @include displayFlex;
                 @include flexAlign(center);

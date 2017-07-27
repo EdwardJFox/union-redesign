@@ -519,7 +519,8 @@ $advice_main_dark: #2e266b;
         display: -webkit-flex ;
         display: flex ;
         -webkit-flex-direction: column;
-        flex-direction: column; }
+        flex-direction: column;
+        height: 100%; }
         .page_root .row.socialMedia .span3 .icons ul li .platform {
           position: relative;
           display: block;
@@ -724,8 +725,11 @@ $advice_main_dark: #2e266b;
   .page_root .row.socialMedia {
     height: 440px; }
     .page_root .row.socialMedia .title {
+      -webkit-flex: 0 0 82px;
+      flex: 0 0 82px;
       position: relative;
-      width: 82px; }
+      width: 82px;
+      max-width: 82px; }
       .page_root .row.socialMedia .title h2 {
         transform: rotate(270deg);
         position: absolute;
@@ -741,17 +745,33 @@ $advice_main_dark: #2e266b;
         height: 0;
         border-bottom: 440px solid #55ACEE;
         border-right: 20px solid transparent; }
+    .page_root .row.socialMedia .rowInner {
+      -webkit-flex: 1 0;
+      flex: 1 0; }
+      .page_root .row.socialMedia .rowInner .span3 {
+        max-width: 1200px;
+        margin: 0 auto; }
   .page_root .row.advice {
     height: 280px; }
     .page_root .row.advice .content {
-      width: 1200px;
-      margin: 0 auto; }
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 1em;
+      -webkit-flex: 1 0;
+      flex: 1 0; }
+      .page_root .row.advice .content .span3 {
+        display: -webkit-flex ;
+        display: flex ;
+        max-width: 1200px;
+        margin: 0 auto; }
       .page_root .row.advice .content .areas {
         -webkit-flex: 0 0 800px;
         flex: 0 0 800px; }
     .page_root .row.advice .title {
       position: relative;
-      width: 82px; }
+      width: 82px;
+      -webkit-flex: 0 0 82px;
+      flex: 0 0 82px; }
       .page_root .row.advice .title h2 {
         transform: rotate(270deg);
         position: absolute;

@@ -7,7 +7,7 @@
 .page_drawingboard .header {
   width: 100%;
   background-color: #4AAB43;
-  padding: 0.8em 0em;
+  padding: 0.8em 0.4em 0.8em 3.2em;
   span {
     display: -js-flex;
     display: -webkit-flex;
@@ -29,6 +29,24 @@
     flex: 1;
     margin: 0.1em 0 0;
     font-size: 2.2em;
+  }
+}
+
+.page_drawingboard .subheader {
+  width: 100%;
+  background-color: #4AAB43;
+  padding: 0.8em 0.4em;
+  span {
+    display: -js-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 0 0.4em;
+  }
+  h2 {
+    margin: 0.2em 0 0;
+    font-size: 2em;
   }
 }
 
@@ -87,7 +105,7 @@
 
 /* Quote Block */
 .page_drawingboard .quote {
-  background: #fff;
+  background: #eee;
   display: block;
   width: 100%;
   position: relative;
@@ -135,6 +153,7 @@
 /* Table (Subtemplate of themes) */
 .page_drawingboard .table {
   .entry {
+    background: #eee;
     text-align: center;
     color: #50b848;
     font-size: 1.2em;
@@ -147,7 +166,7 @@
 /* Achievements */
 .page_drawingboard .achievements {
   .achievement {
-    background-color: #fff;
+    background-color: #eee;
     border-bottom: 4px solid #50b848;
     font-size: 1.4em;
     text-align: center;
@@ -160,7 +179,7 @@
 .page_drawingboard .objectives {
   .objective {
     background-color: #50b848;
-    color: #fff;
+    color: #eee;
     padding: 0.4em 0.8em;
     font-size: 1.2em;
     margin-bottom: 1.2em;
@@ -169,6 +188,7 @@
 /*Tablet*/
 @media (min-width: 48em){
   .page_drawingboard .header {
+    min-height: 178px;
     span {
       padding: 0;
     }
@@ -244,7 +264,10 @@
 }
 /*Desktop*/
 @media (min-width: 80em){
-  .page_drawingboard .header span {
+  .page_drawingboard .header {
+    padding: 0;
+  }
+  .page_drawingboard .header span, .page_drawingboard .subheader span {
     width: 1200px;
     margin: 0 auto;
   }

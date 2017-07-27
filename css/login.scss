@@ -37,7 +37,8 @@
         }
       }
       .msl-rememberme {
-        @include flex(1);
+        padding: 0.4em 0.8em;
+        @include flexFixed(100%);
         label {
           padding-left: 0.2em;
         }

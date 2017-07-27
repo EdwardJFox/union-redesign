@@ -223,6 +223,7 @@ header {
   header {
     .search {
       @include displayFlex;
+      @include flexFixed(284px);
     }
     .user {
       .dropdown {

@@ -58,9 +58,9 @@
         height: 300px;
     }
     .repNews h2 {
-    font-size: 2.2em;
-    color: #fff !important;
-    text-align: center;
+        font-size: 2.2em;
+        color: #fff !important;
+        text-align: center;
     }
 
     .repNews img {
@@ -151,6 +151,9 @@
             @include flexAlign(center);
             @include flexJustify(center);
             text-decoration: none;
+            a {
+                padding: 0.4em;
+            }
             .text {
                 background-color: $red;
                 color: #fff;
@@ -161,7 +164,6 @@
             }
             h2 {
                 font-size: 2.2em;
-                color: $red !important;
                 text-align: center;
             }
             img {
@@ -247,7 +249,7 @@
         @include displayFlex;
         @include flexJustify(space-between);
         a {
-            @include flexFixed(19.5%);
+            @include flexFixed(17.5%);
             margin: 0 0 0.8em !important;
         }
     }

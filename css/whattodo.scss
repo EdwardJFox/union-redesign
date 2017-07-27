@@ -173,6 +173,13 @@
       }
     }
   }
+
+  #whatElse {
+    background: #392877;
+    .title {
+      width: 95%;
+    }
+  }
 }
 
 /* Tablet */
@@ -194,6 +201,12 @@
     }
 
     #foodanddrink {
+      .title {
+        width: 80%;
+      }
+    }
+
+    #whatElse {
       .title {
         width: 80%;
       }

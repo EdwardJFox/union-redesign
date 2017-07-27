@@ -19,7 +19,7 @@
         margin: 2em 0 3em;
         overflow: visible;
         h3 {
-            padding: 0.4em 1em;
+            padding: 0.4em 1em !important;
             color: #fff;
             background: $better_staffs_bg;
             -webkit-clip-path: polygon(5% 0, 95% 2%, 100% 95%, 3% 100%, 0 40%);
@@ -375,4 +375,14 @@
         color: #fff !important;
     }
 
+}
+
+/* Outcomes */
+.page_betterstaffsforum.page_outcomes {
+    #topics {
+        .topic {
+            padding: 0.4em 0.8em;
+            margin-bottom: 0.8em;
+        }
+    }
 }

@@ -266,6 +266,13 @@
   }
 }
 
+.page_activities.page_volunteering.page_providers.page_register {
+  .ajax__tab {
+    width: 140px !important;
+    padding: 0.2em;
+  }
+}
+
 /*Tablet*/
 @media (min-width: 48em){
   .vol-skills-list {
