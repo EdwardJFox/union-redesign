@@ -7,12 +7,14 @@
     background-size: cover;
     background-position: top center;
     text-align: center;
-    @include flexAlign(center);
 
     .title {}
 
     .rowInner {
       @include flexDirection(column);
+      @include flexAlign(center);
+      @include flexJustify(center);
+      @include displayFlex;
       .span1 {
         padding: 0.4em;
       }
@@ -187,6 +189,9 @@
   .page_whattodo {
     .whattodoHeader {
       min-height: 40vh !important;
+      .rowInner {
+        min-height: 40vh !important;
+      }
     }
 
     #events {
@@ -220,6 +225,9 @@
     .whattodoHeader {
       min-height: 50vh !important;
       background-position: top -8em center;
+      .rowInner {
+        min-height: 50vh !important;
+      }
     }
     #events {
       .title {

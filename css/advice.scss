@@ -3,7 +3,7 @@
         background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/advice/advice_header.jpg');
         background-position: center;
         background-size: cover;
-        min-height: 250px;
+        min-height: 30vh;
         .span3 {
             @include flexJustify(center);
         }
@@ -161,7 +161,10 @@
             }
         }
         .adviceHeader {
-            min-height: 350px !important;
+            min-height: 30vh !important;
+            .rowInner {
+                min-height: 30vh;
+            }
         }
     }
 }
@@ -169,7 +172,10 @@
 @media (min-width: 80em){
     .page_advice {
         .adviceHeader {
-            min-height: 400px !important;
+            min-height: 40vh !important;
+            .rowInner {
+                min-height: 40vh;
+            }
         }
     }
 }

@@ -127,6 +127,9 @@
   .page_getinvolved main {
     .header {
       min-height: 40vh !important;
+      .rowInner {
+        min-height: 40vh !important;
+      }
     }
 
     #reps {
@@ -164,6 +167,9 @@
     .header {
       min-height: 50vh !important;
       background-position: top -8em center;
+      .rowInner {
+        min-height: 50vh !important;
+      }
     }
 
     #clubsandsocs {

@@ -754,7 +754,6 @@ $advice_main_dark: #2e266b;
   .page_root .row.advice {
     height: 280px; }
     .page_root .row.advice .content {
-      max-width: 1200px;
       margin: 0 auto;
       padding-left: 1em;
       -webkit-flex: 1 0;
