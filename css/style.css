@@ -1711,7 +1711,8 @@ input#ctl00_Main_btnRecipients {
 
 /* Login Page Styling */
 .page_login .rowInner > a {
-  text-decoration: none; }
+  text-decoration: none;
+  display: block; }
 
 .page_login .rowInner .span1 {
   margin: 0.4em;
@@ -3094,13 +3095,17 @@ input#ctl00_Main_btnRecipients {
     padding: 0.8em 1.6em 0em; } }
 
 .page_advice .adviceHeader {
-  background-image: url("https://staffsunion.s3.amazonaws.com/2017/images/assets/advice/advice_header.jpg");
+  background-image: url("//staffsunion.s3.amazonaws.com/2017/images/assets/advice/advice_header.png");
   background-position: center;
-  background-size: cover;
+  background-size: auto 100%;
   min-height: 30vh; }
   .page_advice .adviceHeader .span3 {
     -webkit-justify-content: center;
     justify-content: center; }
+    .page_advice .adviceHeader .span3 h1 {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 0.3em 0.6em;
+      color: #fff; }
 
 .page_advice ul.inline {
   padding: 0; }
@@ -3536,7 +3541,8 @@ input#ctl00_Main_btnRecipients {
       display: -webkit-flex ;
       display: flex ;
       -webkit-flex-wrap: no-wrap;
-      flex-wrap: no-wrap; }
+      flex-wrap: no-wrap;
+      width: 100%; }
     .page_ents.page_emberlounge main .menu .menuCol, .page_ents.page_verve main .menu .menuCol, .page_ents.page_squeezebox main .menu .menuCol {
       -webkit-flex: 0 0 40%;
       flex: 0 0 40%;

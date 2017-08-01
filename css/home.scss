@@ -11,6 +11,13 @@
   .header {
     padding: 0 !important;
     position: relative;
+    background-size: cover;
+    background-position: center;
+
+    // Temporary hide video on mobile
+    video {
+      //display: none;
+    }
   }
 
   /* Homepage specific styling */
@@ -109,6 +116,7 @@
               text-align: center;
               img {
                 max-height: 270px;
+                width: 100%;
               }
             }
           }
@@ -465,6 +473,7 @@
   .page_root {
     .header video {
       width: 160% !important;
+      display: block;
     }
     .splash {
       &.leadership {
@@ -841,6 +850,7 @@
   .page_root {
     .header video {
       width: 100% !important;
+      display: block;
     }
     .splash {
       &.union {

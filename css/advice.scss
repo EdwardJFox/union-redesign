@@ -1,11 +1,16 @@
 .page_advice {
     .adviceHeader {
-        background-image: url('https://staffsunion.s3.amazonaws.com/2017/images/assets/advice/advice_header.jpg');
+        background-image: url('//staffsunion.s3.amazonaws.com/2017/images/assets/advice/advice_header.png');
         background-position: center;
-        background-size: cover;
+        background-size: auto 100%;
         min-height: 30vh;
         .span3 {
             @include flexJustify(center);
+            h1 {
+                background: rgba(0, 0, 0, 0.7);
+                padding: 0.3em 0.6em;
+                color: #fff;
+            }
         }
     }
     ul.inline {

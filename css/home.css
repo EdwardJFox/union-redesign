@@ -24,7 +24,9 @@ $advice_main_dark: #2e266b;
     background: #fff; }
   .page_root .header {
     padding: 0 !important;
-    position: relative; }
+    position: relative;
+    background-size: cover;
+    background-position: center; }
   .page_root .splash {
     padding: 1em 0;
     overflow: hidden;
@@ -93,7 +95,8 @@ $advice_main_dark: #2e266b;
         .page_root .row.news .newsWidget .newsItems .newsItem .image {
           text-align: center; }
           .page_root .row.news .newsWidget .newsItems .newsItem .image img {
-            max-height: 270px; }
+            max-height: 270px;
+            width: 100%; }
       .page_root .row.news .newsWidget .newsInfo .newsDescription {
         padding: 0.6em; }
       .page_root .row.news .newsWidget .newsList ul {
@@ -350,7 +353,8 @@ $advice_main_dark: #2e266b;
 /* Tablets*/
 @media (min-width: 48em) {
   .page_root .header video {
-    width: 160% !important; }
+    width: 160% !important;
+    display: block; }
   .page_root .splash.leadership .content {
     padding: 0;
     text-align: left; }
@@ -630,7 +634,8 @@ $advice_main_dark: #2e266b;
 /* Desktop*/
 @media (min-width: 80em) {
   .page_root .header video {
-    width: 100% !important; }
+    width: 100% !important;
+    display: block; }
   .page_root .splash.union {
     min-height: 550px !important; }
   .page_root .row.news {

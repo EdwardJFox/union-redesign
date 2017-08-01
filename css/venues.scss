@@ -286,6 +286,7 @@
 			.menuContainer {
 				@include displayFlex;
 				@include flexWrap(no-wrap);
+				width: 100%;
 			}
 			overflow-x: scroll;
 			.menuCol {
