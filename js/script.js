@@ -429,7 +429,13 @@ function fixProfileImages(){
 
 function setupAdminWarning(){
   if($('#admin_page_content #edit_header').length > 0){
-    $('#admin_page_content #edit_header').prepend('<div id="editor_warning">WARNING: DO NOT EDIT THIS PAGE WITH THE WYSWYG SETTING ON IF YOU DO NOT KNOW WHAT YOU ARE DOING. It can cause the page to break</div>')
+    $('#admin_page_content #edit_header').prepend('<div id="editor_warning">WARNING: DO NOT EDIT THIS PAGE WITH THE WYSWYG SETTING ON IF YOU DO NOT KNOW WHAT YOU ARE DOING. It can cause the page to break</div>');
+  }
+  if($('#ctl00_ctl00_Main_AdminPageContent_cblEventTypes_fp').length > 0){
+      $('#ctl00_ctl00_Main_AdminPageContent_cblEventTypes_fp').prepend('<div id="editor_warning">WARNING: The LRV option is reserved only for club nights, do not select it for your event hosted at LRV</div>');
+  }
+  if($('#ctl00_ctl00_Main_AdminPageContent_pnlAddEvent .vpFormSubmit').length > 0){
+      $('#ctl00_ctl00_Main_AdminPageContent_pnlAddEvent .vpFormSubmit').prepend('<div id="editor_warning">Remember to advise the Union Marketing Team of your event</div>');
   }
 }
 

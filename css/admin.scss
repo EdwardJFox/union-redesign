@@ -385,7 +385,7 @@ input#ctl00_Main_btnRecipients {
 }
 
 // Editor page
-#admin_page_content #edit_header #editor_warning {
+#admin_page_content #edit_header #editor_warning, .msl_admin_page #editor_warning {
   background: $red;
   color: #fff;
   margin: 0.6em 0;

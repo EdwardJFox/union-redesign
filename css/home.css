@@ -349,6 +349,20 @@ $advice_main_dark: #2e266b;
       .page_root .row.graduation h1 {
         padding: 0 0 0.4em;
         font-size: 2.4em; }
+    .page_root .row.wristband {
+      background-image: url("//staffsunion.s3.amazonaws.com/images/Welcome17/ww_wristband_header_blue.png");
+      background-color: #03003D;
+      background-position: center;
+      background-size: auto 100%;
+      position: relative; }
+      .page_root .row.wristband a {
+        text-decoration: none;
+        color: #fff;
+        text-align: center; }
+      .page_root .row.wristband h1 {
+        font-size: 3.6em;
+        padding: 0.5em 0;
+        color: #fff; }
 
 /* Tablets*/
 @media (min-width: 48em) {

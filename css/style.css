@@ -1697,7 +1697,7 @@ input#ctl00_Main_btnRecipients {
   font-weight: 400;
   font-size: 1.4em; }
 
-#admin_page_content #edit_header #editor_warning {
+#admin_page_content #edit_header #editor_warning, .msl_admin_page #editor_warning {
   background: #E31836;
   color: #fff;
   margin: 0.6em 0;
