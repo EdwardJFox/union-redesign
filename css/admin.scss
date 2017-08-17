@@ -1,401 +1,439 @@
 /* Admin Context Control */
+
 .msl-grouping-context-control {
-  padding: 0.4em 0;
-  a {
-    padding: 0.2em 0.4em;
-    &:hover {
-      background: $union_green_hover_clear;
+    padding: 0.4em 0;
+    a {
+        padding: 0.2em 0.4em;
+        &:hover {
+            background: $union_green_hover_clear;
+        }
     }
-  }
 }
+
 
 /* Admin Button Gird */
-#ulAdmin, #ulOrgs {
-  li {
-    a {
-      border: none !important;
-      height: 6em !important;
-      &:hover {
-        border: !important;
-        background-color: $union_green_hover_clear !important;
-      }
-    }
-  }
-}
 
+#ulAdmin,
+#ulOrgs {
+    li {
+        a {
+            border: none !important;
+            height: 6em !important;
+            &:hover {
+                border: !important;
+                background-color: $union_green_hover_clear !important;
+            }
+        }
+    }
+}
 
 // Header link fix
 .mslwidget {
-  h2 {
-    a {
-      font-family: 'Raleway', sans-serif;
-      font-weight: 400;
+    h2 {
+        a {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+        }
     }
-  }
 }
 
-/* Admin Tool bar */
-.tools {
-  ul {
-    @include displayFlex(!important);
-    @include flexAlign(center);
 
-    li {
-      padding: 0 !important;
-      margin-right: 0.4em !important;
-      input {
-        margin-right: 0.2em !important;
-      }
+/* Admin Tool bar */
+
+.tools {
+    ul {
+        @include displayFlex(!important);
+        @include flexAlign(center);
+        li {
+            padding: 0 !important;
+            margin-right: 0.4em !important;
+            input {
+                margin-right: 0.2em !important;
+            }
+        }
     }
-  }
 }
 
 #msl_toolbar {
-  overflow: auto !important;
-  margin: 0 !important;
-  padding: 0.8em 0 0.4em;
-  ul {
-    float: none !important;
-    li {
-      float: none !important;
-      display: inline-block !important;
-      a {
+    overflow: auto !important;
+    margin: 0 !important;
+    padding: 0.8em 0 0.4em;
+    ul {
         float: none !important;
-        padding: 0.4em 0.8em !important;;
-        border-left: none !important;
-        height: auto !important;
-        line-height: normal !important;
-        &:hover {
-          background: $union_green_hover_clear;
+        li {
+            float: none !important;
+            display: inline-block !important;
+            a {
+                float: none !important;
+                padding: 0.4em 0.8em !important;
+                ;
+                border-left: none !important;
+                height: auto !important;
+                line-height: normal !important;
+                &:hover {
+                    background: $union_green_hover_clear;
+                }
+                &.msl_toolbarbutton_selected {
+                    color: $union_green_dark;
+                    font-size: 100% !important;
+                }
+            }
         }
-        &.msl_toolbarbutton_selected {
-          color: $union_green_dark;
-          font-size: 100% !important;
-        }
-      }
     }
-  }
 }
+
 
 /* Link Grid */
+
 .msl_linkgrid {
-  li {
-    a {
-      padding-bottom: 0.4em;
-      &:hover {
-        background-color: $union_green_hover_clear !important;
-      }
+    li {
+        a {
+            padding-bottom: 0.4em;
+            &:hover {
+                background-color: $union_green_hover_clear !important;
+            }
+        }
     }
-  }
 }
+
 
 /* Fix for the tree view */
+
 #page_tree table {
-  width: auto !important;
-}
-#page_tree table td {
-  padding: 0 !important;
+    width: auto !important;
 }
 
-/* Old import specific fixes */
-input#ctl00_ctl00_Main_AdminPageContent_cbIsEnabled_chkItem {
-  display: block !important;
+#page_tree table td {
+    padding: 0 !important;
 }
-input[class^='ctl00_Main_EventTypeName_CheckboxList_checkList'], input[class^='ctl00_Main_AndEventTypeName_CheckboxList_checkList'], .msl_admin_page input[type="checkbox"] {
-  display: inline-block !important;
+
+
+/* Old import specific fixes */
+
+input#ctl00_ctl00_Main_AdminPageContent_cbIsEnabled_chkItem {
+    display: block !important;
+}
+
+input[class^='ctl00_Main_EventTypeName_CheckboxList_checkList'],
+input[class^='ctl00_Main_AndEventTypeName_CheckboxList_checkList'],
+.msl_admin_page input[type="checkbox"] {
+    display: inline-block !important;
 }
 
 input#ctl00_Main_btnRecipients {
-  color: #fff !important;
-  padding: 0.4em 0.8em !important;
-  background-color: #50B848 !important;
-  text-decoration: none !important;
+    color: #fff !important;
+    padding: 0.4em 0.8em !important;
+    background-color: #50B848 !important;
+    text-decoration: none !important;
 }
 
 #ctl00_ctl00_Main_AdminPageContent_pnlReport {
-  overflow: visible !important;
+    overflow: visible !important;
 }
+
 
 /* Edit Page stuff */
+
 #edit_page_buttons {
-  li {
-    a {
-      background-image: none !important;
-      padding: 0.4em 0.6em;
-      @include displayInlineFlex;
-      @include flexAlign(center);
-      text-decoration: none;
-      &:hover {
-        background: $union_green_hover_clear;
-      }
-      &:before {
-        padding: 0 0.4em 0 0;
-        @include googleFont;
-      }
-      &.msl_documents {
-        &:before {
-          content: 'content_copy';
+    li {
+        a {
+            background-image: none !important;
+            padding: 0.4em 0.6em;
+            @include displayInlineFlex;
+            @include flexAlign(center);
+            text-decoration: none;
+            &:hover {
+                background: $union_green_hover_clear;
+            }
+            &:before {
+                padding: 0 0.4em 0 0;
+                @include googleFont;
+            }
+            &.msl_documents {
+                &:before {
+                    content: 'content_copy';
+                }
+            }
+            &.msl_webpage {
+                &:before {
+                    content: 'subject';
+                }
+            }
+            &.msl_properties {
+                &:before {
+                    content: 'settings';
+                }
+            }
+            &.msl_history {
+                &:before {
+                    content: 'history';
+                }
+            }
+            &.msl_pagestyle {
+                &:before {
+                    content: 'style';
+                }
+            }
+            &.msl_security {
+                &:before {
+                    content: 'security';
+                }
+            }
+            &.msl_view {
+                &:before {
+                    content: 'pageview';
+                }
+            }
         }
-      }
-      &.msl_webpage {
-        &:before {
-          content: 'subject';
-        }
-      }
-      &.msl_properties {
-        &:before {
-          content: 'settings';
-        }
-      }
-      &.msl_history {
-        &:before {
-          content: 'history';
-        }
-      }
-      &.msl_pagestyle {
-        &:before {
-          content: 'style';
-        }
-      }
-      &.msl_security {
-        &:before {
-          content: 'security';
-        }
-      }
-      &.msl_view {
-        &:before {
-          content: 'pageview';
-        }
-      }
     }
-  }
 }
+
 
 /* Admin tabs */
+
+
 /* Panel editor */
+
 #pnlTabs {
-  background: none !important;
-  a {
+    background: none !important;
+    a {
+        background: $union_green_hover_clear !important;
+        color: $union_green;
+        padding: 0.15em 0.2em !important;
+        height: 26px !important;
+        width: 80px !important;
+        font-size: 0.8em !important;
+        &.vt_on {
+            background-color: $union_green !important;
+            color: #fff;
+            &:hover {
+                background-color: $union_green !important;
+            }
+        }
+        &:hover {
+            background-color: darken($union_green_hover_clear, 10%) !important;
+        }
+    }
+}
+
+
+/* Now the ajax one */
+
+.ajax__tab_header {
+    background: none !important;
+}
+
+.ajax__tab {
     background: $union_green_hover_clear !important;
     color: $union_green;
-    padding: 0.15em 0.2em !important;
     height: 26px !important;
-    width: 80px !important;
-    font-size: 0.8em !important;
-    &.vt_on {
-      background-color: $union_green !important;
-      color: #fff;
-      &:hover {
+    width: 100px !important;
+    margin-right: 0.4em;
+    &.ajax__tab_active {
         background-color: $union_green !important;
-      }
+        &:hover {
+            background-color: $union_green !important;
+        }
+        .ajax__tab_tab span {
+            color: #fff;
+            font-size: 1.3em !important;
+        }
     }
     &:hover {
-      background-color: darken($union_green_hover_clear, 10%) !important;
+        background-color: darken($union_green_hover_clear, 10%) !important;
     }
-  }
-}
-/* Now the ajax one */
-.ajax__tab_header {
-  background: none !important;
-}
-.ajax__tab {
-  background: $union_green_hover_clear !important;
-  color: $union_green;
-  height: 26px !important;
-  width: 100px !important;
-  margin-right: 0.4em;
-  &.ajax__tab_active {
-      background-color: $union_green !important;
-      &:hover {
-        background-color: $union_green !important;
-      }
-      .ajax__tab_tab span {
-        color: #fff;
-        font-size: 1.3em !important;
-      }
-    }
-  &:hover {
-    background-color: darken($union_green_hover_clear, 10%) !important;
-  }
-
-  .ajax__tab_outer {
-    background-image: none !important;
-    .ajax__tab_inner {
-      background-image: none !important;
-      padding: 0 !important;
-      .ajax__tab_tab {
+    .ajax__tab_outer {
         background-image: none !important;
-        height: 26px;
-        padding: 0.2em;
-      }
+        .ajax__tab_inner {
+            background-image: none !important;
+            padding: 0 !important;
+            .ajax__tab_tab {
+                background-image: none !important;
+                height: 26px;
+                padding: 0.2em;
+            }
+        }
     }
-  }
 }
+
 .ajax__tab_body {
-  border: none !important;
-  background: #e7e7e7 !important;
+    border: none !important;
+    background: #e7e7e7 !important;
 }
 
 .ajax__tab_panel {
-  .list_controls {
-    @include displayFlex;
-    @include flexWrap(wrap);
-    > a {
-      @include flexFixed(96px);
-      height: auto !important;
-      padding: 5.4em 0.4em 0.8em;
-      border: none !important;
-      background-color: #fff !important;
-      background-position: top 6px center !important;
-      @include displayFlex;
-      @include flexJustify(center);
-      @include flexAlign(center);
-      &:hover {
-        background-color: #f4f4f4 !important;
-      }
+    .list_controls {
+        @include displayFlex;
+        @include flexWrap(wrap);
+        >a {
+            @include flexFixed(96px);
+            height: auto !important;
+            padding: 5.4em 0.4em 0.8em;
+            border: none !important;
+            background-color: #fff !important;
+            background-position: top 6px center !important;
+            @include displayFlex;
+            @include flexJustify(center);
+            @include flexAlign(center);
+            &:hover {
+                background-color: #f4f4f4 !important;
+            }
+        }
     }
-  }
 }
 
 #edit_body {
-  margin-bottom: 200px;
-  .panel_options {
-    background: $union_green !important;
-    border: none !important;
-    @include displayFlex;
-    @include flexAlign(center);
-    position: relative;
-    padding: 0.4em;
-    input[type="image"] {
-      display: none;
-    }
-    select {
-      padding: 0.2em;
-      border: none;
-      margin: 0 0.6em;
-      font-size: 0.9em;
-    }
-    .icon {
-      @include googleFont;
-      color: #fff;
-      cursor: pointer;
-      &:hover {
-        color: rgba(255, 255, 255, 0.9);
-        .tip {
-          display: block;
-        }
-      }
-      .tip {
-        display: none;
-        font-family: 'Roboto', sans-serif;
-        position: absolute;
-        top: 42px;
-        background: #1a4317;
-        color: #fff;
-        padding: 0.3em 0.6em;
-        z-index: 25;
-        font-size: 0.6em;
-        &:before {
-          content: '';
-          position: absolute;
-          top: -6px;
-          left: 8px;
-          width: 0;
-          height: 0;
-          border-left: 3px solid transparent;
-          border-right: 3px solid transparent;
-          border-bottom: 6px solid #1a4317;
-        }
-      }
-    }
-  }
-
-  table.msl_table .msl_delete {
-      margin-right: -52px;
-  }
-}
-
-/* Property edit page (like a widget) */
-#ctl00_Main_upControl {
-  .mvMenu {
-    border-left: none !important;
-    li {
-      background: none !important;
-      padding: 0 !important;
-      border: none !important;
-      a {
-        padding: 0.4em 0.8em;
-        color: #fff;
+    margin-bottom: 200px;
+    .panel_options {
+        background: $union_green !important;
+        border: none !important;
         @include displayFlex;
         @include flexAlign(center);
-        font-weight: 400;
-        &.current, &.save {
-          background: $union_green !important;
+        position: relative;
+        padding: 0.4em;
+        input[type="image"] {
+            display: none;
         }
-        &.stop, &.save, &.current {
-          &:before {
+        select {
+            padding: 0.2em;
+            border: none;
+            margin: 0 0.6em;
+            font-size: 0.9em;
+        }
+        .icon {
             @include googleFont;
             color: #fff;
-            padding: 0 0.4em 0 0;
-          }
+            cursor: pointer;
+            &:hover {
+                color: rgba(255, 255, 255, 0.9);
+                .tip {
+                    display: block;
+                }
+            }
+            .tip {
+                display: none;
+                font-family: 'Roboto', sans-serif;
+                position: absolute;
+                top: 42px;
+                background: #1a4317;
+                color: #fff;
+                padding: 0.3em 0.6em;
+                z-index: 25;
+                font-size: 0.6em;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: -6px;
+                    left: 8px;
+                    width: 0;
+                    height: 0;
+                    border-left: 3px solid transparent;
+                    border-right: 3px solid transparent;
+                    border-bottom: 6px solid #1a4317;
+                }
+            }
         }
-        &.stop {
-          background: $red !important;
-          &:before {
-            content: 'exit_to_app';
-          }
-        }
-        &.save {
-          margin-right: 0.4em;
-          &:before {
-            content: 'save';
-          }
-        }
-        &.current {
-          &:before {
-            content: 'settings';
-          }
-        }
-      }
     }
-  }
-
-  .mv {
-    border: none !important;
-    background: #f9f9f9 !important;
-    .vp_form {
-      width: 100%;
+    table.msl_table .msl_delete {
+        margin-right: -52px;
     }
-    .form_title {
-      background: #e7e7e7 !important;
-      border: none !important;
-      padding: 0.4em 0.8em;
-    }
-  }
 }
 
+
+/* Property edit page (like a widget) */
+
+#ctl00_Main_upControl {
+    .mvMenu {
+        border-left: none !important;
+        li {
+            background: none !important;
+            padding: 0 !important;
+            border: none !important;
+            a {
+                padding: 0.4em 0.8em;
+                color: #fff;
+                @include displayFlex;
+                @include flexAlign(center);
+                font-weight: 400;
+                &.current,
+                &.save {
+                    background: $union_green !important;
+                }
+                &.stop,
+                &.save,
+                &.current {
+                    &:before {
+                        @include googleFont;
+                        color: #fff;
+                        padding: 0 0.4em 0 0;
+                    }
+                }
+                &.stop {
+                    background: $red !important;
+                    &:before {
+                        content: 'exit_to_app';
+                    }
+                }
+                &.save {
+                    margin-right: 0.4em;
+                    &:before {
+                        content: 'save';
+                    }
+                }
+                &.current {
+                    &:before {
+                        content: 'settings';
+                    }
+                }
+            }
+        }
+    }
+    .mv {
+        border: none !important;
+        background: #f9f9f9 !important;
+        .vp_form {
+            width: 100%;
+        }
+        .form_title {
+            background: #e7e7e7 !important;
+            border: none !important;
+            padding: 0.4em 0.8em;
+        }
+    }
+}
+
+
 /* Properties and pages */
-#ctl00_Main_upProperties, #ctl00_ctl00_Main_AdminPageContent_upPageStyle {
-  legend {
-    color: $union_green;
-    font-style: initial;
-    font-weight: 400;
-    font-size: 1.4em;
-  }
+
+#ctl00_Main_upProperties,
+#ctl00_ctl00_Main_AdminPageContent_upPageStyle {
+    legend {
+        color: $union_green;
+        font-style: initial;
+        font-weight: 400;
+        font-size: 1.4em;
+    }
 }
 
 // Editor page
-#admin_page_content #edit_header #editor_warning, .msl_admin_page #editor_warning {
-  background: $red;
-  color: #fff;
-  margin: 0.6em 0;
-  padding: 0.4em 0.8em;
+#admin_page_content #edit_header #editor_warning,
+.msl_admin_page #editor_warning {
+    background: $red;
+    color: #fff;
+    margin: 0.6em 0;
+    padding: 0.4em 0.8em;
 }
 
+#msl ul.msl_linkgrid li {
+    display: inline-block !important;
+}
+
+
 /*Desktop*/
-@media (min-width: 80em){
-  #admin_page_content {
-    width: 1200px !important;
-    margin: 0 auto;
-  }
+
+@media (min-width: 80em) {
+    #admin_page_content {
+        width: 1200px !important;
+        margin: 0 auto;
+    }
 }

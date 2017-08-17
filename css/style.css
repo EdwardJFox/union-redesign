@@ -893,7 +893,7 @@ main {
     padding-left: 0;
     padding-right: 0; }
   main section.row.header {
-    padding-left: 0;
+    padding-left: 3.2em;
     padding-right: 0; }
     main section.row.header h1 {
       font-size: 4.2em; }
@@ -1381,10 +1381,12 @@ dl.comments {
       background: rgba(80, 184, 72, 0.2); }
 
 /* Admin Button Gird */
-#ulAdmin li a, #ulOrgs li a {
+#ulAdmin li a,
+#ulOrgs li a {
   border: none !important;
   height: 6em !important; }
-  #ulAdmin li a:hover, #ulOrgs li a:hover {
+  #ulAdmin li a:hover,
+  #ulOrgs li a:hover {
     border: !important;
     background-color: rgba(80, 184, 72, 0.2) !important; }
 
@@ -1442,7 +1444,9 @@ dl.comments {
 input#ctl00_ctl00_Main_AdminPageContent_cbIsEnabled_chkItem {
   display: block !important; }
 
-input[class^='ctl00_Main_EventTypeName_CheckboxList_checkList'], input[class^='ctl00_Main_AndEventTypeName_CheckboxList_checkList'], .msl_admin_page input[type="checkbox"] {
+input[class^='ctl00_Main_EventTypeName_CheckboxList_checkList'],
+input[class^='ctl00_Main_AndEventTypeName_CheckboxList_checkList'],
+.msl_admin_page input[type="checkbox"] {
   display: inline-block !important; }
 
 input#ctl00_Main_btnRecipients {
@@ -1691,17 +1695,22 @@ input#ctl00_Main_btnRecipients {
     padding: 0.4em 0.8em; }
 
 /* Properties and pages */
-#ctl00_Main_upProperties legend, #ctl00_ctl00_Main_AdminPageContent_upPageStyle legend {
+#ctl00_Main_upProperties legend,
+#ctl00_ctl00_Main_AdminPageContent_upPageStyle legend {
   color: #50b848;
   font-style: initial;
   font-weight: 400;
   font-size: 1.4em; }
 
-#admin_page_content #edit_header #editor_warning, .msl_admin_page #editor_warning {
+#admin_page_content #edit_header #editor_warning,
+.msl_admin_page #editor_warning {
   background: #E31836;
   color: #fff;
   margin: 0.6em 0;
   padding: 0.4em 0.8em; }
+
+#msl ul.msl_linkgrid li {
+  display: inline-block !important; }
 
 /*Desktop*/
 @media (min-width: 80em) {
