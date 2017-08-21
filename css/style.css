@@ -2611,7 +2611,7 @@ input#ctl00_Main_btnRecipients {
     padding: 0 !important;
     min-height: 250px; } }
 
-/* Templating for the Mukky and Gobble events pages */
+/* Templating for the Eclipse and Gobble events pages */
 .page_eclipse:before {
   content: ' ';
   position: fixed;
@@ -2642,6 +2642,18 @@ input#ctl00_Main_btnRecipients {
 .page_gobble {
   overflow: hidden;
   position: relative; }
+  .page_eclipse .video,
+  .page_gobble .video {
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+    .page_eclipse .video video,
+    .page_gobble .video video {
+      z-index: -2;
+      min-width: 100vw;
+      min-height: 100vh; }
   .page_eclipse main,
   .page_gobble main {
     width: 100%;
@@ -4700,7 +4712,7 @@ input#ctl00_Main_btnRecipients {
   .page_whattodo #events:after {
     bottom: -1.1em;
     background-image: url("//staffsunion.s3.amazonaws.com/2017/images/assets/whattodo/whattodo_events_tooth_down.svg"); }
-  .page_whattodo #events .mukky {
+  .page_whattodo #events .eclipse {
     padding-top: 1.6em; }
   .page_whattodo #events .nightout .logo {
     height: 150px; }
@@ -4789,7 +4801,7 @@ input#ctl00_Main_btnRecipients {
     min-height: 40vh !important; }
     .page_whattodo .whattodoHeader .rowInner {
       min-height: 40vh !important; }
-  .page_whattodo #events .mukky {
+  .page_whattodo #events .eclipse {
     padding-top: 0 !important; }
   .page_whattodo #events .nightout .logo {
     height: 180px; }
